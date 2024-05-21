@@ -18,14 +18,29 @@
     <div class="p-3">
       <label
         for="default-input"
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >Default input</label
-      >
-      <input
-        type="text"
-        id="default-input"
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-      />
+        class="block mb-4 text-sm font-medium text-gray-900"
+        >Default input
+
+        <input
+          type="text"
+          id="default-input"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
+        />
+      </label>
+
+      <div class="relative w-64">
+        <input
+          type="text"
+          id="field"
+          class="peer h-10 w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg placeholder-transparent focus:outline-none focus:border-black"
+          placeholder="Mi Campo"
+        />
+        <label
+          for="field"
+          class="absolute left-3 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[12px]"
+          >Super input</label
+        >
+      </div>
     </div>
   </body>
 </html>
