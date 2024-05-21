@@ -4,15 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../src/output.css" rel="stylesheet" />
+    <title>Buttons</title>
   </head>
-  <body>
-    <header class="bg-white overflow-hidden shadow-lg p-5 flex w-full mb-3">
-      <a href="../index.html">
-        <img
-          src="https://cdn.mscdirect.com/global/v2/img/header/msc-logo.svg"
-          alt=""
-        />
-      </a>
-    </header>
+  <body class="bg-[#f2f2f2]">
+    <div class="flex p-5 gap-2 items-center">
+      <h2 class="font-bold text-xl">Default</h2>
+      <button
+        class="py-2 px-5 bg-primary-variant_2 rounded-full font-bold text-base text-white cursor-pointer hover:bg-primary-variant_3"
+      >
+        Primary
+      </button>
+      <button
+        class="py-2 px-5 bg-transparent rounded-full font-bold text-base text-primary-variant_2 cursor-pointer border border-primary-variant_2 hover:bg-primary-variant_3"
+      >
+        Secondary
+      </button>
+      <button
+        class="py-2 px-5 bg-transparent rounded-full font-bold text-base text-primary-variant_2 cursor-pointer hover:bg-primary-variant_3"
+      >
+        Tertiary
+      </button>
+    </div>
+    <div class="flex p-5 gap-2 items-center">
+      <h2 class="font-bold text-xl">Disabled</h2>
+      <button
+        class="py-2 px-5 bg-gray-300 rounded-full font-bold text-base text-white cursor-not-allowed"
+      >
+        Primary
+      </button>
+      <button
+        class="py-2 px-5 bg-transparent rounded-full font-bold text-base text-gray-300 cursor-not-allowed border"
+      >
+        Secondary
+      </button>
+      <button
+        class="py-2 px-5 bg-transparent rounded-full font-bold text-base text-gray-300 cursor-not-allowed"
+      >
+        Tertiary
+      </button>
+    </div>
+    <div class="flex p-5 gap-2 items-center">
+      <h2 class="font-bold text-xl">With Icon</h2>
+      <button
+        class="py-2 px-5 bg-primary-variant_2 rounded-full font-bold text-base text-white cursor-pointer hover:bg-primary-variant_3 flex items-center"
+      >
+        <img src="../assets/download.svg" class="w-4 mr-2" />
+        Primary
+      </button>
+      <button
+        class="py-2 px-5 bg-transparent rounded-full font-bold text-base bg-primary-variant_2 cursor-pointer border border-primary-variant_2 hover:bg-primary-variant_3 flex items-center text-primary-variant_2"
+      >
+        <img src="../assets/download-blue.svg" class="w-4 mr-2" />
+        Secondary
+      </button>
+      <button
+        class="py-2 px-5 bg-transparent rounded-full font-bold text-base bg-primary-variant_2 cursor-pointer hover:bg-primary-variant_3 text-primary-variant_2 flex items-center"
+      >
+        <img src="../assets/download-blue.svg" class="w-4 mr-2" />
+        Tertiary
+      </button>
+    </div>
   </body>
 </html>
