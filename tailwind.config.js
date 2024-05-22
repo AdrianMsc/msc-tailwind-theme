@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{html,js}", "./pages/**/*.{html,js}", "./index.html"],
   theme: {
@@ -29,5 +30,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("./components/msc-buttons"),
+    require("./components/msc-dropdown"),
+    require("./components/msc-inputs"),
+  ],
 };
