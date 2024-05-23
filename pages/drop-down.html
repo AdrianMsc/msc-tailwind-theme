@@ -4,7 +4,102 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../src/output.css" rel="stylesheet" />
-    <title>Check</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css"
+    />
+    <title>Dropdown</title>
   </head>
-  <body class="bg-[#f2f2f2]"></body>
+  <header class="bg-white overflow-hidden shadow-lg p-5 flex w-full mb-3">
+    <a href="../index.html">
+      <img
+        src="https://cdn.mscdirect.com/global/v2/img/header/msc-logo.svg"
+        alt=""
+      />
+    </a>
+  </header>
+  <body class="bg-[#f2f2f2]">
+    <div class="max-w-screen-2xl mx-auto px-5">
+      <h2 class="font-bold text-2xl mb-2">Dropdown</h2>
+      <div
+        id="dropdown"
+        class="flex bg-white h-10 w-[300px] rounded cursor-pointer border border-gray-400"
+      >
+        <button class="flex items-center w-full place-content-between m-2">
+          <p class="font-normal text-sm text-gray-400 mr-2">
+            Select a Buyer <span class="text-red-600">*</span>
+          </p>
+          <img src="../assets/caret-down.svg" />
+        </button>
+        <div
+          id="options"
+          class="w-[300px] min-h-min bg-white rounded absolute mt-11"
+        >
+          <button
+            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100"
+          >
+            <p class="font-normal text-sm text-black">Buyer 1</p>
+          </button>
+          <button
+            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100"
+          >
+            <p class="font-normal text-sm text-black">Buyer 2</p>
+          </button>
+          <button
+            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100"
+          >
+            <p class="font-normal text-sm text-black">Buyer 3</p>
+          </button>
+        </div>
+      </div>
+      <div class="max-w-[1500px] mt-[130px]">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;div id=&quot;dropdown&quot; class=&quot;flex bg-white h-10 w-[300px] rounded cursor-pointer&quot;&gt;
+    &lt;button class=&quot;flex items-center w-full place-content-between m-2&quot;&gt;
+      &lt;p class=&quot;font-normal text-sm text-gray-400 mr-2&quot;&gt;
+        Select a Buyer &lt;span class=&quot;text-red-600&quot;&gt;*&lt;/span&gt;
+      &lt;/p&gt;
+      &lt;img src=&quot;../assets/caret-down.svg&quot; /&gt;
+    &lt;/button&gt;
+
+    &lt;div id=&quot;options&quot; class=&quot;hidden w-[300px] min-h-min bg-white rounded absolute mt-11&quot;&gt;
+      &lt;button class=&quot;flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100&quot;&gt;
+        &lt;p class=&quot;font-normal text-sm text-black&quot;&gt;Buyer 1&lt;/p&gt;
+      &lt;/button&gt;
+      &lt;button class=&quot;flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100&quot;&gt;
+        &lt;p class=&quot;font-normal text-sm text-black&quot;&gt;Buyer 2&lt;/p&gt;
+      &lt;/button&gt;
+      &lt;button class=&quot;flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100&quot;&gt;
+        &lt;p class=&quot;font-normal text-sm text-black&quot;&gt;Buyer 3&lt;/p&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- JS --&gt;
+  &lt;script&gt;
+      let cartOptionsButton = document.getElementById(&quot;dropdown&quot;);
+      let menu = document.getElementById(&quot;options&quot;);
+
+      cartOptionsButton.addEventListener(&quot;click&quot;, function () {
+        menu.classList.toggle(&quot;hidden&quot;);
+      });
+    &lt;/script&gt;
+          </code>
+        </pre>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script>
+      let cartOptionsButton = document.getElementById("dropdown");
+      let menu = document.getElementById("options");
+
+      cartOptionsButton.addEventListener("click", function () {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>

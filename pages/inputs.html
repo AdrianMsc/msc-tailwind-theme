@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css"
+    />
   </head>
   <body class="bg-[#f2f2f2]">
     <header class="bg-white overflow-hidden shadow-lg p-5 flex w-full mb-3">
@@ -15,47 +19,69 @@
       </a>
     </header>
 
-    <div class="p-3">
-      <!-- <label
-        for="default-input"
-        class="block mb-4 text-sm font-medium text-gray-900"
-        >Default input
-
-        <input
-          type="text"
-          id="default-input"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block p-2.5"
-        />
-      </label> -->
-
+    <div class="max-w-screen-2xl mx-auto px-5">
+      <h2 class="font-bold text-2xl mb-4">Default Input</h2>
       <div class="relative w-64">
         <input
-          type="text"
           id="field"
-          class="peer h-10 w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded placeholder-transparent focus:outline-none focus:border-black"
-          placeholder="Mi Campo"
+          type="text"
+          placeholder="First Name"
+          class="peer w-[300px] border border-gray-300 px-4 py-3.5 rounded text-sm placeholder-transparent focus:outline-none focus:border-black"
         />
         <label
           for="field"
           class="absolute left-3 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[12px]"
-          >Super input</label
+          >First Name</label
         >
+      </div>
+      <div class="max-w-[1500px] mt-2">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;div class=&quot;relative w-64&quot;&gt;
+    &lt;input
+      id=&quot;field&quot;
+      type=&quot;text&quot;
+      placeholder=&quot;First Name&quot;
+      class=&quot;peer w-[300px] border border-gray-300 px-4 py-3.5 rounded text-sm placeholder-transparent focus:outline-none focus:border-black&quot;/&gt;
+    &lt;label
+      for=&quot;field&quot;
+      class=&quot;absolute left-3 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[12px]&quot;&gt;
+      First Name
+    &lt;/label&gt;
+  &lt;/div&gt;
+          </code>
+        </pre>
       </div>
 
-      <!-- REQUIRED  -->
-      <div class="relative w-64 mt-3">
+      <h2 class="font-bold text-2xl mb-4">Disabled Input</h2>
+      <div class="relative w-64">
         <input
-          type="text"
           id="field"
-          class="peer h-10 w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded placeholder-transparent focus:outline-none focus:border-black"
-          placeholder="Mi Campo"
+          type="text"
+          disabled
+          placeholder="First Name"
+          class="w-[300px] border border-gray-300 px-4 py-3.5 rounded text-sm focus:outline-none focus:border-black cursor-not-allowed"
         />
-        <label
-          for="field"
-          class="absolute left-3 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[12px] after:content-['*'] after:relative after:text-red-500 after:top-1 after:left-1"
-          >Super input</label
-        >
+      </div>
+      <div class="max-w-[1500px] mt-2">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;div class=&quot;relative w-64&quot;&gt;
+    &lt;input
+      id=&quot;field&quot;
+      type=&quot;text&quot;
+      disabled
+      placeholder=&quot;First Name&quot;
+      class=&quot;w-[300px] border border-gray-300 px-4 py-3.5 rounded text-sm focus:outline-none focus:border-black cursor-not-allowed&quot;
+    /&gt;
+  &lt;/div&gt;
+          </code>
+        </pre>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>

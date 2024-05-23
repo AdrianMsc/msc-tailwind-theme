@@ -4,7 +4,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../src/output.css" rel="stylesheet" />
-    <title>Check</title>
+    <title>Radio Buttons</title>
   </head>
-  <body class="bg-[#f2f2f2]"></body>
+  <body class="bg-[#f2f2f2]">
+    <header class="bg-white overflow-hidden shadow-lg p-5 flex w-full mb-3">
+      <a href="../index.html">
+        <img
+          src="https://cdn.mscdirect.com/global/v2/img/header/msc-logo.svg"
+          alt=""
+        />
+      </a>
+    </header>
+    <main class="max-w-screen-2xl mx-auto px-5">
+      <h2 class="font-bold text-2xl mb-2">Default Radio Button</h2>
+      <div class="flex gap-2 mb-3">
+        <div class="flex w-fit py-2 px-3 bg-white items-center shadow-md">
+          <input
+            id="radio-default"
+            type="radio"
+            name="list-radio"
+            class="w-4 h-4 text-black"
+          />
+          <label
+            for="radio-default"
+            class="w-full ms-2 text-sm font-sm text-black font-normal"
+            >Yes
+          </label>
+        </div>
+        <div class="flex w-fit py-2 px-3 bg-white items-center shadow-md">
+          <input
+            id="radio-default"
+            type="radio"
+            value=""
+            name="list-radio"
+            class="w-4 h-4 text-black"
+          />
+          <label
+            for="radio-default"
+            class="w-full ms-2 text-sm font-sm text-black font-normal"
+            >No
+          </label>
+        </div>
+      </div>
+      <h2 class="font-bold text-2xl mb-2">Default Radio Button</h2>
+      <ul
+        class="items-center w-[150px] text-sm font-base bg-white border rounded flex"
+      >
+        <li class="w-full border-b border-gray-100 border-r rounded-l">
+          <div class="flex items-center ps-3">
+            <input
+              id="horizontal-list-radio-license"
+              type="radio"
+              value=""
+              name="list-radio"
+              class="w-4 h-4 bg-gray-100 border-gray-300"
+            />
+            <label
+              for="horizontal-list-radio-license"
+              class="w-full py-3 ms-2 text-sm font-medium text-black"
+              >Yes
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-gray-200 rounded-r">
+          <div class="flex items-center ps-3">
+            <input
+              id="horizontal-list-radio-license"
+              type="radio"
+              value=""
+              name="list-radio"
+              class="w-4 h-4 bg-gray-100 border-gray-300"
+            />
+            <label
+              for="horizontal-list-radio-license"
+              class="w-full py-3 ms-2 text-sm font-medium text-black"
+              >No
+            </label>
+          </div>
+        </li>
+      </ul>
+    </main>
+  </body>
 </html>
