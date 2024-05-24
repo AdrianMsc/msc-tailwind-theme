@@ -1591,6 +1591,11 @@ video {
   background-color: rgb(241 245 254 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-primary-blue_light:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(179 199 249 / var(--tw-bg-opacity));
+}
+
 .focus\:border-black:focus {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
