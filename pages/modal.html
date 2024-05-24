@@ -4,7 +4,177 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../src/output.css" rel="stylesheet" />
-    <title>Check</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css"
+    />
+    <title>Modal</title>
   </head>
-  <body class="bg-[#f2f2f2]"></body>
+  <body class="bg-[#f2f2f2]">
+    <header class="bg-white overflow-hidden shadow-lg p-5 flex w-full mb-3">
+      <a href="../index.html">
+        <img
+          src="https://cdn.mscdirect.com/global/v2/img/header/msc-logo.svg"
+          alt=""
+        />
+      </a>
+    </header>
+
+    <main class="max-w-screen-2xl mx-auto px-5">
+      <h2 class="font-bold text-2xl mb-2">Modal</h2>
+      <button
+        id="modalBtn"
+        class="py-2 px-5 bg-primary-blue hover:bg-[#186DF5] rounded-full font-bold text-base text-white cursor-pointer"
+      >
+        Trigger Modal
+      </button>
+      <div
+        id="modalOne"
+        class="hidden absolute flex h-screen w-screen bg-[#21212166] top-0 left-0 place-content-center place-items-center"
+      >
+        <div class="max-h-[560px] max-w-[560px] bg-white rounded-lg shadow-xl">
+          <div class="flex p-4 w-full place-content-between">
+            <h4 class="text-lg font-bold">Modal Title</h4>
+            <button id="modalClsBtn">
+              <img src="../assets/times.svg" class="h-3 w-3" />
+            </button>
+          </div>
+          <div
+            class="flex-row gap-4 p-4 border-t border-b text-sm overflow-hidden"
+          >
+            <p class="text-pretty">
+              Access to the rest of the UI is disabled until the model is
+              addressed. All model services are interrupted by design – their
+              purpose is to have the user focus on content on a surface that
+              appears in front of all other surfaces.
+            </p>
+            <p class="text-pretty mt-4">
+              To express that the rest of the site is inaccessible and to focus
+              attention on the modal, surfaces behind the modal have an overlay.
+              An overlay is a temporary treatment that can be applied to
+              surfaces for the purpose of making content on the surface less
+              prominent.
+            </p>
+            <p class="text-pretty mt-4">
+              When scaling layouts for larger screens, adjust the modal visual
+              presentation by setting minimum and maximum values for margins,
+              padding and container dimensions.
+            </p>
+            <p class="text-pretty mt-4">
+              Modals should maintain a minimum of 48px distance from the leading
+              and trailing edges of the screen. On small screens, modals scale
+              vertically until reaching 48px from the screens, top and bottom
+              edge. On larger displays, modals can increase in size to a maximum
+              width of 560px. When Modha reaches a maximum width, expand or
+              contract vertically to support contact, up to a maximum height of
+              560px.
+            </p>
+          </div>
+          <div class="flex p-4 gap-4 place-content-between">
+            <button
+              class="py-2 px-5 h-10 w-full bg-transparent rounded-full font-bold text-base text-primary-variant_2 cursor-pointer border border-primary-variant_2 hover:bg-[#F1F5FE]"
+            >
+              Cancel
+            </button>
+            <button
+              class="py-2 px-5 h-10 w-full bg-primary-variant_2 hover:bg-[#186DF5] rounded-full font-bold text-base text-white cursor-pointer"
+            >
+              Action
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-[1500px]">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+&lt;div
+  id=&quot;modalOne&quot;
+  class=&quot;hidden absolute flex h-screen w-screen bg-[#21212166] top-0 left-0 place-content-center place-items-center&quot;&gt;
+    &lt;div class=&quot;max-h-[560px] max-w-[560px] bg-white rounded-lg shadow-xl&quot;&gt;
+    &lt;div class=&quot;flex p-4 w-full place-content-between&quot;&gt;
+      &lt;h4 class=&quot;text-lg font-bold&quot;&gt;Modal Title&lt;/h4&gt;
+      &lt;button id=&quot;modalClsBtn&quot;&gt;
+        &lt;img src=&quot;../assets/times.svg&quot; class=&quot;h-3 w-3&quot; /&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;flex-row gap-4 p-4 border-t border-b text-sm overflow-hidden&quot;&gt;
+      &lt;p class=&quot;text-pretty&quot;&gt;
+        Access to the rest of the UI is disabled until the model is
+        addressed. All model services are interrupted by design – their
+        purpose is to have the user focus on content on a surface that
+        appears in front of all other surfaces.
+      &lt;/p&gt;
+      &lt;p class=&quot;text-pretty mt-4&quot;&gt;
+        To express that the rest of the site is inaccessible and to focus
+        attention on the modal, surfaces behind the modal have an overlay.
+        An overlay is a temporary treatment that can be applied to
+        surfaces for the purpose of making content on the surface less
+        prominent.
+      &lt;/p&gt;
+      &lt;p class=&quot;text-pretty mt-4&quot;&gt;
+        When scaling layouts for larger screens, adjust the modal visual
+        presentation by setting minimum and maximum values for margins,
+        padding and container dimensions.
+      &lt;/p&gt;
+      &lt;p class=&quot;text-pretty mt-4&quot;&gt;
+        Modals should maintain a minimum of 48px distance from the leading
+        and trailing edges of the screen. On small screens, modals scale
+        vertically until reaching 48px from the screens, top and bottom
+        edge. On larger displays, modals can increase in size to a maximum
+        width of 560px. When Modha reaches a maximum width, expand or
+        contract vertically to support contact, up to a maximum height of
+        560px.
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;flex p-4 gap-4 place-content-between&quot;&gt;
+      &lt;button
+        class=&quot;py-2 px-5 h-10 w-full bg-transparent rounded-full font-bold text-base text-primary-variant_2 cursor-pointer border border-primary-variant_2 hover:bg-[#F1F5FE]&quot;
+      &gt;
+        Cancel
+      &lt;/button&gt;
+      &lt;button
+        class=&quot;py-2 px-5 h-10 w-full bg-primary-variant_2 hover:bg-[#186DF5] rounded-full font-bold text-base text-white cursor-pointer&quot;
+      &gt;
+        Action
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- JS --&gt;
+&lt;script&gt;
+  const modalBtn = document.getElementById(&quot;modalBtn&quot;);
+  const modalOne = document.getElementById(&quot;modalOne&quot;);
+  const modalClsBtn = document.getElementById(&quot;modalClsBtn&quot;);
+
+  modalBtn.onclick = function () {
+    modalOne.classList.remove(&quot;hidden&quot;);
+  };
+  modalClsBtn.onclick = function () {
+    modalOne.classList.add(&quot;hidden&quot;);
+  };
+&lt;/script&gt;
+          </code>
+        </pre>
+      </div>
+    </main>
+
+    <script>
+      const modalBtn = document.getElementById("modalBtn");
+      const modalOne = document.getElementById("modalOne");
+      const modalClsBtn = document.getElementById("modalClsBtn");
+
+      modalBtn.onclick = function () {
+        modalOne.classList.remove("hidden");
+      };
+      modalClsBtn.onclick = function () {
+        modalOne.classList.add("hidden");
+      };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>

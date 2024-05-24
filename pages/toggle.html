@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../src/output.css" rel="stylesheet" />
-    <title>Check</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css"
+    />
+    <title>Toggle</title>
   </head>
   <body class="bg-[#f2f2f2]">
     <header class="bg-white overflow-hidden shadow-lg p-5 flex w-full mb-3">
@@ -16,11 +20,85 @@
       </a>
     </header>
 
-    <section class="p-3">
-      <label class="inline-flex items-center cursor-pointer">
-        <input type="checkbox" value="" class="sr-only peer" />
-        <div class="toggle"></div>
+    <main class="max-w-screen-2xl mx-auto px-5">
+      <h2 class="font-bold text-2xl mb-2">Toggle</h2>
+      <label
+        for="toggleOne"
+        class="flex items-center cursor-pointer select-none w-fit h-fit"
+      >
+        <div class="relative">
+          <input type="checkbox" id="toggleOne" checked class="peer sr-only" />
+          <div
+            class="h-6 w-[60px] rounded-full box bg-[#18436A] peer-checked:bg-[#186DF5]"
+          ></div>
+          <div
+            class="absolute flex items-center justify-center w-4 h-4 transition bg-white rounded-full dot left-1 top-1 peer-checked:translate-x-full pt-1 peer-checked:ml-4"
+          ></div>
+        </div>
       </label>
-    </section>
+      <div class="max-w-[1500px]">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;label
+    for=&quot;toggleOne&quot;
+    class=&quot;flex items-center cursor-pointer select-none w-fit h-fit&quot;&gt;
+    &lt;div class=&quot;relative&quot;&gt;
+      &lt;input 
+        type=&quot;checkbox&quot; 
+        id=&quot;toggleOne&quot; 
+        checked 
+        class=&quot;peer sr-only&quot;/&gt;
+      &lt;div class=&quot;h-6 w-[60px] rounded-full box bg-[#18436A] peer-checked:bg-[#186DF5]&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;absolute flex items-center justify-center w-4 h-4 transition bg-white rounded-full dot left-top-1 peer-checked:translate-x-full pt-1 peer-checked:ml-4&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/label&gt;
+          </code>
+        </pre>
+      </div>
+      <h2 class="font-bold text-2xl mb-2">Toggle With Text</h2>
+      <label
+        for="toggleTwo"
+        class="flex items-center cursor-pointer select-none w-fit h-fit"
+      >
+        <div class="relative">
+          <input type="checkbox" id="toggleTwo" checked class="peer sr-only" />
+          <div
+            before="Yes"
+            after="No"
+            class="h-6 w-[60px] rounded-full box bg-[#18436A] text-xs text-white peer-checked:bg-[#186DF5] peer-checked:before:content-[attr(before)] before:absolute before:top-[3px] before:pl-2.5 after:content-[attr(after)] after:absolute after:top-[3px] after:right-0 after:pr-2.5 peer-checked:after:hidden after:text-black"
+          ></div>
+          <div
+            class="absolute flex items-center justify-center w-4 h-4 transition bg-white rounded-full dot left-1 top-1 peer-checked:translate-x-full pt-1 peer-checked:ml-4"
+          ></div>
+        </div>
+      </label>
+      <div class="max-w-[1500px]">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;label
+    for=&quot;toggleTwo&quot;
+    class=&quot;flex items-center cursor-pointer select-none w-fit h-fit&quot;&gt;
+    &lt;div class=&quot;relative&quot;&gt;
+      &lt;input 
+        type=&quot;checkbox&quot; 
+        id=&quot;toggleTwo&quot; 
+        checked 
+        class=&quot;peer sr-only&quot;/&gt;
+      &lt;div
+        before=&quot;Yes&quot;
+        after=&quot;No&quot;
+        class=&quot;h-6 w-[60px] rounded-full box bg-[#18436A] text-xs text-white peer-checked:bg-[#186DF5] peer-checked:before:content-[attr(before)] before:absolute before:top-[3px] before:pl-2.5 after:content-[attr(after)] after:absolute after:top-[3px] after:right-0 after:pr-2.5 peer-checked:after:hidden after:text-black&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;absolute flex items-center justify-center w-4 h-4 transition bg-white rounded-full dot left-top-1 peer-checked:translate-x-full pt-1 peer-checked:ml-4&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/label&gt;
+          </code>
+        </pre>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>
