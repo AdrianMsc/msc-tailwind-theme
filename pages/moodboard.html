@@ -110,7 +110,7 @@
           >Default Drop Down</label
         >
 
-        <select class="msc-input">
+        <select class="msc-dropdown max-w-sm">
           <option value="">List item</option>
           <option value="">List item</option>
           <option value="">List item</option>
@@ -120,51 +120,19 @@
 
       <div class="col-span-4">
         <h2 class="font-bold text-[1.5rem]">Inputs</h2>
-        <div class="mb-6">
-          <label
-            for="default-input"
-            class="block mb-2 text-sm font-medium text-gray-900"
-            >Default input</label
-          >
+        <!-- SUPER INPUT -->
+        <div class="relative w-64 mt-1">
           <input
             type="text"
-            id="default-input"
-            placeholder="Default-input"
-            class="msc-input max-w-sm mb-6"
+            id="field"
+            class="msc-input peer"
+            placeholder="Input"
           />
-
-          <div class="mb-6">
-            <label
-              for="success"
-              class="block mb-2 text-sm font-medium text-green-700"
-              >Your name</label
-            >
-            <input
-              type="text"
-              id="success"
-              class="msc-input-success max-w-sm"
-              placeholder="Success input"
-            />
-            <p class="mt-2 text-sm text-green-600">
-              <span class="font-medium">Well done!</span> Some success message.
-            </p>
-          </div>
-          <div>
-            <label
-              for="error"
-              class="block mb-2 text-sm font-medium text-red-700m"
-              >Your name</label
-            >
-            <input
-              type="text"
-              id="error"
-              class="msc-input-danger max-w-sm"
-              placeholder="Error input"
-            />
-            <p class="mt-2 text-sm text-red-600">
-              <span class="font-medium">Oh, snapp!</span> Some error message.
-            </p>
-          </div>
+          <label
+            for="field"
+            class="absolute left-3 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[12px]"
+            >Input label</label
+          >
         </div>
       </div>
 
