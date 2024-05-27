@@ -10,6 +10,10 @@
       href="https://www.mscdirect.com/favicon.ico"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css"
+    />
   </head>
   <body class="bg-[#f2f2f2]">
     <header class="bg-white overflow-hidden shadow-lg p-5 flex w-full mb-3">
@@ -21,8 +25,17 @@
       </a>
     </header>
 
-    <section class="p-3 grid grid-cols-12">
-      <div class="col-span-4">
+    <section class="p-3">
+      <h1 class="text-2xl font-bold">Tailwind Plug in Components</h1>
+
+      <p>
+        This section contains a simplified version of the components fully
+        customizable with tailwind.
+      </p>
+    </section>
+
+    <section class="p-3 grid grid-cols-12 gap-10">
+      <div class="col-span-6">
         <h2 class="font-bold text-[1.5rem]">Buttons</h2>
 
         <button class="btn-blue-solid">Blue Solid</button>
@@ -32,6 +45,145 @@
         <br />
         <br />
 
+        <pre class="h-fit">
+        <code class="language-html rounded">
+  &lt;!-- Primary --&gt;        
+  &lt;button class=&quot;btn-blue-solid&quot;&gt;Blue Solid&lt;/button&gt;
+  &lt;!-- Secondary --&gt;
+  &lt;button class=&quot;btn-blue-outline&quot;&gt;Blue Outline&lt;/button&gt;
+  &lt;!-- Tertiary --&gt;
+  &lt;button class=&quot;btn-blue-transparent&quot;&gt;Text Only&lt;/button&gt;
+        </code>
+    </pre>
+      </div>
+
+      <div class="col-span-6">
+        <h2 class="font-bold text-[1.5rem]">Inputs</h2>
+        <!-- SUPER INPUT -->
+        <div class="relative w-64">
+          <input
+            type="text"
+            id="field"
+            class="msc-input peer"
+            placeholder="Input"
+          />
+          <label
+            for="field"
+            class="absolute left-3 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[12px]"
+            >Input label</label
+          >
+        </div>
+
+        <br />
+
+        <pre class="h-fit">
+        <code class="language-html rounded">
+  &lt;!-- Input --&gt;   
+  &lt;input type=&quot;text&quot; id=&quot;field&quot; class=&quot;msc-input peer&quot; placeholder=&quot;Input&quot; /&gt;
+  &lt;!-- Label --&gt;   
+  &lt;label for=&quot;field&quot; class=&quot;msc-input-label&quot; &gt;Input label&lt;/label&gt;
+
+        </code>
+    </pre>
+      </div>
+
+      <div class="col-span-6">
+        <h2 class="font-bold text-[1.5rem]">Drop downs</h2>
+
+        <select class="msc-dropdown w-64">
+          <option value="1">List item 1</option>
+          <option value="2">List item 2</option>
+          <option value="3">List item 3</option>
+          <option value="4">List item 4</option>
+        </select>
+
+        <br />
+
+        <pre class="h-fit">
+        <code class="language-html rounded">
+&lt;select class=&quot;msc-dropdown&quot;&gt;
+  &lt;option value=&quot;1&quot;&gt;List item 1&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;List item 2&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;List item 3&lt;/option&gt;
+  &lt;option value=&quot;4&quot;&gt;List item 4&lt;/option&gt;
+&lt;/select&gt;
+
+        </code>
+    </pre>
+      </div>
+
+      <div class="col-span-6">
+        <h2 class="font-bold text-[1.5rem] mb-3">Toggle</h2>
+
+        <label
+          for="toggleOne"
+          class="flex items-center cursor-pointer select-none w-fit h-fit"
+        >
+          <div class="relative">
+            <input
+              type="checkbox"
+              id="toggleOne"
+              checked
+              class="peer sr-only"
+            />
+            <div
+              class="h-6 w-[60px] rounded-full box bg-[#18436A] peer-checked:bg-[#186DF5]"
+            ></div>
+            <div
+              class="absolute flex items-center justify-center w-4 h-4 transition bg-white rounded-full dot left-1 top-1 peer-checked:translate-x-full pt-1 peer-checked:ml-4"
+            ></div>
+          </div>
+        </label>
+
+        <br />
+
+        <pre class="h-fit">
+        <code class="language-html rounded">
+&lt;label for=&quot;toggleOne&quot; class=&quot;msc-toggle&quot;&gt;
+  &lt;div class=&quot;msc-toggle-body&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;toggleOne&quot; checked class=&quot;peer sr-only&quot; /&gt;
+    &lt;div class=&quot;msc-toggle-inner&quot; &gt;&lt;/div&gt; &lt;div class=&quot;msc-toggle-switch&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+
+        </code>
+    </pre>
+      </div>
+
+      <div class="col-span-6">
+        <h2 class="font-bold text-[1.5rem]">Checkbox</h2>
+
+        <div class="flex items-center gap-3">
+          <input
+            type="checkbox"
+            id="checkbox-id"
+            value="checkbox-value"
+            class="w-5 h-5 rounded border-[#A6A6A6] accent-black"
+          />
+          <label
+            for="checkbox-id"
+            class="checkbox__label relative inline-flex items-center gap-3 leading-150 cursor-pointer"
+          >
+            Checkbox label
+          </label>
+        </div>
+
+        <br />
+        <br />
+
+        <pre class="h-fit">
+          <code class="language-html rounded">
+
+&lt;input type=&quot;checkbox&quot; id=&quot;checkbox-id&quot; value=&quot;checkbox-value&quot; class=&quot;msc-checkbox&quot;/&gt;
+&lt;label for=&quot;checkbox-id&quot; class=&quot;msc-label&quot;&gt;
+  Checkbox label
+&lt;/label&gt;
+
+          </code>
+        </pre>
+      </div>
+
+      <div class="col-span-6">
         <!-- RADIO -->
         <h2 class="font-bold text-[1.5rem]">Radio</h2>
         <div class="flex gap-2 mb-3">
@@ -63,80 +215,26 @@
             </label>
           </div>
         </div>
-        <h2 class="font-bold text-2xl mb-2">Default Radio Button</h2>
-        <ul
-          class="items-center w-[150px] text-sm font-base bg-white border rounded flex"
-        >
-          <li class="w-full border-b border-gray-100 border-r rounded-l">
-            <div class="flex items-center ps-3">
-              <input
-                id="horizontal-list-radio-license"
-                type="radio"
-                value=""
-                name="list-radio"
-                class="w-4 h-4 bg-blue-500 border-blue-500"
-              />
-              <label
-                for="horizontal-list-radio-license"
-                class="w-full py-3 ms-2 text-sm font-medium text-black"
-                >Yes
-              </label>
-            </div>
-          </li>
-          <li class="w-full border-gray-200 rounded-r">
-            <div class="flex items-center ps-3">
-              <input
-                id="horizontal-list-radio-license"
-                type="radio"
-                value=""
-                name="list-radio"
-                class="w-4 h-4 bg-blue-500 border-blue-500"
-              />
-              <label
-                for="horizontal-list-radio-license"
-                class="w-full py-3 ms-2 text-sm font-medium text-black"
-                >No
-              </label>
-            </div>
-          </li>
-        </ul>
+
+        <br />
+
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;div class=&quot;msc-radio-container&quot;&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;list-radio&quot; class=&quot;msc-radio&quot;/&gt;
+    &lt;label for=&quot;radio-default&quot; class=&quot;msc-label&quot;&gt; 
+    Yes
+    &lt;/label&gt;
+  &lt;/div&gt;
+          </code>
+        </pre>
       </div>
-
-      <div class="col-span-4">
-        <h2 class="font-bold text-[1.5rem]">Drop downs</h2>
-        <label
-          for="default-input"
-          class="block mb-2 text-sm font-medium text-gray-900"
-          >Default Drop Down</label
-        >
-
-        <select class="msc-dropdown max-w-sm">
-          <option value="">List item</option>
-          <option value="">List item</option>
-          <option value="">List item</option>
-          <option value="">List item</option>
-        </select>
-      </div>
-
-      <div class="col-span-4">
-        <h2 class="font-bold text-[1.5rem]">Inputs</h2>
-        <!-- SUPER INPUT -->
-        <div class="relative w-64 mt-1">
-          <input
-            type="text"
-            id="field"
-            class="msc-input peer"
-            placeholder="Input"
-          />
-          <label
-            for="field"
-            class="absolute left-3 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[12px]"
-            >Input label</label
-          >
-        </div>
-      </div>
-
-      <div class="col-span-4"></div>
     </section>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>
