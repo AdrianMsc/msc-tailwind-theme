@@ -20,6 +20,51 @@
   </header>
   <body class="bg-[#f2f2f2]">
     <div class="max-w-screen-2xl mx-auto px-5">
+      <h2 class="font-bold text-2xl mb-2">Numeric Dropdown</h2>
+      <div
+        id="dropdown"
+        class="flex bg-white h-10 w-[88px] rounded cursor-pointer border border-gray-400 hover:border-gray-900"
+      >
+        <div class="flex items-center w-full place-content-between my-2.5 mx-2">
+          <input
+            type="text"
+            placeholder="25"
+            class="w-12 font-normal text-sm text-black text-center"
+          />
+          <img src="../assets/caret-down.svg" />
+        </div>
+        <div
+          id="options"
+          class="w-[88px] min-h-min bg-white rounded absolute mt-10 shadow"
+        >
+          <div
+            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100 font-normal text-sm text-black"
+          >
+            25
+          </div>
+          <div
+            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100 font-normal text-sm text-black"
+          >
+            50
+          </div>
+          <div
+            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100 font-normal text-sm text-black"
+          >
+            75
+          </div>
+          <div
+            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100 font-normal text-sm text-black"
+          >
+            100
+          </div>
+        </div>
+      </div>
+            <div class="max-w-[1500px] mt-[150px]">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+          </code>
+        </pre>
+      </div>
       <h2 class="font-bold text-2xl mb-2">Dropdown</h2>
       <div
         id="dropdown"
@@ -33,23 +78,23 @@
         </button>
         <div
           id="options"
-          class="w-[300px] min-h-min bg-white rounded absolute mt-11"
+          class="w-[300px] min-h-min bg-white rounded absolute mt-11 shadow"
         >
-          <button
-            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100"
+          <div
+            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100 font-normal text-sm text-black"
           >
-            <p class="font-normal text-sm text-black">Buyer 1</p>
-          </button>
-          <button
-            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100"
+            Buyer 1
+          </div>
+          <div
+            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100 font-normal text-sm text-black"
           >
-            <p class="font-normal text-sm text-black">Buyer 2</p>
-          </button>
-          <button
-            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100"
+            Buyer 2
+          </div>
+          <div
+            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100 font-normal text-sm text-black"
           >
-            <p class="font-normal text-sm text-black">Buyer 3</p>
-          </button>
+            Buyer 3
+          </div>
         </div>
       </div>
       <div class="max-w-[1500px] mt-[130px]">
@@ -87,6 +132,7 @@
           </code>
         </pre>
       </div>
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
