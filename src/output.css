@@ -1827,6 +1827,10 @@ video {
   outline-color: #6b7280;
 }
 
+.focus-visible\:outline-\[\#424242\]:focus-visible {
+  outline-color: #424242;
+}
+
 .active\:bg-\[\#0d3aa933\]:active {
   background-color: #0d3aa933;
 }
