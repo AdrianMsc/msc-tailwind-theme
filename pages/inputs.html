@@ -19,22 +19,241 @@
       </a>
     </header>
 
-    <div class="max-w-screen-2xl mx-auto px-5">
-      <h2 class="font-bold text-2xl mb-4">Default Input</h2>
-      <div class="relative w-64">
-        <input
-          id="field"
-          type="text"
-          placeholder="First Name"
-          class="peer w-[300px] border border-gray-300 px-4 py-3.5 rounded text-sm placeholder-transparent focus:outline-none focus:border-black"
-        />
-        <label
-          for="field"
-          class="absolute left-3 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[12px]"
-          >First Name</label
-        >
+    <section class="grid grid-cols-12 gap-x-5 max-w-screen-2xl mx-auto p-5">
+      <div class="col-span-12">
+        <h1 class="font-bold text-3xl">Input Fields</h1>
+        <p>Every rose has its thorn</p>
       </div>
-      <div class="max-w-[1500px] mt-2">
+
+      <div class="col-span-3 mb-3">
+        <h2 class="font-bold text-xl mb-4">Default</h2>
+
+        <div class="relative w-full">
+          <input
+            id="field"
+            type="text"
+            placeholder="First Name"
+            class="peer w-full border border-[#717171] hover:border-[#212121] px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-[#212121] focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+          />
+          <label
+            for="field"
+            class="absolute left-3 -top-3.5 text-[#717171] text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[sm]"
+          >
+            First Name
+            <span class="text-error-red">*</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="col-span-3 mb-3">
+        <h2 class="font-bold text-xl mb-4">Hover</h2>
+
+        <div class="relative w-full">
+          <input
+            id="field"
+            type="text"
+            placeholder="First Name"
+            class="peer w-full border border-[#212121] px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-black focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+          />
+          <label
+            for="field"
+            class="absolute left-3 -top-3.5 text-[#717171] text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[sm]"
+          >
+            First Name
+            <span class="text-error-red">*</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="col-span-3 mb-3">
+        <h2 class="font-bold text-xl mb-4">Active</h2>
+        <div class="relative w-full">
+          <input
+            id="field"
+            type="text"
+            placeholder="First Name"
+            readonly
+            value="I"
+            class="peer w-full border border-[#212121] px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-black outline-dashed outline-1 outline-offset-4 h-10"
+          />
+          <label
+            for="field"
+            class="absolute left-3 -top-3.5 text-[#717171] text-sm transition-all text-base text-gray-400 -top-[0.4rem] text-black bg-white leading-none text-[sm]"
+          >
+            First Name
+            <span class="text-error-red">*</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="col-span-3 mb-3">
+        <h2 class="font-bold text-xl mb-4">Complete</h2>
+        <div class="relative w-full">
+          <input
+            id="field"
+            type="text"
+            value="John Smith"
+            placeholder="First Name"
+            class="peer w-full border border-[#717171] px-4 py-3.5 rounded text-sm placeholder-transparent outline-dashed outline-1 outline-offset-4 h-10"
+          />
+          <label
+            for="field"
+            class="absolute left-3 -top-3.5 text-[#717171] text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.875rem] peer-focus:text-black bg-white peer-focus:text-[sm]"
+          >
+            First Name
+            <span class="text-error-red">*</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="col-span-3 mb-3">
+        <h2 class="font-bold text-xl mb-4">Disabled</h2>
+        <div class="relative w-full">
+          <input
+            id="field"
+            type="text"
+            disabled
+            placeholder="First Name"
+            class="w-full border border-gray-300 px-4 py-3.5 rounded text-sm focus:outline-none focus:border-black cursor-not-allowed h-10"
+          />
+        </div>
+      </div>
+
+      <div class="col-span-3 mb-3">
+        <h2 class="font-bold text-xl mb-4">Error</h2>
+
+        <div class="relative w-full flex flex-col">
+          <input
+            id="field"
+            type="text"
+            placeholder="First Name"
+            class="peer w-full border border-error-red px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-error-red focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+          />
+          <label
+            for="field"
+            class="absolute left-3 -top-3.5 text-error-red text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-error-red peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[sm]"
+          >
+            First Name
+            <span class="text-error-red">*</span>
+          </label>
+          <small class="text-error-red font-semibold"
+            >This is a required field</small
+          >
+        </div>
+      </div>
+
+      <div class="col-span-3 mb-3">
+        <h2 class="font-bold text-xl mb-4">Error Complete</h2>
+
+        <div class="relative w-full flex flex-col">
+          <input
+            id="field"
+            type="text"
+            placeholder="First Name"
+            value="John Smith"
+            class="peer w-full border border-error-red px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-[#212121] focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+          />
+          <label
+            for="field"
+            class="absolute left-3 -top-3.5 text-error-red text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-error-red peer-placeholder-shown:top-2 peer-focus:-top-[0.875rem] peer-focus:text-[#212121] bg-white peer-focus:text-sm"
+          >
+            First Name
+            <span class="text-error-red">*</span>
+          </label>
+          <small class="text-error-red font-semibold"
+            >This is a required field</small
+          >
+        </div>
+      </div>
+
+      <div class="col-span-12 my-5">
+        <h1 class="font-bold text-3xl">Input Unit</h1>
+        <p>Every rose has its thorn</p>
+      </div>
+
+      <div class="col-span-2 mb-3">
+        <h2 class="font-bold text-xl mb-4">Default</h2>
+
+        <div class="relative max-w-[68px] flex flex-col">
+          <label for="field" class="text-[#717171] text-sm mb-1"
+            >Length (ft)
+          </label>
+          <input
+            id="field"
+            type="number"
+            placeholder="1"
+            class="w-full text-center border border-[#717171] hover:border-[#212121] pl-4 py-3.5 rounded text-sm focus:border-[#212121] focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+          />
+        </div>
+      </div>
+
+      <div class="col-span-2 mb-3">
+        <h2 class="font-bold text-xl mb-4">Hover</h2>
+
+        <div class="relative max-w-[68px] flex flex-col">
+          <label for="field" class="text-[#717171] text-sm mb-1"
+            >Length (ft)
+          </label>
+          <input
+            id="field"
+            type="number"
+            placeholder="1"
+            class="w-full text-center border border-[#717171] hover:border-[#212121] pl-4 py-3.5 rounded text-sm focus:border-[#212121] focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+          />
+        </div>
+      </div>
+
+      <div class="col-span-2 mb-3">
+        <h2 class="font-bold text-xl mb-4">Active</h2>
+
+        <div class="relative max-w-[68px] flex flex-col">
+          <label for="field" class="text-[#717171] text-sm mb-1"
+            >Length (ft)
+          </label>
+          <input
+            id="field"
+            type="number"
+            placeholder="1"
+            class="w-full text-center border border-[#717171] hover:border-[#212121] pl-4 py-3.5 rounded text-sm focus:border-[#212121] focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+          />
+        </div>
+      </div>
+
+      <div class="col-span-2 mb-3">
+        <h2 class="font-bold text-xl mb-4">Disabled</h2>
+
+        <div class="relative max-w-[68px] flex flex-col">
+          <label for="field" class="text-[#717171] text-sm mb-1"
+            >Length (ft)
+          </label>
+          <input
+            id="field"
+            type="number"
+            placeholder="1"
+            class="w-full text-center border border-[#717171] hover:border-[#212121] pl-4 py-3.5 rounded text-sm focus:border-[#212121] focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+          />
+        </div>
+      </div>
+
+      <div class="col-span-2 mb-3">
+        <h2 class="font-bold text-xl mb-4">Error</h2>
+
+        <div class="relative max-w-[68px] flex flex-col">
+          <label for="field" class="text-[#717171] text-sm mb-1"
+            >Length (ft)
+          </label>
+          <input
+            id="field"
+            type="number"
+            placeholder="1"
+            class="w-full text-center border border-[#717171] hover:border-[#212121] pl-4 py-3.5 rounded text-sm focus:border-[#212121] focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+          />
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-screen-2xl mx-auto px-5">
+      <!-- <div class="max-w-[1500px] mt-2">
         <pre class="h-fit">
           <code class="language-html rounded">
   &lt;div class=&quot;relative w-64&quot;&gt;
@@ -42,28 +261,37 @@
       id=&quot;field&quot;
       type=&quot;text&quot;
       placeholder=&quot;First Name&quot;
-      class=&quot;peer w-[300px] border border-gray-300 px-4 py-3.5 rounded text-sm placeholder-transparent focus:outline-none focus:border-black&quot;/&gt;
+      class=&quot;peer w-full border border-gray-300 px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-black focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10&quot;/&gt;
     &lt;label
       for=&quot;field&quot;
-      class=&quot;absolute left-3 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[12px]&quot;&gt;
+      class=&quot;absolute left-3 -top-3.5 text-[#717171] text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[sm]&quot;&gt;
       First Name
     &lt;/label&gt;
   &lt;/div&gt;
           </code>
         </pre>
-      </div>
+      </div> -->
 
-      <h2 class="font-bold text-2xl mb-4">Disabled Input</h2>
-      <div class="relative w-64">
-        <input
-          id="field"
-          type="text"
-          disabled
-          placeholder="First Name"
-          class="w-[300px] border border-gray-300 px-4 py-3.5 rounded text-sm focus:outline-none focus:border-black cursor-not-allowed"
-        />
-      </div>
-      <div class="max-w-[1500px] mt-2">
+      <!-- <div class="max-w-[1500px] mt-2">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;div class=&quot;relative w-64&quot;&gt;
+    &lt;input
+      id=&quot;field&quot;
+      type=&quot;text&quot;
+      placeholder=&quot;First Name&quot;
+      class=&quot;peer w-full border border-gray-300 px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-black focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10&quot;/&gt;
+    &lt;label
+      for=&quot;field&quot;
+      class=&quot;absolute left-3 -top-3.5 text-[#717171] text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[sm]&quot;&gt;
+      First Name
+    &lt;/label&gt;
+  &lt;/div&gt;
+          </code>
+        </pre>
+      </div> -->
+
+      <!-- <div class="max-w-[1500px] mt-2">
         <pre class="h-fit">
           <code class="language-html rounded">
   &lt;div class=&quot;relative w-64&quot;&gt;
@@ -72,12 +300,12 @@
       type=&quot;text&quot;
       disabled
       placeholder=&quot;First Name&quot;
-      class=&quot;w-[300px] border border-gray-300 px-4 py-3.5 rounded text-sm focus:outline-none focus:border-black cursor-not-allowed&quot;
+      class=&quot;w-full border border-gray-300 px-4 py-3.5 rounded text-sm focus:outline-none focus:border-black cursor-not-allowed&quot;
     /&gt;
   &lt;/div&gt;
           </code>
         </pre>
-      </div>
+      </div> -->
     </div>
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
     <script>
