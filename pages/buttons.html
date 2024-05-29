@@ -20,20 +20,20 @@
       </a>
     </header>
     <div class="max-w-screen-2xl mx-auto px-5">
-      <h2 class="font-bold text-2xl">Default Buttons</h2>
-      <div class="flex pt-5 gap-2 items-center">
+      <h2 class="font-bold text-2xl mb-2">Default Buttons</h2>
+      <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
         <button
-          class="py-2 px-5 bg-primary-blue hover:bg-[#186DF5] rounded-full font-bold text-base text-white cursor-pointer"
+          class="py-2 px-5 bg-primary-blue hover:bg-[#186DF5] rounded-full font-bold text-base text-white cursor-pointer active:bg-primary-blue_dark focus-visible:outline-dashed focus-visible:outline-[#424242] outline-offset-4 focus-visible:outline-1"
         >
           Primary
         </button>
         <button
-          class="py-2 px-5 bg-transparent rounded-full font-bold text-base text-primary-blue cursor-pointer border border-primary-blue hover:bg-primary-blue_xlight"
+          class="py-2 px-5 bg-transparent rounded-full font-bold text-base text-primary-blue cursor-pointer border border-primary-blue hover:bg-primary-blue_xlight active:bg-[#0d3aa933] focus-visible:outline-dashed focus-visible:outline-[#424242] focus-visible:outline-1 outline-offset-4"
         >
           Secondary
         </button>
         <button
-          class="py-2 px-5 bg-transparent rounded-full font-bold text-base text-primary-blue cursor-pointer hover:bg-primary-blue_xlight"
+          class="py-2 px-5 bg-transparent rounded-full font-bold text-base text-primary-blue cursor-pointer hover:bg-primary-blue_xlight active:bg-[#0d3aa933] focus-visible:outline-dashed focus-visible:outline-[#424242] focus-visible:outline-1 outline-offset-4"
         >
           Tertiary
         </button>
@@ -42,31 +42,34 @@
         <pre class="h-fit">
         <code class="language-html rounded">
   &lt;!-- Primary --&gt;        
-  &lt;button class=&quot;py-2 px-5 bg-primary-blue rounded-full font-bold text-base text-white cursor-pointer hover:bg-[#186DF5]&quot;&gt; Primary &lt;/button&gt;
+  &lt;button class=&quot;py-2 px-5 bg-primary-blue hover:bg-[#186DF5] rounded-full font-bold text-base text-white cursor-pointer active:bg-primary-blue_dark focus-visible:outline-dashed focus-visible:outline-[#424242] focus-visible:outline-1 outline-offset-4&quot;&gt; Primary &lt;/button&gt;
   &lt;!-- Secondary --&gt;
-  &lt;button class=&quot;py-2 px-5 bg-transparent rounded-full font-bold text-base text-primary-blue cursor-pointer border border-primary-blue hover:bg-[#F1F5FE]&quot;&gt; Secondary &lt;/button&gt;
+  &lt;button class=&quot;py-2 px-5 bg-transparent rounded-full font-bold text-base text-primary-blue cursor-pointer border border-primary-blue hover:bg-primary-blue_xlight active:bg-[#0d3aa933] focus-visible:outline-dashed focus-visible:outline-[#424242] focus-visible:outline-1 outline-offset-4&quot;&gt; Secondary &lt;/button&gt;
   &lt;!-- Tertiary --&gt;
-  &lt;button class=&quot;py-2 px-5 bg-transparent rounded-full font-bold text-base text-primary-blue cursor-pointer hover:bg-[#F1F5FE]&quot;&gt; Tertiary &lt;/button&gt;
+  &lt;button class=&quot;py-2 px-5 bg-transparent rounded-full font-bold text-base text-primary-blue cursor-pointer hover:bg-primary-blue_xlight active:bg-[#0d3aa933] focus-visible:outline-dashed focus-visible:outline-[#424242] focus-visible:outline-1 outline-offset-4&quot;&gt; Tertiary &lt;/button&gt;
         </code>
     </pre>
       </div>
     </div>
 
     <div class="max-w-screen-2xl mx-auto px-5">
-      <h2 class="font-bold text-2xl">Disabled</h2>
-      <div class="flex pt-5 gap-2 items-center">
+      <h2 class="font-bold text-2xl mb-2">Disabled</h2>
+      <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
         <button
-          class="py-2 px-5 bg-gray-300 rounded-full font-bold text-base text-white cursor-not-allowed"
+          disabled
+          class="py-2 px-5 bg-monochromes-grey_light rounded-full font-bold text-base text-white cursor-not-allowed"
         >
           Primary
         </button>
         <button
-          class="py-2 px-5 bg-transparent rounded-full font-bold text-base text-gray-300 cursor-not-allowed border"
+          disabled
+          class="py-2 px-5 bg-transparent rounded-full font-bold text-base text-monochromes-grey_light cursor-not-allowed border border-monochromes-grey_light"
         >
           Secondary
         </button>
         <button
-          class="py-2 px-5 bg-transparent rounded-full font-bold text-base text-gray-300 cursor-not-allowed"
+          disabled
+          class="py-2 px-5 bg-transparent rounded-full font-bold text-base text-monochromes-grey_light cursor-not-allowed"
         >
           Tertiary
         </button>
@@ -75,33 +78,39 @@
         <pre class="h-fit">
         <code class="language-html rounded">
   &lt;!-- Primary --&gt;        
-  &lt;button class=&quot;py-2 px-5 bg-gray-300 rounded-full font-bold text-base text-white cursor-not-allowed&quot;&gt; Primary &lt;/button&gt;
+  &lt;button
+    disabled
+    class=&quot;py-2 px-5 bg-monochromes-grey_xlight rounded-full font-bold text-base text-white cursor-not-allowed border&quot;&gt; Primary &lt;/button&gt;
   &lt;!-- Secondary --&gt;
-  &lt;button class=&quot;py-2 px-5 bg-transparent rounded-full font-bold text-base text-gray-300 cursor-not-allowed border&quot;&gt; Secondary &lt;/button&gt;
+  &lt;button
+    disabled
+    class=&quot;py-2 px-5 bg-transparent rounded-full font-bold text-base text-gray-300 border cursor-not-allowed border&quot;&gt; Secondary &lt;/button&gt;
   &lt;!-- Tertiary --&gt;
-  &lt;button class=&quot;py-2 px-5 bg-transparent rounded-full font-bold text-base text-gray-300 cursor-not-allowed&quot;&gt; Tertiary &lt;/button&gt;
+  &lt;button
+  disabled
+  class=&quot;py-2 px-5 bg-transparent rounded-full font-bold text-base text-gray-300 cursor-not-allowed border&quot;&gt; Tertiary &lt;/button&gt;
         </code>
     </pre>
       </div>
     </div>
 
     <div class="max-w-screen-2xl mx-auto px-5">
-      <h2 class="font-bold text-2xl">Button With Icon</h2>
-      <div class="flex pt-5 gap-2 items-center">
+      <h2 class="font-bold text-2xl mb-2">Button With Icon</h2>
+      <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
         <button
-          class="py-2 px-5 bg-primary-blue rounded-full font-bold text-base text-white cursor-pointer hover:bg-[#186DF5] flex items-center"
+          class="py-2 px-5 bg-primary-blue rounded-full font-bold text-base text-white cursor-pointer hover:bg-[#186DF5] flex items-center active:bg-primary-blue_dark focus-visible:outline-dashed focus-visible:outline-[#424242] focus-visible:outline-1 outline-offset-4"
         >
           <img src="../assets/download.svg" class="w-4 mr-2" />
           Primary
         </button>
         <button
-          class="py-2 px-5 bg-transparent rounded-full font-bold text-base bg-primary-blue cursor-pointer border border-primary-blue hover:bg-primary-blue_xlight flex items-center text-primary-blue"
+          class="py-2 px-5 bg-transparent rounded-full font-bold text-base bg-primary-blue cursor-pointer border border-primary-blue hover:bg-primary-blue_xlight flex items-center text-primary-blue active:bg-[#0d3aa933] focus-visible:outline-dashed focus-visible:outline-[#424242] focus-visible:outline-1 outline-offset-4"
         >
           <img src="../assets/download-blue.svg" class="w-4 mr-2" />
           Secondary
         </button>
         <button
-          class="py-2 px-5 bg-transparent rounded-full font-bold text-base bg-primary-blue cursor-pointer hover:bg-primary-blue_xlight text-primary-blue flex items-center"
+          class="py-2 px-5 bg-transparent rounded-full font-bold text-base bg-primary-blue cursor-pointer hover:bg-primary-blue_xlight text-primary-blue flex items-center active:bg-[#0d3aa933] focus-visible:outline-dashed focus-visible:outline-[#424242] focus-visible:outline-1 outline-offset-4"
         >
           <img src="../assets/download-blue.svg" class="w-4 mr-2" />
           Tertiary
@@ -111,17 +120,17 @@
         <pre class="h-fit">
         <code class="language-html rounded">
   &lt;!-- Primary --&gt;        
-  &lt;button class=&quot;py-2 px-5 bg-primary-blue rounded-full font-bold text-base text-white cursor-pointer hover:bg-[#186DF5]&quot;&gt;
+  &lt;button class=&quot;py-2 px-5 bg-primary-blue rounded-full font-bold text-base text-white cursor-pointer hover:bg-[#186DF5] flex items-center active:bg-primary-blue_dark focus-visible:outline-dashed focus-visible:outline-[#424242] focus-visible:outline-1 outline-offset-4&quot;&gt;
     &lt;img src=&quot;../assets/download.svg&quot; class=&quot;w-4 mr-2&quot; /&gt;
       Primary
   &lt;/button&gt;
   &lt;!-- Secondary --&gt;
-  &lt;button class=&quot;py-2 px-5 bg-transparent rounded-full font-bold text-base bg-primary-blue cursor-pointer border border-primary-blue hover:bg-[#F1F5FE] flex items-center text-primary-blue&quot;&gt;
+  &lt;button class=&quot;py-2 px-5 bg-transparent rounded-full font-bold text-base bg-primary-blue cursor-pointer border border-primary-blue hover:bg-[#F1F5FE] flex items-center text-primary-blue active:bg-[#0d3aa933] focus-visible:outline-dashed focus-visible:outline-[#424242] focus-visible:outline-1 outline-offset-4&quot;&gt;
     &lt;img src=&quot;../assets/download.svg&quot; class=&quot;w-4 mr-2&quot; /&gt;
       Secondary
   &lt;/button&gt;
   &lt;!-- Tertiary --&gt;
-  &lt;button class=&quot;py-2 px-5 bg-transparent rounded-full font-bold text-base bg-primary-blue cursor-pointer hover:bg-[#F1F5FE] text-primary-blue flex items-center&quot;&gt;
+  &lt;button class=&quot;py-2 px-5 bg-transparent rounded-full font-bold text-base bg-primary-blue cursor-pointer hover:bg-[#F1F5FE] text-primary-blue flex items-center active:bg-[#0d3aa933] focus-visible:outline-dashed focus-visible:outline-[#424242] focus-visible:outline-1 outline-offset-4&quot;&gt;
     &lt;img src=&quot;../assets/download.svg&quot; class=&quot;w-4 mr-2&quot; /&gt;
       Tertiary
   &lt;/button&gt;
