@@ -1,17 +1,63 @@
 module.exports = function ({ addComponents }) {
   const dropdown = {
-    ".msc-dropdown": {
-      "@apply border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5":
-        {},
-      appearance: "none",
-      "-webkit-appearance": "none",
-      "-moz-appearance": "none",
-      background:
-        'url(\'data:image/svg+xml;utf8,<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M18.425 10.271C19.499 8.967 18.57 7 16.88 7H7.12c-1.69 0-2.618 1.967-1.544 3.271l4.881 5.927a2 2 0 0 0 3.088 0l4.88-5.927Z" clip-rule="evenodd"/></svg>\') no-repeat',
-      "background-position": "right .7em top 50%, 0 0",
-      "background-size": ".95em auto, 100%",
-      "background-color": "white",
+    ".numeric-dropdown-container": {
+      "@apply flex bg-white h-9 w-[88px] rounded cursor-pointer border border-[#21212161]":
+      {},
+      "&:hover":{
+        "@apply border-[#212121a3]":
+        {}
+      },
+      "&:active":{
+          "@apply border-0":{}
+        }
     },
+    ".numeric-dropdown":{
+      "@apply flex items-center w-full place-content-between my-2.5 mx-2":{}
+    },
+    ".numeric-dropdown-input":{
+      "@apply w-12 font-normal text-sm text-black text-center":{}
+    },
+    ".numeric-dropdown-options-container":{
+      "@apply w-[88px] min-h-min bg-white rounded absolute mt-8 shadow":{
+        "&:active":{
+          "@apply border-0":{}
+        }
+      }
+    },
+    ".numeric-dropdown-options":{
+      "@apply flex max-h-10 w-full py-[13px] px-6 gap-1.5 items-center font-normal text-sm text-black":{},
+        "&:hover":{
+          "@apply bg-[#f2f2f280]":{}
+        },
+    },
+    ".dropdown-label":{
+      "@apply flex w-full items-center font-bold gap-6":{}
+    },
+    ".dropdown-container":{
+      "@apply flex w-full bg-white h-10 rounded cursor-pointer border border-[#21212161] relative":{},
+      "&:hover":{
+        "@apply border-[#212121a3]":
+        {}
+      },
+    },
+    ".dropdown-button":{
+      "@apply flex items-center w-full place-content-between m-2":{}
+    },
+    ".dropdown-placeholder":{
+      "@apply font-normal text-sm text-gray-400":{}
+    },
+    ".dropdown-options-container":{
+      "@apply w-full min-h-min bg-white rounded absolute mt-9 shadow":{}
+    },
+    ".dropdown-option":{
+      "@apply flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center font-normal text-sm text-black":{},
+      "&:hover":{
+          "@apply bg-[#f2f2f280]":{}
+        },
+    },
+    ".dropdown-disabled":{
+      "@apply cursor-not-allowed text-[#21212129] border-[#21212129]":{}
+    }
   };
 
   addComponents(dropdown);
