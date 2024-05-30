@@ -987,6 +987,10 @@ video {
   top: 0.25rem;
 }
 
+.-top-2 {
+  top: -0.5rem;
+}
+
 .z-40 {
   z-index: 40;
 }
@@ -1732,6 +1736,11 @@ video {
   color: #00000066;
 }
 
+.text-\[\#A6A6A6\] {
+  --tw-text-opacity: 1;
+  color: rgb(166 166 166 / var(--tw-text-opacity));
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -2110,6 +2119,22 @@ video {
   top: 0.4rem;
 }
 
+.peer:-moz-placeholder-shown ~ .peer-placeholder-shown\:top-1 {
+  top: 0.25rem;
+}
+
+.peer:placeholder-shown ~ .peer-placeholder-shown\:top-1 {
+  top: 0.25rem;
+}
+
+.peer:-moz-placeholder-shown ~ .peer-placeholder-shown\:top-1\.5 {
+  top: 0.375rem;
+}
+
+.peer:placeholder-shown ~ .peer-placeholder-shown\:top-1\.5 {
+  top: 0.375rem;
+}
+
 .peer:-moz-placeholder-shown ~ .peer-placeholder-shown\:text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -2118,6 +2143,24 @@ video {
 .peer:placeholder-shown ~ .peer-placeholder-shown\:text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.peer:-moz-placeholder-shown ~ .peer-placeholder-shown\:text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.peer:placeholder-shown ~ .peer-placeholder-shown\:text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.peer:-moz-placeholder-shown ~ .peer-placeholder-shown\:text-\[12px\] {
+  font-size: 12px;
+}
+
+.peer:placeholder-shown ~ .peer-placeholder-shown\:text-\[12px\] {
+  font-size: 12px;
 }
 
 .peer:-moz-placeholder-shown ~ .peer-placeholder-shown\:text-error-red {
@@ -2138,6 +2181,16 @@ video {
 .peer:placeholder-shown ~ .peer-placeholder-shown\:text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.peer:-moz-placeholder-shown ~ .peer-placeholder-shown\:text-\[\#A6A6A6\] {
+  --tw-text-opacity: 1;
+  color: rgb(166 166 166 / var(--tw-text-opacity));
+}
+
+.peer:placeholder-shown ~ .peer-placeholder-shown\:text-\[\#A6A6A6\] {
+  --tw-text-opacity: 1;
+  color: rgb(166 166 166 / var(--tw-text-opacity));
 }
 
 .peer:focus ~ .peer-focus\:-top-\[0\.4rem\] {
@@ -2173,6 +2226,11 @@ video {
 .peer:focus ~ .peer-focus\:text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.peer:focus ~ .peer-focus\:text-\[red\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
