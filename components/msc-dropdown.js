@@ -62,7 +62,10 @@ module.exports = function ({ addComponents, theme }) {
       },
     },
     ".dropdown-disabled":{
-      "@apply cursor-not-allowed text-[#21212129] border-[#21212129]":{}
+      "@apply cursor-not-allowed text-[#21212129] border-[#21212129]":{},
+      "&:hover":{
+        borderColor: '#21212129'
+      }
     },
     ".dropdown-error":{
       borderColor: theme("colors.error.red"),

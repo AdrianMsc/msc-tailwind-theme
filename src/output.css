@@ -863,6 +863,10 @@ video {
   color: #21212129;
 }
 
+.dropdown-disabled:hover {
+  border-color: #21212129;
+}
+
 .dropdown-error {
   border-color: #CC2500;
   color: #CC2500;
