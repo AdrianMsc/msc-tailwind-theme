@@ -1,4 +1,4 @@
-module.exports = function ({ addComponents }) {
+module.exports = function ({ addComponents, theme }) {
   const dropdown = {
     ".numeric-dropdown-container": {
       "@apply flex bg-white h-9 w-[88px] rounded cursor-pointer border border-[#21212161]":
@@ -33,6 +33,9 @@ module.exports = function ({ addComponents }) {
     ".dropdown-label":{
       "@apply flex w-full items-center font-bold gap-6":{}
     },
+    ".dropdown-label-top":{
+      "@apply absolute -top-2.5 left-1 px-1 bg-white text-xs":{}
+    },
     ".dropdown-container":{
       "@apply flex w-full bg-white h-10 rounded cursor-pointer border border-[#21212161] relative":{},
       "&:hover":{
@@ -52,12 +55,29 @@ module.exports = function ({ addComponents }) {
     ".dropdown-option":{
       "@apply flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center font-normal text-sm text-black":{},
       "&:hover":{
-          "@apply bg-[#f2f2f280]":{}
-        },
+        "@apply bg-[#f2f2f280]":{}
+      },
+      "&:active":{
+        "":{},
+      },
     },
     ".dropdown-disabled":{
       "@apply cursor-not-allowed text-[#21212129] border-[#21212129]":{}
-    }
+    },
+    ".dropdown-error":{
+      borderColor: theme("colors.error.red"),
+      color: theme("colors.error.red"),
+      "&:hover":{
+        borderColor: theme("colors.error.red"),
+      }
+    },
+    ".dropdown-error-message":{
+      color: theme("colors.error.red"),
+      "@apply text-xs font-medium mt-1":{},
+    },
+    ".dropdown-error-placeholder":{
+      color: theme("colors.error.red"),
+    },
   };
 
   addComponents(dropdown);

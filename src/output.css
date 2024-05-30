@@ -774,6 +774,18 @@ video {
   font-weight: 700;
 }
 
+.dropdown-label-top {
+  position: absolute;
+  top: -0.625rem;
+  left: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .dropdown-container {
   position: relative;
   display: flex;
@@ -842,10 +854,30 @@ video {
   background-color: #f2f2f280;
 }
 
+ {
+}
+
 .dropdown-disabled {
   cursor: not-allowed;
   border-color: #21212129;
   color: #21212129;
+}
+
+.dropdown-error {
+  border-color: #CC2500;
+  color: #CC2500;
+}
+
+.dropdown-error:hover {
+  border-color: #CC2500;
+}
+
+.dropdown-error-message {
+  color: #CC2500;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
 }
 
 .msc-input {
@@ -880,6 +912,11 @@ video {
 
 .msc-input {
   background: @apply bg-white;
+}
+
+.icon-btn {
+  margin-right: 0.5rem;
+  width: 1rem;
 }
 
 .sr-only {
@@ -1004,12 +1041,16 @@ video {
   margin-top: 1.25rem;
 }
 
-.mt-\[130px\] {
-  margin-top: 130px;
+.mt-\[100px\] {
+  margin-top: 100px;
 }
 
 .mt-\[150px\] {
   margin-top: 150px;
+}
+
+.mt-\[30px\] {
+  margin-top: 30px;
 }
 
 .flex {
@@ -1721,6 +1762,10 @@ video {
 .text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.text-transparent {
+  color: transparent;
 }
 
 .text-white {

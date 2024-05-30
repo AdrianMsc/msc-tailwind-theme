@@ -16,5 +16,6 @@ module.exports = {
     require("./components/msc-modals"),
     require("./components/msc-radio"),
     require("./components/msc-toggle"),
+    require("./components/msc-icons"),
   ],
 };
