@@ -20,119 +20,257 @@
   </header>
   <body class="bg-[#f2f2f2]">
     <div class="max-w-screen-2xl mx-auto px-5">
-      <h2 class="font-bold text-2xl mb-2">Numeric Dropdown</h2>
-      <div
-        id="dropdown"
-        class="flex bg-white h-10 w-[88px] rounded cursor-pointer border border-gray-400 hover:border-gray-900"
-      >
-        <div class="flex items-center w-full place-content-between my-2.5 mx-2">
-          <input
-            type="text"
-            placeholder="25"
-            class="w-12 font-normal text-sm text-black text-center"
-          />
-          <img src="../assets/caret-down.svg" />
-        </div>
-        <div
-          id="options"
-          class="w-[88px] min-h-min bg-white rounded absolute mt-10 shadow"
-        >
-          <div
-            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100 font-normal text-sm text-black"
-          >
-            25
-          </div>
-          <div
-            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100 font-normal text-sm text-black"
-          >
-            50
-          </div>
-          <div
-            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100 font-normal text-sm text-black"
-          >
-            75
-          </div>
-          <div
-            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100 font-normal text-sm text-black"
-          >
-            100
-          </div>
-        </div>
-      </div>
-            <div class="max-w-[1500px] mt-[150px]">
-        <pre class="h-fit">
-          <code class="language-html rounded">
-          </code>
-        </pre>
-      </div>
-      <h2 class="font-bold text-2xl mb-2">Dropdown</h2>
-      <div
-        id="dropdown"
-        class="flex bg-white h-10 w-[300px] rounded cursor-pointer border border-gray-400"
-      >
-        <button class="flex items-center w-full place-content-between m-2">
-          <p class="font-normal text-sm text-gray-400 mr-2">
+      <h2 class="font-bold text-2xl mb-2">Default Dropdown</h2>
+      <div id="dropdown" class="dropdown-container">
+        <button class="dropdown-button">
+          <p class="dropdown-placeholder">
             Select a Buyer <span class="text-red-600">*</span>
           </p>
           <img src="../assets/caret-down.svg" />
         </button>
-        <div
-          id="options"
-          class="w-[300px] min-h-min bg-white rounded absolute mt-11 shadow"
-        >
-          <div
-            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100 font-normal text-sm text-black"
-          >
-            Buyer 1
-          </div>
-          <div
-            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100 font-normal text-sm text-black"
-          >
-            Buyer 2
-          </div>
-          <div
-            class="flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100 font-normal text-sm text-black"
-          >
-            Buyer 3
-          </div>
+        <div id="options" class="dropdown-options-container hidden">
+          <div class="dropdown-option">Buyer 1</div>
+          <div class="dropdown-option">Buyer 2</div>
+          <div class="dropdown-option">Buyer 3</div>
         </div>
       </div>
-      <div class="max-w-[1500px] mt-[130px]">
+
+      <div class="max-w-[1500px] mt-[100px]">
         <pre class="h-fit">
           <code class="language-html rounded">
-  &lt;div id=&quot;dropdown&quot; class=&quot;flex bg-white h-10 w-[300px] rounded cursor-pointer&quot;&gt;
-    &lt;button class=&quot;flex items-center w-full place-content-between m-2&quot;&gt;
-      &lt;p class=&quot;font-normal text-sm text-gray-400 mr-2&quot;&gt;
+  &lt;div id=&quot;dropdown&quot; class=&quot;dropdown-container&quot;&gt;
+    &lt;button class=&quot;dropdown-button&quot;&gt;
+      &lt;p class=&quot;dropdown-placeholder&quot;&gt;
         Select a Buyer &lt;span class=&quot;text-red-600&quot;&gt;*&lt;/span&gt;
       &lt;/p&gt;
       &lt;img src=&quot;../assets/caret-down.svg&quot; /&gt;
     &lt;/button&gt;
+    &lt;div id=&quot;options&quot; class=&quot;dropdown-options-container hidden&quot;&gt;
+      &lt;div class=&quot;dropdown-option&quot;&gt;Buyer 1&lt;/div&gt;
+      &lt;div class=&quot;dropdown-option&quot;&gt;Buyer 2&lt;/div&gt;
+      &lt;div class=&quot;dropdown-option&quot;&gt;Buyer 3&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+    &lt;!-- JS --&gt;
+  &lt;script&gt;
+  let numDropdown = document.getElementById("numDropdown");
+  let numOptions = document.getElementById("numOptions");
+  
+  numDropdown.addEventListener("click", function () {
+    numDropdown.classList.toggle("border-0");
+    numOptions.classList.toggle("hidden");
+  });
+  &lt;/script&gt;
+          </code>
+        </pre>
+      </div>
 
-    &lt;div id=&quot;options&quot; class=&quot;hidden w-[300px] min-h-min bg-white rounded absolute mt-11&quot;&gt;
-      &lt;button class=&quot;flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100&quot;&gt;
-        &lt;p class=&quot;font-normal text-sm text-black&quot;&gt;Buyer 1&lt;/p&gt;
+      <h2 class="font-bold text-2xl mb-2">Dropdown with label</h2>
+      <div class="dropdown-label">
+        <p>Label</p>
+        <div id="dropdownTwo" class="dropdown-container">
+          <button class="dropdown-button">
+            <p class="dropdown-placeholder">Select a Buyer</p>
+            <img src="../assets/caret-down.svg" />
+          </button>
+          <div
+            id="dropdownTwoOptions"
+            class="dropdown-options-container hidden"
+          >
+            <div class="dropdown-option">Buyer 1</div>
+            <div class="dropdown-option">Buyer 2</div>
+            <div class="dropdown-option">Buyer 3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-[1500px] mt-[100px]">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;div class=&quot;dropdown-label&quot;&gt;
+    &lt;p&gt;Label&lt;/p&gt;
+    &lt;div id=&quot;dropdownTwo&quot; class=&quot;dropdown-container&quot;&gt;
+      &lt;button class=&quot;dropdown-button&quot;&gt;
+        &lt;p class=&quot;dropdown-placeholder&quot;&gt;
+          Select a Buyer &lt;span class=&quot;text-red-600&quot;&gt;*&lt;/span&gt;
+        &lt;/p&gt;
+        &lt;img src=&quot;../assets/caret-down.svg&quot; /&gt;
       &lt;/button&gt;
-      &lt;button class=&quot;flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100&quot;&gt;
-        &lt;p class=&quot;font-normal text-sm text-black&quot;&gt;Buyer 2&lt;/p&gt;
-      &lt;/button&gt;
-      &lt;button class=&quot;flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center hover:bg-gray-100&quot;&gt;
-        &lt;p class=&quot;font-normal text-sm text-black&quot;&gt;Buyer 3&lt;/p&gt;
-      &lt;/button&gt;
+      &lt;div id=&quot;dropdownTwoOptions&quot; class=&quot;dropdown-options-container hidden&quot;&gt;
+        &lt;div class=&quot;dropdown-option&quot;&gt;Buyer 1&lt;/div&gt;
+        &lt;div class=&quot;dropdown-option&quot;&gt;Buyer 2&lt;/div&gt;
+        &lt;div class=&quot;dropdown-option&quot;&gt;Buyer 3&lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;!-- JS --&gt;
   &lt;script&gt;
-      let cartOptionsButton = document.getElementById(&quot;dropdown&quot;);
-      let menu = document.getElementById(&quot;options&quot;);
-
-      cartOptionsButton.addEventListener(&quot;click&quot;, function () {
-        menu.classList.toggle(&quot;hidden&quot;);
-      });
-    &lt;/script&gt;
+  let dropdownTwo = document.getElementById("dropdownTwo");
+  let dropdownTwoOptions = document.getElementById("dropdownTwoOptions");
+  
+  dropdown.addEventListener("click", function () {
+    dropdownTwo.classList.toggle("border-0");
+    dropdownTwoOptions.classList.toggle("hidden");
+  });
+  &lt;/script&gt;
           </code>
         </pre>
       </div>
-    </div>
+
+      <h2 class="font-bold text-2xl mb-4">Dropdown with label on top</h2>
+      <div id="dropdownThree" class="dropdown-container">
+        <p id="labelTop" class="dropdown-label-top hidden">Select a Buyer</p>
+        <button class="dropdown-button">
+          <p id="dropPlaceholder" class="dropdown-placeholder">
+            Select a Buyer
+          </p>
+          <img src="../assets/caret-down.svg" />
+        </button>
+        <div
+          id="dropdownThreeOptions"
+          class="dropdown-options-container hidden"
+        >
+          <div id="dropOption" class="dropdown-option">Buyer 1</div>
+        </div>
+      </div>
+
+      <div class="max-w-[1500px] mt-[30px]">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;div id=&quot;dropdownThree&quot; class=&quot;dropdown-container&quot;&gt;
+    &lt;p id=&quot;labelTop&quot; class=&quot;dropdown-label-top hidden&quot;&gt;
+      Select a Buyer
+    &lt;/p&gt;
+    &lt;button class=&quot;dropdown-button&quot;&gt;
+      &lt;p id=&quot;dropPlaceholder&quot; class=&quot;dropdown-placeholder&quot;&gt;
+        Select a Buyer
+      &lt;/p&gt;
+      &lt;img src=&quot;../assets/caret-down.svg&quot; /&gt;
+    &lt;/button&gt;
+    &lt;div id=&quot;dropdownThreeOptions&quot; class=&quot;dropdown-options-container hidden&quot;&gt;
+      &lt;div id=&quot;dropOption&quot; class=&quot;dropdown-option&quot;&gt;Buyer 1&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- JS --&gt;
+  &lt;script&gt;
+  let dropdownThree = document.getElementById("dropdownThree");
+  let dropdownThreeOptions = document.getElementById("dropdownThreeOptions");
+  let dropOption = document.getElementById("dropOption");
+  let labelTop = document.getElementById("labelTop");
+  let dropPlaceholder = document.getElementById("dropPlaceholder");
+
+  dropdownThree.addEventListener("click", function () {
+    dropdownThree.classList.toggle("border-0");
+    dropdownThreeOptions.classList.toggle("hidden");
+  });
+  dropOption.addEventListener("click", function () {
+    console.log("clicked");
+    labelTop.classList.toggle("hidden");
+    dropPlaceholder.classList.toggle("text-transparent");
+  });
+  &lt;/script&gt;
+          </code>
+        </pre>
+      </div>
+
+      <h2 class="font-bold text-2xl mb-2">Numeric Dropdown</h2>
+      <div id="numDropdown" class="numeric-dropdown-container">
+        <div class="numeric-dropdown">
+          <input type="text" placeholder="25" class="numeric-dropdown-input" />
+          <img src="../assets/caret-down.svg" />
+        </div>
+        <div id="numOptions" class="numeric-dropdown-options-container hidden">
+          <div class="numeric-dropdown-options">25</div>
+          <div class="numeric-dropdown-options">50</div>
+          <div class="numeric-dropdown-options">75</div>
+          <div class="numeric-dropdown-options">100</div>
+        </div>
+      </div>
+
+      <div class="max-w-[1500px] mt-[150px]">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;div id=&quot;numDropdown&quot; class=&quot;numeric-dropdown-container&quot;&gt;
+    &lt;div class=&quot;numeric-dropdown&quot;&gt;
+      &lt;input type=&quot;text&quot; placeholder=&quot;25&quot; class=&quot;numeric-dropdown-input&quot; /&gt;
+      &lt;img src=&quot;../assets/caret-down.svg&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;numOptions&quot; class=&quot;numeric-dropdown-options-container hidden&quot;&gt;
+      &lt;div class=&quot;numeric-dropdown-options&quot;&gt;25&lt;/div&gt;
+      &lt;div class=&quot;numeric-dropdown-options&quot;&gt;50&lt;/div&gt;
+      &lt;div class=&quot;numeric-dropdown-options&quot;&gt;75&lt;/div&gt;
+      &lt;div class=&quot;numeric-dropdown-options&quot;&gt;100&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- JS --&gt;
+  &lt;script&gt;
+  let numDropdown = document.getElementById("numDropdown");
+  let numOptions = document.getElementById("numOptions");
+  
+  numDropdown.addEventListener("click", function () {
+    numDropdown.classList.toggle("border-0");
+    numOptions.classList.toggle("hidden");
+  });
+  &lt;/script&gt;
+          </code>
+        </pre>
+      </div>
+
+      <h2 class="font-bold text-2xl mb-2">Dropdown With Error</h2>
+      <div>
+        <div id="dropdownDisabled" class="dropdown-container dropdown-error">
+          <button class="dropdown-button">
+            <p class="dropdown-placeholder dropdown-error">Select a Buyer *</p>
+            <img src="../assets/caret-down-error.svg" />
+          </button>
+        </div>
+        <p class="dropdown-error-message">Error Message</p>
+      </div>
+
+      <div class="max-w-[1500px]">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;div&gt;
+    &lt;div id=&quot;dropdownDisabled&quot; class=&quot;dropdown-container dropdown-error&quot;&gt;
+      &lt;button class=&quot;dropdown-button&quot;&gt;
+        &lt;p class=&quot;dropdown-placeholder dropdown-error&quot;&gt;Select a Buyer *&lt;/p&gt;
+        &lt;img src=&quot;../assets/caret-down-error.svg&quot; /&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;dropdown-error-message&quot;&gt;Error Message&lt;/p&gt;
+  &lt;/div&gt;
+          </code>
+        </pre>
+      </div>
+
+      <h2 class="font-bold text-2xl mb-2">Dropdown disabled</h2>
+      <div class="dropdown-label dropdown-disabled">
+        <p>Label</p>
+        <div id="dropdownDisabled" class="dropdown-container dropdown-disabled">
+          <button class="dropdown-button dropdown-disabled">
+            <p class="dropdown-placeholder dropdown-disabled">Select a Buyer</p>
+            <img src="../assets/caret-down.svg" />
+          </button>
+        </div>
+      </div>
+
+      <div class="max-w-[1500px]">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;div class=&quot;dropdown-label&quot;&gt;
+    &lt;p&gt;Label&lt;/p&gt;
+    &lt;div id=&quot;dropdownDisabled&quot; class=&quot;dropdown-container&quot;&gt;
+      &lt;button class=&quot;dropdown-button&quot;&gt;
+        &lt;p class=&quot;dropdown-placeholder&quot;&gt;
+          Select a Buyer &lt;span class=&quot;text-red-600&quot;&gt;*&lt;/span&gt;
+        &lt;/p&gt;
+        &lt;img src=&quot;../assets/caret-down.svg&quot; /&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+          </code>
+        </pre>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
@@ -140,11 +278,47 @@
       hljs.highlightAll();
     </script>
     <script>
-      let cartOptionsButton = document.getElementById("dropdown");
-      let menu = document.getElementById("options");
+      let numDropdown = document.getElementById("numDropdown");
+      let numOptions = document.getElementById("numOptions");
 
-      cartOptionsButton.addEventListener("click", function () {
-        menu.classList.toggle("hidden");
+      numDropdown.addEventListener("click", function () {
+        numDropdown.classList.toggle("border-0");
+        numOptions.classList.toggle("hidden");
+      });
+
+      let dropdown = document.getElementById("dropdown");
+      let options = document.getElementById("options");
+
+      dropdown.addEventListener("click", function () {
+        dropdown.classList.toggle("border-0");
+        options.classList.toggle("hidden");
+      });
+
+      let dropdownTwo = document.getElementById("dropdownTwo");
+      let dropdownTwoOptions = document.getElementById("dropdownTwoOptions");
+
+      dropdownTwo.addEventListener("click", function () {
+        dropdownTwo.classList.toggle("border-0");
+        dropdownTwoOptions.classList.toggle("hidden");
+      });
+
+      let dropdownThree = document.getElementById("dropdownThree");
+      let dropdownThreeOptions = document.getElementById(
+        "dropdownThreeOptions"
+      );
+      let dropOption = document.getElementById("dropOption");
+      let labelTop = document.getElementById("labelTop");
+      let dropPlaceholder = document.getElementById("dropPlaceholder");
+
+      dropdownThree.addEventListener("click", function () {
+        dropdownThree.classList.toggle("border-0");
+        dropdownThreeOptions.classList.toggle("hidden");
+      });
+
+      dropOption.addEventListener("click", function () {
+        console.log("clicked");
+        labelTop.classList.toggle("hidden");
+        dropPlaceholder.classList.toggle("text-transparent");
       });
     </script>
   </body>
