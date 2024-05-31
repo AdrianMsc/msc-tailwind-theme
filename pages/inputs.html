@@ -207,14 +207,12 @@
         <h2 class="font-bold text-xl mb-4">Hover</h2>
 
         <div class="relative max-w-[68px] flex flex-col">
-          <label for="field" class="text-[ #A6A6A6] text-sm mb-1"
-            >Length (ft)
-          </label>
+          <label for="field" class="msc-input-unit-label">Length (ft) </label>
           <input
             id="field"
             type="number"
             placeholder="1"
-            class="w-full text-center border border-[#212121] pl-4 py-3.5 rounded text-sm focus:border-[#212121] focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+            class="msc-input-unit border-monochromes-main"
           />
         </div>
       </div>
@@ -223,14 +221,12 @@
         <h2 class="font-bold text-xl mb-4">Active</h2>
 
         <div class="relative max-w-[68px] flex flex-col">
-          <label for="field" class="text-[ #A6A6A6] text-sm mb-1"
-            >Length (ft)
-          </label>
+          <label for="field" class="msc-input-unit-label">Length (ft) </label>
           <input
             id="field"
             type="number"
             placeholder="1"
-            class="w-full text-center border border-[#212121] pl-4 py-3.5 rounded text-sm focus:border-[#212121] outline-dashed outline-1 outline-offset-4 h-10"
+            class="msc-input-unit outline-dashed outline-1 outline-offset-4"
           />
         </div>
       </div>
@@ -239,15 +235,13 @@
         <h2 class="font-bold text-xl mb-4">Disabled</h2>
 
         <div class="relative max-w-[68px] flex flex-col">
-          <label for="field" class="text-[ #A6A6A6] text-sm mb-1"
-            >Length (ft)
-          </label>
+          <label for="field" class="msc-input-unit-label">Length (ft) </label>
           <input
             id="field"
             type="number"
             disabled
             placeholder="1"
-            class="w-full text-center border border-[ #A6A6A6] pl-4 py-3.5 rounded text-sm focus:border-[#212121] focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+            class="msc-input-unit msc-input-disabled"
           />
         </div>
       </div>
@@ -255,16 +249,15 @@
       <div class="col-span-6 md:col-span-1 mb-3">
         <h2 class="font-bold text-xl mb-4">Error</h2>
 
-        <div class="relative max-w-[68px] flex flex-col">
-          <label for="field" class="text-error-red text-sm mb-1"
-            >Length (ft)
-          </label>
+        <div class="relative flex flex-col">
+          <label for="field" class="msc-input-unit-label">Length (ft) </label>
           <input
             id="field"
             type="number"
             placeholder="1"
-            class="w-full text-center border border-error-red hover:border-[#212121] pl-4 py-3.5 rounded text-sm focus:border-[#212121] focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+            class="msc-input-unit input-error"
           />
+          <small class="error-message">Error message </small>
         </div>
       </div>
     </section>
@@ -273,20 +266,26 @@
       <div class="max-w-[1500px] mt-2">
         <pre class="h-fit">
           <code class="language-html rounded">
-  &lt;div class=&quot;relative w-64&quot;&gt;
-    &lt;input
-      id=&quot;field&quot;
-      type=&quot;text&quot;
-      placeholder=&quot;First Name&quot;
-      class=&quot;peer w-full border border-gray-300 px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-black focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10&quot;/&gt;
-    &lt;label
-      for=&quot;field&quot;
-      class=&quot;absolute left-3 -top-3.5 text-[ #A6A6A6]
- text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-sm
-&quot;&gt;
-      First Name
-    &lt;/label&gt;
-  &lt;/div&gt;
+&lt;!-- Input Unit --&gt;
+&lt;div class=&quot;relative flex flex-col&quot;&gt;
+  &lt;label for=&quot;field&quot; class=&quot;msc-input-unit-label&quot;&gt;Length (ft) &lt;/label&gt;
+  &lt;input id=&quot;field&quot; type=&quot;number&quot; placeholder=&quot;1&quot; class=&quot;msc-input-unit&quot;/&gt;
+&lt;/div&gt;
+
+&lt;!-- Input Unit Disabled --&gt;
+&lt;div class=&quot;relative max-w-[68px] flex flex-col&quot;&gt;
+  &lt;label for=&quot;field&quot; class=&quot;msc-input-unit-label&quot;&gt;Length (ft) &lt;/label&gt;
+  &lt;input id=&quot;field&quot; type=&quot;number&quot; disabled placeholder=&quot;1&quot; class=&quot;msc-input-unit msc-input-disabled&quot;/&gt;
+&lt;/div&gt;
+
+&lt;!-- Input Unit Error --&gt;
+&lt;div class=&quot;relative flex flex-col&quot;&gt;
+  &lt;label for=&quot;field&quot; class=&quot;msc-input-unit-label&quot;&gt;Length (ft) &lt;/label&gt;
+  &lt;input id=&quot;field&quot; type=&quot;number&quot; placeholder=&quot;1&quot; class=&quot;msc-input-unit input-error&quot;/&gt;
+&lt;/div&gt;
+
+
+
           </code>
         </pre>
       </div>

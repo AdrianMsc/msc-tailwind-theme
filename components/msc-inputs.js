@@ -15,19 +15,19 @@ module.exports = function ({ addComponents, theme }) {
       "@apply w-full border border-gray-300 px-4 py-3.5 rounded text-sm focus:outline-none focus:border-black cursor-not-allowed h-10":
         {},
     },
+    ".msc-input-unit": {
+      "@apply w-[68px] text-center border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 md:pl-4 md:pr-0 py-3.5 rounded text-sm focus:border-monochromes-main focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10":
+        {},
+    },
+    ".msc-input-unit-label": {
+      "@apply text-monochromes-main text-sm mb-1": {},
+    },
     ".input-error": {
       "@apply  border-error-red hover:border-error-red text-error-red focus:border-error-red":
         {},
     },
     ".error-message": {
       "@apply  text-error-red font-semibold !important": {},
-    },
-    ".msc-input-unit": {
-      "@apply w-[68px] text-center border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 md:pl-4 md:pr-0 py-3.5 rounded text-sm focus:border-monochromes-main focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10":
-        {},
-    },
-    ".msc-input-unit-label": {
-      "@apply text-monochromes-grey_light text-sm mb-1": {},
     },
   };
 
