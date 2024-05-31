@@ -6,10 +6,7 @@ module.exports = function ({ addComponents, theme }) {
       "&:hover":{
         "@apply border-[#212121a3]":
         {}
-      },
-      "&:active":{
-          "@apply border-0":{}
-        }
+      }
     },
     ".numeric-dropdown":{
       "@apply flex items-center w-full place-content-between my-2.5 mx-2":{}
@@ -47,7 +44,8 @@ module.exports = function ({ addComponents, theme }) {
       "@apply flex items-center w-full place-content-between m-2":{}
     },
     ".dropdown-placeholder":{
-      "@apply font-normal text-sm text-gray-400":{}
+      "@apply font-normal text-sm":{},
+      color: theme("colors.monochromes.grey"),
     },
     ".dropdown-options-container":{
       "@apply w-full min-h-min bg-white rounded absolute mt-9 shadow":{}
@@ -80,6 +78,12 @@ module.exports = function ({ addComponents, theme }) {
     },
     ".dropdown-error-placeholder":{
       color: theme("colors.error.red"),
+    },
+    ".dropdown-active":{
+      borderColor: theme("colors.white"),
+      "&:hover":{
+        borderColor: theme("colors.white"),
+      }
     },
   };
 

@@ -57,7 +57,7 @@
   let numOptions = document.getElementById("numOptions");
   
   numDropdown.addEventListener("click", function () {
-    numDropdown.classList.toggle("border-0");
+    numDropdown.classList.toggle("dropdown-active");
     numOptions.classList.toggle("hidden");
   });
   &lt;/script&gt;
@@ -109,7 +109,7 @@
   let dropdownTwoOptions = document.getElementById("dropdownTwoOptions");
   
   dropdown.addEventListener("click", function () {
-    dropdownTwo.classList.toggle("border-0");
+    dropdownTwo.classList.toggle("dropdown-active");
     dropdownTwoOptions.classList.toggle("hidden");
   });
   &lt;/script&gt;
@@ -160,7 +160,7 @@
   let dropPlaceholder = document.getElementById("dropPlaceholder");
 
   dropdownThree.addEventListener("click", function () {
-    dropdownThree.classList.toggle("border-0");
+    dropdownThree.classList.toggle("dropdown-active");
     dropdownThreeOptions.classList.toggle("hidden");
   });
   dropOption.addEventListener("click", function () {
@@ -208,7 +208,7 @@
   let numOptions = document.getElementById("numOptions");
   
   numDropdown.addEventListener("click", function () {
-    numDropdown.classList.toggle("border-0");
+    numDropdown.classList.toggle("dropdown-active");
     numOptions.classList.toggle("hidden");
   });
   &lt;/script&gt;
@@ -278,19 +278,11 @@
       hljs.highlightAll();
     </script>
     <script>
-      let numDropdown = document.getElementById("numDropdown");
-      let numOptions = document.getElementById("numOptions");
-
-      numDropdown.addEventListener("click", function () {
-        numDropdown.classList.toggle("border-0");
-        numOptions.classList.toggle("hidden");
-      });
-
       let dropdown = document.getElementById("dropdown");
       let options = document.getElementById("options");
 
       dropdown.addEventListener("click", function () {
-        dropdown.classList.toggle("border-0");
+        dropdown.classList.toggle("dropdown-active");
         options.classList.toggle("hidden");
       });
 
@@ -298,7 +290,7 @@
       let dropdownTwoOptions = document.getElementById("dropdownTwoOptions");
 
       dropdownTwo.addEventListener("click", function () {
-        dropdownTwo.classList.toggle("border-0");
+        dropdownTwo.classList.toggle("dropdown-active");
         dropdownTwoOptions.classList.toggle("hidden");
       });
 
@@ -311,7 +303,7 @@
       let dropPlaceholder = document.getElementById("dropPlaceholder");
 
       dropdownThree.addEventListener("click", function () {
-        dropdownThree.classList.toggle("border-0");
+        dropdownThree.classList.toggle("dropdown-active");
         dropdownThreeOptions.classList.toggle("hidden");
       });
 
@@ -319,6 +311,14 @@
         console.log("clicked");
         labelTop.classList.toggle("hidden");
         dropPlaceholder.classList.toggle("text-transparent");
+      });
+
+      let numDropdown = document.getElementById("numDropdown");
+      let numOptions = document.getElementById("numOptions");
+
+      numDropdown.addEventListener("click", function () {
+        numDropdown.classList.toggle("dropdown-active");
+        numOptions.classList.toggle("hidden");
       });
     </script>
   </body>
