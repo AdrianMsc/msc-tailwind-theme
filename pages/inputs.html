@@ -27,18 +27,15 @@
       <div class="col-span-12 md:col-span-3 mb-3">
         <h2 class="font-bold text-xl mb-4">Default</h2>
 
-        <div class="relative w-full">
+        <div class="msc-input-wrapper">
           <input
-            id="field"
+            id="default"
             type="text"
-            placeholder="First Name"
-            class="peer w-full border border-[ #A6A6A6] hover:border-[#212121] px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-[#212121] focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+            placeholder="Default"
+            class="msc-input peer"
           />
-          <label
-            for="field"
-            class="absolute left-3 -top-1.5 px-[0.2rem] text-sm transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-[#A6A6A6] peer-placeholder-shown:top-1.5 peer-focus:-top-[0.4rem] peer-focus:text-[#212121] peer-focus:text-[12px] bg-white"
-          >
-            First Name
+          <label for="default" class="msc-input-label">
+            Default
             <span class="text-error-red">*</span>
           </label>
         </div>
@@ -47,18 +44,16 @@
       <div class="col-span-12 md:col-span-3 mb-3">
         <h2 class="font-bold text-xl mb-4">Hover</h2>
 
-        <div class="relative w-full">
+        <div class="msc-input-wrapper">
           <input
-            id="field"
+            id="default"
             type="text"
-            placeholder="First Name"
-            class="peer w-full border border-[#212121] px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-black focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+            placeholder="Hover"
+            readonly
+            class="msc-input peer border-monochromes-main"
           />
-          <label
-            for="field"
-            class="absolute left-3 -top-3.5 text-[ #A6A6A6] text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-sm"
-          >
-            First Name
+          <label for="default" class="msc-input-label">
+            Hover
             <span class="text-error-red">*</span>
           </label>
         </div>
@@ -66,20 +61,17 @@
 
       <div class="col-span-12 md:col-span-3 mb-3">
         <h2 class="font-bold text-xl mb-4">Active</h2>
-        <div class="relative w-full">
+
+        <div class="msc-input-wrapper">
           <input
-            id="field"
+            id="default"
             type="text"
-            placeholder="First Name"
+            placeholder="Active"
             readonly
-            value="I"
-            class="peer w-full border border-[#212121] px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-black outline-dashed outline-1 outline-offset-4 h-10"
+            class="msc-input peer bfocus:border-[#212121] outline-dashed outline-1 outline-offset-4"
           />
-          <label
-            for="field"
-            class="absolute left-3 -top-3.5 text-[ #A6A6A6] text-sm transition-all text-base text-gray-400 -top-[0.4rem] text-black bg-white leading-none text-sm"
-          >
-            First Name
+          <label for="default" class="msc-input-label">
+            Active
             <span class="text-error-red">*</span>
           </label>
         </div>
@@ -87,33 +79,33 @@
 
       <div class="col-span-12 md:col-span-3 mb-3">
         <h2 class="font-bold text-xl mb-4">Complete</h2>
-        <div class="relative w-full">
+
+        <div class="msc-input-wrapper">
           <input
-            id="field"
+            id="default"
             type="text"
-            value="John Smith"
-            placeholder="First Name"
-            class="peer w-full border border-[ #A6A6A6] px-4 py-3.5 rounded text-sm placeholder-transparent outline-dashed outline-1 outline-offset-4 h-10"
+            placeholder="Complete"
+            readonly
+            value="Complete text"
+            class="msc-input peer border-monochromes-main outline-dashed outline-1 outline-offset-4"
           />
-          <label
-            for="field"
-            class="absolute left-3 -top-3.5 text-[ #A6A6A6] text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.875rem] peer-focus:text-black bg-white peer-focus:text-sm"
-          >
-            First Name
-            <span class="text-error-red">*</span>
+          <label for="default" class="msc-input-label">
+            Complete
+            <span class="error-message">*</span>
           </label>
         </div>
       </div>
 
       <div class="col-span-12 md:col-span-3 mb-3">
         <h2 class="font-bold text-xl mb-4">Disabled</h2>
-        <div class="relative w-full">
+
+        <div class="msc-input-wrapper">
           <input
             id="field"
             type="text"
             disabled
-            placeholder="First Name"
-            class="w-full border border-gray-300 px-4 py-3.5 rounded text-sm focus:outline-none focus:border-black cursor-not-allowed h-10"
+            placeholder="Disabled"
+            class="msc-input-disabled"
           />
         </div>
       </div>
@@ -121,50 +113,78 @@
       <div class="col-span-12 md:col-span-3 mb-3">
         <h2 class="font-bold text-xl mb-4">Error</h2>
 
-        <div class="relative w-full flex flex-col">
+        <div class="msc-input-wrapper">
           <input
-            id="field"
+            id="default"
             type="text"
-            placeholder="First Name"
-            class="peer w-full border border-error-red px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-error-red focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+            placeholder="Default"
+            class="msc-input peer input-error"
           />
           <label
-            for="field"
-            class="absolute left-3 -top-3.5 text-error-red text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-error-red peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-sm"
+            for="default"
+            class="msc-input-label label-error placeholder-shown:text-error-red"
           >
-            First Name
+            Default
             <span class="text-error-red">*</span>
           </label>
-          <small class="text-error-red font-semibold"
-            >This is a required field</small
-          >
+          <small class="error-message">This is a required field </small>
         </div>
       </div>
 
       <div class="col-span-12 md:col-span-3 mb-3">
         <h2 class="font-bold text-xl mb-4">Error Complete</h2>
 
-        <div class="relative w-full flex flex-col">
+        <div class="msc-input-wrapper">
           <input
-            id="field"
+            id="default"
             type="text"
+            value="First Name"
             placeholder="First Name"
-            value="John Smith"
-            class="peer w-full border border-error-red px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-[#212121] focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+            class="msc-input peer input-error"
           />
-          <label
-            for="field"
-            class="absolute left-3 -top-3.5 text-error-red text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-error-red peer-placeholder-shown:top-2 peer-focus:-top-[0.875rem] peer-focus:text-[#212121] bg-white peer-focus:text-sm"
-          >
+          <label for="default" class="msc-input-label">
             First Name
             <span class="text-error-red">*</span>
           </label>
-          <small class="text-error-red font-semibold"
-            >This is a required field</small
-          >
+          <small class="error-message">This is a required field </small>
         </div>
       </div>
+    </section>
 
+    <div class="max-w-screen-2xl mx-auto px-5">
+      <div class="max-w-[1500px] mt-2">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+&lt;!-- Default --&gt;
+&lt;div class=&quot;msc-input-wrapper&quot;&gt;
+  &lt;input id=&quot;default&quot; type=&quot;text&quot; placeholder=&quot;Default&quot; class=&quot;msc-input peer&quot;/&gt;
+  &lt;label for=&quot;default&quot; class=&quot;msc-input-label&quot;&gt;
+    Default
+    &lt;span class=&quot;text-error-red&quot;&gt;*&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Disabled --&gt;
+&lt;div class=&quot;msc-input-wrapper&quot;&gt;
+  &lt;input type=&quot;text&quot; disabled placeholder=&quot;Disabled&quot; class=&quot;msc-input-disabled&quot;/&gt;
+&lt;/div&gt;
+
+&lt;!-- Error --&gt;
+&lt;div class=&quot;msc-input-wrapper&quot;&gt;
+  &lt;input id=&quot;default&quot; type=&quot;text&quot; placeholder=&quot;Default&quot; class=&quot;msc-input peer input-error&quot;/&gt;
+  &lt;label for=&quot;default&quot; class=&quot;msc-input-label label-error placeholder-shown:text-error-red&quot;&gt;
+    Default
+    &lt;span class=&quot;text-error-red&quot;&gt;*&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;small class=&quot;error-message&quot;&gt;This is a required field &lt;/small&gt;
+&lt;/div&gt;
+
+          </code>
+        </pre>
+      </div>
+    </div>
+
+    <section class="grid grid-cols-12 gap-x-5 max-w-screen-2xl mx-auto p-5">
       <div class="col-span-12 my-5">
         <h1 class="font-bold text-3xl">Input Unit</h1>
       </div>
@@ -172,15 +192,13 @@
       <div class="col-span-6 md:col-span-1 mb-3">
         <h2 class="font-bold text-xl mb-4">Default</h2>
 
-        <div class="relative max-w-[68px] flex flex-col">
-          <label for="field" class="text-[ #A6A6A6] text-sm mb-1"
-            >Length (ft)
-          </label>
+        <div class="relative flex flex-col">
+          <label for="field" class="msc-input-unit-label">Length (ft) </label>
           <input
             id="field"
             type="number"
             placeholder="1"
-            class="w-full text-center border border-[ #A6A6A6] hover:border-[#212121] pl-4 py-3.5 rounded text-sm focus:border-[#212121] focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10"
+            class="msc-input-unit"
           />
         </div>
       </div>
@@ -252,7 +270,7 @@
     </section>
 
     <div class="max-w-screen-2xl mx-auto px-5">
-      <!-- <div class="max-w-[1500px] mt-2">
+      <div class="max-w-[1500px] mt-2">
         <pre class="h-fit">
           <code class="language-html rounded">
   &lt;div class=&quot;relative w-64&quot;&gt;
@@ -271,44 +289,7 @@
   &lt;/div&gt;
           </code>
         </pre>
-      </div> -->
-
-      <!-- <div class="max-w-[1500px] mt-2">
-        <pre class="h-fit">
-          <code class="language-html rounded">
-  &lt;div class=&quot;relative w-64&quot;&gt;
-    &lt;input
-      id=&quot;field&quot;
-      type=&quot;text&quot;
-      placeholder=&quot;First Name&quot;
-      class=&quot;peer w-full border border-gray-300 px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-black focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10&quot;/&gt;
-    &lt;label
-      for=&quot;field&quot;
-      class=&quot;absolute left-3 -top-3.5 text-[ #A6A6A6]
- text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-sm
-&quot;&gt;
-      First Name
-    &lt;/label&gt;
-  &lt;/div&gt;
-          </code>
-        </pre>
-      </div> -->
-
-      <!-- <div class="max-w-[1500px] mt-2">
-        <pre class="h-fit">
-          <code class="language-html rounded">
-  &lt;div class=&quot;relative w-64&quot;&gt;
-    &lt;input
-      id=&quot;field&quot;
-      type=&quot;text&quot;
-      disabled
-      placeholder=&quot;First Name&quot;
-      class=&quot;w-full border border-gray-300 px-4 py-3.5 rounded text-sm focus:outline-none focus:border-black cursor-not-allowed&quot;
-    /&gt;
-  &lt;/div&gt;
-          </code>
-        </pre>
-      </div> -->
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
     <script>
