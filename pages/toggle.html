@@ -22,62 +22,45 @@
 
     <main class="max-w-screen-2xl mx-auto px-5">
       <h2 class="font-bold text-2xl mb-4">Toggle</h2>
-      <label
-        for="toggleOne"
-        class="flex items-center cursor-pointer select-none w-fit h-fit"
-      >
+      <label for="toggleOne" class="msc-toggle">
         <div class="relative">
           <input type="checkbox" id="toggleOne" checked class="peer sr-only" />
-          <div
-            class="h-6 w-11 rounded-full box bg-monochromes-grey_xlight peer-checked:bg-primary-blue"
-          ></div>
-          <div
-            class="absolute flex items-center justify-center w-4 h-4 transition bg-white rounded-full dot left-1 top-1 peer-checked:translate-x-full pt-1 peer-checked:left-2 shadow"
-          ></div>
+          <div class="msc-toggle-container"></div>
+          <div class="msc-toggle-dot"></div>
         </div>
       </label>
+
       <div class="max-w-[1500px]">
         <pre class="h-fit">
           <code class="language-html rounded">
-  &lt;label
-    for=&quot;toggleOne&quot;
-    class=&quot;flex items-center cursor-pointer select-none w-fit h-fit&quot;&gt;
+  &lt;label for=&quot;toggleOne&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
       &lt;input 
         type=&quot;checkbox&quot; 
         id=&quot;toggleOne&quot; 
         checked 
         class=&quot;peer sr-only&quot;/&gt;
-      &lt;div class=&quot;h-6 w-11 rounded-full box bg-monochromes-grey_xlight peer-checked:bg-primary-blue&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;absolute flex items-center justify-center w-4 h-4 transition bg-white rounded-full dot left-1 top-1 peer-checked:translate-x-full pt-1 peer-checked:left-2 shadow&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;msc-toggle-container&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;msc-toggle-dot&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/label&gt;
           </code>
         </pre>
       </div>
+
       <h2 class="font-bold text-2xl mb-4">Toggle With Text</h2>
-      <label
-        for="toggleTwo"
-        class="flex items-center cursor-pointer select-none w-fit h-fit"
-      >
+      <label for="toggleTwo" class="msc-toggle">
         <div class="relative">
           <input type="checkbox" id="toggleTwo" checked class="peer sr-only" />
-          <div
-            before="Yes"
-            after="No"
-            class="h-6 w-[60px] rounded-full box bg-monochromes-grey_xlight text-xs text-white peer-checked:bg-primary-blue peer-checked:before:content-[attr(before)] before:absolute before:top-[3px] before:left-2.5 before:font-bold after:content-[attr(after)] after:absolute after:top-[3px] after:right-1 after:pr-2.5 peer-checked:after:hidden after:text-black after:font-bold"
-          ></div>
-          <div
-            class="absolute flex items-center justify-center w-4 h-4 transition bg-white rounded-full dot left-1 top-1 peer-checked:translate-x-full pt-1 peer-checked:left-6 shadow"
-          ></div>
+          <div before="Yes" after="No" class="msc-toggle-container-text"></div>
+          <div class="msc-toggle-dot-text"></div>
         </div>
       </label>
+
       <div class="max-w-[1500px]">
         <pre class="h-fit">
           <code class="language-html rounded">
-  &lt;label
-    for=&quot;toggleTwo&quot;
-    class=&quot;flex items-center cursor-pointer select-none w-fit h-fit&quot;&gt;
+  &lt;label for=&quot;toggleTwo&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
       &lt;input 
         type=&quot;checkbox&quot; 
@@ -87,19 +70,17 @@
       &lt;div
         before=&quot;Yes&quot;
         after=&quot;No&quot;
-        class=&quot;h-6 w-[60px] rounded-full box bg-monochromes-grey_xlight text-xs text-white peer-checked:bg-primary-blue peer-checked:before:content-[attr(before)] before:absolute before:top-[3px] before:left-2.5 before:font-bold after:content-[attr(after)] after:absolute after:top-[3px] after:right-1 after:pr-2.5 peer-checked:after:hidden after:text-black after:font-bold&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;absolute flex items-center justify-center w-4 h-4 transition bg-white rounded-full dot left-1 top-1 peer-checked:translate-x-full pt-1 peer-checked:left-6 shadow&quot;&gt;&lt;/div&gt;
+        class=&quot;msc-toggle-container-text&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;msc-toggle-dot-text&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/label&gt;
           </code>
         </pre>
       </div>
+
       <h2 class="font-bold text-2xl mb-4">Toggle With Text Disabled</h2>
       <div class="flex gap-2 w-fit">
-        <label
-          for="toggleDisabled"
-          class="flex items-center cursor-pointer select-none w-fit h-fit"
-        >
+        <label for="toggleDisabled" class="msc-toggle">
           <div class="relative">
             <input
               type="checkbox"
@@ -111,17 +92,12 @@
             <div
               before="Yes"
               after="No"
-              class="h-6 w-[60px] rounded-full box bg-[#dbdbdb66] text-xs text-white peer-checked:bg-[#1c58db66] peer-checked:before:content-[attr(before)] before:absolute before:top-[3px] before:left-2.5 before:font-bold after:content-[attr(after)] after:absolute after:top-[3px] after:right-1 after:pr-2.5 peer-checked:after:hidden after:text-[#00000066] after:font-bold cursor-not-allowed"
+              class="msc-toggle-container-disabled"
             ></div>
-            <div
-              class="absolute flex items-center justify-center w-4 h-4 transition bg-[#ffffff66] rounded-full dot left-1 top-1 peer-checked:translate-x-full pt-1 peer-checked:left-6 shadow cursor-not-allowed"
-            ></div>
+            <div class="msc-toggle-dot-disabled"></div>
           </div>
         </label>
-        <label
-          for="toggleDisabled"
-          class="flex items-center cursor-pointer select-none w-fit h-fit"
-        >
+        <label for="toggleDisabled" class="msc-toggle">
           <div class="relative">
             <input
               type="checkbox"
@@ -132,20 +108,17 @@
             <div
               before="Yes"
               after="No"
-              class="h-6 w-[60px] rounded-full box bg-[#dbdbdb66] text-xs text-white peer-checked:bg-[#1c58db66] peer-checked:before:content-[attr(before)] before:absolute before:top-[3px] before:left-2.5 before:font-bold after:content-[attr(after)] after:absolute after:top-[3px] after:right-1 after:pr-2.5 peer-checked:after:hidden after:text-[#00000066] after:font-bold cursor-not-allowed"
+              class="msc-toggle-container-disabled"
             ></div>
-            <div
-              class="absolute flex items-center justify-center w-4 h-4 transition bg-[#ffffff66] rounded-full dot left-1 top-1 peer-checked:translate-x-full pt-1 peer-checked:left-6 shadow cursor-not-allowed"
-            ></div>
+            <div class="msc-toggle-dot-disabled"></div>
           </div>
         </label>
       </div>
+
       <div class="max-w-[1500px]">
         <pre class="h-fit">
           <code class="language-html rounded">
-  &lt;label
-    for=&quot;toggleDisabled&quot;
-    class=&quot;flex items-center cursor-pointer select-none w-fit h-fit&quot;&gt;
+  &lt;label for=&quot;toggleDisabled&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
       &lt;input 
         type=&quot;checkbox&quot; 
@@ -156,38 +129,35 @@
       &lt;div
         before=&quot;Yes&quot;
         after=&quot;No&quot;
-        class=&quot;h-6 w-[60px] rounded-full box bg-[#dbdbdb66] text-xs text-white peer-checked:bg-[#1c58db66] peer-checked:before:content-[attr(before)] before:absolute before:top-[3px] before:left-2.5 before:font-bold after:content-[attr(after)] after:absolute after:top-[3px] after:right-1 after:pr-2.5 peer-checked:after:hidden after:text-[#00000066] after:font-bold cursor-not-allowed&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;absolute flex items-center justify-center w-4 h-4 transition bg-[#ffffff66] rounded-full dot left-1 top-1 peer-checked:translate-x-full pt-1 peer-checked:left-6 shadow cursor-not-allowed&quot;&gt;&lt;/div&gt;
+        class=&quot;msc-toggle-container-disabled&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;msc-toggle-dot-disabled&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/label&gt;
           </code>
         </pre>
       </div>
+
       <h2 class="font-bold text-2xl mb-4">Address Type Toggle</h2>
-      <label
-        for="toggleAddress"
-        class="flex items-center cursor-pointer select-none w-fit h-fit"
-      >
+      <label for="toggleAddress" class="msc-toggle">
         <div class="relative">
           <input type="checkbox" id="toggleAddress" class="peer sr-only" />
           <div
             before="Residential"
             after="Commercial"
-            class="h-8 w-[200px] rounded-full box bg-[#21212129] text-xs text-[#00000066] peer-checked:before:content-[attr(before)] before:absolute before:top-2 before:left-5 before:font-bold after:content-[attr(after)] after:absolute after:right-5 after:top-2 peer-checked:after:hidden after:text-[#00000066] after:font-bold"
+            class="msc-toggle-container-text-lg"
           ></div>
           <div
             before="Residential"
             after="Commercial"
-            class="absolute place-content-center flex w-[96px] h-6 transition bg-white rounded-full dot left-1 top-1 peer-checked:translate-x-full peer-checked:left-1 text-black font-bold before:content-[attr(before)] before:absolute before:top-[3px] before:text-xs peer-checked:after:content-[attr(after)] after:absolute after:top-[3px] after:right-1 after:pr-2.5 after:text-xs after:text-black after:font-bold peer-checked:before:hidden shadow"
+            class="msc-toggle-dot-text-lg"
           ></div>
         </div>
       </label>
+
       <div class="max-w-[1500px]">
         <pre class="h-fit">
           <code class="language-html rounded">
-  &lt;label
-    for=&quot;toggleAddress&quot;
-    class=&quot;flex items-center cursor-pointer select-none w-fit h-fit&quot;&gt;
+  &lt;label for=&quot;toggleAddress&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
       &lt;input 
         type=&quot;checkbox&quot; 
@@ -196,81 +166,53 @@
       &lt;div
         before=&quot;Residential&quot;
         after=&quot;Commercial&quot;
-        class=&quot;h-8 w-[200px] rounded-full box bg-[#21212129] text-xs  text-[#00000066] peer-checked:before:content-[attr(before)] before:absolute before:top-2 before:left-5 before:font-bold after:content-[attr(after)] after:absolute after:right-5 after:top-2 peer-checked:after:hidden after:text-[#00000066] after:font-bold&quot;&gt;&lt;/div&gt;
+        class=&quot;msc-toggle-container-text-lg&quot;&gt;&lt;/div&gt;
       &lt;div
         before=&quot;Residential&quot;
         after=&quot;Commercial&quot;
-        class=&quot;absolute place-content-center flex w-[96px] h-6 transition bg-white rounded-full dot left-1 top-1 peer-checked:translate-x-full peer-checked:left-1 text-black font-bold before:content-[attr(before)] before:absolute before:top-[3px] before:text-xs peer-checked:after:content-[attr(after)] after:absolute after:top-[3px] after:right-1 after:pr-2.5 after:text-xs after:text-black after:font-bold peer-checked:before:hidden shadow&quot;&gt;&lt;/div&gt;
+        class=&quot;msc-toggle-dot-text-lg&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/label&gt;
           </code>
         </pre>
       </div>
+
       <h2 class="font-bold text-2xl mb-4">Units Toggle</h2>
-      <label
-        for="toggleUnits"
-        class="flex items-center cursor-pointer select-none w-fit h-fit"
-      >
+      <label for="toggleUnits" class="msc-toggle">
         <div class="relative">
           <input type="checkbox" id="toggleUnits" class="peer sr-only" />
           <div
             before="Decimal Inch"
             after="MM"
-            class="h-8 w-[200px] rounded-full box bg-[#21212129] text-xs text-[#00000066] peer-checked:before:content-[attr(before)] before:absolute before:top-2 before:left-5 before:font-bold after:content-[attr(after)] after:absolute after:right-9 after:top-2 peer-checked:after:hidden after:text-[#00000066] after:font-bold"
+            class="msc-toggle-container-text-lg after:right-10"
           ></div>
           <div
             before="Decimal Inch"
             after="MM"
-            class="absolute place-content-center flex w-[96px] h-6 transition bg-white rounded-full dot left-1 top-1 peer-checked:translate-x-full peer-checked:left-1 text-black font-bold before:content-[attr(before)] before:absolute before:top-[3px] before:text-xs peer-checked:after:content-[attr(after)] after:absolute after:top-[3px] after:right-8.5 after:text-xs after:text-black after:font-bold peer-checked:before:hidden shadow"
+            class="msc-toggle-dot-text-lg after:right-6"
           ></div>
         </div>
       </label>
+
       <div class="max-w-[1500px]">
         <pre class="h-fit">
           <code class="language-html rounded">
-  &lt;label
-    for=&quot;toggleAddress&quot;
-    class=&quot;flex items-center cursor-pointer select-none w-fit h-fit&quot;&gt;
+  &lt;label for=&quot;toggleAddress&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
       &lt;input 
         type=&quot;checkbox&quot; 
         id=&quot;toggleAddress&quot;
         class=&quot;peer sr-only&quot;/&gt;
       &lt;div
-        before=&quot;Residential&quot;
-        after=&quot;Commercial&quot;
-        class=&quot;h-8 w-[200px] rounded-full box bg-[#21212129] text-xs  text-[#00000066] peer-checked:before:content-[attr(before)] before:absolute before:top-2 before:left-5 before:font-bold after:content-[attr(after)] after:absolute after:right-5 after:top-2 peer-checked:after:hidden after:text-[#00000066] after:font-bold&quot;&gt;&lt;/div&gt;
+        before=&quot;Decimal Inch&quot;
+        after=&quot;MM&quot;
+        class=&quot;msc-toggle-container-text-lg after:right-10&quot;&gt;&lt;/div&gt;
       &lt;div
-        before=&quot;Residential&quot;
-        after=&quot;Commercial&quot;
-        class=&quot;absolute place-content-center flex w-[96px] h-6 transition bg-white rounded-full dot left-1 top-1 peer-checked:translate-x-full peer-checked:left-1 text-black font-bold before:content-[attr(before)] before:absolute before:top-[3px] before:text-xs peer-checked:after:content-[attr(after)] after:absolute after:top-[3px] after:right-1 after:pr-2.5 after:text-xs after:text-black after:font-bold peer-checked:before:hidden shadow&quot;&gt;&lt;/div&gt;
+        before=&quot;Decimal Inch&quot;
+        after=&quot;MM&quot;
+        class=&quot;msc-toggle-dot-text-lg after:right-6&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/label&gt;
-          </code>
-        </pre>
-      </div>
-      <h2 class="font-bold text-2xl mb-4">Trple Toggle</h2>
-      <label
-        for="toggleUnits"
-        class="flex items-center cursor-pointer select-none w-fit h-fit"
-      >
-        <div class="relative">
-          <input type="checkbox" id="toggleUnits" class="peer sr-only" />
-          <div
-            before="Decimal Inch"
-            after="MM"
-            class="h-8 w-[200px] rounded-full box bg-[#21212129] text-xs text-[#00000066] peer-checked:before:content-[attr(before)] before:absolute before:top-2 before:left-5 before:font-bold after:content-[attr(after)] after:absolute after:right-9 after:top-2 peer-checked:after:hidden after:text-[#00000066] after:font-bold"
-          ></div>
-          <div
-            before="Decimal Inch"
-            after="MM"
-            class="absolute place-content-center flex w-[96px] h-6 transition bg-white rounded-full dot left-1 top-1 peer-checked:translate-x-full peer-checked:left-1 text-black font-bold before:content-[attr(before)] before:absolute before:top-[3px] before:text-xs peer-checked:after:content-[attr(after)] after:absolute after:top-[3px] after:right-8.5 after:text-xs after:text-black after:font-bold peer-checked:before:hidden shadow"
-          ></div>
-        </div>
-      </label>
-      <div class="max-w-[1500px]">
-        <pre class="h-fit">
-          <code class="language-html rounded">
           </code>
         </pre>
       </div>
