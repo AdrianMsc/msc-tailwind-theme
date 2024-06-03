@@ -4,6 +4,10 @@ module.exports = function ({ addComponents, theme }) {
       "@apply py-2 px-5 rounded-full font-bold text-base cursor-pointer":
         {},
     },
+    ".btn-sm":{
+      "@apply h-7 text-sm py-1":
+        {},
+    },
     ".btn-blue-solid": {
       "@apply text-white cursor-pointer":
         {},
