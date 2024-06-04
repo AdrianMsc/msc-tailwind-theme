@@ -5,7 +5,7 @@ module.exports = function ({ addComponents, theme }) {
         {},
     },
     ".msc-input-label": {
-      "@apply bg-white absolute left-3.5 -top-1.5 pt-0.5 px-[0.2rem] text-xs transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-monochromes-grey_light peer-placeholder-shown:top-2 peer-focus:-top-[0.6rem] peer-focus:text-[#212121] peer-focus:text-xs":
+      "@apply bg-white absolute left-3.5 -top-1.5 pt-[1px] px-[0.2rem] text-xs transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-monochromes-grey_light peer-placeholder-shown:top-2 peer-focus:-top-[0.6rem] peer-focus:text-[#212121] peer-focus:text-xs":
         {},
     },
     ".msc-input-wrapper": {
