@@ -1,14 +1,14 @@
 module.exports = function ({ addComponents, theme }) {
   const buttons = {
-    ".btn":{
+    ".msc-btn":{
       "@apply py-2 px-5 rounded-full font-bold text-base cursor-pointer":
         {},
     },
-    ".btn-sm":{
+    ".msc-btn-sm":{
       "@apply h-7 text-sm py-1":
         {},
     },
-    ".btn-blue-solid": {
+    ".msc-btn-blue-solid": {
       "@apply text-white cursor-pointer":
         {},
       backgroundColor: theme("colors.primary.blue"),
@@ -23,7 +23,7 @@ module.exports = function ({ addComponents, theme }) {
         {}
       },
     },
-    ".btn-blue-outline": {
+    ".msc-btn-blue-outline": {
       "@apply bg-transparent border":
         {},
       color: theme("colors.primary.blue"),
@@ -39,7 +39,7 @@ module.exports = function ({ addComponents, theme }) {
         {}
       },
     },
-    ".btn-transparent": {
+    ".msc-btn-transparent": {
       "@apply bg-transparent":
         {},
       color: theme("colors.primary.blue"),
@@ -54,23 +54,23 @@ module.exports = function ({ addComponents, theme }) {
         {}
       },
     },
-    ".btn-solid-disabled":{
+    ".msc-btn-solid-disabled":{
       "@apply text-white cursor-not-allowed":
         {},
       backgroundColor: theme("colors.monochromes.grey_light"),
     },
-    ".btn-outline-disabled":{
+    ".msc-btn-outline-disabled":{
       "@apply bg-transparent cursor-not-allowed border":
         {},
       color: theme("colors.monochromes.grey_light"),
       borderColor: theme("colors.monochromes.grey_light")
     },
-    ".btn-transparent-disabled":{
+    ".msc-btn-transparent-disabled":{
       "@apply bg-transparent cursor-not-allowed":
         {},
       color: theme("colors.monochromes.grey_light"),
     },
-    ".btn-icon":{
+    ".msc-btn-icon":{
       "@apply flex items-center":
         {},
     },

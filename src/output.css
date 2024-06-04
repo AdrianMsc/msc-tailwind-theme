@@ -588,7 +588,7 @@ video {
   }
 }
 
-.btn {
+.msc-btn {
   cursor: pointer;
   border-radius: 9999px;
   padding-top: 0.5rem;
@@ -600,7 +600,7 @@ video {
   font-weight: 700;
 }
 
-.btn-sm {
+.msc-btn-sm {
   height: 1.75rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -608,78 +608,78 @@ video {
   line-height: 1.25rem;
 }
 
-.btn-blue-solid {
+.msc-btn-blue-solid {
   cursor: pointer;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   background-color: #1C58EE;
 }
 
-.btn-blue-solid:hover {
+.msc-btn-blue-solid:hover {
   background-color: #186DF5;
 }
 
-.btn-blue-solid:active {
+.msc-btn-blue-solid:active {
   background-color: #0D3AA9;
 }
 
-.btn-blue-solid:focus-visible {
+.msc-btn-blue-solid:focus-visible {
   outline-style: dashed;
   outline-width: 1px;
   outline-offset: 4px;
   outline-color: #424242;
 }
 
-.btn-blue-outline {
+.msc-btn-blue-outline {
   border-width: 1px;
   background-color: transparent;
   color: #1C58EE;
   border-color: #1C58EE;
 }
 
-.btn-blue-outline:hover {
+.msc-btn-blue-outline:hover {
   background-color: #F1F5FE;
 }
 
-.btn-blue-outline:active {
+.msc-btn-blue-outline:active {
   background-color: #0d3aa933;
 }
 
-.btn-blue-outline:focus-visible {
+.msc-btn-blue-outline:focus-visible {
   outline-style: dashed;
   outline-width: 1px;
   outline-offset: 4px;
   outline-color: #424242;
 }
 
-.btn-transparent {
+.msc-btn-transparent {
   background-color: transparent;
   color: #1C58EE;
 }
 
-.btn-transparent:hover {
+.msc-btn-transparent:hover {
   background-color: #F1F5FE;
 }
 
-.btn-transparent:active {
+.msc-btn-transparent:active {
   background-color: #0d3aa933;
 }
 
-.btn-transparent:focus-visible {
+.msc-btn-transparent:focus-visible {
   outline-style: dashed;
   outline-width: 1px;
   outline-offset: 4px;
   outline-color: #424242;
 }
 
-.btn-solid-disabled {
+.msc-btn-solid-disabled {
   cursor: not-allowed;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   background-color: #A6A6A6;
 }
 
-.btn-outline-disabled {
+.msc-btn-outline-disabled {
   cursor: not-allowed;
   border-width: 1px;
   background-color: transparent;
@@ -687,13 +687,13 @@ video {
   border-color: #A6A6A6;
 }
 
-.btn-transparent-disabled {
+.msc-btn-transparent-disabled {
   cursor: not-allowed;
   background-color: transparent;
   color: #A6A6A6;
 }
 
-.btn-icon {
+.msc-btn-icon {
   display: flex;
   align-items: center;
 }
@@ -964,7 +964,7 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-left: 0.2rem;
   padding-right: 0.2rem;
-  padding-top: 0.125rem;
+  padding-top: 1px;
   font-size: 0.75rem;
   line-height: 1rem;
   transition-property: all;
