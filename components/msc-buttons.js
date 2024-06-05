@@ -71,8 +71,27 @@ module.exports = function ({ addComponents, theme }) {
       color: theme("colors.monochromes.grey_light"),
     },
     ".msc-btn-icon":{
-      "@apply flex items-center":
+      "@apply flex items-center ml-2":
         {},
+    },
+    ".msc-btn-dots-container":{
+      "@apply w-10 h-6 flex place-content-between items-center":
+        {},
+    },
+    ".msc-btn-dot1":{
+      "@apply relative top-0 w-2 h-2 bg-white rounded-full animate-dotFlashing1":
+        {
+          left: '3.75rem'
+        },
+    },
+    ".msc-btn-dot2":{
+      "@apply relative w-2 h-2 bg-white rounded-full animate-dotFlashing2 opacity-50":{}
+    },
+    ".msc-btn-dot3":{
+      "@apply relative top-0 w-2 h-2 bg-white rounded-full animate-dotFlashing3 opacity-30":
+      {
+        left: '3.75rem'
+      }
     },
   };
   addComponents(buttons);
