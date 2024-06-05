@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../src/output.css" rel="stylesheet" />
+    <link
+      href="https://devcdn.mscdirect.com/global/v2/css/styles-v2.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <title>Moodboard</title>
     <link
       rel="shortcut icon"
@@ -36,198 +40,99 @@
 
     <section class="p-3 grid grid-cols-12 gap-10">
       <div class="col-span-6">
-        <h2 class="font-bold text-[1.5rem]">Buttons</h2>
+        <h2 class="font-bold text-[1.5rem] mb-4">Buttons</h2>
 
-        <button class="btn-blue-solid">Blue Solid</button>
-        <button class="btn-blue-outline">Blue Outline</button>
-        <button class="btn-transparent">Text Only</button>
-
-        <br />
-        <br />
-
-        <pre class="h-fit">
-        <code class="language-html rounded">
-  &lt;!-- Primary --&gt;        
-  &lt;button class=&quot;btn-blue-solid&quot;&gt;Blue Solid&lt;/button&gt;
-  &lt;!-- Secondary --&gt;
-  &lt;button class=&quot;btn-blue-outline&quot;&gt;Blue Outline&lt;/button&gt;
-  &lt;!-- Tertiary --&gt;
-  &lt;button class=&quot;btn-blue-transparent&quot;&gt;Text Only&lt;/button&gt;
-        </code>
-    </pre>
+        <button class="msc-btn msc-btn-blue-solid">Blue Solid</button>
+        <button class="msc-btn msc-btn-blue-outline">Blue Outline</button>
+        <button class="msc-btn msc-btn-transparent">Text Only</button>
+        <button class="msc-btn msc-btn-blue-solid msc-btn-sm">Blue Solid</button>
       </div>
 
       <div class="col-span-6">
-        <h2 class="font-bold text-[1.5rem]">Inputs</h2>
-        <!-- SUPER INPUT -->
-        <div class="relative w-64">
+        <h2 class="font-bold text-[1.5rem] mb-4">Inputs</h2>
+        <div class="msc-input-wrapper">
           <input
+            id="default"
             type="text"
-            id="field"
+            placeholder="Default"
             class="msc-input peer"
-            placeholder="Input"
           />
-          <label
-            for="field"
-            class="absolute left-3 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-[0.4rem] peer-focus:text-black bg-white peer-focus:leading-none peer-focus:text-[12px]"
-            >Input label</label
-          >
+          <label for="default" class="msc-input-label">
+            Default
+            <span class="text-error-red">*</span>
+          </label>
         </div>
-
-        <br />
-
-        <pre class="h-fit">
-        <code class="language-html rounded">
-  &lt;!-- Input --&gt;   
-  &lt;input type=&quot;text&quot; id=&quot;field&quot; class=&quot;msc-input peer&quot; placeholder=&quot;Input&quot; /&gt;
-  &lt;!-- Label --&gt;   
-  &lt;label for=&quot;field&quot; class=&quot;msc-input-label&quot; &gt;Input label&lt;/label&gt;
-
-        </code>
     </pre>
       </div>
 
       <div class="col-span-6">
-        <h2 class="font-bold text-[1.5rem]">Drop downs</h2>
-
-        <select class="msc-dropdown w-64">
-          <option value="1">List item 1</option>
-          <option value="2">List item 2</option>
-          <option value="3">List item 3</option>
-          <option value="4">List item 4</option>
-        </select>
-
-        <br />
-
-        <pre class="h-fit">
-        <code class="language-html rounded">
-&lt;select class=&quot;msc-dropdown&quot;&gt;
-  &lt;option value=&quot;1&quot;&gt;List item 1&lt;/option&gt;
-  &lt;option value=&quot;2&quot;&gt;List item 2&lt;/option&gt;
-  &lt;option value=&quot;3&quot;&gt;List item 3&lt;/option&gt;
-  &lt;option value=&quot;4&quot;&gt;List item 4&lt;/option&gt;
-&lt;/select&gt;
-
-        </code>
+        <h2 class="font-bold text-[1.5rem] mb-4">Drop downs</h2>
+        <div id="dropdown" class="dropdown-container">
+        <button class="dropdown-button">
+          <p class="dropdown-placeholder">
+            Select a Buyer <span class="text-red-600">*</span>
+          </p>
+          <img src="../assets/caret-down.svg" />
+        </button>
+        <div id="options" class="dropdown-options-container hidden">
+          <div class="dropdown-option">Buyer 1</div>
+          <div class="dropdown-option">Buyer 2</div>
+          <div class="dropdown-option">Buyer 3</div>
+        </div>
+      </div>
     </pre>
       </div>
 
       <div class="col-span-6">
-        <h2 class="font-bold text-[1.5rem] mb-3">Toggle</h2>
-
-        <label
-          for="toggleOne"
-          class="flex items-center cursor-pointer select-none w-fit h-fit"
-        >
+        <h2 class="font-bold text-[1.5rem] mb-4">Toggle</h2>
+        <label for="toggleOne" class="msc-toggle">
           <div class="relative">
-            <input
-              type="checkbox"
-              id="toggleOne"
-              checked
-              class="peer sr-only"
-            />
-            <div
-              class="h-6 w-[60px] rounded-full box bg-[#18436A] peer-checked:bg-[#186DF5]"
-            ></div>
-            <div
-              class="absolute flex items-center justify-center w-4 h-4 transition bg-white rounded-full dot left-1 top-1 peer-checked:translate-x-full pt-1 peer-checked:ml-4"
-            ></div>
+            <input type="checkbox" id="toggleOne" checked class="peer sr-only" />
+            <div class="msc-toggle-container"></div>
+            <div class="msc-toggle-dot"></div>
           </div>
         </label>
-
-        <br />
-
-        <pre class="h-fit">
-        <code class="language-html rounded">
-&lt;label for=&quot;toggleOne&quot; class=&quot;msc-toggle&quot;&gt;
-  &lt;div class=&quot;msc-toggle-body&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;toggleOne&quot; checked class=&quot;peer sr-only&quot; /&gt;
-    &lt;div class=&quot;msc-toggle-inner&quot; &gt;&lt;/div&gt; &lt;div class=&quot;msc-toggle-switch&quot;&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/label&gt;
-
-        </code>
-    </pre>
       </div>
 
       <div class="col-span-6">
-        <h2 class="font-bold text-[1.5rem]">Checkbox</h2>
+        <h2 class="font-bold text-[1.5rem] mb-4">Checkbox</h2>
 
-        <div class="flex items-center gap-3">
+        <div class="msc-checkbox-container">
           <input
             type="checkbox"
             id="checkbox-id"
             value="checkbox-value"
-            class="w-5 h-5 rounded border-[#A6A6A6] accent-black"
+            class="msc-checkbox"
           />
-          <label
-            for="checkbox-id"
-            class="checkbox__label relative inline-flex items-center gap-3 leading-150 cursor-pointer"
-          >
+          <label for="checkbox-id" class="msc-checkbox-label">
             Checkbox label
           </label>
         </div>
-
-        <br />
-        <br />
-
-        <pre class="h-fit">
-          <code class="language-html rounded">
-
-&lt;input type=&quot;checkbox&quot; id=&quot;checkbox-id&quot; value=&quot;checkbox-value&quot; class=&quot;msc-checkbox&quot;/&gt;
-&lt;label for=&quot;checkbox-id&quot; class=&quot;msc-label&quot;&gt;
-  Checkbox label
-&lt;/label&gt;
-
-          </code>
-        </pre>
       </div>
 
       <div class="col-span-6">
-        <!-- RADIO -->
-        <h2 class="font-bold text-[1.5rem]">Radio</h2>
-        <div class="flex gap-2 mb-3">
-          <div class="flex w-fit py-2 px-3 bg-white items-center shadow-md">
-            <input
-              id="radio-default"
-              type="radio"
-              name="list-radio"
-              class="w-4 h-4 text-black"
-            />
-            <label
-              for="radio-default"
-              class="w-full ms-2 text-sm font-sm text-black font-normal"
-              >Yes
-            </label>
-          </div>
-          <div class="flex w-fit py-2 px-3 bg-white items-center shadow-md">
-            <input
-              id="radio-default"
-              type="radio"
-              value=""
-              name="list-radio"
-              class="w-4 h-4 text-black"
-            />
-            <label
-              for="radio-default"
-              class="w-full ms-2 text-sm font-sm text-black font-normal"
-              >No
-            </label>
-          </div>
+        <h2 class="font-bold text-[1.5rem] mb-4">Radio</h2>
+        <div class="flex gap-2">
+        <div class="msc-radio-container">
+          <input
+            id="radio-yes"
+            type="radio"
+            name="list-radio"
+            class="msc-radio-input"
+          />
+          <label for="radio-yes" class="msc-radio-label">Yes </label>
         </div>
-
-        <br />
-
-        <pre class="h-fit">
-          <code class="language-html rounded">
-  &lt;div class=&quot;msc-radio-container&quot;&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;list-radio&quot; class=&quot;msc-radio&quot;/&gt;
-    &lt;label for=&quot;radio-default&quot; class=&quot;msc-label&quot;&gt; 
-    Yes
-    &lt;/label&gt;
-  &lt;/div&gt;
-          </code>
-        </pre>
+        <div class="msc-radio-container">
+          <input
+            id="radio-no"
+            type="radio"
+            value=""
+            name="list-radio"
+            class="msc-radio-input"
+          />
+          <label for="radio-no" class="msc-radio-label">No </label>
+        </div>
+      </div>
       </div>
     </section>
 
