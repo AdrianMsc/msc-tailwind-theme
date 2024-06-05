@@ -1,7 +1,7 @@
 module.exports = function ({ addComponents, theme }) {
   const input = {
     ".msc-input": {
-      "@apply w-full bg-white border border-monochromes-grey_light hover:border-monochromes-main px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10":
+      "@apply w-full bg-white border border-monochromes-grey_light hover:border-monochromes-main px-4 py-3.5 rounded text-sm placeholder-transparent focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black h-10":
         {},
     },
     ".msc-input-label": {
