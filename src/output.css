@@ -707,6 +707,14 @@ video {
   align-items: center;
 }
 
+.msc-btn-dots-container-sm {
+  display: flex;
+  height: 1.25rem;
+  width: 2.5rem;
+  place-content: space-between;
+  align-items: center;
+}
+
 .msc-btn-dot1 {
   position: relative;
   top: 0px;
@@ -786,6 +794,84 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   opacity: 0.3;
+}
+
+.msc-btn-dot1-blue {
+  position: relative;
+  top: 0px;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+@keyframes dotFlashing1 {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.msc-btn-dot1-blue {
+  animation: dotFlashing1 2s infinite linear alternate;
+  border-radius: 9999px;
+  background-color: #1C58EE;
+}
+
+.msc-btn-dot2-blue {
+  position: relative;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+@keyframes dotFlashing2 {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.msc-btn-dot2-blue {
+  animation: dotFlashing2 2s infinite linear alternate 0.4s;
+  border-radius: 9999px;
+  opacity: 0.5;
+  background-color: #1C58EE;
+}
+
+.msc-btn-dot3-blue {
+  position: relative;
+  top: 0px;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+@keyframes dotFlashing3 {
+  0% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.msc-btn-dot3-blue {
+  animation: dotFlashing3 2s infinite linear alternate 0.6s;
+  border-radius: 9999px;
+  opacity: 0.3;
+  background-color: #1C58EE;
 }
 
 .msc-checkbox-container {
@@ -1696,10 +1782,6 @@ video {
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
 }
 
 .mb-2 {
