@@ -38,5 +38,6 @@ module.exports = {
     require("./components/msc-radio"),
     require("./components/msc-toggle"),
     require("./components/msc-icons"),
+    require("./components/msc-dividers"),
   ],
 };
