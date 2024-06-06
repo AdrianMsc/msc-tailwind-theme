@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css"
+    />
+    <title>Dividers</title>
+  </head>
+  <body class="bg-[#f2f2f2]">
+    <div class="max-w-screen-2xl mx-auto px-5">
+      <h2 class="font-bold text-2xl mb-2">Horizontal Dividers</h2>
+      <div
+        class="flex flex-col gap-2 place-content-evenly w-full h-[100px] bg-white rounded py-3 px-4"
+      >
+        <div class="msc-h-divider-gray"></div>
+        <div class="msc-h-divider-blue"></div>
+      </div>
+      <div class="max-w-[1500px]">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;!-- Horizontal Gray Divider --&gt;
+  &lt;div class=&quot;msc-h-divider-gray&quot;&gt;&lt;/div&gt;
+  &lt;!-- Horizontal Blue Divider --&gt;
+  &lt;div class=&quot;msc-h-divider-blue&quot;&gt;&lt;/div&gt;
+          </code>
+        </pre>
+      </div>
+
+      <h2 class="font-bold text-2xl mb-2">Vertical Dividers</h2>
+      <div
+        class="flex flex-row gap-2 place-content-evenly w-[100px] h-[300px] bg-white rounded py-3 px-4"
+      >
+        <div class="msc-v-divider-gray"></div>
+        <div class="msc-v-divider-blue"></div>
+      </div>
+      <div class="max-w-[1500px]">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;!-- Vertical Gray Divider --&gt;
+  &lt;div class=&quot;msc-v-divider-gray&quot;&gt;&lt;/div&gt;
+  &lt;!-- Vertical Blue Divider --&gt;
+  &lt;div class=&quot;msc-v-divider-blue&quot;&gt;&lt;/div&gt;
+          </code>
+        </pre>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
