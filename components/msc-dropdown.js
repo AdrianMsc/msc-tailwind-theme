@@ -41,7 +41,7 @@ module.exports = function ({ addComponents, theme }) {
       },
     },
     ".dropdown-button":{
-      "@apply flex items-center w-full place-content-between m-2":{}
+      "@apply flex items-center w-full place-content-between mx-4 my-3.5":{}
     },
     ".dropdown-placeholder":{
       "@apply font-normal text-sm":{},
@@ -51,7 +51,7 @@ module.exports = function ({ addComponents, theme }) {
       "@apply w-full min-h-min bg-white rounded absolute mt-9 shadow":{}
     },
     ".dropdown-option":{
-      "@apply flex max-h-10 w-full py-[13px] px-2.5 gap-1.5 items-center font-normal text-sm text-black":{},
+      "@apply flex max-h-10 w-full py-3.5 px-4 gap-1.5 items-center font-normal text-sm text-black":{},
       "&:hover":{
         "@apply bg-[#f2f2f280]":{}
       },
@@ -93,10 +93,10 @@ module.exports = function ({ addComponents, theme }) {
       },
     },
     ".double-dropdown-options-container":{
-      "@apply w-full min-h-min bg-white rounded absolute mt-12 shadow overflow-hidden":{}
+      "@apply w-full min-h-min bg-white rounded absolute mt-14 shadow overflow-hidden":{}
     },
     ".double-dropdown-option":{
-      "@apply flex flex-col h-fit w-full py-2 px-3 items-start cursor-pointer":{},
+      "@apply flex flex-col h-fit w-full py-3.5 px-4 items-start cursor-pointer":{},
       "&:hover":{
         "@apply bg-[#f2f2f280]":{}
       },
