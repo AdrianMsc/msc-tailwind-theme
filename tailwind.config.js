@@ -39,5 +39,6 @@ module.exports = {
     require("./components/msc-toggle"),
     require("./components/msc-icons"),
     require("./components/msc-dividers"),
+    require("./components/msc-spinner"),
   ],
 };
