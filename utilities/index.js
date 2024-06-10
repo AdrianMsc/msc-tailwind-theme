@@ -1,3 +1,11 @@
+toggleSideNav = () => {
+  const body = document.querySelector("body");
+  const sidebar = document.querySelector("#msc-sidebar");
+  body.classList.toggle("overflow-hidden");
+  sidebar.classList.toggle("-translate-x-full");
+  sidebar.classList.toggle("transform-none");
+};
+
 const sideNav = `
 <ul class="space-y-2 font-medium">
           <li>
@@ -360,15 +368,8 @@ const sideNav = `
 `;
 
 createPagesSidenav = () => {
-  document.getElementById("sidenav-menu").innerHTML = sideNav;
+  const isSidenav = document.getElementById("sidenav-menu");
+  isSidenav ? (isSidenav.innerHTML = sideNav) : null;
 };
 
 createPagesSidenav();
-
-toggleSideNav = () => {
-  const body = document.querySelector("body");
-  const sidebar = document.querySelector("#msc-sidebar");
-  body.classList.toggle("overflow-hidden");
-  sidebar.classList.toggle("-translate-x-full");
-  sidebar.classList.toggle("transform-none");
-};
