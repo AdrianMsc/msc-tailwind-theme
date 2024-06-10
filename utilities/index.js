@@ -11,7 +11,7 @@ const sideNav = `
           <li>
             <a
               href="../index.html"
-              class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100"
+              class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-3 group hover:bg-gray-100"
               >Home</a
             >
           </li>
@@ -40,11 +40,11 @@ const sideNav = `
                 src="../assets/icons/chevron-down.svg"
               />
             </button>
-            <ul id="dropdown-example" class="hidden py-2 space-y-2">
+            <ul id="dropdown-example" class=" py-2 space-y-2">
               <li>
                 <a
                   href="#"
-                  class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100"
+                  class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100"
                   >Component Status</a
                 >
               </li>
@@ -65,7 +65,7 @@ const sideNav = `
                 src="../assets/icons/home.svg"
               /> -->
               <span
-                class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                class="flex-1 text-left rtl:text-right whitespace-nowrap"
                 >Foundations</span
               >
               <img
@@ -75,7 +75,7 @@ const sideNav = `
                 src="../assets/icons/chevron-down.svg"
               />
             </button>
-            <ul id="dropdown-foundations" class="hidden py-2 space-y-2">
+            <ul id="dropdown-foundations" class=" py-2 space-y-2">
               <li>
                 <a
                   href="colors.html"
@@ -108,7 +108,7 @@ const sideNav = `
                 src="../assets/icons/home.svg"
               /> -->
               <span
-                class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                class="flex-1  text-left rtl:text-right whitespace-nowrap"
                 >Action</span
               >
               <img
@@ -118,7 +118,7 @@ const sideNav = `
                 src="../assets/icons/chevron-down.svg"
               />
             </button>
-            <ul id="dropdown-action" class="hidden py-2 space-y-2">
+            <ul id="dropdown-action" class=" py-2 space-y-2">
               <li>
                 <a
                   href="buttons.html"
@@ -176,7 +176,7 @@ const sideNav = `
                 src="../assets/icons/chevron-down.svg"
               />
             </button>
-            <ul id="dropdown-colection" class="hidden py-2 space-y-2">
+            <ul id="dropdown-colection" class=" py-2 space-y-2">
               <li>
                 <a
                   href="buttons.html"
@@ -201,7 +201,7 @@ const sideNav = `
                 src="../assets/icons/home.svg"
               /> -->
               <span
-                class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                class="flex-1  text-left rtl:text-right whitespace-nowrap"
                 >Form</span
               >
               <img
@@ -211,7 +211,7 @@ const sideNav = `
                 src="../assets/icons/chevron-down.svg"
               />
             </button>
-            <ul id="dropdown-form" class="hidden py-2 space-y-2">
+            <ul id="dropdown-form" class=" py-2 space-y-2">
               <li>
                 <a
                   href="inputs.html"
@@ -291,7 +291,7 @@ const sideNav = `
                     src="../assets/icons/home.svg"
                   /> -->
               <span
-                class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                class="flex-1  text-left rtl:text-right whitespace-nowrap"
                 >Layout</span
               >
               <img
@@ -301,7 +301,7 @@ const sideNav = `
                 src="../assets/icons/chevron-down.svg"
               />
             </button>
-            <ul id="dropdown-layout" class="hidden py-2 space-y-2">
+            <ul id="dropdown-layout" class=" py-2 space-y-2">
               <li>
                 <a
                   href="dividers.html"
@@ -335,7 +335,7 @@ const sideNav = `
                 src="../assets/icons/home.svg"
               /> -->
               <span
-                class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                class="flex-1  text-left rtl:text-right whitespace-nowrap"
                 >Overlay</span
               >
               <img
@@ -345,7 +345,7 @@ const sideNav = `
                 src="../assets/icons/chevron-down.svg"
               />
             </button>
-            <ul id="dropdown-overlay" class="hidden py-2 space-y-2">
+            <ul id="dropdown-overlay" class=" py-2 space-y-2">
               <li>
                 <a
                   href="modal.html"
