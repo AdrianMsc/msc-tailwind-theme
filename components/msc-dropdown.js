@@ -85,6 +85,31 @@ module.exports = function ({ addComponents, theme }) {
         borderColor: theme("colors.white"),
       }
     },
+    ".msc-double-dropdown-container":{
+      "@apply flex w-full bg-white h-fit rounded cursor-pointer border border-[#21212161] relative":{},
+      "&:hover":{
+        "@apply border-[#212121a3]":
+        {}
+      },
+    },
+    ".double-dropdown-options-container":{
+      "@apply w-full min-h-min bg-white rounded absolute mt-12 shadow overflow-hidden":{}
+    },
+    ".double-dropdown-option":{
+      "@apply flex flex-col h-fit w-full py-2 px-3 items-start cursor-pointer":{},
+      "&:hover":{
+        "@apply bg-[#f2f2f280]":{}
+      },
+      "&:active":{
+        "":{},
+      },
+    },
+    ".double-dropdown-active":{
+      borderColor: theme("colors.white"),
+      "&:hover":{
+        borderColor: theme("colors.white"),
+      }
+    },
   };
 
   addComponents(dropdown);

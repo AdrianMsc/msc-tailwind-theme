@@ -173,6 +173,68 @@
         </pre>
       </div>
 
+      <h2 class="font-bold text-2xl mb-2">Double Line Dropdown</h2>
+      <div id="double-dropdown" class="msc-double-dropdown-container">
+        <button class="dropdown-button">
+          <div class="text-left">
+            <p class="text-sm">Est. <b>Wed, Apr 03</b> from PA</p>
+            <p class="text-xs">Standard UPS Ground</p>
+          </div>
+          <img src="../assets/caret-down.svg" />
+        </button>
+        <div
+          id="double-options"
+          class="double-dropdown-options-container hidden"
+        >
+          <div class="double-dropdown-option text-left">
+            <p class="text-sm">Est. <b>Thu, Apr 04</b> from PA</p>
+            <p class="text-xs">UPS Ground Freight Saver</p>
+          </div>
+          <div class="double-dropdown-option text-left">
+            <p class="text-sm">Est. <b>Wed, Apr 03</b> from PA</p>
+            <p class="text-xs">1 Day UPS Air (Red)</p>
+          </div>
+          <div class="double-dropdown-option text-left">
+            <p class="text-sm">Est. <b>Wed, Apr 03</b> from PA</p>
+            <p class="text-xs">1 Day UPS (Early AM)</p>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-[1500px] mt-[150px]">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+  &lt;div id=&quot;double-dropdown&quot; class=&quot;msc-double-dropdown-container&quot;&gt;
+    &lt;button class=&quot;dropdown-button&quot;&gt;
+      &lt;div class=&quot;text-left&quot;&gt;
+        &lt;p class=&quot;text-sm&quot;&gt;Est. &lt;b&gt;Wed, Apr 03&lt;/b&gt; from PA&lt;/p&gt;
+        &lt;p class=&quot;text-xs&quot;&gt;Standard UPS Ground&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;img src=&quot;../assets/caret-down.svg&quot; /&gt;
+    &lt;/button&gt;
+    &lt;div
+      id=&quot;double-options&quot;
+      class=&quot;double-dropdown-options-container hidden&quot;
+    &gt;
+      &lt;div class=&quot;double-dropdown-option text-left&quot;&gt;
+        &lt;p class=&quot;text-sm&quot;&gt;Est. &lt;b&gt;Thu, Apr 04&lt;/b&gt; from PA&lt;/p&gt;
+        &lt;p class=&quot;text-xs&quot;&gt;UPS Ground Freight Saver&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- JS --&gt;
+  &lt;script&gt;
+    let doubleDropdown = document.getElementById("double-dropdown");
+    let doubleOptions = document.getElementById("double-options");
+
+    doubleDropdown.addEventListener("click", function () {
+      doubleDropdown.classList.toggle("double-dropdown-active");
+      doubleOptions.classList.toggle("hidden");
+    });
+  &lt;/script&gt;
+          </code>
+        </pre>
+      </div>
+
       <h2 class="font-bold text-2xl mb-2">Numeric Dropdown</h2>
       <div id="numDropdown" class="numeric-dropdown-container">
         <div class="numeric-dropdown">
@@ -308,9 +370,16 @@
       });
 
       dropOption.addEventListener("click", function () {
-        console.log("clicked");
         labelTop.classList.toggle("hidden");
         dropPlaceholder.classList.toggle("text-transparent");
+      });
+
+      let doubleDropdown = document.getElementById("double-dropdown");
+      let doubleOptions = document.getElementById("double-options");
+
+      doubleDropdown.addEventListener("click", function () {
+        doubleDropdown.classList.toggle("double-dropdown-active");
+        doubleOptions.classList.toggle("hidden");
       });
 
       let numDropdown = document.getElementById("numDropdown");
