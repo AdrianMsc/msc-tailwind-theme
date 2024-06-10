@@ -217,10 +217,10 @@
           <h1 class="font-bold text-3xl">Input Unit</h1>
         </div>
 
-        <div class="col-span-6 md:col-span-1 mb-3">
+        <div class="col-span-6 md:col-span-2 mb-3">
           <h2 class="font-bold text-xl mb-4">Default</h2>
 
-          <div class="relative flex flex-col">
+          <div class="msc-input-unit-wrapper">
             <label for="field" class="msc-input-unit-label">Length (ft) </label>
             <input
               id="field"
@@ -231,10 +231,10 @@
           </div>
         </div>
 
-        <div class="col-span-6 md:col-span-1 mb-3">
+        <div class="col-span-6 md:col-span-2 mb-3">
           <h2 class="font-bold text-xl mb-4">Hover</h2>
 
-          <div class="relative max-w-[68px] flex flex-col">
+          <div class="msc-input-unit-wrapper">
             <label for="field" class="msc-input-unit-label">Length (ft) </label>
             <input
               id="field"
@@ -245,10 +245,10 @@
           </div>
         </div>
 
-        <div class="col-span-6 md:col-span-1 mb-3">
+        <div class="col-span-6 md:col-span-2 mb-3">
           <h2 class="font-bold text-xl mb-4">Active</h2>
 
-          <div class="relative max-w-[68px] flex flex-col">
+          <div class="msc-input-unit-wrapper">
             <label for="field" class="msc-input-unit-label">Length (ft) </label>
             <input
               id="field"
@@ -259,11 +259,13 @@
           </div>
         </div>
 
-        <div class="col-span-6 md:col-span-1 mb-3">
+        <div class="col-span-6 md:col-span-2 mb-3">
           <h2 class="font-bold text-xl mb-4">Disabled</h2>
 
-          <div class="relative max-w-[68px] flex flex-col">
-            <label for="field" class="msc-input-unit-label">Length (ft) </label>
+          <div class="msc-input-unit-wrapper">
+            <label for="field" class="msc-input-unit-label msc-label-disabled"
+              >Length (ft)
+            </label>
             <input
               id="field"
               type="number"
@@ -274,18 +276,21 @@
           </div>
         </div>
 
-        <div class="col-span-6 md:col-span-1 mb-3">
+        <div class="col-span-6 md:col-span-2 mb-3">
           <h2 class="font-bold text-xl mb-4">Error</h2>
 
-          <div class="relative flex flex-col">
+          <div class="msc-input-unit-wrapper">
             <label for="field" class="msc-input-unit-label">Length (ft) </label>
             <input
               id="field"
               type="number"
               placeholder="1"
-              class="msc-input-unit input-error"
+              class="msc-input-unit input-error mb-1"
             />
-            <small class="error-message">Error message </small>
+            <small class="error-message"
+              >Error <br />
+              message
+            </small>
           </div>
         </div>
       </section>

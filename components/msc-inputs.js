@@ -12,15 +12,21 @@ module.exports = function ({ addComponents, theme }) {
       "@apply  relative w-full flex-col": {},
     },
     ".msc-input-disabled": {
-      "@apply w-full border border-gray-300 px-4 py-3.5 rounded text-sm focus:outline-none focus:border-black cursor-not-allowed h-10":
+      "@apply w-full border text-monochromes-grey_light px-4 py-3.5 rounded text-sm focus:outline-none focus:border-monochromes-grey_light  cursor-not-allowed h-10":
         {},
     },
+    ".msc-label-disabled": {
+      "@apply text-monochromes-grey_xlight !important": {},
+    },
     ".msc-input-unit": {
-      "@apply w-[68px] text-center border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 md:pl-4 md:pr-0 py-3.5 rounded text-sm focus:border-monochromes-main focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10":
+      "@apply  text-center border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 md:pl-4 md:pr-0 py-3.5 rounded text-sm focus:border-monochromes-main focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10":
         {},
     },
     ".msc-input-unit-label": {
-      "@apply text-monochromes-main text-sm mb-1": {},
+      "@apply text-monochromes-main text-sm mb-1 text-xs text-center": {},
+    },
+    ".msc-input-unit-wrapper": {
+      "@apply relative flex flex-col w-[68px]": {},
     },
     ".input-error": {
       "@apply  border-error-red hover:border-error-red text-error-red focus:border-error-red":
