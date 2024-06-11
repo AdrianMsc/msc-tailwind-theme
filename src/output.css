@@ -623,6 +623,13 @@ video {
   background-color: #0D3AA9;
 }
 
+.msc-btn-blue-solid:disabled {
+  cursor: not-allowed;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background-color: #A6A6A6;
+}
+
 .msc-btn-blue-solid:focus-visible {
   outline-style: dashed;
   outline-width: 1px;
@@ -645,6 +652,14 @@ video {
   background-color: #0d3aa933;
 }
 
+.msc-btn-blue-outline:disabled {
+  cursor: not-allowed;
+  border-width: 1px;
+  background-color: transparent;
+  color: #A6A6A6;
+  border-color: #A6A6A6;
+}
+
 .msc-btn-blue-outline:focus-visible {
   outline-style: dashed;
   outline-width: 1px;
@@ -665,32 +680,17 @@ video {
   background-color: #0d3aa933;
 }
 
+.msc-btn-transparent:disabled {
+  cursor: not-allowed;
+  background-color: transparent;
+  color: #A6A6A6;
+}
+
 .msc-btn-transparent:focus-visible {
   outline-style: dashed;
   outline-width: 1px;
   outline-offset: 4px;
   outline-color: #424242;
-}
-
-.msc-btn-solid-disabled {
-  cursor: not-allowed;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  background-color: #A6A6A6;
-}
-
-.msc-btn-outline-disabled {
-  cursor: not-allowed;
-  border-width: 1px;
-  background-color: transparent;
-  color: #A6A6A6;
-  border-color: #A6A6A6;
-}
-
-.msc-btn-transparent-disabled {
-  cursor: not-allowed;
-  background-color: transparent;
-  color: #A6A6A6;
 }
 
 .msc-btn-icon {
@@ -2672,6 +2672,13 @@ video {
   background-color: #0D3AA9;
 }
 
+.disabled\:msc-btn-blue-solid:disabled:disabled {
+  cursor: not-allowed;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background-color: #A6A6A6;
+}
+
 .disabled\:msc-btn-blue-solid:disabled:focus-visible {
   outline-style: dashed;
   outline-width: 1px;
@@ -2694,6 +2701,14 @@ video {
   background-color: #0d3aa933;
 }
 
+.disabled\:msc-btn-blue-outline:disabled:disabled {
+  cursor: not-allowed;
+  border-width: 1px;
+  background-color: transparent;
+  color: #A6A6A6;
+  border-color: #A6A6A6;
+}
+
 .disabled\:msc-btn-blue-outline:disabled:focus-visible {
   outline-style: dashed;
   outline-width: 1px;
@@ -2712,6 +2727,12 @@ video {
 
 .disabled\:msc-btn-transparent:disabled:active {
   background-color: #0d3aa933;
+}
+
+.disabled\:msc-btn-transparent:disabled:disabled {
+  cursor: not-allowed;
+  background-color: transparent;
+  color: #A6A6A6;
 }
 
 .disabled\:msc-btn-transparent:disabled:focus-visible {
