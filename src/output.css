@@ -2657,6 +2657,70 @@ video {
   -moz-appearance: textfield;
 }
 
+.disabled\:msc-btn-blue-solid:disabled {
+  cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background-color: #1C58EE;
+}
+
+.disabled\:msc-btn-blue-solid:disabled:hover {
+  background-color: #186DF5;
+}
+
+.disabled\:msc-btn-blue-solid:disabled:active {
+  background-color: #0D3AA9;
+}
+
+.disabled\:msc-btn-blue-solid:disabled:focus-visible {
+  outline-style: dashed;
+  outline-width: 1px;
+  outline-offset: 4px;
+  outline-color: #424242;
+}
+
+.disabled\:msc-btn-blue-outline:disabled {
+  border-width: 1px;
+  background-color: transparent;
+  color: #1C58EE;
+  border-color: #1C58EE;
+}
+
+.disabled\:msc-btn-blue-outline:disabled:hover {
+  background-color: #F1F5FE;
+}
+
+.disabled\:msc-btn-blue-outline:disabled:active {
+  background-color: #0d3aa933;
+}
+
+.disabled\:msc-btn-blue-outline:disabled:focus-visible {
+  outline-style: dashed;
+  outline-width: 1px;
+  outline-offset: 4px;
+  outline-color: #424242;
+}
+
+.disabled\:msc-btn-transparent:disabled {
+  background-color: transparent;
+  color: #1C58EE;
+}
+
+.disabled\:msc-btn-transparent:disabled:hover {
+  background-color: #F1F5FE;
+}
+
+.disabled\:msc-btn-transparent:disabled:active {
+  background-color: #0d3aa933;
+}
+
+.disabled\:msc-btn-transparent:disabled:focus-visible {
+  outline-style: dashed;
+  outline-width: 1px;
+  outline-offset: 4px;
+  outline-color: #424242;
+}
+
 .after\:right-10::after {
   content: var(--tw-content);
   right: 2.5rem;
