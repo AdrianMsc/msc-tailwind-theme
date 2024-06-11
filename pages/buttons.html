@@ -79,34 +79,42 @@
           </div>
         </div>
 
-        <div class="max-w-screen-2xl mx-auto px-5">
+        <div class="max-w-screen-2xl mx-auto">
           <h2 class="font-bold text-2xl mb-2">Disabled</h2>
           <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
-            <button disabled class="msc-btn msc-btn-solid-disabled">
+            <button disabled class="msc-btn disabled:msc-btn-blue-solid">
               Primary
             </button>
-            <button disabled class="msc-btn msc-btn-outline-disabled">
+            <button disabled class="msc-btn disabled:msc-btn-blue-outline">
               Secondary
             </button>
-            <button disabled class="msc-btn msc-btn-transparent-disabled">
+            <button disabled class="msc-btn disabled:msc-btn-transparent">
               Tertiary
+            </button>
+            <button
+              disabled
+              class="msc-btn disabled:msc-btn-blue-solid msc-btn-sm"
+            >
+              Small
             </button>
           </div>
           <div class="max-w-[1500px]">
             <pre class="h-fit">
             <code class="language-html rounded">
       &lt;!-- Primary --&gt;        
-      &lt;button disabled class=&quot;msc-btn msc-btn-solid-disabled&quot;&gt;Primary&lt;/button&gt;
+      &lt;button disabled class=&quot;msc-btn disabled:msc-btn-solid&quot;&gt;Primary&lt;/button&gt;
       &lt;!-- Secondary --&gt;
-      &lt;button disabled class=&quot;msc-btn msc-btn-outline-disabled&quot;&gt;Secondary&lt;/button&gt;
+      &lt;button disabled class=&quot;msc-btn disabled:msc-btn-blue-outline&quot;&gt;Secondary&lt;/button&gt;
       &lt;!-- Tertiary --&gt;
-      &lt;button disabled class=&quot;msc-btn msc-btn-transparent-disabled&quot;&gt;Tertiary&lt;/button&gt;
+      &lt;button disabled class=&quot;msc-btn disabled:msc-btn-transparent&quot;&gt;Tertiary&lt;/button&gt;
+      &lt;!-- Small --&gt;        
+      &lt;button disabled class=&quot;msc-btn disabled:msc-btn-solid&quot;&gt;Primary&lt;/button&gt;
             </code>
         </pre>
           </div>
         </div>
 
-        <div class="max-w-screen-2xl mx-auto px-5">
+        <div class="max-w-screen-2xl mx-auto">
           <h2 class="font-bold text-2xl mb-2">Button With Icon</h2>
           <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
             <button class="msc-btn msc-btn-blue-solid msc-btn-icon">
@@ -142,7 +150,7 @@
           </div>
         </div>
 
-        <div class="max-w-screen-2xl mx-auto px-5">
+        <div class="max-w-screen-2xl mx-auto">
           <h2 class="font-bold text-2xl mb-2">Button Loading State</h2>
           <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
             <button class="msc-btn msc-btn-blue-solid">

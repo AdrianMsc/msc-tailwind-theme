@@ -15,6 +15,10 @@ module.exports = function ({ addComponents, theme }) {
       "&:active": {
         backgroundColor: theme("colors.primary.blue_dark"),
       },
+      "&:disabled": {
+        "@apply text-white cursor-not-allowed": {},
+        backgroundColor: theme("colors.monochromes.grey_light"),
+      },
       "&:focus-visible": {
         "@apply outline-dashed outline-1 outline-offset-4 outline-[#424242]":
           {},
@@ -30,6 +34,11 @@ module.exports = function ({ addComponents, theme }) {
       "&:active": {
         backgroundColor: "#0d3aa933",
       },
+      "&:disabled": {
+        "@apply bg-transparent cursor-not-allowed border": {},
+        color: theme("colors.monochromes.grey_light"),
+        borderColor: theme("colors.monochromes.grey_light"),
+      },
       "&:focus-visible": {
         "@apply outline-dashed outline-1 outline-offset-4 outline-[#424242]":
           {},
@@ -44,23 +53,14 @@ module.exports = function ({ addComponents, theme }) {
       "&:active": {
         backgroundColor: "#0d3aa933",
       },
+      "&:disabled": {
+        "@apply bg-transparent cursor-not-allowed": {},
+        color: theme("colors.monochromes.grey_light"),
+      },
       "&:focus-visible": {
         "@apply outline-dashed outline-1 outline-offset-4 outline-[#424242]":
           {},
       },
-    },
-    ".msc-btn-solid-disabled": {
-      "@apply text-white cursor-not-allowed": {},
-      backgroundColor: theme("colors.monochromes.grey_light"),
-    },
-    ".msc-btn-outline-disabled": {
-      "@apply bg-transparent cursor-not-allowed border": {},
-      color: theme("colors.monochromes.grey_light"),
-      borderColor: theme("colors.monochromes.grey_light"),
-    },
-    ".msc-btn-transparent-disabled": {
-      "@apply bg-transparent cursor-not-allowed": {},
-      color: theme("colors.monochromes.grey_light"),
     },
     ".msc-btn-icon": {
       "@apply flex items-center ml-2": {},
