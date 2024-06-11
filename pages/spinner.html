@@ -8,6 +8,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css"
     />
+    <link
+      rel="shortcut icon"
+      href="https://www.mscdirect.com/favicon.ico"
+      type="image/x-icon"
+    />
     <title>Spinner</title>
   </head>
   <body class="bg-[#f2f2f2]">
@@ -60,10 +65,10 @@
               page or app module.
             </p>
 
+            <h2 class="font-bold text-xl mb-4">Light</h2>
+
             <div class="msc-spinner-wrapper mt-5">
               <svg
-                width="62"
-                height="62"
                 viewBox="0 0 62 62"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -151,12 +156,108 @@
             <div class="max-w-[1500px] mt-2">
               <pre class="h-fit">
               <code class="language-html rounded">
-&lt;div class=&quot;msc-spinner-wrapper mt-5&quot;&gt;
-  &lt;svg class=&quot;msc-spinner&quot; viewBox=&quot;0 0 62 62&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-    &lt;circle cx=&quot;31&quot; cy=&quot;31&quot; r=&quot;28&quot; stroke=&quot;white&quot; stroke-width=&quot;6&quot;/&gt;
-    &lt;circle opacity=&quot;0.38&quot; cx=&quot;31&quot; cy=&quot;31&quot; r=&quot;28&quot; stroke=&quot;#212121&quot; stroke-width=&quot;6&quot;/&gt; &lt;path opacity=&quot;0.8&quot; d=&quot;M3 31C3 15.536 15.536 3 31 3&quot; stroke=&quot;#212121&quot; stroke-width=&quot;6&quot; stroke-linecap=&quot;round&quot;/&gt;
-  &lt;/svg&gt;  
-    &lt;label class=&quot;msc-spinner-label&quot;&gt;Loading Results&lt;/label&gt;
+&lt;div class=&quot;msc-spinner-overlay hidden&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;msc-spinner-wrapper&quot;&gt;
+    &lt;svg class=&quot;msc-spinner&quot; viewBox=&quot;0 0 62 62&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+      &lt;circle cx=&quot;31&quot; cy=&quot;31&quot; r=&quot;28&quot; stroke=&quot;white&quot; stroke-width=&quot;6&quot;/&gt;
+      &lt;circle opacity=&quot;0.38&quot; cx=&quot;31&quot; cy=&quot;31&quot; r=&quot;28&quot; stroke=&quot;#212121&quot; stroke-width=&quot;6&quot;/&gt; &lt;path opacity=&quot;0.8&quot; d=&quot;M3 31C3 15.536 15.536 3 31 3&quot; stroke=&quot;#212121&quot; stroke-width=&quot;6&quot; stroke-linecap=&quot;round&quot;/&gt;
+    &lt;/svg&gt;  
+      &lt;label class=&quot;msc-spinner-label&quot;&gt;Loading Results&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    
+              </code>
+            </pre>
+            </div>
+
+            <h2 class="font-bold text-xl mb-4">Dark</h2>
+
+            <div
+              class="msc-spinner-wrapper mt-5 bg-monochromes-main py-3 rounded"
+            >
+              <svg
+                class="msc-spinner"
+                viewBox="0 0 62 62"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="31"
+                  cy="31"
+                  r="28"
+                  stroke="#717171"
+                  stroke-width="6"
+                />
+                <path
+                  opacity="0.8"
+                  d="M3 31C3 15.536 15.536 3 31 3"
+                  stroke="white"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                />
+              </svg>
+
+              <label class="msc-spinner-label-dark">Loading Results</label>
+            </div>
+
+            <div id="fidgetSpinnerDark" class="msc-spinner-overlay-dark hidden">
+              <span
+                class="absolute top-2 right-3 text-lg text-white font-bold cursor-pointer"
+                onclick="closeSpinnerDark()"
+                >X
+              </span>
+
+              <div class="msc-spinner-wrapper">
+                <svg
+                  class="msc-spinner"
+                  viewBox="0 0 62 62"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="31"
+                    cy="31"
+                    r="28"
+                    stroke="#717171"
+                    stroke-width="6"
+                  />
+                  <path
+                    opacity="0.8"
+                    d="M3 31C3 15.536 15.536 3 31 3"
+                    stroke="white"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+                <label class="msc-spinner-label-dark">Loading Results</label>
+              </div>
+            </div>
+
+            <button
+              class="msc-btn msc-btn-blue-solid mt-4"
+              onclick="openSpinnerDark()"
+            >
+              Launch Loading Overlay
+            </button>
+            <br />
+            <small
+              >Press "ESC" or click/tap the "X" to close the spinner
+              example</small
+            >
+
+            <div class="max-w-[1500px] mt-2">
+              <pre class="h-fit">
+              <code class="language-html rounded">
+                
+&lt;div class=&quot;msc-spinner-overlay-dark hidden&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;msc-spinner-wrapper&quot;&gt;
+    &lt;svg class=&quot;msc-spinner&quot; viewBox=&quot;0 0 62 62&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+      &lt;circle cx=&quot;31&quot; cy=&quot;31&quot; r=&quot;28&quot; stroke=&quot;white&quot; stroke-width=&quot;6&quot;/&gt;
+      &lt;circle opacity=&quot;0.38&quot; cx=&quot;31&quot; cy=&quot;31&quot; r=&quot;28&quot; stroke=&quot;#212121&quot; stroke-width=&quot;6&quot;/&gt; &lt;path opacity=&quot;0.8&quot; d=&quot;M3 31C3 15.536 15.536 3 31 3&quot; stroke=&quot;#212121&quot; stroke-width=&quot;6&quot; stroke-linecap=&quot;round&quot;/&gt;
+    &lt;/svg&gt;  
+      &lt;label class=&quot;msc-spinner-label-dark&quot;&gt;Loading Results&lt;/label&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
     
               </code>
@@ -184,12 +285,30 @@
         }
       });
 
-      openSpinner = () => {
+      openSpinner = (id) => {
         spinnerOverlay.classList.remove("hidden");
       };
 
-      closeSpinner = () => {
+      closeSpinner = (id) => {
         spinnerOverlay.classList.add("hidden");
+      };
+
+      //DARK
+
+      const spinnerOverlayDark = document.getElementById("fidgetSpinnerDark");
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          spinnerOverlayDark.classList.add("hidden");
+        }
+      });
+
+      openSpinnerDark = (id) => {
+        spinnerOverlayDark.classList.remove("hidden");
+      };
+
+      closeSpinnerDark = (id) => {
+        spinnerOverlayDark.classList.add("hidden");
       };
     </script>
   </body>
