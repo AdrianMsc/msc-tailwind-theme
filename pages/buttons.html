@@ -46,169 +46,177 @@
       </div>
     </aside>
 
-    <div class="p-4 sm:ml-64">
-      <div class="max-w-screen-2xl mx-auto px-5">
-        <h2 class="font-bold text-2xl mb-2">Default Buttons</h2>
-        <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
-          <button class="msc-btn msc-btn-blue-solid">Blue Solid</button>
-          <button class="msc-btn msc-btn-blue-outline">Blue Outline</button>
-          <button class="msc-btn msc-btn-transparent">Text Only</button>
-          <button class="msc-btn msc-btn-blue-solid msc-btn-sm">
-            Small Button
-          </button>
+    <section class="p-4 sm:ml-64 grid grid-cols-12">
+      <div class="col-span-12 md:col-span-8 md:col-start-3 pt-10">
+        <div class="max-w-screen-2xl mx-auto">
+          <h1 class="font-bold text-3xl mb-3">
+            <small class="text-sm text-primary-blue">Action</small> <br />
+            Buttons
+          </h1>
+
+          <h2 class="font-bold text-2xl mb-2">Default Buttons</h2>
+          <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
+            <button class="msc-btn msc-btn-blue-solid">Blue Solid</button>
+            <button class="msc-btn msc-btn-blue-outline">Blue Outline</button>
+            <button class="msc-btn msc-btn-transparent">Text Only</button>
+            <button class="msc-btn msc-btn-blue-solid msc-btn-sm">
+              Small Button
+            </button>
+          </div>
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
+            <code class="language-html rounded">
+      &lt;!-- Primary --&gt;        
+      &lt;button class=&quot;msc-btn msc-btn-blue-solid&quot;&gt;Blue Solid&lt;/button&gt;
+      &lt;!-- Secondary --&gt;
+      &lt;button class=&quot;msc-btn msc-btn-blue-outline&quot;&gt;Blue Outline&lt;/button&gt;
+      &lt;!-- Tertiary --&gt;
+      &lt;button class=&quot;msc-btn msc-btn-blue-transparent&quot;&gt;Text Only&lt;/button&gt;
+      &lt;!-- Small --&gt;        
+      &lt;button class=&quot;msc-btn msc-btn-blue-solid msc-btn-sm&quot;&gt;Small Button&lt;/button&gt;
+            </code>
+        </pre>
+          </div>
         </div>
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
-          <code class="language-html rounded">
-    &lt;!-- Primary --&gt;        
-    &lt;button class=&quot;msc-btn msc-btn-blue-solid&quot;&gt;Blue Solid&lt;/button&gt;
-    &lt;!-- Secondary --&gt;
-    &lt;button class=&quot;msc-btn msc-btn-blue-outline&quot;&gt;Blue Outline&lt;/button&gt;
-    &lt;!-- Tertiary --&gt;
-    &lt;button class=&quot;msc-btn msc-btn-blue-transparent&quot;&gt;Text Only&lt;/button&gt;
-    &lt;!-- Small --&gt;        
-    &lt;button class=&quot;msc-btn msc-btn-blue-solid msc-btn-sm&quot;&gt;Small Button&lt;/button&gt;
+
+        <div class="max-w-screen-2xl mx-auto px-5">
+          <h2 class="font-bold text-2xl mb-2">Disabled</h2>
+          <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
+            <button disabled class="msc-btn msc-btn-solid-disabled">
+              Primary
+            </button>
+            <button disabled class="msc-btn msc-btn-outline-disabled">
+              Secondary
+            </button>
+            <button disabled class="msc-btn msc-btn-transparent-disabled">
+              Tertiary
+            </button>
+          </div>
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
+            <code class="language-html rounded">
+      &lt;!-- Primary --&gt;        
+      &lt;button disabled class=&quot;msc-btn msc-btn-solid-disabled&quot;&gt;Primary&lt;/button&gt;
+      &lt;!-- Secondary --&gt;
+      &lt;button disabled class=&quot;msc-btn msc-btn-outline-disabled&quot;&gt;Secondary&lt;/button&gt;
+      &lt;!-- Tertiary --&gt;
+      &lt;button disabled class=&quot;msc-btn msc-btn-transparent-disabled&quot;&gt;Tertiary&lt;/button&gt;
+            </code>
+        </pre>
+          </div>
+        </div>
+
+        <div class="max-w-screen-2xl mx-auto px-5">
+          <h2 class="font-bold text-2xl mb-2">Button With Icon</h2>
+          <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
+            <button class="msc-btn msc-btn-blue-solid msc-btn-icon">
+              <img src="../assets/download.svg" class="icon-btn" />
+              Primary
+            </button>
+            <button class="msc-btn msc-btn-blue-outline msc-btn-icon">
+              <img src="../assets/download-blue.svg" class="icon-btn" />
+              Secondary
+            </button>
+            <button class="msc-btn msc-btn-transparent msc-btn-icon">
+              <img src="../assets/download-blue.svg" class="icon-btn" />
+              Tertiary
+            </button>
+          </div>
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
+            <code class="language-html rounded">
+      &lt;!-- Primary --&gt;        
+      &lt;button class=&quot;msc-btn msc-btn-solid msc-btn-icon&quot;&gt;Primary
+        &lt;img src=&quot;...&quot; class=&quot;icon-btn&quot; /&gt;
+      &lt;/button&gt;
+      &lt;!-- Secondary --&gt;
+      &lt;button class=&quot;msc-btn msc-btn-blue-outline msc-btn-icon&quot;&gt;Secondary
+        &lt;img src=&quot;...&quot; class=&quot;icon-btn&quot; /&gt;
+      &lt;/button&gt;
+      &lt;!-- Tertiary --&gt;
+      &lt;button class=&quot;msc-btn msc-btn-transparent msc-btn-icon&quot;&gt;Tertiary
+        &lt;img src=&quot;...&quot; class=&quot;icon-btn&quot; /&gt;
+      &lt;/button&gt;
+            </code>
+        </pre>
+          </div>
+        </div>
+
+        <div class="max-w-screen-2xl mx-auto px-5">
+          <h2 class="font-bold text-2xl mb-2">Button Loading State</h2>
+          <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
+            <button class="msc-btn msc-btn-blue-solid">
+              <div class="msc-btn-dots-container">
+                <div class="msc-btn-dot1"></div>
+                <div class="msc-btn-dot2"></div>
+                <div class="msc-btn-dot3"></div>
+              </div>
+            </button>
+            <button class="msc-btn msc-btn-blue-outline">
+              <div class="msc-btn-dots-container">
+                <div class="msc-btn-dot1-blue"></div>
+                <div class="msc-btn-dot2-blue"></div>
+                <div class="msc-btn-dot3-blue"></div>
+              </div>
+            </button>
+            <button class="msc-btn msc-btn-transparent">
+              <div class="msc-btn-dots-container">
+                <div class="msc-btn-dot1-blue"></div>
+                <div class="msc-btn-dot2-blue"></div>
+                <div class="msc-btn-dot3-blue"></div>
+              </div>
+            </button>
+            <button class="msc-btn msc-btn-blue-solid msc-btn-sm">
+              <div class="msc-btn-dots-container-sm">
+                <div class="msc-btn-dot1"></div>
+                <div class="msc-btn-dot2"></div>
+                <div class="msc-btn-dot3"></div>
+              </div>
+            </button>
+          </div>
+
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
+          <code class="language-html rounded">       
+      &lt;!-- Primary --&gt;
+      &lt;button class=&quot;msc-btn msc-btn-blue-solid&quot;&gt;
+        &lt;div class=&quot;msc-btn-dots-container&quot;&gt;
+          &lt;div class=&quot;msc-btn-dot1&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;msc-btn-dot2&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;msc-btn-dot3&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/button&gt;
+      &lt;!-- Secondary --&gt;
+      &lt;button class=&quot;msc-btn msc-btn-blue-outline&quot;&gt;
+        &lt;div class=&quot;msc-btn-dots-container&quot;&gt;
+          &lt;div class=&quot;msc-btn-dot1-blue&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;msc-btn-dot2-blue&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;msc-btn-dot3-blue&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/button&gt;
+      &lt;!-- Tertiary --&gt;
+      &lt;button class=&quot;msc-btn msc-btn-transparent&quot;&gt;
+        &lt;div class=&quot;msc-btn-dots-container&quot;&gt;
+          &lt;div class=&quot;msc-btn-dot1-blue&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;msc-btn-dot2-blue&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;msc-btn-dot3-blue&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/button&gt;
+      &lt;!-- Small --&gt;
+      &lt;button class=&quot;msc-btn msc-btn-blue-solid msc-btn-sm&quot;&gt;
+        &lt;div class=&quot;msc-btn-dots-container-sm&quot;&gt;
+          &lt;div class=&quot;msc-btn-dot1-blue&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;msc-btn-dot2-blue&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;msc-btn-dot3-blue&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/button&gt;
           </code>
       </pre>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="max-w-screen-2xl mx-auto px-5">
-        <h2 class="font-bold text-2xl mb-2">Disabled</h2>
-        <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
-          <button disabled class="msc-btn msc-btn-solid-disabled">
-            Primary
-          </button>
-          <button disabled class="msc-btn msc-btn-outline-disabled">
-            Secondary
-          </button>
-          <button disabled class="msc-btn msc-btn-transparent-disabled">
-            Tertiary
-          </button>
-        </div>
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
-          <code class="language-html rounded">
-    &lt;!-- Primary --&gt;        
-    &lt;button disabled class=&quot;msc-btn msc-btn-solid-disabled&quot;&gt;Primary&lt;/button&gt;
-    &lt;!-- Secondary --&gt;
-    &lt;button disabled class=&quot;msc-btn msc-btn-outline-disabled&quot;&gt;Secondary&lt;/button&gt;
-    &lt;!-- Tertiary --&gt;
-    &lt;button disabled class=&quot;msc-btn msc-btn-transparent-disabled&quot;&gt;Tertiary&lt;/button&gt;
-          </code>
-      </pre>
-        </div>
-      </div>
-
-      <div class="max-w-screen-2xl mx-auto px-5">
-        <h2 class="font-bold text-2xl mb-2">Button With Icon</h2>
-        <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
-          <button class="msc-btn msc-btn-blue-solid msc-btn-icon">
-            <img src="../assets/download.svg" class="icon-btn" />
-            Primary
-          </button>
-          <button class="msc-btn msc-btn-blue-outline msc-btn-icon">
-            <img src="../assets/download-blue.svg" class="icon-btn" />
-            Secondary
-          </button>
-          <button class="msc-btn msc-btn-transparent msc-btn-icon">
-            <img src="../assets/download-blue.svg" class="icon-btn" />
-            Tertiary
-          </button>
-        </div>
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
-          <code class="language-html rounded">
-    &lt;!-- Primary --&gt;        
-    &lt;button class=&quot;msc-btn msc-btn-solid msc-btn-icon&quot;&gt;Primary
-      &lt;img src=&quot;...&quot; class=&quot;icon-btn&quot; /&gt;
-    &lt;/button&gt;
-    &lt;!-- Secondary --&gt;
-    &lt;button class=&quot;msc-btn msc-btn-blue-outline msc-btn-icon&quot;&gt;Secondary
-      &lt;img src=&quot;...&quot; class=&quot;icon-btn&quot; /&gt;
-    &lt;/button&gt;
-    &lt;!-- Tertiary --&gt;
-    &lt;button class=&quot;msc-btn msc-btn-transparent msc-btn-icon&quot;&gt;Tertiary
-      &lt;img src=&quot;...&quot; class=&quot;icon-btn&quot; /&gt;
-    &lt;/button&gt;
-          </code>
-      </pre>
-        </div>
-      </div>
-
-      <div class="max-w-screen-2xl mx-auto px-5">
-        <h2 class="font-bold text-2xl mb-2">Button Loading State</h2>
-        <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
-          <button class="msc-btn msc-btn-blue-solid">
-            <div class="msc-btn-dots-container">
-              <div class="msc-btn-dot1"></div>
-              <div class="msc-btn-dot2"></div>
-              <div class="msc-btn-dot3"></div>
-            </div>
-          </button>
-          <button class="msc-btn msc-btn-blue-outline">
-            <div class="msc-btn-dots-container">
-              <div class="msc-btn-dot1-blue"></div>
-              <div class="msc-btn-dot2-blue"></div>
-              <div class="msc-btn-dot3-blue"></div>
-            </div>
-          </button>
-          <button class="msc-btn msc-btn-transparent">
-            <div class="msc-btn-dots-container">
-              <div class="msc-btn-dot1-blue"></div>
-              <div class="msc-btn-dot2-blue"></div>
-              <div class="msc-btn-dot3-blue"></div>
-            </div>
-          </button>
-          <button class="msc-btn msc-btn-blue-solid msc-btn-sm">
-            <div class="msc-btn-dots-container-sm">
-              <div class="msc-btn-dot1"></div>
-              <div class="msc-btn-dot2"></div>
-              <div class="msc-btn-dot3"></div>
-            </div>
-          </button>
-        </div>
-
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
-        <code class="language-html rounded">       
-    &lt;!-- Primary --&gt;
-    &lt;button class=&quot;msc-btn msc-btn-blue-solid&quot;&gt;
-      &lt;div class=&quot;msc-btn-dots-container&quot;&gt;
-        &lt;div class=&quot;msc-btn-dot1&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;msc-btn-dot2&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;msc-btn-dot3&quot;&gt;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/button&gt;
-    &lt;!-- Secondary --&gt;
-    &lt;button class=&quot;msc-btn msc-btn-blue-outline&quot;&gt;
-      &lt;div class=&quot;msc-btn-dots-container&quot;&gt;
-        &lt;div class=&quot;msc-btn-dot1-blue&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;msc-btn-dot2-blue&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;msc-btn-dot3-blue&quot;&gt;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/button&gt;
-    &lt;!-- Tertiary --&gt;
-    &lt;button class=&quot;msc-btn msc-btn-transparent&quot;&gt;
-      &lt;div class=&quot;msc-btn-dots-container&quot;&gt;
-        &lt;div class=&quot;msc-btn-dot1-blue&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;msc-btn-dot2-blue&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;msc-btn-dot3-blue&quot;&gt;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/button&gt;
-    &lt;!-- Small --&gt;
-    &lt;button class=&quot;msc-btn msc-btn-blue-solid msc-btn-sm&quot;&gt;
-      &lt;div class=&quot;msc-btn-dots-container-sm&quot;&gt;
-        &lt;div class=&quot;msc-btn-dot1-blue&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;msc-btn-dot2-blue&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;msc-btn-dot3-blue&quot;&gt;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/button&gt;
-        </code>
-    </pre>
-        </div>
-      </div>
-    </div>
     <script src="../utilities/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 

@@ -1843,6 +1843,8 @@ video {
 
 .msc-spinner {
   margin-bottom: 0.75rem;
+  height: 62px;
+  width: 62px;
 }
 
 @keyframes spin {
@@ -1994,18 +1996,6 @@ video {
 
 .mt-5 {
   margin-top: 1.25rem;
-}
-
-.mt-\[100px\] {
-  margin-top: 100px;
-}
-
-.mt-\[150px\] {
-  margin-top: 150px;
-}
-
-.mt-\[180px\] {
-  margin-top: 180px;
 }
 
 .mt-\[30px\] {
@@ -2477,10 +2467,6 @@ video {
   font-size: 12px;
 }
 
-.text-\[2rem\] {
-  font-size: 2rem;
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -2667,8 +2653,16 @@ video {
     grid-column: span 8 / span 8;
   }
 
+  .md\:col-span-10 {
+    grid-column: span 10 / span 10;
+  }
+
   .md\:col-start-3 {
     grid-column-start: 3;
+  }
+
+  .md\:col-start-2 {
+    grid-column-start: 2;
   }
 }
 
@@ -2681,6 +2675,14 @@ video {
 @media (min-width: 1280px) {
   .xl\:col-span-6 {
     grid-column: span 6 / span 6;
+  }
+
+  .xl\:col-span-8 {
+    grid-column: span 8 / span 8;
+  }
+
+  .xl\:col-start-3 {
+    grid-column-start: 3;
   }
 }
 

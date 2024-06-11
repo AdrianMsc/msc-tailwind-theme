@@ -46,117 +46,128 @@
       </div>
     </aside>
 
-    <div class="p-4 sm:ml-64">
-      <main class="max-w-screen-2xl mx-auto px-5">
-        <h2 class="font-bold text-2xl mb-2">Default Radio Button</h2>
-        <div class="flex gap-2">
-          <div class="msc-radio-container">
-            <input
-              id="radio-yes"
-              type="radio"
-              name="list-radio"
-              class="msc-radio-input"
-            />
-            <label for="radio-yes" class="msc-radio-label">Yes </label>
-          </div>
-          <div class="msc-radio-container">
-            <input
-              id="radio-no"
-              type="radio"
-              value=""
-              name="list-radio"
-              class="msc-radio-input"
-            />
-            <label for="radio-no" class="msc-radio-label">No </label>
-          </div>
-        </div>
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
-          <code class="language-html rounded">
-  &lt;div class=&quot;msc-radio-container&quot;&gt;
-    &lt;input id=&quot;radio-yes&quot; type=&quot;radio&quot; name=&quot;list-radio&quot; class=&quot;msc-radio-label&quot;/&gt;
-    &lt;label for=&quot;radio-default&quot; class=&quot;msc-radio-label&quot;&gt;
-      Yes
-    &lt;/label&gt;
-  &lt;/div&gt;
-          </code>
-        </pre>
-        </div>
-        <h2 class="font-bold text-2xl mb-2">Radio Button Set</h2>
-        <ul class="msc-radio-horizontal-main-container">
-          <li class="msc-radio-horizontal-container">
-            <div class="msc-input-horizontal-container">
+    <section class="p-4 sm:ml-64 grid grid-cols-12">
+      <div
+        class="col-span-12 md:col-span-10 md:col-start-2 xl:col-span-8 xl:col-start-3 pt-10"
+      >
+        <h1 class="font-bold text-3xl mb-3">
+          <small class="text-sm text-primary-blue">Form</small> <br />
+          Radio
+        </h1>
+
+        <p class="mb-4">This is the Radio of MSC</p>
+
+        <main class="max-w-screen-2xl mx-auto">
+          <h2 class="font-bold text-2xl mb-2">Default Radio Button</h2>
+          <div class="flex gap-2">
+            <div class="msc-radio-container">
               <input
-                id="horizontal-list-radio-yes"
+                id="radio-yes"
+                type="radio"
+                name="list-radio"
+                class="msc-radio-input"
+              />
+              <label for="radio-yes" class="msc-radio-label">Yes </label>
+            </div>
+            <div class="msc-radio-container">
+              <input
+                id="radio-no"
                 type="radio"
                 value=""
                 name="list-radio"
-                class="msc-input-horizontal"
+                class="msc-radio-input"
               />
-              <label
-                for="horizontal-list-radio-yes"
-                class="msc-input-horizontal-label"
-                >Yes
-              </label>
+              <label for="radio-no" class="msc-radio-label">No </label>
             </div>
-          </li>
-          <li class="msc-radio-horizontal-container">
-            <div class="msc-input-horizontal-container">
-              <input
-                id="horizontal-list-radio-no"
-                type="radio"
-                value=""
-                name="list-radio"
-                class="msc-input-horizontal"
-              />
-              <label
-                for="horizontal-list-radio-no"
-                class="msc-input-horizontal-label"
-                >No
-              </label>
-            </div>
-          </li>
-        </ul>
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
-          <code class="language-html rounded">
-  &lt;ul class=&quot;msc-radio-horizontal-main-container&quot;&gt;
-    &lt;li class=&quot;msc-radio-horizontal-container&quot;&gt;
-      &lt;div class=&quot;msc-input-horizontal-container&quot;&gt;
-        &lt;input
-          id=&quot;horizontal-list-radio-license&quot;
-          type=&quot;radio&quot;
-          value=&quot;&quot;
-          name=&quot;list-radio&quot;
-          class=&quot;msc-input-horizontal&quot;/&gt;
-        &lt;label
-          for=&quot;horizontal-list-radio-license&quot;
-          class=&quot;msc-input-horizontal-label&quot;&gt;
-            Yes
-        &lt;/label&gt;
-      &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;msc-radio-horizontal-container&quot;&gt;
-      &lt;div class=&quot;msc-input-horizontal-container&quot;&gt;
-        &lt;input
-          id=&quot;horizontal-list-radio-license&quot;
-          type=&quot;radio&quot;
-          value=&quot;&quot;
-          name=&quot;list-radio&quot;
-          class=&quot;msc-input-horizontal&quot;/&gt;
-        &lt;label
-          for=&quot;horizontal-list-radio-license&quot;
-          class=&quot;msc-input-horizontal-label&quot;&gt;
-          No
-        &lt;/label&gt;
-      &lt;/div&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-          </code>
-        </pre>
-        </div>
-      </main>
-    </div>
+          </div>
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
+            <code class="language-html rounded">
+    &lt;div class=&quot;msc-radio-container&quot;&gt;
+      &lt;input id=&quot;radio-yes&quot; type=&quot;radio&quot; name=&quot;list-radio&quot; class=&quot;msc-radio-label&quot;/&gt;
+      &lt;label for=&quot;radio-default&quot; class=&quot;msc-radio-label&quot;&gt;
+        Yes
+      &lt;/label&gt;
+    &lt;/div&gt;
+            </code>
+          </pre>
+          </div>
+          <h2 class="font-bold text-2xl mb-2">Radio Button Set</h2>
+          <ul class="msc-radio-horizontal-main-container">
+            <li class="msc-radio-horizontal-container">
+              <div class="msc-input-horizontal-container">
+                <input
+                  id="horizontal-list-radio-yes"
+                  type="radio"
+                  value=""
+                  name="list-radio"
+                  class="msc-input-horizontal"
+                />
+                <label
+                  for="horizontal-list-radio-yes"
+                  class="msc-input-horizontal-label"
+                  >Yes
+                </label>
+              </div>
+            </li>
+            <li class="msc-radio-horizontal-container">
+              <div class="msc-input-horizontal-container">
+                <input
+                  id="horizontal-list-radio-no"
+                  type="radio"
+                  value=""
+                  name="list-radio"
+                  class="msc-input-horizontal"
+                />
+                <label
+                  for="horizontal-list-radio-no"
+                  class="msc-input-horizontal-label"
+                  >No
+                </label>
+              </div>
+            </li>
+          </ul>
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
+            <code class="language-html rounded">
+    &lt;ul class=&quot;msc-radio-horizontal-main-container&quot;&gt;
+      &lt;li class=&quot;msc-radio-horizontal-container&quot;&gt;
+        &lt;div class=&quot;msc-input-horizontal-container&quot;&gt;
+          &lt;input
+            id=&quot;horizontal-list-radio-license&quot;
+            type=&quot;radio&quot;
+            value=&quot;&quot;
+            name=&quot;list-radio&quot;
+            class=&quot;msc-input-horizontal&quot;/&gt;
+          &lt;label
+            for=&quot;horizontal-list-radio-license&quot;
+            class=&quot;msc-input-horizontal-label&quot;&gt;
+              Yes
+          &lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;msc-radio-horizontal-container&quot;&gt;
+        &lt;div class=&quot;msc-input-horizontal-container&quot;&gt;
+          &lt;input
+            id=&quot;horizontal-list-radio-license&quot;
+            type=&quot;radio&quot;
+            value=&quot;&quot;
+            name=&quot;list-radio&quot;
+            class=&quot;msc-input-horizontal&quot;/&gt;
+          &lt;label
+            for=&quot;horizontal-list-radio-license&quot;
+            class=&quot;msc-input-horizontal-label&quot;&gt;
+            No
+          &lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+            </code>
+          </pre>
+          </div>
+        </main>
+      </div>
+    </section>
 
     <script src="../utilities/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>

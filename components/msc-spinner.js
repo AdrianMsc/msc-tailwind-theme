@@ -4,7 +4,7 @@ module.exports = function ({ addComponents }) {
       "@apply flex flex-col items-center w-[200px]": {},
     },
     ".msc-spinner": {
-      "@apply mb-3 animate-spin": {},
+      "@apply mb-3 animate-spin w-[62px] h-[62px]": {},
     },
     ".msc-spinner-label": {
       "@apply text-base": {},

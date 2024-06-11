@@ -47,79 +47,124 @@
     </aside>
 
     <div class="p-4 sm:ml-64">
-      <div class="max-w-screen-2xl mx-auto px-5">
-        <h1 class="font-bold text-3xl mb-4">Spinner</h1>
+      <section class="container mx-auto">
+        <div class="grid grid-cols-12">
+          <div class="col-span-12 md:col-span-8 md:col-start-3 pt-10">
+            <h1 class="font-bold text-3xl mb-3">
+              <small class="text-sm text-primary-blue">Indicator</small> <br />
+              Spinner
+            </h1>
 
-        <div class="msc-spinner-wrapper">
-          <svg
-            width="62"
-            height="62"
-            viewBox="0 0 62 62"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="msc-spinner"
-          >
-            <circle cx="31" cy="31" r="28" stroke="white" stroke-width="6" />
-            <circle
-              opacity="0.38"
-              cx="31"
-              cy="31"
-              r="28"
-              stroke="#212121"
-              stroke-width="6"
-            />
-            <path
-              opacity="0.8"
-              d="M3 31C3 15.536 15.536 3 31 3"
-              stroke="#212121"
-              stroke-width="6"
-              stroke-linecap="round"
-            />
-          </svg>
-          <label class="msc-spinner-label">Loading Results</label>
-        </div>
+            <p class="mb-4">
+              Welcome to the MSC spinner, this spinner works for the load of any
+              page or app module.
+            </p>
 
-        <div id="fidgetSpinner" class="msc-spinner-overlay hidden">
-          <span
-            class="absolute top-2 right-3 text-lg font-bold cursor-pointer"
-            onclick="closeSpinner()"
-            >X
-          </span>
+            <div class="msc-spinner-wrapper mt-5">
+              <svg
+                width="62"
+                height="62"
+                viewBox="0 0 62 62"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="msc-spinner"
+              >
+                <circle
+                  cx="31"
+                  cy="31"
+                  r="28"
+                  stroke="white"
+                  stroke-width="6"
+                />
+                <circle
+                  opacity="0.38"
+                  cx="31"
+                  cy="31"
+                  r="28"
+                  stroke="#212121"
+                  stroke-width="6"
+                />
+                <path
+                  opacity="0.8"
+                  d="M3 31C3 15.536 15.536 3 31 3"
+                  stroke="#212121"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <label class="msc-spinner-label">Loading Results</label>
+            </div>
 
-          <div class="msc-spinner-wrapper">
-            <svg
-              width="62"
-              height="62"
-              viewBox="0 0 62 62"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="msc-spinner"
+            <div id="fidgetSpinner" class="msc-spinner-overlay hidden">
+              <span
+                class="absolute top-2 right-3 text-lg font-bold cursor-pointer"
+                onclick="closeSpinner()"
+                >X
+              </span>
+
+              <div class="msc-spinner-wrapper">
+                <svg
+                  class="msc-spinner"
+                  viewBox="0 0 62 62"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="31"
+                    cy="31"
+                    r="28"
+                    stroke="white"
+                    stroke-width="6"
+                  />
+                  <circle
+                    opacity="0.38"
+                    cx="31"
+                    cy="31"
+                    r="28"
+                    stroke="#212121"
+                    stroke-width="6"
+                  />
+                  <path
+                    opacity="0.8"
+                    d="M3 31C3 15.536 15.536 3 31 3"
+                    stroke="#212121"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <label class="msc-spinner-label">Loading Results</label>
+              </div>
+            </div>
+
+            <button
+              class="msc-btn msc-btn-blue-solid mt-4"
+              onclick="openSpinner()"
             >
-              <circle cx="31" cy="31" r="28" stroke="white" stroke-width="6" />
-              <circle
-                opacity="0.38"
-                cx="31"
-                cy="31"
-                r="28"
-                stroke="#212121"
-                stroke-width="6"
-              />
-              <path
-                opacity="0.8"
-                d="M3 31C3 15.536 15.536 3 31 3"
-                stroke="#212121"
-                stroke-width="6"
-                stroke-linecap="round"
-              />
-            </svg>
-            <label class="msc-spinner-label">Loading Results</label>
+              Launch Loading Overlay
+            </button>
+            <br />
+            <small
+              >Press "ESC" or click/tap the "X" to close the spinner
+              example</small
+            >
+
+            <div class="max-w-[1500px] mt-2">
+              <pre class="h-fit">
+              <code class="language-html rounded">
+&lt;div class=&quot;msc-spinner-wrapper mt-5&quot;&gt;
+  &lt;svg class=&quot;msc-spinner&quot; viewBox=&quot;0 0 62 62&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+    &lt;circle cx=&quot;31&quot; cy=&quot;31&quot; r=&quot;28&quot; stroke=&quot;white&quot; stroke-width=&quot;6&quot;/&gt;
+    &lt;circle opacity=&quot;0.38&quot; cx=&quot;31&quot; cy=&quot;31&quot; r=&quot;28&quot; stroke=&quot;#212121&quot; stroke-width=&quot;6&quot;/&gt; &lt;path opacity=&quot;0.8&quot; d=&quot;M3 31C3 15.536 15.536 3 31 3&quot; stroke=&quot;#212121&quot; stroke-width=&quot;6&quot; stroke-linecap=&quot;round&quot;/&gt;
+  &lt;/svg&gt;  
+    &lt;label class=&quot;msc-spinner-label&quot;&gt;Loading Results&lt;/label&gt;
+&lt;/div&gt;
+    
+              </code>
+            </pre>
+            </div>
           </div>
         </div>
-
-        <button class="msc-btn msc-btn-blue-solid mt-4" onclick="openSpinner()">
-          Launch Loading Overlay
-        </button>
-      </div>
+      </section>
     </div>
 
     <script src="../utilities/index.js"></script>

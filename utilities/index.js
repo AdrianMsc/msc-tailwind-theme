@@ -30,7 +30,7 @@ const sideNav = `
                 src="../assets/icons/home.svg"
               /> -->
               <span
-                class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap"
+                class="flex-1 text-left rtl:text-right whitespace-nowrap"
                 >Getting Started</span
               >
               <img
@@ -43,7 +43,7 @@ const sideNav = `
             <ul id="dropdown-example" class=" py-2 space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="component-status.html"
                   class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-5 group hover:bg-gray-100"
                   >Component Status</a
                 >
@@ -271,6 +271,49 @@ const sideNav = `
                   />
 
                   <span class="flex-1 ms-3 whitespace-nowrap">Radio</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+                 <!-- INDICATOR  -->
+          <li>
+            <button
+              type="button"
+              class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100"
+              aria-controls="dropdown-indicator"
+              data-collapse-toggle="dropdown-indicator"
+            >
+              <!-- <img
+                      class="flex-shrink-0 w-5 h-5"
+                      width="24"
+                      height="24"
+                      src="assets/icons/home.svg"
+                    /> -->
+              <span class="flex-1 text-left rtl:text-right whitespace-nowrap"
+                >Indicator</span
+              >
+              <img
+                class="flex-shrink-0 w-3 h-3"
+                width="24"
+                height="24"
+                src="../assets/icons/chevron-down.svg"
+              />
+            </button>
+            <ul id="dropdown-indicator" class="py-2 space-y-2">
+              <li>
+                <a
+                  href="spinner.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
+                >
+                  <img
+                    class="flex-shrink-0 w-5 h-5"
+                    width="24"
+                    height="24"
+                    src="../assets/icons/colors.svg"
+                  />
+
+                  <span class="flex-1 ms-3 whitespace-nowrap">Spiiner</span>
                 </a>
               </li>
             </ul>

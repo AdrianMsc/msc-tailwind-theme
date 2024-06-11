@@ -11,67 +11,104 @@
     <title>Modal</title>
   </head>
   <body class="bg-[#f2f2f2]">
-    <header class="bg-white overflow-hidden shadow-lg p-5 flex w-full mb-3">
-      <a href="../index.html">
-        <img
-          src="https://cdn.mscdirect.com/global/v2/img/header/msc-logo.svg"
-          alt=""
-        />
-      </a>
-    </header>
+    <button
+      onclick="toggleSideNav()"
+      aria-controls="default-sidebar"
+      type="button"
+      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+    >
+      <span class="sr-only">Open sidebar</span>
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+        ></path>
+      </svg>
+    </button>
 
-    <main class="max-w-screen-2xl mx-auto px-5">
-      <h2 class="font-bold text-2xl mb-2">Modal</h2>
-      <button id="modalBtn" class="btn btn-blue-solid">Trigger Modal</button>
+    <aside
+      id="msc-sidebar"
+      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
+        <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" />
+        <p class="font-bold text-lg mb-5">Fuel Design System</p>
 
-      <div id="modalOne" class="msc-modal-bg hidden">
-        <div class="msc-modal">
-          <div class="msc-modal-header">
-            <h4 class="msc-modal-title">Modal Title</h4>
-            <button id="modalClsBtn">
-              <img src="../assets/times.svg" class="msc-modal-close" />
-            </button>
-          </div>
-          <div class="msc-modal-body">
-            <p class="msc-modal-p">
-              Access to the rest of the UI is disabled until the model is
-              addressed. All model services are interrupted by design – their
-              purpose is to have the user focus on content on a surface that
-              appears in front of all other surfaces.
-            </p>
-            <p class="msc-modal-p">
-              To express that the rest of the site is inaccessible and to focus
-              attention on the modal, surfaces behind the modal have an overlay.
-              An overlay is a temporary treatment that can be applied to
-              surfaces for the purpose of making content on the surface less
-              prominent.
-            </p>
-            <p class="msc-modal-p">
-              When scaling layouts for larger screens, adjust the modal visual
-              presentation by setting minimum and maximum values for margins,
-              padding and container dimensions.
-            </p>
-            <p class="msc-modal-p">
-              Modals should maintain a minimum of 48px distance from the leading
-              and trailing edges of the screen. On small screens, modals scale
-              vertically until reaching 48px from the screens, top and bottom
-              edge. On larger displays, modals can increase in size to a maximum
-              width of 560px. When Modha reaches a maximum width, expand or
-              contract vertically to support contact, up to a maximum height of
-              560px.
-            </p>
-          </div>
-          <div class="msc-modal-footer">
-            <button id="cancelBtn" class="btn btn-blue-solid w-full">
-              Cancel
-            </button>
-            <button class="btn btn-blue-outline w-full">Action</button>
+        <span id="sidenav-menu"></span>
+      </div>
+    </aside>
+
+    <section class="p-4 sm:ml-64 grid grid-cols-12">
+      <div
+        class="col-span-12 md:col-span-10 md:col-start-2 xl:col-span-8 xl:col-start-3 pt-10"
+      >
+        <h1 class="font-bold text-3xl mb-3">
+          <small class="text-sm text-primary-blue">Overlay</small> <br />
+          Modal
+        </h1>
+
+        <p class="mb-4">This is the playground</p>
+
+        <button id="modalBtn" class="msc-btn msc-btn-blue-solid">
+          Trigger Modal
+        </button>
+
+        <div id="modalOne" class="msc-modal-bg hidden">
+          <div class="msc-modal">
+            <div class="msc-modal-header">
+              <h4 class="msc-modal-title">Modal Title</h4>
+              <button id="modalClsBtn">
+                <img src="../assets/times.svg" class="msc-modal-close" />
+              </button>
+            </div>
+            <div class="msc-modal-body">
+              <p class="msc-modal-p">
+                Access to the rest of the UI is disabled until the model is
+                addressed. All model services are interrupted by design – their
+                purpose is to have the user focus on content on a surface that
+                appears in front of all other surfaces.
+              </p>
+              <p class="msc-modal-p">
+                To express that the rest of the site is inaccessible and to
+                focus attention on the modal, surfaces behind the modal have an
+                overlay. An overlay is a temporary treatment that can be applied
+                to surfaces for the purpose of making content on the surface
+                less prominent.
+              </p>
+              <p class="msc-modal-p">
+                When scaling layouts for larger screens, adjust the modal visual
+                presentation by setting minimum and maximum values for margins,
+                padding and container dimensions.
+              </p>
+              <p class="msc-modal-p">
+                Modals should maintain a minimum of 48px distance from the
+                leading and trailing edges of the screen. On small screens,
+                modals scale vertically until reaching 48px from the screens,
+                top and bottom edge. On larger displays, modals can increase in
+                size to a maximum width of 560px. When Modha reaches a maximum
+                width, expand or contract vertically to support contact, up to a
+                maximum height of 560px.
+              </p>
+            </div>
+            <div class="msc-modal-footer">
+              <button id="cancelBtn" class="btn btn-blue-solid w-full">
+                Cancel
+              </button>
+              <button class="btn btn-blue-outline w-full">Action</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="max-w-[1500px]">
-        <pre class="h-fit">
+        <div class="max-w-[1500px]">
+          <pre class="h-fit">
           <code class="language-html rounded">
 &lt;div id=&quot;modalOne&quot;
   class=&quot;hidden msc-modal-bg&quot;&gt;
@@ -117,8 +154,9 @@
 &lt;/script&gt;
           </code>
         </pre>
+        </div>
       </div>
-    </main>
+    </section>
 
     <script>
       const modalBtn = document.getElementById("modalBtn");
@@ -136,6 +174,9 @@
         modalOne.classList.add("hidden");
       };
     </script>
+
+    <script src="../utilities/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
     <script>

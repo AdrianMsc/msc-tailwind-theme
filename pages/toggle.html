@@ -46,24 +46,33 @@
       </div>
     </aside>
 
-    <div class="p-4 sm:ml-64">
-      <main class="max-w-screen-2xl mx-auto px-5">
-        <h2 class="font-bold text-2xl mb-4">Toggle</h2>
-        <label for="toggleOne" class="msc-toggle">
-          <div class="relative">
-            <input
-              type="checkbox"
-              id="toggleOne"
-              checked
-              class="peer sr-only"
-            />
-            <div class="msc-toggle-container"></div>
-            <div class="msc-toggle-dot"></div>
-          </div>
-        </label>
+    <section class="p-4 sm:ml-64 grid grid-cols-12">
+      <div
+        class="col-span-12 md:col-span-10 md:col-start-2 xl:col-span-8 xl:col-start-3 pt-10"
+      >
+        <main class="max-w-screen-2xl mx-auto px-5">
+          <h1 class="font-bold text-3xl mb-3">
+            <small class="text-sm text-primary-blue">Form</small> <br />
+            Toggle
+          </h1>
 
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
+          <p class="mb-4">This is the toggle of MSC</p>
+
+          <label for="toggleOne" class="msc-toggle">
+            <div class="relative">
+              <input
+                type="checkbox"
+                id="toggleOne"
+                checked
+                class="peer sr-only"
+              />
+              <div class="msc-toggle-container"></div>
+              <div class="msc-toggle-dot"></div>
+            </div>
+          </label>
+
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
           <code class="language-html rounded">
   &lt;label for=&quot;toggleOne&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
@@ -78,28 +87,28 @@
   &lt;/label&gt;
           </code>
         </pre>
-        </div>
-
-        <h2 class="font-bold text-2xl mb-4">Toggle With Text</h2>
-        <label for="toggleTwo" class="msc-toggle">
-          <div class="relative">
-            <input
-              type="checkbox"
-              id="toggleTwo"
-              checked
-              class="peer sr-only"
-            />
-            <div
-              before="Yes"
-              after="No"
-              class="msc-toggle-container-text"
-            ></div>
-            <div class="msc-toggle-dot-text"></div>
           </div>
-        </label>
 
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
+          <h2 class="font-bold text-2xl mb-4">Toggle With Text</h2>
+          <label for="toggleTwo" class="msc-toggle">
+            <div class="relative">
+              <input
+                type="checkbox"
+                id="toggleTwo"
+                checked
+                class="peer sr-only"
+              />
+              <div
+                before="Yes"
+                after="No"
+                class="msc-toggle-container-text"
+              ></div>
+              <div class="msc-toggle-dot-text"></div>
+            </div>
+          </label>
+
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
           <code class="language-html rounded">
   &lt;label for=&quot;toggleTwo&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
@@ -117,47 +126,47 @@
   &lt;/label&gt;
           </code>
         </pre>
-        </div>
+          </div>
 
-        <h2 class="font-bold text-2xl mb-4">Toggle With Text Disabled</h2>
-        <div class="flex gap-2 w-fit">
-          <label for="toggleDisabled" class="msc-toggle">
-            <div class="relative">
-              <input
-                type="checkbox"
-                id="toggleDisabled"
-                class="peer sr-only"
-                disabled
-                checked
-              />
-              <div
-                before="Yes"
-                after="No"
-                class="msc-toggle-container-disabled"
-              ></div>
-              <div class="msc-toggle-dot-disabled"></div>
-            </div>
-          </label>
-          <label for="toggleDisabled" class="msc-toggle">
-            <div class="relative">
-              <input
-                type="checkbox"
-                id="toggleDisabled"
-                class="peer sr-only"
-                disabled
-              />
-              <div
-                before="Yes"
-                after="No"
-                class="msc-toggle-container-disabled"
-              ></div>
-              <div class="msc-toggle-dot-disabled"></div>
-            </div>
-          </label>
-        </div>
+          <h2 class="font-bold text-2xl mb-4">Toggle With Text Disabled</h2>
+          <div class="flex gap-2 w-fit">
+            <label for="toggleDisabled" class="msc-toggle">
+              <div class="relative">
+                <input
+                  type="checkbox"
+                  id="toggleDisabled"
+                  class="peer sr-only"
+                  disabled
+                  checked
+                />
+                <div
+                  before="Yes"
+                  after="No"
+                  class="msc-toggle-container-disabled"
+                ></div>
+                <div class="msc-toggle-dot-disabled"></div>
+              </div>
+            </label>
+            <label for="toggleDisabled" class="msc-toggle">
+              <div class="relative">
+                <input
+                  type="checkbox"
+                  id="toggleDisabled"
+                  class="peer sr-only"
+                  disabled
+                />
+                <div
+                  before="Yes"
+                  after="No"
+                  class="msc-toggle-container-disabled"
+                ></div>
+                <div class="msc-toggle-dot-disabled"></div>
+              </div>
+            </label>
+          </div>
 
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
           <code class="language-html rounded">
   &lt;label for=&quot;toggleDisabled&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
@@ -176,27 +185,27 @@
   &lt;/label&gt;
           </code>
         </pre>
-        </div>
-
-        <h2 class="font-bold text-2xl mb-4">Address Type Toggle</h2>
-        <label for="toggleAddress" class="msc-toggle">
-          <div class="relative">
-            <input type="checkbox" id="toggleAddress" class="peer sr-only" />
-            <div
-              before="Residential"
-              after="Commercial"
-              class="msc-toggle-container-text-lg"
-            ></div>
-            <div
-              before="Residential"
-              after="Commercial"
-              class="msc-toggle-dot-text-lg"
-            ></div>
           </div>
-        </label>
 
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
+          <h2 class="font-bold text-2xl mb-4">Address Type Toggle</h2>
+          <label for="toggleAddress" class="msc-toggle">
+            <div class="relative">
+              <input type="checkbox" id="toggleAddress" class="peer sr-only" />
+              <div
+                before="Residential"
+                after="Commercial"
+                class="msc-toggle-container-text-lg"
+              ></div>
+              <div
+                before="Residential"
+                after="Commercial"
+                class="msc-toggle-dot-text-lg"
+              ></div>
+            </div>
+          </label>
+
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
           <code class="language-html rounded">
   &lt;label for=&quot;toggleAddress&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
@@ -216,27 +225,27 @@
   &lt;/label&gt;
           </code>
         </pre>
-        </div>
-
-        <h2 class="font-bold text-2xl mb-4">Units Toggle</h2>
-        <label for="toggleUnits" class="msc-toggle">
-          <div class="relative">
-            <input type="checkbox" id="toggleUnits" class="peer sr-only" />
-            <div
-              before="Decimal Inch"
-              after="MM"
-              class="msc-toggle-container-text-lg after:right-10"
-            ></div>
-            <div
-              before="Decimal Inch"
-              after="MM"
-              class="msc-toggle-dot-text-lg after:right-6"
-            ></div>
           </div>
-        </label>
 
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
+          <h2 class="font-bold text-2xl mb-4">Units Toggle</h2>
+          <label for="toggleUnits" class="msc-toggle">
+            <div class="relative">
+              <input type="checkbox" id="toggleUnits" class="peer sr-only" />
+              <div
+                before="Decimal Inch"
+                after="MM"
+                class="msc-toggle-container-text-lg after:right-10"
+              ></div>
+              <div
+                before="Decimal Inch"
+                after="MM"
+                class="msc-toggle-dot-text-lg after:right-6"
+              ></div>
+            </div>
+          </label>
+
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
           <code class="language-html rounded">
   &lt;label for=&quot;toggleAddress&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
@@ -256,9 +265,10 @@
   &lt;/label&gt;
           </code>
         </pre>
-        </div>
-      </main>
-    </div>
+          </div>
+        </main>
+      </div>
+    </section>
 
     <script src="../utilities/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
