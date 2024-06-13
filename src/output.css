@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1850,8 +1850,80 @@ video {
   content: var(--tw-content);
 }
 
+.msc-label-toggle-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.msc-label-triple-toggle {
+  margin-bottom: 0.125rem;
+  margin-right: 0.25rem;
+  font-weight: 700;
+}
+
+.msc-triple-toggle-container {
+  display: flex;
+  height: 2rem;
+  width: 200px;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 219 219 / var(--tw-bg-opacity));
+  background-color: #21212129;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #212121A3;
+}
+
+.msc-triple-toggle-input-label {
+  display: flex;
+  height: 1.5rem;
+  width: 64px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+}
+
+.msc-triple-toggle-text {
+  height: 100%;
+  width: 100%;
+  align-content: center;
+  border-radius: 9999px;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-delay: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.peer:checked ~ .msc-triple-toggle-text {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .icon-btn {
   margin-right: 0.5rem;
+  width: 1rem;
+}
+
+.msc-toggle-icon {
+  margin-right: 0.75rem;
+  height: 1rem;
   width: 1rem;
 }
 
