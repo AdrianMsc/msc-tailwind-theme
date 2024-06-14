@@ -142,21 +142,19 @@
             </div>
           </div>
 
+          <!-- INPUT ERROR -->
           <div class="col-span-12 md:col-span-3 mb-3">
             <h2 class="font-bold text-xl mb-4">Error</h2>
 
             <div class="msc-input-wrapper">
               <input
-                id="default"
+                id="error"
                 type="text"
                 placeholder="Default"
                 class="msc-input peer input-error"
               />
-              <label
-                for="default"
-                class="msc-input-label label-error placeholder-shown:text-error-red"
-              >
-                Default
+              <label for="error" class="msc-input-label label-error">
+                Error
                 <span class="text-error-red">*</span>
               </label>
               <small class="error-message">This is a required field </small>
@@ -168,13 +166,13 @@
 
             <div class="msc-input-wrapper">
               <input
-                id="default"
+                id="errorComp"
                 type="text"
                 value="First Name"
                 placeholder="First Name"
                 class="msc-input peer input-error"
               />
-              <label for="default" class="msc-input-label">
+              <label for="errorComp" class="msc-input-label label-error">
                 First Name
                 <span class="text-error-red">*</span>
               </label>
@@ -281,7 +279,7 @@
                 type="number"
                 disabled
                 placeholder="1"
-                class="msc-input-unit msc-input-disabled"
+                class="msc-input-unit-disabled"
               />
             </div>
           </div>

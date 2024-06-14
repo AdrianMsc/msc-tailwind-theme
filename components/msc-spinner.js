@@ -9,8 +9,15 @@ module.exports = function ({ addComponents }) {
     ".msc-spinner-label": {
       "@apply text-base": {},
     },
+    ".msc-spinner-label-dark": {
+      "@apply text-white": {},
+    },
     ".msc-spinner-overlay": {
       "@apply fixed bg-white w-full h-full top-0 left-0 flex justify-center items-center z-40":
+        {},
+    },
+    ".msc-spinner-overlay-dark": {
+      "@apply fixed bg-monochromes-main w-full h-full top-0 left-0 flex justify-center items-center z-40":
         {},
     },
   };

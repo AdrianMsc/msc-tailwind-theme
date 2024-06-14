@@ -5,7 +5,7 @@ module.exports = function ({ addComponents, theme }) {
         {},
     },
     ".msc-input-label": {
-      "@apply bg-white absolute left-3.5 -top-[0.6rem] pt-[1px] px-[0.2rem] text-xs transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-monochromes-grey_light peer-placeholder-shown:top-2 peer-focus:-top-[0.6rem] peer-focus:text-[#212121] peer-focus:text-xs":
+      "@apply bg-white absolute left-3.5 -top-[0.6rem] pt-[1px] px-[0.2rem] text-xs transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:text-monochromes-grey_light peer-placeholder-shown:top-2 peer-focus:-top-[0.6rem] peer-focus:text-monochromes-main peer-focus:text-xs":
         {},
     },
     ".msc-input-wrapper": {
@@ -19,18 +19,25 @@ module.exports = function ({ addComponents, theme }) {
       "@apply text-monochromes-grey_xlight !important": {},
     },
     ".msc-input-unit": {
-      "@apply  text-center border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 md:pl-4 md:pr-0 py-3.5 rounded text-sm focus:border-monochromes-main focus:outline-dashed focus:outline-1 focus:outline-offset-4 h-10":
+      "@apply  text-center border border-monochromes-grey_light hover:border-monochromes-main  md:pr-0 py-3.5 rounded text-sm focus:border-monochromes-main focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black h-10 no-arrows":
         {},
     },
     ".msc-input-unit-label": {
       "@apply text-monochromes-main text-sm mb-1 text-xs text-center": {},
     },
+    ".msc-input-unit-disabled": {
+      "@apply w-full border text-center text-monochromes-grey_light py-3.5 rounded text-sm focus:outline-none focus:border-monochromes-grey_light  cursor-not-allowed h-10 no-arrows":
+        {},
+    },
     ".msc-input-unit-wrapper": {
       "@apply relative flex flex-col w-[68px]": {},
     },
     ".input-error": {
-      "@apply  border-error-red hover:border-error-red text-error-red focus:border-error-red":
+      "@apply border-error-red hover:border-error-red text-error-red focus:border-error-red":
         {},
+    },
+    ".label-error": {
+      "@apply peer-placeholder-shown:text-error-red peer-focus:text-black": {},
     },
     ".error-message": {
       "@apply  text-error-red font-semibold !important": {},
