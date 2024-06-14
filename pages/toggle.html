@@ -274,6 +274,7 @@
               <p class="msc-label-triple-toggle">Tolerance</p>
               <img src="../assets/info-question.svg" class="msc-toggle-icon" />
               <div class="msc-triple-toggle-container">
+                <span id="toleranceDot" class="msc-triple-toggle-dot"></span>
                 <label for="allTolerance" class="msc-triple-toggle-input-label"
                   ><input
                     type="radio"
@@ -315,6 +316,7 @@
       &lt;p class=&quot;msc-label-triple-toggle&quot;&gt;Tolerance&lt;/p&gt;
       &lt;img src=&quot;...&quot; class=&quot;msc-toggle-icon&quot; /&gt;
       &lt;div class=&quot;msc-triple-toggle-container&quot;&gt;
+        &lt;span id=&quot;toleranceDot&quot; class=&quot;msc-triple-toggle-dot&quot;&gt;&lt;/span&gt;
         &lt;label for=&quot;allTolerance&quot; class=&quot;msc-triple-toggle-input-label&quot;&gt; 
           &lt;input
             type=&quot;radio&quot;
@@ -347,6 +349,35 @@
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/fieldset&gt;
+&lt;!-- JS --&gt;
+  &lt;script&gt;
+    document.addEventListener("DOMContentLoaded", function () {
+      function updateSliderPosition(toggleContainer) {
+        let slider = toggleContainer.querySelector(".msc-triple-toggle-dot");
+        let checkedRadio = toggleContainer.querySelector(
+          'input[type="radio"]:checked'
+        );
+        let radioIndex = Array.from(
+          checkedRadio.parentNode.parentNode.children
+        ).indexOf(checkedRadio.parentNode);
+        let positions = ["left-[4px]", "left-1/3", "left-[130px]"];
+        slider.className =
+          "msc-triple-toggle-dot " + positions[radioIndex - 1];
+      }
+      document
+        .querySelectorAll(".msc-triple-toggle-container")
+        .forEach(function (toggleContainer) {
+          toggleContainer
+            .querySelectorAll(".msc-triple-toggle-input-label input")
+            .forEach(function (radio) {
+              radio.addEventListener("change", function () {
+                updateSliderPosition(toggleContainer);
+              });
+            });
+          updateSliderPosition(toggleContainer);
+        });
+    });
+  &lt;/script&gt;
               </code>
             </pre>
           </div>
@@ -358,6 +389,7 @@
               <p class="msc-label-triple-toggle">Class</p>
               <img src="../assets/info-question.svg" class="msc-toggle-icon" />
               <div class="msc-triple-toggle-container">
+                <span id="classDot" class="msc-triple-toggle-dot"></span>
                 <label for="allClass" class="msc-triple-toggle-input-label"
                   ><input
                     type="radio"
@@ -399,6 +431,7 @@
       &lt;p class=&quot;msc-label-triple-toggle&quot;&gt;Class&lt;/p&gt;
       &lt;img src=&quot;...&quot; class=&quot;msc-toggle-icon&quot; /&gt;
       &lt;div class=&quot;msc-triple-toggle-container&quot;&gt;
+        &lt;span id=&quot;classDot&quot; class=&quot;msc-triple-toggle-dot&quot;&gt;&lt;/span&gt;
         &lt;label for=&quot;allClass&quot; class=&quot;msc-triple-toggle-input-label&quot;&gt; 
           &lt;input
             type=&quot;radio&quot;
@@ -431,6 +464,35 @@
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/fieldset&gt;
+&lt;!-- JS --&gt;
+  &lt;script&gt;
+    document.addEventListener("DOMContentLoaded", function () {
+      function updateSliderPosition(toggleContainer) {
+        let slider = toggleContainer.querySelector(".msc-triple-toggle-dot");
+        let checkedRadio = toggleContainer.querySelector(
+          'input[type="radio"]:checked'
+        );
+        let radioIndex = Array.from(
+          checkedRadio.parentNode.parentNode.children
+        ).indexOf(checkedRadio.parentNode);
+        let positions = ["left-[4px]", "left-1/3", "left-[130px]"];
+        slider.className =
+          "msc-triple-toggle-dot " + positions[radioIndex - 1];
+      }
+      document
+        .querySelectorAll(".msc-triple-toggle-container")
+        .forEach(function (toggleContainer) {
+          toggleContainer
+            .querySelectorAll(".msc-triple-toggle-input-label input")
+            .forEach(function (radio) {
+              radio.addEventListener("change", function () {
+                updateSliderPosition(toggleContainer);
+              });
+            });
+          updateSliderPosition(toggleContainer);
+        });
+    });
+  &lt;/script&gt;
               </code>
             </pre>
           </div>
@@ -438,6 +500,35 @@
       </div>
     </section>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function updateSliderPosition(toggleContainer) {
+          let slider = toggleContainer.querySelector(".msc-triple-toggle-dot");
+          let checkedRadio = toggleContainer.querySelector(
+            'input[type="radio"]:checked'
+          );
+          let radioIndex = Array.from(
+            checkedRadio.parentNode.parentNode.children
+          ).indexOf(checkedRadio.parentNode);
+          let positions = ["left-[4px]", "left-1/3", "left-[130px]"];
+          slider.className =
+            "msc-triple-toggle-dot " + positions[radioIndex - 1];
+        }
+
+        document
+          .querySelectorAll(".msc-triple-toggle-container")
+          .forEach(function (toggleContainer) {
+            toggleContainer
+              .querySelectorAll(".msc-triple-toggle-input-label input")
+              .forEach(function (radio) {
+                radio.addEventListener("change", function () {
+                  updateSliderPosition(toggleContainer);
+                });
+              });
+            updateSliderPosition(toggleContainer);
+          });
+      });
+    </script>
     <script src="../utilities/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
