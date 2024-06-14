@@ -313,7 +313,7 @@ const sideNav = `
                     src="../assets/icons/colors.svg"
                   />
 
-                  <span class="flex-1 ms-3 whitespace-nowrap">Spiiner</span>
+                  <span class="flex-1 ms-3 whitespace-nowrap">Spinner</span>
                 </a>
               </li>
             </ul>
