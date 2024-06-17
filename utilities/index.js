@@ -23,12 +23,7 @@ const sideNav = `
               aria-controls="dropdown-example"
               data-collapse-toggle="dropdown-example"
             >
-              <!-- <img
-                class="flex-shrink-0 w-5 h-5"
-                width="24"
-                height="24"
-                src="../assets/icons/home.svg"
-              /> -->
+           
               <span
                 class="flex-1 text-left rtl:text-right whitespace-nowrap"
                 >Getting Started</span
@@ -81,14 +76,20 @@ const sideNav = `
                   href="colors.html"
                   class="flex items-center p-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
                 >
-                  <img
-                    class="flex-shrink-0 w-5 h-5"
-                    width="24"
-                    height="24"
-                    src="../assets/icons/colors.svg"
-                  />
+                
 
                   <span class="flex-1 ms-3 whitespace-nowrap">Colors</span>
+                </a>
+              </li>
+
+                <li>
+                <a
+                  href="shadows.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
+                >
+                 
+
+                  <span class="flex-1 ms-3 whitespace-nowrap">Shadows</span>
                 </a>
               </li>
             </ul>
@@ -124,13 +125,7 @@ const sideNav = `
                   href="buttons.html"
                   class="flex items-center p-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
                 >
-                  <img
-                    class="flex-shrink-0 w-5 h-5"
-                    width="24"
-                    height="24"
-                    src="../assets/icons/buttons.svg"
-                  />
-
+                
                   <span class="flex-1 ms-3 whitespace-nowrap">Buttons</span>
                 </a>
               </li>
@@ -139,16 +134,24 @@ const sideNav = `
                   href="drop-down.html"
                   class="flex items-center p-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
                 >
-                  <img
-                    class="flex-shrink-0 w-5 h-5"
-                    width="24"
-                    height="24"
-                    src="../assets/icons/drop-down.svg"
-                  />
+                 
 
                   <span class="flex-1 ms-3 whitespace-nowrap">Drop Down</span>
                 </a>
               </li>
+              
+              <li>
+                <a
+                  href="link.html"
+                  class="flex items-center p-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
+                >
+                 
+
+                  <span class="flex-1 ms-3 whitespace-nowrap">Link</span>
+                </a>
+              </li>
+
+             
             </ul>
           </li>
           <!-- COLECTION 
@@ -217,12 +220,7 @@ const sideNav = `
                   href="inputs.html"
                   class="flex items-center p-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
                 >
-                  <img
-                    class="flex-shrink-0 w-5 h-5"
-                    width="24"
-                    height="24"
-                    src="../assets/icons/inputs.svg"
-                  />
+                 
 
                   <span class="flex-1 ms-3 whitespace-nowrap">Inputs</span>
                 </a>
@@ -232,13 +230,7 @@ const sideNav = `
                   href="toggle.html"
                   class="flex items-center p-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
                 >
-                  <img
-                    class="flex-shrink-0 w-5 h-5"
-                    width="24"
-                    height="24"
-                    src="../assets/icons/toggle.svg"
-                  />
-
+                
                   <span class="flex-1 ms-3 whitespace-nowrap">Toggle</span>
                 </a>
               </li>
@@ -247,12 +239,7 @@ const sideNav = `
                   href="checkbox.html"
                   class="flex items-center p-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
                 >
-                  <img
-                    class="flex-shrink-0 w-5 h-5"
-                    width="24"
-                    height="24"
-                    src="../assets/icons/drop-down.svg"
-                  />
+                 
 
                   <span class="flex-1 ms-3 whitespace-nowrap">Checkbox</span>
                 </a>
@@ -263,12 +250,7 @@ const sideNav = `
                   href="radio.html"
                   class="flex items-center p-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
                 >
-                  <img
-                    class="flex-shrink-0 w-5 h-5"
-                    width="24"
-                    height="24"
-                    src="../assets/icons/cog.svg"
-                  />
+                 
 
                   <span class="flex-1 ms-3 whitespace-nowrap">Radio</span>
                 </a>
@@ -306,12 +288,7 @@ const sideNav = `
                   href="spinner.html"
                   class="flex items-center p-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
                 >
-                  <img
-                    class="flex-shrink-0 w-5 h-5"
-                    width="24"
-                    height="24"
-                    src="../assets/icons/colors.svg"
-                  />
+                 
 
                   <span class="flex-1 ms-3 whitespace-nowrap">Spinner</span>
                 </a>
@@ -350,12 +327,7 @@ const sideNav = `
                   href="dividers.html"
                   class="flex items-center p-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
                 >
-                  <img
-                    class="flex-shrink-0 w-5 h-5"
-                    width="24"
-                    height="24"
-                    src="../assets/icons/colors.svg"
-                  />
+               
 
                   <span class="flex-1 ms-3 whitespace-nowrap">Dividers</span>
                 </a>
@@ -394,12 +366,7 @@ const sideNav = `
                   href="modal.html"
                   class="flex items-center p-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
                 >
-                  <img
-                    class="flex-shrink-0 w-5 h-5"
-                    width="24"
-                    height="24"
-                    src="../assets/icons/modal.svg"
-                  />
+                 
 
                   <span class="flex-1 ms-3 whitespace-nowrap">Modal</span>
                 </a>
