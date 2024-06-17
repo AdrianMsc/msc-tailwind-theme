@@ -42,7 +42,7 @@ module.exports = function ({ addComponents }) {
       "@apply mb-0.5 mr-1 font-bold": {},
     },
     ".msc-triple-toggle-container": {
-      "@apply flex flex-row h-8 w-[200px] p-1 rounded-full items-center bg-monochromes-grey_xlight text-xs text-[#212121A3] bg-[#21212129]":
+      "@apply relative flex flex-row h-8 w-[200px] p-1 rounded-full items-center bg-monochromes-grey_xlight text-xs text-[#212121A3] bg-[#21212129]":
         {},
     },
     ".msc-triple-toggle-input-label": {
@@ -50,7 +50,11 @@ module.exports = function ({ addComponents }) {
         {},
     },
     ".msc-triple-toggle-text": {
-      "@apply w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:bg-white peer-checked:text-black peer-checked:shadow-md transition ease-in delay-150":
+      "@apply w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10":
+        {},
+    },
+    ".msc-triple-toggle-dot": {
+      "@apply absolute w-1/3 h-3/4 bg-white shadow-md rounded-full transition-all duration-150 ease-in-out":
         {},
     },
   };
