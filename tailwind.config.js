@@ -40,5 +40,6 @@ module.exports = {
     require("./components/msc-icons"),
     require("./components/msc-dividers"),
     require("./components/msc-spinner"),
+    require("./components/msc-link"),
   ],
 };
