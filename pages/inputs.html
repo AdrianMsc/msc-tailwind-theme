@@ -123,7 +123,7 @@
               />
               <label for="default" class="msc-input-label">
                 Complete
-                <span class="error-message">*</span>
+                <span class="msc-error-message">*</span>
               </label>
             </div>
           </div>
@@ -133,31 +133,37 @@
 
             <div class="msc-input-wrapper">
               <input
-                id="field"
+                id="disabled-field"
                 type="text"
                 disabled
-                placeholder="Disabled"
-                class="msc-input-disabled"
+                placeholder=""
+                class="msc-input peer"
               />
+              <label for="disabled-field" class="msc-input-label">
+                Disabled
+                <span class="msc-error-message">*</span>
+              </label>
             </div>
           </div>
 
-          <!-- INPUT ERROR -->
           <div class="col-span-12 md:col-span-3 mb-3">
             <h2 class="font-bold text-xl mb-4">Error</h2>
 
             <div class="msc-input-wrapper">
               <input
-                id="error"
+                id="error-input"
                 type="text"
                 placeholder="Default"
-                class="msc-input peer input-error"
+                class="msc-input peer !border-error-red !text-error-red hover:!border-error-red focus:!border-error-red"
               />
-              <label for="error" class="msc-input-label label-error">
-                Error
+              <label
+                for="error-input"
+                class="msc-input-label label-error placeholder-shown:text-error-red"
+              >
+                Default
                 <span class="text-error-red">*</span>
               </label>
-              <small class="error-message">This is a required field </small>
+              <small class="msc-error-message !block">This is a required field </small>
             </div>
           </div>
 
@@ -166,17 +172,17 @@
 
             <div class="msc-input-wrapper">
               <input
-                id="errorComp"
+                id="default"
                 type="text"
                 value="First Name"
                 placeholder="First Name"
-                class="msc-input peer input-error"
+                class="msc-input peer !border-error-red !text-error-red hover:!border-error-red focus:!border-error-red"
               />
-              <label for="errorComp" class="msc-input-label label-error">
+              <label for="default" class="msc-input-label">
                 First Name
                 <span class="text-error-red">*</span>
               </label>
-              <small class="error-message">This is a required field </small>
+              <small class="msc-error-message !block">This is a required field </small>
             </div>
           </div>
         </section>
@@ -196,17 +202,21 @@
     
     &lt;!-- Disabled --&gt;
     &lt;div class=&quot;msc-input-wrapper&quot;&gt;
-      &lt;input type=&quot;text&quot; disabled placeholder=&quot;Disabled&quot; class=&quot;msc-input-disabled&quot;/&gt;
+      &lt;input id=&quot;disabled&quot; disabled type=&quot;text&quot; placeholder=&quot;Default&quot; class=&quot;msc-input peer&quot;/&gt;
+      &lt;label for=&quot;disabled&quot; class=&quot;msc-input-label&quot;&gt;
+        Default
+        &lt;span class=&quot;text-error-red&quot;&gt;*&lt;/span&gt;
+      &lt;/label&gt;
     &lt;/div&gt;
     
     &lt;!-- Error --&gt;
     &lt;div class=&quot;msc-input-wrapper&quot;&gt;
-      &lt;input id=&quot;default&quot; type=&quot;text&quot; placeholder=&quot;Default&quot; class=&quot;msc-input peer input-error&quot;/&gt;
-      &lt;label for=&quot;default&quot; class=&quot;msc-input-label label-error placeholder-shown:text-error-red&quot;&gt;
-        Default
+      &lt;input id=&quot;error-example&quot; type=&quot;text&quot; placeholder=&quot;Default&quot; class=&quot;msc-input peer&quot;/&gt;
+      &lt;label for=&quot;error-example&quot; class=&quot;msc-input-label&quot;&gt;
+        Error Example
         &lt;span class=&quot;text-error-red&quot;&gt;*&lt;/span&gt;
       &lt;/label&gt;
-      &lt;small class=&quot;error-message&quot;&gt;This is a required field &lt;/small&gt;
+      &lt;small class=&quot;msc-error-message&quot;&gt;This is a required field &lt;/small&gt;
     &lt;/div&gt;
     
               </code>
@@ -223,15 +233,15 @@
             <h2 class="font-bold text-xl mb-4">Default</h2>
 
             <div class="msc-input-unit-wrapper">
-              <label for="field" class="msc-input-unit-label"
+              <input
+              id="field"
+              type="number"
+              placeholder="1"
+              class="msc-input-unit peer order-2"
+              />
+              <label for="field" class="msc-input-unit-label order-1"
                 >Length (ft)
               </label>
-              <input
-                id="field"
-                type="number"
-                placeholder="1"
-                class="msc-input-unit"
-              />
             </div>
           </div>
 
@@ -239,15 +249,15 @@
             <h2 class="font-bold text-xl mb-4">Hover</h2>
 
             <div class="msc-input-unit-wrapper">
-              <label for="field" class="msc-input-unit-label"
+              <input
+              id="field"
+              type="number"
+              placeholder="1"
+              class="msc-input-unit border-monochromes-main peer order-2"
+              />
+              <label for="field" class="msc-input-unit-label order-1"
                 >Length (ft)
               </label>
-              <input
-                id="field"
-                type="number"
-                placeholder="1"
-                class="msc-input-unit border-monochromes-main"
-              />
             </div>
           </div>
 
@@ -255,15 +265,15 @@
             <h2 class="font-bold text-xl mb-4">Active</h2>
 
             <div class="msc-input-unit-wrapper">
-              <label for="field" class="msc-input-unit-label"
-                >Length (ft)
-              </label>
               <input
                 id="field"
                 type="number"
                 placeholder="1"
-                class="msc-input-unit outline-dashed outline-1 outline-offset-4"
+                class="msc-input-unit outline-dashed outline-1 outline-offset-4 peer order-2"
               />
+              <label for="field" class="msc-input-unit-label order-1"
+                >Length (ft)
+              </label>
             </div>
           </div>
 
@@ -271,16 +281,16 @@
             <h2 class="font-bold text-xl mb-4">Disabled</h2>
 
             <div class="msc-input-unit-wrapper">
-              <label for="field" class="msc-input-unit-label msc-label-disabled"
+              <input
+              id="field"
+              type="number"
+              disabled
+              placeholder="1"
+              class="msc-input-unit peer order-2"
+              />
+              <label for="field" class="msc-input-unit-label order-1"
                 >Length (ft)
               </label>
-              <input
-                id="field"
-                type="number"
-                disabled
-                placeholder="1"
-                class="msc-input-unit-disabled"
-              />
             </div>
           </div>
 
@@ -288,16 +298,16 @@
             <h2 class="font-bold text-xl mb-4">Error</h2>
 
             <div class="msc-input-unit-wrapper">
-              <label for="field" class="msc-input-unit-label"
-                >Length (ft)
-              </label>
               <input
                 id="field"
                 type="number"
                 placeholder="1"
-                class="msc-input-unit input-error mb-1"
+                class="msc-input-unit order-2 peer !border-error-red !text-error-red hover:!border-error-red focus:!border-error-red"
               />
-              <small class="error-message"
+              <label for="field" class="msc-input-unit-label order-1"
+                >Length (ft)
+              </label>
+              <small class="msc-error-message order-3 !block"
                 >Error <br />
                 message
               </small>
@@ -310,21 +320,22 @@
             <pre class="h-fit">
               <code class="language-html rounded">
     &lt;!-- Input Unit --&gt;
-    &lt;div class=&quot;relative flex flex-col&quot;&gt;
-      &lt;label for=&quot;field&quot; class=&quot;msc-input-unit-label&quot;&gt;Length (ft) &lt;/label&gt;
-      &lt;input id=&quot;field&quot; type=&quot;number&quot; placeholder=&quot;1&quot; class=&quot;msc-input-unit&quot;/&gt;
+    &lt;div class=&quot;msc-input-unit-wrapper&quot;&gt;
+      &lt;input id=&quot;field&quot; type=&quot;number&quot; placeholder=&quot;1&quot; class=&quot;msc-input-unit order-2 peer&quot;/&gt;
+      &lt;label for=&quot;field&quot; class=&quot;msc-input-unit-label order-1&quot;&gt;Length (ft) &lt;/label&gt;
     &lt;/div&gt;
     
     &lt;!-- Input Unit Disabled --&gt;
-    &lt;div class=&quot;relative max-w-[68px] flex flex-col&quot;&gt;
-      &lt;label for=&quot;field&quot; class=&quot;msc-input-unit-label&quot;&gt;Length (ft) &lt;/label&gt;
-      &lt;input id=&quot;field&quot; type=&quot;number&quot; disabled placeholder=&quot;1&quot; class=&quot;msc-input-unit msc-input-disabled&quot;/&gt;
+    &lt;div class=&quot;msc-input-unit-wrapper&quot;&gt;
+      &lt;input id=&quot;field&quot; type=&quot;number&quot; disabled placeholder=&quot;1&quot; class=&quot;msc-input-unit order-2 peer&quot;/&gt;
+      &lt;label for=&quot;field&quot; class=&quot;msc-input-unit-label order-1&quot;&gt;Length (ft) &lt;/label&gt;
     &lt;/div&gt;
     
     &lt;!-- Input Unit Error --&gt;
-    &lt;div class=&quot;relative flex flex-col&quot;&gt;
-      &lt;label for=&quot;field&quot; class=&quot;msc-input-unit-label&quot;&gt;Length (ft) &lt;/label&gt;
-      &lt;input id=&quot;field&quot; type=&quot;number&quot; placeholder=&quot;1&quot; class=&quot;msc-input-unit input-error&quot;/&gt;
+    &lt;div class=&quot;msc-input-unit-wrapper&quot;&gt;
+      &lt;input id=&quot;field&quot; type=&quot;number&quot; placeholder=&quot;1&quot; class=&quot;msc-input-unit order-2 peer&quot;/&gt;
+      &lt;label for=&quot;field&quot; class=&quot;msc-input-unit-label order-1&quot;&gt;Length (ft) &lt;/label&gt;
+      &lt;small class=&quot;msc-error-message tw-order-3&quot;&gt;Error message &lt;/small&gt;
     &lt;/div&gt;
     
     
