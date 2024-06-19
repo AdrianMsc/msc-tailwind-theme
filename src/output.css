@@ -2050,6 +2050,10 @@ input[type="number"]::-webkit-inner-spin-button,
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -2225,10 +2229,6 @@ input[type="number"]::-webkit-inner-spin-button,
   height: 100px;
 }
 
-.h-\[200px\] {
-  height: 200px;
-}
-
 .h-\[300px\] {
   height: 300px;
 }
@@ -2270,6 +2270,10 @@ input[type="number"]::-webkit-inner-spin-button,
   width: 100px;
 }
 
+.w-\[25\%\] {
+  width: 25%;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -2277,6 +2281,14 @@ input[type="number"]::-webkit-inner-spin-button,
 
 .w-full {
   width: 100%;
+}
+
+.w-\[15\%\] {
+  width: 15%;
+}
+
+.w-\[20\%\] {
+  width: 20%;
 }
 
 .max-w-\[1500px\] {
@@ -2524,6 +2536,11 @@ input[type="number"]::-webkit-inner-spin-button,
   background-color: rgb(241 245 254 / var(--tw-bg-opacity));
 }
 
+.bg-red-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(127 29 29 / var(--tw-bg-opacity));
+}
+
 .bg-success-green {
   --tw-bg-opacity: 1;
   background-color: rgb(36 229 148 / var(--tw-bg-opacity));
@@ -2577,6 +2594,11 @@ input[type="number"]::-webkit-inner-spin-button,
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
 .p-2 {
@@ -2644,6 +2666,10 @@ input[type="number"]::-webkit-inner-spin-button,
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pb-\[2000px\] {
+  padding-bottom: 2000px;
 }
 
 .text-left {
