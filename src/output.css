@@ -2026,6 +2026,132 @@ input[type="number"]::-webkit-inner-spin-button,
   transition-duration: 150ms;
 }
 
+.msc-pager-container {
+  position: relative;
+  display: flex;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+@media not all and (min-width: 1024px) {
+  .msc-pager-container {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .msc-pager-container {
+    justify-content: center;
+  }
+}
+
+.msc-pager-container-after::after {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 2.25rem;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #FFFFFF var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #776e6ede var(--tw-gradient-to-position);
+  content: var(--tw-content);
+  opacity: 0.5;
+}
+
+@media (min-width: 1024px) {
+  .msc-pager-container-after::after {
+    --tw-content: none;
+    content: var(--tw-content);
+  }
+}
+
+.msc-pager-container-before::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 2.25rem;
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+  --tw-gradient-from: #FFFFFF var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #776e6ede var(--tw-gradient-to-position);
+  content: var(--tw-content);
+  opacity: 0.5;
+}
+
+@media (min-width: 1024px) {
+  .msc-pager-container-before::before {
+    --tw-content: none;
+    content: var(--tw-content);
+  }
+}
+
+.msc-pager-list {
+  display: flex;
+  max-width: 100%;
+  overflow-x: auto;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 400;
+}
+
+.msc-pager-item {
+  border-right-width: 1px;
+  padding: 1rem;
+}
+
+.msc-pager-item:hover {
+  text-decoration-line: underline;
+}
+
+@media (min-width: 1024px) {
+  .msc-pager-item {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+.msc-pager-item:focus {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.msc-pager-item:focus-visible {
+  outline-style: dashed;
+  outline-width: 1px;
+  outline-offset: 4px;
+  outline-color: #424242;
+}
+
+.msc-pager-last-item {
+  white-space: nowrap;
+  border-style: none;
+  padding: 1rem;
+}
+
+.msc-pager-last-item:hover {
+  text-decoration-line: underline;
+}
+
+@media (min-width: 1024px) {
+  .msc-pager-last-item {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+.msc-pager-last-item:focus {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -2048,10 +2174,6 @@ input[type="number"]::-webkit-inner-spin-button,
 
 .relative {
   position: relative;
-}
-
-.sticky {
-  position: sticky;
 }
 
 .left-0 {
@@ -2270,8 +2392,12 @@ input[type="number"]::-webkit-inner-spin-button,
   width: 100px;
 }
 
-.w-\[25\%\] {
-  width: 25%;
+.w-\[15\%\] {
+  width: 15%;
+}
+
+.w-\[20\%\] {
+  width: 20%;
 }
 
 .w-fit {
@@ -2281,14 +2407,6 @@ input[type="number"]::-webkit-inner-spin-button,
 
 .w-full {
   width: 100%;
-}
-
-.w-\[15\%\] {
-  width: 15%;
-}
-
-.w-\[20\%\] {
-  width: 20%;
 }
 
 .max-w-\[1500px\] {
@@ -2536,11 +2654,6 @@ input[type="number"]::-webkit-inner-spin-button,
   background-color: rgb(241 245 254 / var(--tw-bg-opacity));
 }
 
-.bg-red-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(127 29 29 / var(--tw-bg-opacity));
-}
-
 .bg-success-green {
   --tw-bg-opacity: 1;
   background-color: rgb(36 229 148 / var(--tw-bg-opacity));
@@ -2594,11 +2707,6 @@ input[type="number"]::-webkit-inner-spin-button,
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-blue-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
 .p-2 {
@@ -2666,10 +2774,6 @@ input[type="number"]::-webkit-inner-spin-button,
 
 .pt-10 {
   padding-top: 2.5rem;
-}
-
-.pb-\[2000px\] {
-  padding-bottom: 2000px;
 }
 
 .text-left {
