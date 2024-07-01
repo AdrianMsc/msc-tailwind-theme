@@ -47,5 +47,6 @@ module.exports = {
     require("./components/msc-spinner"),
     require("./components/msc-link"),
     require("./components/msc-typography"),
+    require("./components/msc-pager"),
   ],
 };
