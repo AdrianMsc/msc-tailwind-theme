@@ -2051,7 +2051,7 @@ input[type="number"]::-webkit-inner-spin-button,
   position: absolute;
   top: 0px;
   right: 0px;
-  height: 100%;
+  height: 95%;
   width: 2.25rem;
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
   --tw-gradient-from: #FFFFFF var(--tw-gradient-from-position);
@@ -2060,6 +2060,13 @@ input[type="number"]::-webkit-inner-spin-button,
   --tw-gradient-to: #776e6ede var(--tw-gradient-to-position);
   content: var(--tw-content);
   opacity: 0.5;
+}
+
+@media (min-width: 640px) {
+  .msc-pager-container-after::after {
+    content: var(--tw-content);
+    height: 83%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -2073,7 +2080,7 @@ input[type="number"]::-webkit-inner-spin-button,
   position: absolute;
   top: 0px;
   left: 0px;
-  height: 100%;
+  height: 95%;
   width: 2.25rem;
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
   --tw-gradient-from: #FFFFFF var(--tw-gradient-from-position);
@@ -2082,6 +2089,13 @@ input[type="number"]::-webkit-inner-spin-button,
   --tw-gradient-to: #776e6ede var(--tw-gradient-to-position);
   content: var(--tw-content);
   opacity: 0.5;
+}
+
+@media (min-width: 640px) {
+  .msc-pager-container-before::before {
+    content: var(--tw-content);
+    height: 83%;
+  }
 }
 
 @media (min-width: 1024px) {

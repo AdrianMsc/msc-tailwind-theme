@@ -5,11 +5,11 @@ module.exports = function ({ addComponents, theme }) {
         {},
     },
     ".msc-pager-container-after": {
-      "@apply after:absolute after:top-0 after:right-0 after:w-9 after:h-full after:bg-gradient-to-r after:from-white after:to-[#776e6ede] lg:after:content-none after:opacity-50":
+      "@apply after:absolute after:top-0 after:right-0 after:w-9 after:h-full after:bg-gradient-to-r after:from-white after:to-[#776e6ede] lg:after:content-none after:opacity-50 after:h-[95%] sm:after:h-[83%]":
         {},
     },
     ".msc-pager-container-before": {
-      "@apply before:absolute before:top-0 before:left-0 before:w-9 before:h-full lg:before:content-none before:bg-gradient-to-l before:from-white before:to-[#776e6ede] before:opacity-50":
+      "@apply before:absolute before:top-0 before:left-0 before:w-9 before:h-full lg:before:content-none before:bg-gradient-to-l before:from-white before:to-[#776e6ede] before:opacity-50 before:h-[95%] sm:before:h-[83%]":
         {},
     },
     ".msc-pager-list": {
