@@ -238,18 +238,29 @@
   &lt;!-- JS --&gt;
   &lt;script&gt;
     let pagerContainer = document.getElementById("pagerContainer");
-    let pagerList = document.getElementById("pagerList");
-            
-    pagerList.addEventListener("scroll", function () {
-      if (pagerList.scrollLeft >= 800) {
-        pagerContainer.classList.remove("msc-pager-container-after");
-      } else if (pagerList.scrollLeft > 1) {
-        pagerContainer.classList.add("msc-pager-container-before");
-        pagerContainer.classList.add("msc-pager-container-after");
-      } else if (pagerList.scrollLeft < 1) {
-        pagerContainer.classList.remove("msc-pager-container-before");
+      let pagerList = document.getElementById("pagerList");
+
+      let scrollBreakpoint;
+      let windowWidth = window.innerWidth;
+
+      if (windowWidth <= 1024 && windowWidth >= 768) {
+        scrollBreakpoint = 550;
+      } else if (windowWidth <= 768 && windowWidth >= 640) {
+        scrollBreakpoint = 700;
+      } else if (windowWidth <= 640) {
+        scrollBreakpoint = 750;
       }
-    });
+
+      pagerList.addEventListener("scroll", function () {
+        if (pagerList.scrollLeft >= scrollBreakpoint) {
+          pagerContainer.classList.remove("msc-pager-container-after");
+        } else if (pagerList.scrollLeft > 1) {
+          pagerContainer.classList.add("msc-pager-container-before");
+          pagerContainer.classList.add("msc-pager-container-after");
+        } else if (pagerList.scrollLeft < 1) {
+          pagerContainer.classList.remove("msc-pager-container-before");
+        }
+      });
   &lt;/script&gt;
           </code>
         </pre>
@@ -261,8 +272,19 @@
       let pagerContainer = document.getElementById("pagerContainer");
       let pagerList = document.getElementById("pagerList");
 
+      let scrollBreakpoint;
+      let windowWidth = window.innerWidth;
+
+      if (windowWidth <= 1024 && windowWidth >= 768) {
+        scrollBreakpoint = 550;
+      } else if (windowWidth <= 768 && windowWidth >= 640) {
+        scrollBreakpoint = 700;
+      } else if (windowWidth <= 640) {
+        scrollBreakpoint = 750;
+      }
+
       pagerList.addEventListener("scroll", function () {
-        if (pagerList.scrollLeft >= 800) {
+        if (pagerList.scrollLeft >= scrollBreakpoint) {
           pagerContainer.classList.remove("msc-pager-container-after");
         } else if (pagerList.scrollLeft > 1) {
           pagerContainer.classList.add("msc-pager-container-before");
