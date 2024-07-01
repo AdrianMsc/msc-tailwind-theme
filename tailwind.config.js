@@ -2,7 +2,12 @@
 const colors = require("./utilities/colors");
 
 module.exports = {
-  content: ["./src/**/*.{html,js}", "./pages/**/*.{html,js}", "./index.html"],
+  content: [
+    "./src/**/*.{html,js}",
+    "./pages/**/*.{html,js}",
+    "./index.html",
+    "./utilities/index.js",
+  ],
   theme: {
     extend: {
       colors,
@@ -41,5 +46,6 @@ module.exports = {
     require("./components/msc-dividers"),
     require("./components/msc-spinner"),
     require("./components/msc-link"),
+    require("./components/msc-typography"),
   ],
 };
