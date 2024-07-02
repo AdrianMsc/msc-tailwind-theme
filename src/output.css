@@ -2346,6 +2346,11 @@ h6 {
   margin-bottom: 0.75rem;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -2468,12 +2473,28 @@ h6 {
   height: 100px;
 }
 
+.h-\[16px\] {
+  height: 16px;
+}
+
 .h-\[20px\] {
   height: 20px;
 }
 
+.h-\[24px\] {
+  height: 24px;
+}
+
 .h-\[300px\] {
   height: 300px;
+}
+
+.h-\[4px\] {
+  height: 4px;
+}
+
+.h-\[8px\] {
+  height: 8px;
 }
 
 .h-fit {
@@ -2487,6 +2508,14 @@ h6 {
 
 .h-screen {
   height: 100vh;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-1\/4 {
+  width: 25%;
 }
 
 .w-16 {
@@ -2544,6 +2573,10 @@ h6 {
 
 .flex-shrink-0 {
   flex-shrink: 0;
+}
+
+.border-collapse {
+  border-collapse: collapse;
 }
 
 .-translate-x-full {
@@ -2675,6 +2708,16 @@ h6 {
   border-color: rgb(33 33 33 / var(--tw-border-opacity));
 }
 
+.border-slate-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(203 213 225 / var(--tw-border-opacity));
+}
+
+.border-slate-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(148 163 184 / var(--tw-border-opacity));
+}
+
 .bg-\[\#f2f2f2\] {
   --tw-bg-opacity: 1;
   background-color: rgb(242 242 242 / var(--tw-bg-opacity));
@@ -2785,6 +2828,16 @@ h6 {
   background-color: rgb(241 245 254 / var(--tw-bg-opacity));
 }
 
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.bg-slate-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+}
+
 .bg-success-green {
   --tw-bg-opacity: 1;
   background-color: rgb(36 229 148 / var(--tw-bg-opacity));
@@ -2840,6 +2893,10 @@ h6 {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -2854,6 +2911,10 @@ h6 {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-2 {
@@ -2943,11 +3004,6 @@ h6 {
   font-size: 4rem;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -3032,6 +3088,11 @@ h6 {
   color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
+.text-slate-900 {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
 .text-transparent {
   color: transparent;
 }
@@ -3083,6 +3144,10 @@ h6 {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.outline {
+  outline-style: solid;
+}
+
 .outline-dashed {
   outline-style: dashed;
 }
@@ -3093,6 +3158,10 @@ h6 {
 
 .outline-offset-4 {
   outline-offset: 4px;
+}
+
+.outline-slate-300 {
+  outline-color: #cbd5e1;
 }
 
 .transition {
