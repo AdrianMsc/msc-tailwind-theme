@@ -2260,6 +2260,41 @@ h6 {
   text-decoration: underline;
 }
 
+.msc-dialog-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #21212166;
+}
+
+.msc-dialog {
+  max-width: 328px;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 1.25rem;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.msc-dialog h4 {
+  margin-bottom: 1rem;
+}
+
+.msc-dialog .footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -2428,6 +2463,10 @@ h6 {
   display: block !important;
 }
 
+.block {
+  display: block;
+}
+
 .inline {
   display: inline;
 }
@@ -2446,6 +2485,10 @@ h6 {
 
 .grid {
   display: grid;
+}
+
+.contents {
+  display: contents;
 }
 
 .hidden {
@@ -2768,6 +2811,11 @@ h6 {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
 .bg-monochromes-grey {
   --tw-bg-opacity: 1;
   background-color: rgb(113 113 113 / var(--tw-bg-opacity));
@@ -2895,6 +2943,10 @@ h6 {
 
 .p-1 {
   padding: 0.25rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .p-2 {

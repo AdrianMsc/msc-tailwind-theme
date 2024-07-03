@@ -48,5 +48,6 @@ module.exports = {
     require("./components/msc-link"),
     require("./components/msc-typography"),
     require("./components/msc-pager"),
+    require("./components/msc-dialog"),
   ],
 };
