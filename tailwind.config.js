@@ -42,5 +42,6 @@ module.exports = {
     require("./components/msc-spinner"),
     require("./components/msc-link"),
     require("./components/msc-pager"),
+    require("./components/msc-filter"),
   ],
 };

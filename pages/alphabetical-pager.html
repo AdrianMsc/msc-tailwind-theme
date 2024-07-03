@@ -284,6 +284,7 @@
       }
 
       pagerList.addEventListener("scroll", function () {
+        console.log(pagerList.scrollLeft);
         if (pagerList.scrollLeft >= scrollBreakpoint) {
           pagerContainer.classList.remove("msc-pager-container-after");
         } else if (pagerList.scrollLeft > 1) {
