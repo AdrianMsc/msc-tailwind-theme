@@ -128,7 +128,14 @@ const sideNav = `
             <span class="flex-1 ms-3 whitespace-nowrap">Drop Down</span>
           </a>
         </li>
-
+        <li>
+          <a
+            href="filter.html"
+            class="flex items-center px-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
+          >
+            <span class="flex-1 ms-3 whitespace-nowrap">Filter</span>
+          </a>
+        </li>
         <li>
           <a
             href="link.html"
@@ -249,6 +256,36 @@ const sideNav = `
             class="flex items-center px-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
           >
             <span class="flex-1 ms-3 whitespace-nowrap">Dividers</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- NAVIGATION  -->
+    <li>
+      <button
+        type="button"
+        class="flex items-center w-full px-2 text-sm font-bold text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100"
+        aria-controls="dropdown-overlay"
+        data-collapse-toggle="dropdown-overlay"
+      >
+        <span class="flex-1 text-left rtl:text-right whitespace-nowrap"
+          >Navigation</span
+        >
+        <img
+          class="flex-shrink-0 w-3 h-3"
+          width="24"
+          height="24"
+          src="../assets/icons/chevron-down.svg"
+        />
+      </button>
+      <ul id="dropdown-overlay" class="py-2 space-y-2">
+        <li>
+          <a
+            href="alphabetical-pager.html"
+            class="flex items-center px-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
+          >
+            <span class="flex-1 ms-3 whitespace-nowrap">Alphabetic Pager</span>
           </a>
         </li>
       </ul>
