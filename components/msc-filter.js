@@ -18,7 +18,7 @@ module.exports = function ({ addComponents, theme }) {
       "@apply text-white rounded-full bg-black size-4 text-xs items-center": {},
     },
     ".msc-filters-section": {
-      "@apply flex flex-col gap-2": {},
+      "@apply flex flex-col gap-2 bg-[#F2F2F2] p-3 rounded": {},
     },
     ".msc-filters-title": {
       "@apply font-bold text-xl": {},
