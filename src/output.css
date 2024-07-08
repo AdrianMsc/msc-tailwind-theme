@@ -2260,7 +2260,7 @@ h6 {
   text-decoration: underline;
 }
 
-.msc-filter {
+.msc-top-filter {
   display: flex;
   height: 2rem;
   width: 100%;
@@ -2282,16 +2282,48 @@ h6 {
 }
 
 @media (min-width: 768px) {
-  .msc-filter {
+  .msc-top-filter {
     width: 216px;
   }
 }
 
-.msc-filter:hover {
+.msc-top-filter:hover {
   border-color: #000000;
 }
 
-.msc-filter-active {
+.msc-top-filter:after {
+  display: none;
+  width: 1rem;
+  height: 1rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.msc-top-filter:hover:after {
+  display: block;
+}
+
+.msc-top-filter:after {
+  background-image: url('../assets/plusBlack.svg');
+}
+
+.msc-filter-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.group:hover .msc-filter-icon {
+  display: none;
+}
+
+.msc-filter-icon {
+  background-image: url('../assets/plusGrey.svg');
+}
+
+.msc-top-filter-active {
   display: flex;
   height: 2rem;
   width: 100%;
@@ -2312,22 +2344,22 @@ h6 {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.msc-filter-active:hover {
+.msc-top-filter-active:hover {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 @media (min-width: 768px) {
-  .msc-filter-active {
+  .msc-top-filter-active {
     width: 216px;
   }
 }
 
-.msc-filter-active:hover {
+.msc-top-filter-active:hover {
   border-color: #000000;
 }
 
-.msc-filter-badge {
+.msc-top-filter-badge {
   width: 1rem;
   height: 1rem;
   align-items: center;
@@ -2340,7 +2372,7 @@ h6 {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.msc-filters-section {
+.msc-top-filters-section {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -2350,13 +2382,13 @@ h6 {
   padding: 0.75rem;
 }
 
-.msc-filters-title {
+.msc-top-filters-title {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 700;
 }
 
-.msc-filters-container {
+.msc-top-filters-container {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -2597,11 +2629,6 @@ h6 {
 
 .hidden {
   display: none;
-}
-
-.size-4 {
-  width: 1rem;
-  height: 1rem;
 }
 
 .size-\[128px\] {
