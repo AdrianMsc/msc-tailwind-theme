@@ -100,25 +100,25 @@ module.exports = function ({ addComponents, theme }) {
         {},
     },
     ".msc-icon-button-sm": {
-      "@apply p-2 h-[36px] hover:bg-off_white rounded-full focus:bg-monochromes-grey_xlight disabled:bg-white fill-monochromes-grey disabled:fill-monochromes-grey_xlight":
+      "@apply p-2 h-[36px] hover:bg-off_white rounded-full focus:bg-monochromes-grey_xlight disabled:bg-white text-monochromes-grey disabled:text-monochromes-grey_xlight":
         {},
     },
-    ".msc-icon-button-sm svg": {
-      "@apply h-[20px]": {},
+    ".msc-icon-button-sm i": {
+      "@apply text-[20px]": {},
     },
     ".msc-icon-button": {
-      "@apply p-2 h-[40px] hover:bg-off_white rounded-full focus:bg-monochromes-grey_xlight disabled:bg-white fill-monochromes-grey disabled:fill-monochromes-grey_xlight":
+      "@apply p-2 h-[40px] hover:bg-off_white rounded-full focus:bg-monochromes-grey_xlight disabled:bg-white text-monochromes-grey disabled:text-monochromes-grey_xlight":
         {},
     },
-    ".msc-icon-button svg": {
-      "@apply h-[24px]": {},
+    ".msc-icon-button i": {
+      "@apply text-[24px]": {},
     },
     ".msc-icon-button-lg": {
-      "@apply p-2 h-[48px] hover:bg-off_white rounded-full focus:bg-monochromes-grey_xlight disabled:bg-white fill-monochromes-grey disabled:fill-monochromes-grey_xlight":
+      "@apply p-2 h-[48px] hover:bg-off_white rounded-full focus:bg-monochromes-grey_xlight disabled:bg-white text-monochromes-grey disabled:text-monochromes-grey_xlight flex items-center justify-center":
         {},
     },
-    ".msc-icon-button-lg svg": {
-      "@apply h-[32px]": {},
+    ".msc-icon-button-lg ": {
+      "@apply text-[32px]": {},
     },
   };
   addComponents(buttons);

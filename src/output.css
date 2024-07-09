@@ -804,8 +804,9 @@ input[type="number"]::-webkit-inner-spin-button,
 .msc-icon-button-sm {
   height: 36px;
   border-radius: 9999px;
-  fill: #717171;
   padding: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(113 113 113 / var(--tw-text-opacity));
 }
 
 .msc-icon-button-sm:hover {
@@ -821,18 +822,20 @@ input[type="number"]::-webkit-inner-spin-button,
 .msc-icon-button-sm:disabled {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  fill: #DBDBDB;
+  --tw-text-opacity: 1;
+  color: rgb(219 219 219 / var(--tw-text-opacity));
 }
 
-.msc-icon-button-sm svg {
-  height: 20px;
+.msc-icon-button-sm i {
+  font-size: 20px;
 }
 
 .msc-icon-button {
   height: 40px;
   border-radius: 9999px;
-  fill: #717171;
   padding: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(113 113 113 / var(--tw-text-opacity));
 }
 
 .msc-icon-button:hover {
@@ -848,18 +851,23 @@ input[type="number"]::-webkit-inner-spin-button,
 .msc-icon-button:disabled {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  fill: #DBDBDB;
+  --tw-text-opacity: 1;
+  color: rgb(219 219 219 / var(--tw-text-opacity));
 }
 
-.msc-icon-button svg {
-  height: 24px;
+.msc-icon-button i {
+  font-size: 24px;
 }
 
 .msc-icon-button-lg {
+  display: flex;
   height: 48px;
+  align-items: center;
+  justify-content: center;
   border-radius: 9999px;
-  fill: #717171;
   padding: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(113 113 113 / var(--tw-text-opacity));
 }
 
 .msc-icon-button-lg:hover {
@@ -875,11 +883,12 @@ input[type="number"]::-webkit-inner-spin-button,
 .msc-icon-button-lg:disabled {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  fill: #DBDBDB;
+  --tw-text-opacity: 1;
+  color: rgb(219 219 219 / var(--tw-text-opacity));
 }
 
-.msc-icon-button-lg svg {
-  height: 32px;
+.msc-icon-button-lg  {
+  font-size: 32px;
 }
 
 .msc-checkbox-container {
@@ -3275,10 +3284,6 @@ h6 {
   line-height: 2.25rem;
 }
 
-.text-\[1\.5rem\] {
-  font-size: 1.5rem;
-}
-
 .text-\[12px\] {
   font-size: 12px;
 }
@@ -3309,6 +3314,10 @@ h6 {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[1\.5rem\] {
+  font-size: 1.5rem;
 }
 
 .font-bold {
