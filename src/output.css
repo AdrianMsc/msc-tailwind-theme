@@ -596,6 +596,7 @@ input[type="number"]::-webkit-inner-spin-button,
 
 .msc-btn {
   height: 2.5rem;
+  min-width: 8rem;
   cursor: pointer;
   border-radius: 9999px;
   padding-top: 0.5rem;
@@ -645,6 +646,7 @@ input[type="number"]::-webkit-inner-spin-button,
 }
 
 .msc-btn-blue-outline {
+  min-width: 8rem;
   border-width: 1px;
   background-color: transparent;
   color: #1C58EE;
@@ -679,6 +681,7 @@ input[type="number"]::-webkit-inner-spin-button,
 }
 
 .msc-btn-transparent {
+  min-width: 8rem;
   background-color: transparent;
   color: #1C58EE;
 }
@@ -711,10 +714,12 @@ input[type="number"]::-webkit-inner-spin-button,
 .msc-btn-icon {
   margin-left: 0.5rem;
   display: flex;
+  min-width: 8rem;
   align-items: center;
 }
 
 .msc-btn-dots-container {
+  margin: auto;
   display: flex;
   height: auto;
   width: 2.5rem;
@@ -3284,6 +3289,10 @@ h6 {
   line-height: 2.25rem;
 }
 
+.text-\[1\.5rem\] {
+  font-size: 1.5rem;
+}
+
 .text-\[12px\] {
   font-size: 12px;
 }
@@ -3314,10 +3323,6 @@ h6 {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[1\.5rem\] {
-  font-size: 1.5rem;
 }
 
 .font-bold {
