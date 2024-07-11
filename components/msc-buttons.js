@@ -1,7 +1,7 @@
 module.exports = function ({ addComponents, theme }) {
   const buttons = {
     ".msc-btn": {
-      "@apply py-2 px-5 h-10 rounded-full font-bold text-base cursor-pointer":
+      "@apply py-2 px-5 h-10 rounded-full font-bold text-base cursor-pointer min-w-32":
         {},
     },
     ".msc-btn-sm": {
@@ -30,7 +30,7 @@ module.exports = function ({ addComponents, theme }) {
       },
     },
     ".msc-btn-blue-outline": {
-      "@apply bg-transparent border": {},
+      "@apply bg-transparent border min-w-32": {},
       color: theme("colors.primary.blue"),
       borderColor: theme("colors.primary.blue"),
       "&:hover": {
@@ -58,7 +58,7 @@ module.exports = function ({ addComponents, theme }) {
       },
     },
     ".msc-btn-transparent": {
-      "@apply bg-transparent": {},
+      "@apply bg-transparent min-w-32": {},
       color: theme("colors.primary.blue"),
       "&:hover": {
         backgroundColor: theme("colors.primary.blue_xlight"),
@@ -83,10 +83,10 @@ module.exports = function ({ addComponents, theme }) {
       },
     },
     ".msc-btn-icon": {
-      "@apply flex items-center ml-2": {},
+      "@apply flex items-center ml-2 min-w-32": {},
     },
     ".msc-btn-dots-container": {
-      "@apply w-10 h-auto flex place-content-between items-center": {},
+      "@apply w-10 h-auto flex place-content-between items-center m-auto": {},
     },
     ".msc-btn-dot1": {
       "@apply relative w-2 h-2 bg-white rounded-full animate-dotFlashing1": {},

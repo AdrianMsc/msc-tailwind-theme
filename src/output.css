@@ -596,6 +596,7 @@ input[type="number"]::-webkit-inner-spin-button,
 
 .msc-btn {
   height: 2.5rem;
+  min-width: 8rem;
   cursor: pointer;
   border-radius: 9999px;
   padding-top: 0.5rem;
@@ -645,6 +646,7 @@ input[type="number"]::-webkit-inner-spin-button,
 }
 
 .msc-btn-blue-outline {
+  min-width: 8rem;
   border-width: 1px;
   background-color: transparent;
   color: #1C58EE;
@@ -679,6 +681,7 @@ input[type="number"]::-webkit-inner-spin-button,
 }
 
 .msc-btn-transparent {
+  min-width: 8rem;
   background-color: transparent;
   color: #1C58EE;
 }
@@ -711,10 +714,12 @@ input[type="number"]::-webkit-inner-spin-button,
 .msc-btn-icon {
   margin-left: 0.5rem;
   display: flex;
+  min-width: 8rem;
   align-items: center;
 }
 
 .msc-btn-dots-container {
+  margin: auto;
   display: flex;
   height: auto;
   width: 2.5rem;
@@ -2505,7 +2510,7 @@ h6 {
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  padding: 1.25rem;
+  padding: 1rem;
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
