@@ -2537,13 +2537,20 @@ h6 {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
+  line-height: 14px;
   --tw-text-opacity: 1;
-  color: rgb(166 166 166 / var(--tw-text-opacity));
+  color: rgb(113 113 113 / var(--tw-text-opacity));
 }
 
 .msc-grey-button:hover {
   --tw-text-opacity: 1;
-  color: rgb(62 62 62 / var(--tw-text-opacity));
+  color: rgb(33 33 33 / var(--tw-text-opacity));
+}
+
+.msc-grey-button:disabled {
+  cursor: not-allowed;
+  --tw-text-opacity: 1;
+  color: rgb(166 166 166 / var(--tw-text-opacity));
 }
 
 .sr-only {
@@ -2710,6 +2717,10 @@ h6 {
   margin-top: 30px;
 }
 
+.mb-\[1px\] {
+  margin-bottom: 1px;
+}
+
 .\!block {
   display: block !important;
 }
@@ -2757,10 +2768,6 @@ h6 {
 
 .h-3 {
   height: 0.75rem;
-}
-
-.h-5 {
-  height: 1.25rem;
 }
 
 .h-6 {
@@ -2953,6 +2960,10 @@ h6 {
   gap: 0.5rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .gap-x-5 {
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
@@ -3004,10 +3015,6 @@ h6 {
 
 .border {
   border-width: 1px;
-}
-
-.border-0 {
-  border-width: 0px;
 }
 
 .border-b {
@@ -3407,6 +3414,11 @@ h6 {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.text-monochromes-main {
+  --tw-text-opacity: 1;
+  color: rgb(33 33 33 / var(--tw-text-opacity));
+}
+
 .text-primary-blue {
   --tw-text-opacity: 1;
   color: rgb(28 88 238 / var(--tw-text-opacity));
@@ -3558,6 +3570,10 @@ body {
 .after\:right-6::after {
   content: var(--tw-content);
   right: 1.5rem;
+}
+
+.first\:mb-\[1px\]:first-child {
+  margin-bottom: 1px;
 }
 
 .placeholder-shown\:text-error-red:-moz-placeholder-shown {
