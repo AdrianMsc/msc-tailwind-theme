@@ -52,5 +52,6 @@ module.exports = {
     require("./components/msc-dialog"),
     require("./components/msc-grey-button"),
     require("./components/msc-tabs"),
+    require("./components/msc-cart-action-bar"),
   ],
 };

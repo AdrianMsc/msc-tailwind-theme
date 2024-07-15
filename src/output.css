@@ -2530,6 +2530,7 @@ h6 {
   display: flex;
   align-items: center;
   gap: 6px;
+  text-wrap: nowrap;
   padding-top: 13px;
   padding-bottom: 13px;
   padding-left: 10px;
@@ -2617,6 +2618,45 @@ h6 {
   --tw-border-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
   --tw-border-opacity: 16%;
+}
+
+.msc-cart-action-bar {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.msc-buttons-container {
+  display: none;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .msc-buttons-container {
+    display: flex;
+  }
+}
+
+.msc-buttons-container-responsive {
+  position: absolute;
+  margin-top: 0.25rem;
+  display: flex;
+  width: 160px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.msc-v-divider-blue {
+  height: 100%;
+  width: 1px;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(179 199 249 / var(--tw-bg-opacity));
 }
 
 .sr-only {
@@ -2834,6 +2874,10 @@ h6 {
 
 .h-3 {
   height: 0.75rem;
+}
+
+.h-5 {
+  height: 1.25rem;
 }
 
 .h-6 {
