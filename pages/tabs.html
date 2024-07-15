@@ -58,20 +58,64 @@
             <small class="text-sm text-primary-blue">Action</small> <br />
             Tabs
           </h1>
-          <p>
+
+          <p class="mb-4">
             Tabs on an ecommerce website serve several crucial functions to
             enhance user experience and facilitate online shopping.
           </p>
 
-          <ul class="flex w-100">
-            <li
-              class="p-3 grow border-b-2 border-b-primary-blue text-center font-bold"
-            >
-              General Purpose & Heavy Duty
-            </li>
-            <li class="p-3 grow">Specialized & High Performance</li>
-            <li class="p-3 grow">Maintenance</li>
+          <ul class="msc-tabs">
+            <li class="active">General Purpose & Heavy Duty</li>
+            <li class="middle">Specialized & High Performance</li>
+            <li>Maintenance</li>
           </ul>
+
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
+            <code class="language-html rounded">
+&lt;!-- Tab Component --&gt;
+&lt;ul class="msc-tabs"&gt;
+  &lt;li&gt;General Purpose &amp; Heavy Duty&lt;/li&gt;
+  &lt;li class="middle"&gt;Specialized &amp; High Performance&lt;/li&gt;
+  &lt;li&gt;Maintenance&lt;/li&gt;
+&lt;/ul&gt;
+              
+            </code>
+        </pre>
+          </div>
+
+          <h2>Js example</h2>
+
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
+            <code class="language-html rounded">
+&lt;script&gt;
+  document.querySelector(".msc-tabs").addEventListener("click", (event) =&gt; {
+    const { target } = event;
+    target.tagName === "LI" &amp;&amp; Array.from(document.querySelectorAll(".msc-tabs li")).forEach(tab =&gt; {
+    tab === target ? tab.classList.add("active") : tab.classList.remove("active");
+    });
+  });
+&lt;/script&gt;
+            </code>
+        </pre>
+          </div>
+
+          <script>
+            document
+              .querySelector(".msc-tabs")
+              .addEventListener("click", (event) => {
+                const { target } = event;
+                target.tagName === "LI" &&
+                  Array.from(document.querySelectorAll(".msc-tabs li")).forEach(
+                    (tab) => {
+                      tab === target
+                        ? tab.classList.add("active")
+                        : tab.classList.remove("active");
+                    }
+                  );
+              });
+          </script>
         </div>
       </div>
     </section>

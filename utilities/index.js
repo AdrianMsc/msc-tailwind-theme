@@ -144,6 +144,14 @@ const sideNav = `
             <span class="flex-1 ms-3 whitespace-nowrap">Link</span>
           </a>
         </li>
+        <li>
+          <a
+            href="tabs.html"
+            class="flex items-center px-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
+          >
+            <span class="flex-1 ms-3 whitespace-nowrap">Tabs</span>
+          </a>
+        </li>
       </ul>
     </li>
     <!-- FORM -->
