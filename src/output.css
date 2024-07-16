@@ -2570,6 +2570,7 @@ h6 {
   padding: 0.75rem;
   text-align: center;
   font-size: 16px;
+  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(113 113 113 / var(--tw-text-opacity));
   transition-property: all;
@@ -2586,6 +2587,8 @@ h6 {
 }
 
 .msc-tabs li:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -2611,13 +2614,36 @@ h6 {
   background-color: rgb(28 88 238 / var(--tw-bg-opacity));
 }
 
+.msc-tabs .active:hover {
+  border-color: transparent;
+}
+
 .msc-tabs .middle {
-  border-left-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(55 65 81 / var(--tw-border-opacity));
-  --tw-border-opacity: 16%;
+  position: relative;
+}
+
+.msc-tabs .middle::before {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 100%;
+  width: 1px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  content: var(--tw-content);
+  opacity: 16%;
+}
+
+.msc-tabs .middle::after {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: 100%;
+  width: 1px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  content: var(--tw-content);
+  opacity: 16%;
 }
 
 .msc-cart-action-bar {
