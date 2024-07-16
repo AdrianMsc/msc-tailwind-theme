@@ -2787,6 +2787,10 @@ h6 {
   margin-left: 0.25rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -2959,10 +2963,6 @@ h6 {
 
 .w-\[20\%\] {
   width: 20%;
-}
-
-.w-\[300px\] {
-  width: 300px;
 }
 
 .w-fit {
