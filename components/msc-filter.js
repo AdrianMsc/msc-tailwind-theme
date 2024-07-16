@@ -6,15 +6,6 @@ module.exports = function ({ addComponents, theme }) {
       "&:hover": {
         borderColor: "#000000",
       },
-      "&:after": {
-        "@apply size-4 content-[''] bg-no-repeat bg-center bg-contain hidden hover:block":
-          {},
-        backgroundImage: "url('../assets/plusBlack.svg')",
-      },
-    },
-    ".msc-filter-icon": {
-      "@apply size-4 group-hover:hidden": {},
-      backgroundImage: "url('../assets/plusGrey.svg')",
     },
     ".msc-top-filter-active": {
       "@apply border border-monochromes-grey_light rounded bg-white h-8 w-full md:w-[216px] flex flex-row place-content-between py-1.5 px-3 items-center hover:border-black text-black":
