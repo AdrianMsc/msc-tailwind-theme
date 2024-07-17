@@ -2556,6 +2556,7 @@ h6 {
 
 .msc-tabs {
   display: flex;
+  height: 50px;
   width: 100%;
 }
 
@@ -2616,34 +2617,6 @@ h6 {
 
 .msc-tabs .active:hover {
   border-color: transparent;
-}
-
-.msc-tabs .middle {
-  position: relative;
-}
-
-.msc-tabs .middle::before {
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  height: 100%;
-  width: 1px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-  content: var(--tw-content);
-  opacity: 16%;
-}
-
-.msc-tabs .middle::after {
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  height: 100%;
-  width: 1px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-  content: var(--tw-content);
-  opacity: 16%;
 }
 
 .msc-cart-action-bar {
@@ -2813,6 +2786,10 @@ h6 {
   margin-left: 0.25rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -2851,10 +2828,6 @@ h6 {
 
 .mt-\[30px\] {
   margin-top: 30px;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
 }
 
 .\!block {
@@ -2989,10 +2962,6 @@ h6 {
 
 .w-\[20\%\] {
   width: 20%;
-}
-
-.w-\[300px\] {
-  width: 300px;
 }
 
 .w-fit {
