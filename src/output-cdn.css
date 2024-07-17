@@ -1966,6 +1966,7 @@ h6 {
 
 .msc-tabs {
   display: flex;
+  height: 50px;
   width: 100%;
 }
 
@@ -2026,34 +2027,6 @@ h6 {
 
 .msc-tabs .active:hover {
   border-color: transparent;
-}
-
-.msc-tabs .middle {
-  position: relative;
-}
-
-.msc-tabs .middle::before {
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  height: 100%;
-  width: 1px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-  content: var(--tw-content);
-  opacity: 16%;
-}
-
-.msc-tabs .middle::after {
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  height: 100%;
-  width: 1px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-  content: var(--tw-content);
-  opacity: 16%;
 }
 
 .msc-cart-action-bar {
