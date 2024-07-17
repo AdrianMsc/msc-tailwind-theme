@@ -1,291 +1,397 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../src/output.css" rel="stylesheet" />
-    <title>Component Status</title>
-  </head>
-  <body class="bg-off_white">
-    <button
-      onclick="toggleSideNav()"
-      aria-controls="default-sidebar"
-      type="button"
-      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-    >
-      <span class="sr-only">Open sidebar</span>
-      <svg
-        class="w-6 h-6"
-        aria-hidden="true"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          clip-rule="evenodd"
-          fill-rule="evenodd"
-          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-        ></path>
-      </svg>
-    </button>
 
-    <aside
-      id="msc-sidebar"
-      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-      aria-label="Sidebar"
-    >
-      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
-        <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" />
-        <p class="font-bold text-lg mb-5">Fuel Design System</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../src/output.css" rel="stylesheet" />
+  <title>Component Status</title>
+</head>
 
-        <span id="sidenav-menu"> </span>
-      </div>
-    </aside>
+<body class="bg-off_white">
+  <button onclick="toggleSideNav()" aria-controls="default-sidebar" type="button"
+    class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+    <span class="sr-only">Open sidebar</span>
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path clip-rule="evenodd" fill-rule="evenodd"
+        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+      </path>
+    </svg>
+  </button>
 
-    <!-- CONTENT  -->
-    <div class="p-4 sm:ml-64">
-      <section class="container mx-auto">
-        <div class="grid grid-cols-12">
-          <div class="col-span-12 md:col-span-8 md:col-start-3 pt-10">
-            <h1 class="font-bold text-3xl">
-              <small class="text-sm text-primary-blue">Getting Started</small>
-              <br />
-              Component Status
-            </h1>
+  <aside id="msc-sidebar"
+    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+    aria-label="Sidebar">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
+      <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" />
+      <p class="font-bold text-lg mb-5">Fuel Design System</p>
 
-            <small>Last update: June 5th, 2024</small>
+      <span id="sidenav-menu"> </span>
+    </div>
+  </aside>
 
-            <ul class="flex mt-5">
-              <li class="mr-3">🧱 Todo</li>
-              <li class="mr-3">🛠 WIP</li>
-              <li class="mr-3">🔭 Alpha</li>
-              <li class="mr-3">🧪 Beta</li>
-              <li class="mr-3">✅ Live</li>
-              <li class="mr-3"><b class="font-bold">N/A</b> Not Applicable</li>
-            </ul>
+  <!-- CONTENT  -->
+  <div class="p-4 sm:ml-64">
+    <section class="container mx-auto">
+      <div class="grid grid-cols-12">
+        <div class="col-span-12 md:col-span-8 md:col-start-3 pt-10">
+          <h1 class="font-bold text-3xl">
+            <small class="text-sm text-primary-blue">Getting Started</small>
+            <br />
+            Component Status
+          </h1>
 
-            <!-- FOUNDATINONS -->
-            <h2 class="font-bold text-2xl mt-5">Foundations</h2>
+          <small>Last update: June 5th, 2024</small>
 
-            <div class="relative overflow-x-auto mt-3">
-              <table
-                class="w-full text-sm text-left rtl:text-right text-gray-500"
-              >
-                <thead class="text-xs text-gray-700 bg-gray-50">
-                  <tr>
-                    <th scope="col" class="px-6 py-3 w-[20%]">&nbsp;</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Figma</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Guidelines</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">CDN</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Bit.cloud</th>
-                    <th scope="col" class="px-6 py-3" colspan="3">Comments</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="bg-white border-b">
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-                    >
-                      Colors
-                    </th>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">🧱</td>
-                    <td class="px-6 py-4" colspan="3">Comment</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <ul class="flex mt-5">
+            <li class="mr-3">🧱 Todo</li>
+            <li class="mr-3">🛠 WIP</li>
+            <li class="mr-3">🔭 Alpha</li>
+            <li class="mr-3">🧪 Beta</li>
+            <li class="mr-3">✅ Live</li>
+            <li class="mr-3"><b class="font-bold">N/A</b> Not Applicable</li>
+          </ul>
 
-            <!-- ACTION -->
-            <h2 class="font-bold text-2xl mt-5">Action</h2>
+          <!-- FOUNDATINONS -->
+          <h2 class="font-bold text-2xl mt-5">Foundations</h2>
 
-            <div class="relative overflow-x-auto mt-3">
-              <table
-                class="w-full text-sm text-left rtl:text-right text-gray-500"
-              >
-                <thead class="text-xs text-gray-700 bg-gray-50">
-                  <tr>
-                    <th scope="col" class="px-6 py-3 w-[20%]">&nbsp;</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Figma</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Guidelines</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">CDN</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Bit.cloud</th>
-                    <th scope="col" class="px-6 py-3" colspan="3">Comments</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="bg-white border-b">
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-                    >
-                      Buttons
-                    </th>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">🧱</td>
-                    <td class="px-6 py-4" colspan="3">Comment</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <div class="relative overflow-x-auto mt-3">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+              <thead class="text-xs text-gray-700 bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 w-[20%]">&nbsp;</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Figma</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Guidelines</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">CDN</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Bit.cloud</th>
+                  <th scope="col" class="px-6 py-3" colspan="3">Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Colors
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Shadows
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Typography
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Spacing
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-            <!-- FORM -->
-            <h2 class="font-bold text-2xl mt-5">Form</h2>
+          <!-- ACTION -->
+          <h2 class="font-bold text-2xl mt-5">Action</h2>
 
-            <div class="relative overflow-x-auto mt-3">
-              <table
-                class="w-full text-sm text-left rtl:text-right text-gray-500"
-              >
-                <thead class="text-xs text-gray-700 bg-gray-50">
-                  <tr>
-                    <th scope="col" class="px-6 py-3 w-[20%]">&nbsp;</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Figma</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Guidelines</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">CDN</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Bit.cloud</th>
-                    <th scope="col" class="px-6 py-3" colspan="3">Comments</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="bg-white border-b">
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-                    >
-                      Input
-                    </th>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">🧱</td>
-                    <td class="px-6 py-4" colspan="3">Comment</td>
-                  </tr>
+          <div class="relative overflow-x-auto mt-3">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+              <thead class="text-xs text-gray-700 bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 w-[20%]">&nbsp;</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Figma</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Guidelines</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">CDN</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Bit.cloud</th>
+                  <th scope="col" class="px-6 py-3" colspan="3">Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Buttons
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Drop Down
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Filter
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Link
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Cart Action Bar
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Tabs
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-                  <tr class="bg-white border-b">
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-                    >
-                      Toggle
-                    </th>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">🧱</td>
-                    <td class="px-6 py-4" colspan="3">Comment</td>
-                  </tr>
+          <!-- FORM -->
+          <h2 class="font-bold text-2xl mt-5">Form</h2>
 
-                  <tr class="bg-white border-b">
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-                    >
-                      Checkbox
-                    </th>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">🧱</td>
-                    <td class="px-6 py-4" colspan="3">Comment</td>
-                  </tr>
+          <div class="relative overflow-x-auto mt-3">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+              <thead class="text-xs text-gray-700 bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 w-[20%]">&nbsp;</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Figma</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Guidelines</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">CDN</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Bit.cloud</th>
+                  <th scope="col" class="px-6 py-3" colspan="3">Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Input
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
 
-                  <tr class="bg-white border-b">
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-                    >
-                      Radio
-                    </th>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">🧱</td>
-                    <td class="px-6 py-4" colspan="3">Comment</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Toggle
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
 
-            <!-- LAYOUT -->
-            <h2 class="font-bold text-2xl mt-5">Layout</h2>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Checkbox
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
 
-            <div class="relative overflow-x-auto mt-3">
-              <table
-                class="w-full text-sm text-left rtl:text-right text-gray-500"
-              >
-                <thead class="text-xs text-gray-700 bg-gray-50">
-                  <tr>
-                    <th scope="col" class="px-6 py-3 w-[20%]">&nbsp;</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Figma</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Guidelines</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">CDN</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Bit.cloud</th>
-                    <th scope="col" class="px-6 py-3" colspan="3">Comments</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="bg-white border-b">
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-                    >
-                      Dividers
-                    </th>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">✅</td>
-                    <td class="px-6 py-4">🧱</td>
-                    <td class="px-6 py-4" colspan="3">Comment</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Radio
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-            <!-- OVERLAY -->
-            <h2 class="font-bold text-2xl mt-5">Overlay</h2>
+          <!-- INDICATOR -->
+          <h2 class="font-bold text-2xl mt-5">Indicator</h2>
 
-            <div class="relative overflow-x-auto mt-3">
-              <table
-                class="w-full text-sm text-left rtl:text-right text-gray-500"
-              >
-                <thead class="text-xs text-gray-700 bg-gray-50">
-                  <tr>
-                    <th scope="col" class="px-6 py-3 w-[20%]">&nbsp;</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Figma</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Guidelines</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">CDN</th>
-                    <th scope="col" class="px-6 py-3 w-[15%]">Bit.cloud</th>
-                    <th scope="col" class="px-6 py-3" colspan="3">Comments</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="bg-white border-b">
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-                    >
-                      Modal
-                    </th>
-                    <td class="px-6 py-4">🧱</td>
-                    <td class="px-6 py-4">🧱</td>
-                    <td class="px-6 py-4">🧱</td>
-                    <td class="px-6 py-4">🧱</td>
-                    <td class="px-6 py-4" colspan="3">Comment</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <div class="relative overflow-x-auto mt-3">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+              <thead class="text-xs text-gray-700 bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 w-[20%]">&nbsp;</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Figma</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Guidelines</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">CDN</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Bit.cloud</th>
+                  <th scope="col" class="px-6 py-3" colspan="3">Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Spinner
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- LAYOUT -->
+          <h2 class="font-bold text-2xl mt-5">Layout</h2>
+
+          <div class="relative overflow-x-auto mt-3">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+              <thead class="text-xs text-gray-700 bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 w-[20%]">&nbsp;</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Figma</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Guidelines</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">CDN</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Bit.cloud</th>
+                  <th scope="col" class="px-6 py-3" colspan="3">Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Dividers
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- NAVIGATION -->
+          <h2 class="font-bold text-2xl mt-5">Navigation</h2>
+
+          <div class="relative overflow-x-auto mt-3">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+              <thead class="text-xs text-gray-700 bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 w-[20%]">&nbsp;</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Figma</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Guidelines</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">CDN</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Bit.cloud</th>
+                  <th scope="col" class="px-6 py-3" colspan="3">Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Alphabetic Pager
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- OVERLAY -->
+          <h2 class="font-bold text-2xl mt-5">Overlay</h2>
+
+          <div class="relative overflow-x-auto mt-3">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+              <thead class="text-xs text-gray-700 bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 w-[20%]">&nbsp;</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Figma</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Guidelines</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">CDN</th>
+                  <th scope="col" class="px-6 py-3 w-[15%]">Bit.cloud</th>
+                  <th scope="col" class="px-6 py-3" colspan="3">Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Modal
+                  </th>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    Dialog
+                  </th>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">✅</td>
+                  <td class="px-6 py-4">🧱</td>
+                  <td class="px-6 py-4" colspan="3">Comment</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+  </div>
 
-    <script src="../utilities/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-  </body>
+  <script src="../utilities/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
 </html>
