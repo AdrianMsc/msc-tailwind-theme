@@ -13,6 +13,9 @@ module.exports = function ({ addComponents, theme }) {
     ".msc-dialog .footer": {
       "@apply flex justify-end mt-4": {},
     },
+    ".msc-dialog .footer button": {
+      "@apply ml-2": {},
+    },
   };
   addComponents(dialog);
 };

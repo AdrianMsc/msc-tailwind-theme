@@ -1936,6 +1936,10 @@ h6 {
   justify-content: flex-end;
 }
 
+.msc-dialog .footer button {
+  margin-left: 0.5rem;
+}
+
 .msc-grey-button {
   display: flex;
   align-items: center;
@@ -2020,9 +2024,9 @@ h6 {
   bottom: 0px;
   height: 2px;
   width: 100%;
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(28 88 238 / var(--tw-bg-opacity));
+  content: var(--tw-content) !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(28 88 238 / var(--tw-bg-opacity)) !important;
 }
 
 .msc-tabs .active:hover {
