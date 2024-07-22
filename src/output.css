@@ -2531,9 +2531,16 @@ h6 {
 }
 
 .msc-tabs {
-  display: flex;
-  height: 50px;
+  display: grid;
   width: 100%;
+  grid-auto-columns: min-content;
+  overflow-x: auto;
+}
+
+@media (min-width: 768px) {
+  .msc-tabs {
+    overflow-x: hidden;
+  }
 }
 
 .msc-tabs li {
@@ -2544,7 +2551,6 @@ h6 {
   --tw-border-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
   --tw-border-opacity: 16%;
-  padding: 0.75rem;
   text-align: center;
   font-size: 16px;
   font-weight: 700;
@@ -2571,9 +2577,22 @@ h6 {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.msc-tabs li a {
+  display: block;
+  width: 100%;
+  text-wrap: nowrap;
+  border-right-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+  padding: 0.75rem;
+}
+
+.msc-tabs :last-child a {
+  border-right-width: 0px !important;
+}
+
 .msc-tabs .active {
   flex-grow: 1;
-  padding: 0.75rem;
   text-align: center;
   font-weight: 700;
   --tw-text-opacity: 1;
@@ -2817,6 +2836,10 @@ h6 {
 
 .col-span-6 {
   grid-column: span 6 / span 6;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
 
 .col-start-3 {
@@ -3211,10 +3234,6 @@ h6 {
   height: 4px;
 }
 
-.h-\[50px\] {
-  height: 50px;
-}
-
 .h-\[62px\] {
   height: 62px;
 }
@@ -3578,8 +3597,16 @@ h6 {
   list-style-type: none;
 }
 
+.auto-cols-min {
+  grid-auto-columns: min-content;
+}
+
 .grid-cols-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-cols-5 {
@@ -3731,6 +3758,10 @@ h6 {
   overflow-y: auto;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
 .overscroll-auto {
   overscroll-behavior: auto;
 }
@@ -3805,6 +3836,10 @@ h6 {
   border-width: 0px;
 }
 
+.\!border-r-0 {
+  border-right-width: 0px !important;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -3858,6 +3893,11 @@ h6 {
 .border-gray-100 {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
+}
+
+.border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
 .border-gray-300 {
@@ -5606,6 +5646,10 @@ body {
     grid-column: span 8 / span 8;
   }
 
+  .md\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
   .md\:col-start-2 {
     grid-column-start: 2;
   }
@@ -5731,6 +5775,10 @@ body {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .md\:overflow-x-hidden {
+    overflow-x: hidden;
   }
 
   .md\:px-5 {

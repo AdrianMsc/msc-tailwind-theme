@@ -64,26 +64,34 @@
             enhance user experience and facilitate online shopping.
           </p>
 
-          <ul class="msc-tabs">
-            <li class="active">General Purpose & Heavy Duty</li>
-            <div class="msc-v-divider-gray"></div>
-            <li>Specialized & High Performance</li>
-            <div class="msc-v-divider-gray"></div>
-            <li>Maintenance</li>
+          <ul class="msc-tabs grid-cols-5">
+            <li class="col-span-5 md:col-span-2 active">
+              <a href="#">General Purpose & Heavy Duty</a>
+            </li>
+            <li class="col-span-5 md:col-span-2">
+              <a href="#">Specialized & High Performance</a>
+            </li>
+            <li class="col-span-5 md:col-span-1">
+              <a href="#">Maintenance</a>
+            </li>
           </ul>
 
           <div class="max-w-[1500px]">
             <pre class="h-fit">
             <code class="language-html rounded">
 &lt;!-- Tab Component --&gt;
-&lt;ul class=&quot;msc-tabs&quot;&gt;
-    &lt;li class=&quot;active&quot;&gt;General Purpose & Heavy Duty&lt;/li&gt;
-    &lt;div class=&quot;msc-v-divider-gray&quot;&gt;&lt;/div&gt;
-    &lt;li&gt;Specialized & High Performance&lt;/li&gt;
-    &lt;div class=&quot;msc-v-divider-gray&quot;&gt;&lt;/div&gt;
-    &lt;li&gt;Maintenance&lt;/li&gt;
+&lt;ul class=&quot;msc-tabs grid-cols-5&quot;&gt;
+    &lt;li class=&quot;col-span-2 active&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;General Purpose &amp; Heavy Duty&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;col-span-2&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Specialized &amp; High Performance&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;col-span-1&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Maintenance&lt;/a&gt;
+    &lt;/li&gt;
 &lt;/ul&gt;
-              
+
             </code>
         </pre>
           </div>
@@ -94,10 +102,10 @@
             <pre class="h-fit">
             <code class="language-html rounded">
 &lt;script&gt;
-  document.querySelector(".msc-tabs").addEventListener("click", (event) =&gt; {
+  document.querySelector(&quot;.msc-tabs&quot;).addEventListener(&quot;click&quot;, (event) =&amp;gt; {
     const { target } = event;
-    target.tagName === "LI" &amp;&amp; Array.from(document.querySelectorAll(".msc-tabs li")).forEach(tab =&gt; {
-    tab === target ? tab.classList.add("active") : tab.classList.remove("active");
+    target.tagName === &quot;LI&quot; &amp;amp;&amp;amp; Array.from(document.querySelectorAll(&quot;.msc-tabs li&quot;)).forEach(tab =&amp;gt; {
+    tab === target ? tab.classList.add(&quot;active&quot;) : tab.classList.remove(&quot;active&quot;);
     });
   });
 &lt;/script&gt;
@@ -109,15 +117,23 @@
             document
               .querySelector(".msc-tabs")
               .addEventListener("click", (event) => {
-                const { target } = event;
-                target.tagName === "LI" &&
-                  Array.from(document.querySelectorAll(".msc-tabs li")).forEach(
-                    (tab) => {
-                      tab === target
-                        ? tab.classList.add("active")
-                        : tab.classList.remove("active");
-                    }
-                  );
+                event.preventDefault();
+                let { target } = event;
+                if (target.tagName === "A") {
+                  target = target.closest("li");
+                }
+                if (
+                  target.tagName === "LI" &&
+                  target.parentElement.classList.contains("msc-tabs")
+                ) {
+                  Array.from(
+                    document.querySelectorAll(".msc-tabs > li")
+                  ).forEach((tab) => {
+                    tab === target
+                      ? tab.classList.add("active")
+                      : tab.classList.remove("active");
+                  });
+                }
               });
           </script>
         </div>
