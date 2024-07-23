@@ -2845,12 +2845,24 @@ h6 {
   grid-column: span 6 / span 6;
 }
 
+.col-span-10 {
+  grid-column: span 10 / span 10;
+}
+
 .col-start-3 {
   grid-column-start: 3;
 }
 
 .col-start-5 {
   grid-column-start: 5;
+}
+
+.col-start-1 {
+  grid-column-start: 1;
+}
+
+.col-start-2 {
+  grid-column-start: 2;
 }
 
 .float-right {
@@ -3608,8 +3620,16 @@ h6 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -5654,6 +5674,10 @@ body {
     grid-column: span 8 / span 8;
   }
 
+  .md\:col-span-12 {
+    grid-column: span 12 / span 12;
+  }
+
   .md\:col-start-2 {
     grid-column-start: 2;
   }
@@ -5845,6 +5869,10 @@ body {
 
   .lg\:col-span-6 {
     grid-column: span 6 / span 6;
+  }
+
+  .lg\:col-span-8 {
+    grid-column: span 8 / span 8;
   }
 
   .lg\:mx-6 {
@@ -6201,6 +6229,18 @@ body {
 
   .\32xl\:top-7 {
     top: 1.75rem;
+  }
+
+  .\32xl\:col-span-8 {
+    grid-column: span 8 / span 8;
+  }
+
+  .\32xl\:col-start-3 {
+    grid-column-start: 3;
+  }
+
+  .\32xl\:col-start-2 {
+    grid-column-start: 2;
   }
 
   .\32xl\:mx-10 {
