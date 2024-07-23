@@ -1,170 +1,148 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../src/output.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css"
-    />
-    <link
-      rel="shortcut icon"
-      href="https://www.mscdirect.com/favicon.ico"
-      type="image/x-icon"
-    />
-    <title>Spacing</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="bg-[#f2f2f2]">
-    <button
-      onclick="toggleSideNav()"
-      aria-controls="default-sidebar"
-      type="button"
-      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-    >
-      <span class="sr-only">Open sidebar</span>
-      <svg
-        class="w-6 h-6"
-        aria-hidden="true"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          clip-rule="evenodd"
-          fill-rule="evenodd"
-          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-        ></path>
-      </svg>
-    </button>
 
-    <aside
-      id="msc-sidebar"
-      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-      aria-label="Sidebar"
-    >
-      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
-        <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" />
-        <p class="font-bold text-lg mb-5">Fuel Design System</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../src/output.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css" />
+  <link rel="shortcut icon" href="https://www.mscdirect.com/favicon.ico" type="image/x-icon" />
+  <title>Spacing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+</head>
 
-        <span id="sidenav-menu"> </span>
-      </div>
-    </aside>
+<body class="bg-[#f2f2f2]">
+  <button onclick="toggleSideNav()" aria-controls="default-sidebar" type="button"
+    class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+    <span class="sr-only">Open sidebar</span>
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path clip-rule="evenodd" fill-rule="evenodd"
+        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+      </path>
+    </svg>
+  </button>
 
-    <section class="p-4 sm:ml-64 grid grid-cols-12">
-      <div class="col-span-12 md:col-span-8 md:col-start-3 pt-10">
-        <div class="max-w-screen-2xl mx-auto">
-          <h1 class="mb-3">
-            <small class="text-sm text-primary-blue">Foundations</small> <br />
-            Spacing
-          </h1>
+  <aside id="msc-sidebar"
+    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+    aria-label="Sidebar">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
+      <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" />
+      <p class="font-bold text-lg mb-5">Fuel Design System</p>
 
-          <p class="mb-3">
-            Spacing is an essential part of the design. It can be applied on
-            grid and layouts but also used on margin and padding of our
-            components. Like our grid, the spacing system use the 8 pixels grid.
-          </p>
-          <p class="mb-3">
-            If we use by default the 8 pixels grid for spacing system, some
-            elements (like icons or small components) can use a 4px spacing.
-          </p>
+      <span id="sidenav-menu"> </span>
+    </div>
+  </aside>
 
-          <h2 class="mb-3">Spacing System</h2>
+  <section class="p-4 sm:ml-64 grid grid-cols-12">
+    <div class="msc-layout-container">
+      <div class="max-w-screen-2xl mx-auto">
+        <h1 class="mb-3">
+          <small class="text-sm text-primary-blue">Foundations</small> <br />
+          Spacing
+        </h1>
 
-          <table class="border-collapse w-full border border-slate-400">
-            <thead class="bg-slate-50">
-              <tr>
-                <th
-                  class="w-1/4 border border-slate-300 p-4 text-slate-900 text-left"
-                >
-                  Spacing
-                </th>
-                <th
-                  class="w-1/2 border border-slate-300 font-semibold p-4 text-slate-900 text-left"
-                >
-                  Usage
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="border border-slate-300 p-4">2px</td>
-                <td class="border border-slate-300 p-4">TBD</td>
-              </tr>
-              <tr>
-                <td class="border border-slate-300 p-4">4px</td>
-                <td class="border border-slate-300 p-4">
-                  Padding/margin for some components (XS and S size) <br />
-                  Margin between atoms (eg: between icon and text)
-                </td>
-              </tr>
-              <tr>
-                <td class="border border-slate-300 p-4">8px</td>
-                <td class="border border-slate-300 p-4">
-                  Default padding for components <br />
-                  Margin between related components (eg: two buttons on a modal
-                  > for better hierarchy)
-                </td>
-              </tr>
-              <tr>
-                <td class="border border-slate-300 p-4">16px</td>
-                <td class="border border-slate-300 p-4">
-                  Default margin between components or sections (eg: buttons,
-                  inputs, texts) <br />
-                  Padding for some components (eg: buttons, dialog, drawer)
-                  Padding for organisms (eg: side panel)
-                </td>
-              </tr>
-              <tr>
-                <td class="border border-slate-300 p-4">24px</td>
-                <td class="border border-slate-300 p-4">
-                  Margin between main title and body content <br />
-                  Margin between cards/sections/organisms (body content) <br />
-                  Global padding for body content (Body with sub-header and/or
-                  multi-column)
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <p class="mb-3">
+          Spacing is an essential part of the design. It can be applied on
+          grid and layouts but also used on margin and padding of our
+          components. Like our grid, the spacing system use the 8 pixels grid.
+        </p>
+        <p class="mb-3">
+          If we use by default the 8 pixels grid for spacing system, some
+          elements (like icons or small components) can use a 4px spacing.
+        </p>
 
-          <h2 class="mt-5">4px</h2>
+        <h2 class="mb-3">Spacing System</h2>
 
-          <div class="p-1 outline outline-slate-300 my-4">
-            <div class="w-full h-[4px] bg-slate-300"></div>
-          </div>
-          <h2>8px</h2>
+        <table class="border-collapse w-full border border-slate-400">
+          <thead class="bg-slate-50">
+            <tr>
+              <th class="w-1/4 border border-slate-300 p-4 text-slate-900 text-left">
+                Spacing
+              </th>
+              <th class="w-1/2 border border-slate-300 font-semibold p-4 text-slate-900 text-left">
+                Usage
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-slate-300 p-4">2px</td>
+              <td class="border border-slate-300 p-4">TBD</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-300 p-4">4px</td>
+              <td class="border border-slate-300 p-4">
+                Padding/margin for some components (XS and S size) <br />
+                Margin between atoms (eg: between icon and text)
+              </td>
+            </tr>
+            <tr>
+              <td class="border border-slate-300 p-4">8px</td>
+              <td class="border border-slate-300 p-4">
+                Default padding for components <br />
+                Margin between related components (eg: two buttons on a modal
+                > for better hierarchy)
+              </td>
+            </tr>
+            <tr>
+              <td class="border border-slate-300 p-4">16px</td>
+              <td class="border border-slate-300 p-4">
+                Default margin between components or sections (eg: buttons,
+                inputs, texts) <br />
+                Padding for some components (eg: buttons, dialog, drawer)
+                Padding for organisms (eg: side panel)
+              </td>
+            </tr>
+            <tr>
+              <td class="border border-slate-300 p-4">24px</td>
+              <td class="border border-slate-300 p-4">
+                Margin between main title and body content <br />
+                Margin between cards/sections/organisms (body content) <br />
+                Global padding for body content (Body with sub-header and/or
+                multi-column)
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-          <div class="p-2 outline outline-slate-300 my-4">
-            <div class="w-full h-[8px] bg-slate-300"></div>
-          </div>
+        <h2 class="mt-5">4px</h2>
 
-          <h2>16px</h2>
+        <div class="p-1 outline outline-slate-300 my-4">
+          <div class="w-full h-[4px] bg-slate-300"></div>
+        </div>
+        <h2>8px</h2>
 
-          <div class="p-4 outline outline-slate-300 my-4">
-            <div class="w-full h-[16px] bg-slate-300"></div>
-          </div>
+        <div class="p-2 outline outline-slate-300 my-4">
+          <div class="w-full h-[8px] bg-slate-300"></div>
+        </div>
 
-          <h2>24px</h2>
+        <h2>16px</h2>
 
-          <div class="p-6 outline outline-slate-300 my-4">
-            <div class="w-full h-[24px] bg-slate-300"></div>
-          </div>
+        <div class="p-4 outline outline-slate-300 my-4">
+          <div class="w-full h-[16px] bg-slate-300"></div>
+        </div>
+
+        <h2>24px</h2>
+
+        <div class="p-6 outline outline-slate-300 my-4">
+          <div class="w-full h-[24px] bg-slate-300"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <script src="../utilities/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="../utilities/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-    <script>
-      hljs.highlightAll();
-    </script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
 </html>

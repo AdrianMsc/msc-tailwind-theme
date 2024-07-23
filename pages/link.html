@@ -1,83 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../src/output.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css"
-    />
-    <link
-      rel="shortcut icon"
-      href="https://www.mscdirect.com/favicon.ico"
-      type="image/x-icon"
-    />
-    <title>Link</title>
-  </head>
-  <body class="bg-[#f2f2f2]">
-    <button
-      onclick="toggleSideNav()"
-      aria-controls="default-sidebar"
-      type="button"
-      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-    >
-      <span class="sr-only">Open sidebar</span>
-      <svg
-        class="w-6 h-6"
-        aria-hidden="true"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          clip-rule="evenodd"
-          fill-rule="evenodd"
-          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-        ></path>
-      </svg>
-    </button>
 
-    <aside
-      id="msc-sidebar"
-      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-      aria-label="Sidebar"
-    >
-      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
-        <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" />
-        <p class="font-bold text-lg mb-5">Fuel Design System</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../src/output.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css" />
+  <link rel="shortcut icon" href="https://www.mscdirect.com/favicon.ico" type="image/x-icon" />
+  <title>Link</title>
+</head>
 
-        <span id="sidenav-menu"> </span>
-      </div>
-    </aside>
+<body class="bg-[#f2f2f2]">
+  <button onclick="toggleSideNav()" aria-controls="default-sidebar" type="button"
+    class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+    <span class="sr-only">Open sidebar</span>
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path clip-rule="evenodd" fill-rule="evenodd"
+        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+      </path>
+    </svg>
+  </button>
 
-    <section class="p-4 sm:ml-64 grid grid-cols-12">
-      <div class="col-span-12 md:col-span-8 md:col-start-3 pt-10">
-        <div class="max-w-screen-2xl mx-auto">
-          <h1 class="font-bold text-3xl mb-3">
-            <small class="text-sm text-primary-blue">Action</small> <br />
-            Link
-          </h1>
-          <p>
-            Links on an ecommerce website serve several crucial functions to
-            enhance user experience and facilitate online shopping.
-          </p>
+  <aside id="msc-sidebar"
+    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+    aria-label="Sidebar">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
+      <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" />
+      <p class="font-bold text-lg mb-5">Fuel Design System</p>
 
-          <h2 class="font-bold text-2xl mb-2 mt-5">Default Link</h2>
+      <span id="sidenav-menu"> </span>
+    </div>
+  </aside>
 
-          <ul class="flex">
-            <li class="p-r py-4">
-              <!-- Link base -->
-              <a href="#" class="msc-link">Link</a>
-            </li>
-            <li class="p-4">
-              <!-- Link sm -->
-              <a href="#" class="msc-link-sm">Link sm</a>
-            </li>
-          </ul>
+  <section class="p-4 sm:ml-64 grid grid-cols-12">
+    <div class="msc-layout-container">
+      <div class="max-w-screen-2xl mx-auto">
+        <h1 class="font-bold text-3xl mb-3">
+          <small class="text-sm text-primary-blue">Action</small> <br />
+          Link
+        </h1>
+        <p>
+          Links on an ecommerce website serve several crucial functions to
+          enhance user experience and facilitate online shopping.
+        </p>
 
-          <div class="max-w-[1500px]">
-            <pre class="h-fit">
+        <h2 class="font-bold text-2xl mb-2 mt-5">Default Link</h2>
+
+        <ul class="flex">
+          <li class="p-r py-4">
+            <!-- Link base -->
+            <a href="#" class="msc-link">Link</a>
+          </li>
+          <li class="p-4">
+            <!-- Link sm -->
+            <a href="#" class="msc-link-sm">Link sm</a>
+          </li>
+        </ul>
+
+        <div class="max-w-[1500px]">
+          <pre class="h-fit">
             <code class="language-html rounded">
 &lt;!-- Link base --&gt;
 &lt;a href=&quot;#&quot; class=&quot;msc-link&quot;&gt;Link&lt;/a&gt;
@@ -86,23 +68,23 @@
 &lt;a href=&quot;#&quot; class=&quot;msc-link-sm&quot;&gt;Link sm&lt;/a&gt;
             </code>
         </pre>
-          </div>
+        </div>
 
-          <h2 class="font-bold text-2xl mb-2 mt-5">Text Link</h2>
+        <h2 class="font-bold text-2xl mb-2 mt-5">Text Link</h2>
 
-          <ul class="flex">
-            <li class="p-r py-4">
-              <!-- Text Link base -->
-              <a href="#" class="msc-text-link">Text Link</a>
-            </li>
-            <li class="p-4">
-              <!-- Text Link sm -->
-              <a href="#" class="msc-text-link-sm">Text Link sm</a>
-            </li>
-          </ul>
+        <ul class="flex">
+          <li class="p-r py-4">
+            <!-- Text Link base -->
+            <a href="#" class="msc-text-link">Text Link</a>
+          </li>
+          <li class="p-4">
+            <!-- Text Link sm -->
+            <a href="#" class="msc-text-link-sm">Text Link sm</a>
+          </li>
+        </ul>
 
-          <div class="max-w-[1500px]">
-            <pre class="h-fit">
+        <div class="max-w-[1500px]">
+          <pre class="h-fit">
             <code class="language-html rounded">
 &lt;!-- Link base --&gt;
 &lt;a href=&quot;#&quot; class=&quot;msc-text-link&quot;&gt;Text Link&lt;/a&gt;
@@ -111,62 +93,50 @@
 &lt;a href=&quot;#&quot; class=&quot;msc-text-link-sm&quot;&gt;Text Link sm&lt;/a&gt;
             </code>
         </pre>
-          </div>
+        </div>
 
-          <h2 class="font-bold text-2xl mb-2 mt-5">Drop Down Link</h2>
+        <h2 class="font-bold text-2xl mb-2 mt-5">Drop Down Link</h2>
 
-          <ul class="flex">
-            <li class="p-r py-4">
-              <!-- Text Link base -->
-              <a id="dd-link" class="msc-dd-link" onclick="ddLinkToggle(this)">
-                <span id="dd-text">Show More</span>
+        <ul class="flex">
+          <li class="p-r py-4">
+            <!-- Text Link base -->
+            <a id="dd-link" class="msc-dd-link" onclick="ddLinkToggle(this)">
+              <span id="dd-text">Show More</span>
 
-                <svg
-                  id="dd-image"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  class="msc-dd-link-icon"
-                >
-                  <path
-                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li class="p-4">
-              <!-- Text Link sm -->
-              <a class="msc-dd-link-sm" onclick="ddLinkToggle(this)">
-                <span id="dd-text">Show More </span>
-                <span class="ml-1"> sm</span>
-                <svg
-                  id="dd-image"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  class="msc-dd-link-icon"
-                >
-                  <path
-                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                  />
-                </svg>
-              </a>
-            </li>
+              <svg id="dd-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="msc-dd-link-icon">
+                <path
+                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+              </svg>
+            </a>
+          </li>
+          <li class="p-4">
+            <!-- Text Link sm -->
+            <a class="msc-dd-link-sm" onclick="ddLinkToggle(this)">
+              <span id="dd-text">Show More </span>
+              <span class="ml-1"> sm</span>
+              <svg id="dd-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="msc-dd-link-icon">
+                <path
+                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+              </svg>
+            </a>
+          </li>
 
-            <script>
-              function ddLinkToggle(element) {
-                const ddLink = element;
-                const ddText = ddLink.querySelector("#dd-text");
-                const ddImage = ddLink.querySelector("#dd-image");
+          <script>
+            function ddLinkToggle(element) {
+              const ddLink = element;
+              const ddText = ddLink.querySelector("#dd-text");
+              const ddImage = ddLink.querySelector("#dd-image");
 
-                ddImage.classList.toggle("rotate-180");
+              ddImage.classList.toggle("rotate-180");
 
-                ddText.innerHTML =
-                  ddText.innerHTML === "Show More" ? "Show Less" : "Show More";
-              }
-            </script>
-          </ul>
+              ddText.innerHTML =
+                ddText.innerHTML === "Show More" ? "Show Less" : "Show More";
+            }
+          </script>
+        </ul>
 
-          <div class="max-w-[1500px]">
-            <pre class="h-fit">
+        <div class="max-w-[1500px]">
+          <pre class="h-fit">
             <code class="language-html rounded">
 &lt;a class=&quot;msc-dd-link-sm&quot;&gt;
   &lt;span id=&quot;dd-text&quot;&gt;Show More&lt;/span&gt;
@@ -176,17 +146,18 @@
 &lt;/a&gt;
           </code>
         </pre>
-          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <script src="../utilities/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="../utilities/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-    <script>
-      hljs.highlightAll();
-    </script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
 </html>
