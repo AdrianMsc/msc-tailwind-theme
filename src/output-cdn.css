@@ -2125,6 +2125,15 @@ h6 {
   color: rgb(113 113 113 / var(--tw-text-opacity));
 }
 
+.msc-breadcrumb-container li {
+  display: flex;
+}
+
+.msc-breadcrumb-container span {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
 .msc-breadcrumb-container :last-child a {
   cursor: auto;
   font-weight: 700;

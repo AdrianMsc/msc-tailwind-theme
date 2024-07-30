@@ -4,6 +4,12 @@ module.exports = function ({ addComponents }) {
       "@apply flex flex-wrap text-monochromes-grey text-sm font-normal w-full":
         {},
     },
+    ".msc-breadcrumb-container li": {
+      "@apply flex": {},
+    },
+    ".msc-breadcrumb-container span": {
+      "@apply mx-1": {},
+    },
     ".msc-breadcrumb-container :last-child a": {
       "@apply font-bold cursor-auto": {},
       "&:hover": {
