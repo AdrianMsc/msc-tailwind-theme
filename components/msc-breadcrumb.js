@@ -1,7 +1,8 @@
 module.exports = function ({ addComponents }) {
   const breadcrumb = {
     ".msc-breadcrumb-container": {
-      "@apply flex flex-wrap text-monochromes-grey text-sm font-normal": {},
+      "@apply flex flex-wrap text-monochromes-grey text-sm font-normal w-full":
+        {},
     },
     ".msc-breadcrumb-container :last-child a": {
       "@apply font-bold cursor-auto": {},
