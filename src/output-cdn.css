@@ -2094,6 +2094,58 @@ h6 {
   background-color: rgb(179 199 249 / var(--tw-bg-opacity));
 }
 
+.msc-layout-container {
+  grid-column: span 12 / span 12;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .msc-layout-container {
+    grid-column: span 12 / span 12;
+  }
+}
+
+@media (min-width: 1536px) {
+  .msc-layout-container {
+    grid-column: span 8 / span 8;
+    grid-column-start: 3;
+  }
+}
+
+.msc-breadcrumb-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(113 113 113 / var(--tw-text-opacity));
+}
+
+.msc-breadcrumb-container :last-child a {
+  cursor: auto;
+  font-weight: 700;
+}
+
+.msc-breadcrumb-container :last-child a:hover {
+  text-decoration-line: none;
+}
+
+.msc-breadcrumb-container :last-child span {
+  display: none;
+}
+
+.msc-breadcrumb {
+  cursor: pointer;
+}
+
+.msc-breadcrumb:hover {
+  text-decoration-line: underline;
+}
+
 .disabled\:msc-btn-blue-solid:disabled {
   cursor: pointer;
   --tw-text-opacity: 1;
