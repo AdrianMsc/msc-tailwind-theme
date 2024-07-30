@@ -55,5 +55,6 @@ module.exports = {
     require("./components/msc-tabs"),
     require("./components/msc-cart-action-bar"),
     require("./components/msc-index"),
+    require("./components/msc-breadcrumb"),
   ],
 };
