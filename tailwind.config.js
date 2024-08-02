@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require("./utilities/colors");
-import tailwind, { tailwindHMR } from "stencil-tailwind-plugin";
 
 module.exports = {
   content: [
@@ -38,8 +37,6 @@ module.exports = {
     },
   },
   plugins: [
-    tailwind(),
-    tailwindHMR(),
     require("./components/msc-buttons"),
     require("./components/msc-checkbox"),
     require("./components/msc-dropdown"),
