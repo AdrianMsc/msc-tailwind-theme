@@ -5,16 +5,13 @@ module.exports = function ({ addComponents, theme }) {
         {},
     },
     ".msc-dialog": {
-      "@apply bg-white max-w-[328px] p-4 rounded shadow-xl": {},
+      "@apply bg-white max-w-[328px] p-5 rounded shadow-xl": {},
     },
-    ".msc-dialog h4": {
+    ".msc-dialog-title": {
       "@apply mb-4": {},
     },
-    ".msc-dialog .footer": {
-      "@apply flex justify-end mt-4": {},
-    },
-    ".msc-dialog .footer button": {
-      "@apply ml-2": {},
+    ".msc-dialog-footer": {
+      "@apply flex justify-end mt-4 gap-2": {},
     },
   };
   addComponents(dialog);

@@ -18,4 +18,6 @@ Users and developers can interact with the components directly in the documentat
 
 The design system is maintained and updated regularly to ensure that the components follow the latest design trends and meet accessibility standards.
 
+## Create Component
 
+npx stencil generate <component>

@@ -1,176 +1,209 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css"
+    />
+    <title>Dialog</title>
+  </head>
+  <body class="bg-[#f2f2f2]">
+    <button
+      onclick="toggleSideNav()"
+      aria-controls="default-sidebar"
+      type="button"
+      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+    >
+      <span class="sr-only">Open sidebar</span>
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+        ></path>
+      </svg>
+    </button>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../src/output.css" rel="stylesheet" />
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css" />
-  <title>Dialog</title>
-</head>
+    <aside
+      id="msc-sidebar"
+      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
+        <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" />
+        <p class="font-bold text-lg mb-5">Fuel Design System</p>
 
-<body class="bg-[#f2f2f2]">
-  <button onclick="toggleSideNav()" aria-controls="default-sidebar" type="button"
-    class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
-    <span class="sr-only">Open sidebar</span>
-    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-      <path clip-rule="evenodd" fill-rule="evenodd"
-        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-      </path>
-    </svg>
-  </button>
-
-  <aside id="msc-sidebar"
-    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-    aria-label="Sidebar">
-    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
-      <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" />
-      <p class="font-bold text-lg mb-5">Fuel Design System</p>
-
-      <span id="sidenav-menu"></span>
-    </div>
-  </aside>
-
-  <section class="p-4 sm:ml-64 grid grid-cols-12">
-    <div class="msc-layout-container">
-      <h1 class="font-bold text-3xl mb-3">
-        <small class="text-sm text-primary-blue">Overlay</small> <br />
-        Dialog
-      </h1>
-
-      <h2>Introduction</h2>
-
-      <p>
-        A Dialog is a modal window appearing above page contents to provide
-        critical information or asking users to confirm a specific action.
-        Thus, to focus users attention, all other functionalities have to be
-        unreachable and the Dialog must stay on screen until it is proceed.
-      </p>
-
-      <p class="mb-4">
-        Dialogs block user's flow, so they should be used sparingly and
-        wisely.
-      </p>
-
-      <h2>Takeaways</h2>
-
-      <ul class="list-disc pl-10 mb-3">
-        <li>
-          A dialog focus user attention to ensure confirmation about a key
-          step, often led by a user action
-        </li>
-        <li>
-          Dialog content should be straight and to the point when sharing
-          information and guiding to proceed a specific task.
-        </li>
-        <li>
-          Dialog has to be part of a helpful process by carrying relevant and
-          contextual information.
-        </li>
-      </ul>
-
-      <div class="rounded bg-gray-700 p-10 flex items-center justify-center mb-5">
-        <article class="msc-dialog">
-          <h4>Are you sure?</h4>
-          <p>
-            You are setting your status as Out of Office. Your organization
-            will see this status until you turn it off.
-          </p>
-          <div class="footer">
-            <button class="msc-btn msc-btn-transparent">Cancel</button>
-
-            <button class="msc-btn msc-btn-blue-solid">Continue</button>
-          </div>
-        </article>
+        <span id="sidenav-menu"></span>
       </div>
+    </aside>
 
-      <button id="dialogBtn" class="msc-btn msc-btn-blue-solid mb-4" onclick="toggleDialog()">
-        Trigger Dialog
-      </button>
+    <section class="p-4 sm:ml-64 grid grid-cols-12">
+      <div
+        class="col-span-12 md:col-span-10 md:col-start-2 xl:col-span-8 xl:col-start-3 pt-10"
+      >
+        <h1 class="font-bold text-3xl mb-3">
+          <small class="text-sm text-primary-blue">Overlay</small> <br />
+          Dialog
+        </h1>
 
-      <h2>Pattern</h2>
+        <h2>Introduction</h2>
 
-      <ul class="list-disc pl-10 mb-3">
-        <li>
-          When a Dialog is displayed, no other interactions on the page is
-          allowed.
-        </li>
-        <li>
-          A Backdrop has to cover the content beneath the Dialog in order to
-          bring focus to its content, and prevent users trying to click on the
-          page.
-        </li>
-        <li>
-          If time is needed to process the primary action, the Button can
-          display a loader. No actions are displayed and it loads until the
-          action is complete.
-        </li>
-      </ul>
+        <p>
+          A Dialog is a modal window appearing above page contents to provide
+          critical information or asking users to confirm a specific action.
+          Thus, to focus users attention, all other functionalities have to be
+          unreachable and the Dialog must stay on screen until it is proceed.
+        </p>
 
-      <div class="rounded bg-gray-700 p-10 flex items-center justify-center mb-5">
-        <article class="msc-dialog">
-          <h4>Are you sure?</h4>
-          <p>
-            You are setting your status as Out of Office. Your organization
-            will see this status until you turn it off.
-          </p>
-          <div class="footer">
-            <button class="msc-btn msc-btn-transparent">
-              Cancel
-            </button>
+        <p class="mb-4">
+          Dialogs block user's flow, so they should be used sparingly and
+          wisely.
+        </p>
 
-            <button class="msc-btn msc-btn-blue-solid">
-              <div class="msc-btn-dots-container">
-                <div class="msc-btn-dot1"></div>
-                <div class="msc-btn-dot2"></div>
-                <div class="msc-btn-dot3"></div>
-              </div>
-            </button>
-          </div>
-        </article>
+        <h2>Takeaways</h2>
+
+        <ul class="list-disc pl-10 mb-3">
+          <li>
+            A dialog focus user attention to ensure confirmation about a key
+            step, often led by a user action
+          </li>
+          <li>
+            Dialog content should be straight and to the point when sharing
+            information and guiding to proceed a specific task.
+          </li>
+          <li>
+            Dialog has to be part of a helpful process by carrying relevant and
+            contextual information.
+          </li>
+        </ul>
+
+        <div
+          class="rounded bg-gray-700 p-10 flex items-center justify-center mb-5"
+        >
+          <article class="msc-dialog">
+            <h4 class="msc-dialog-title">Are you sure?</h4>
+            <p>
+              You are setting your status as Out of Office. Your organization
+              will see this status until you turn it off.
+            </p>
+            <div class="msc-dialog-footer">
+              <button class="msc-btn msc-btn-transparent">Cancel</button>
+
+              <button class="msc-btn msc-btn-blue-solid">Continue</button>
+            </div>
+          </article>
+        </div>
+
+        <button
+          id="dialogBtn"
+          class="msc-btn msc-btn-blue-solid mb-4"
+          onclick="toggleDialog()"
+        >
+          Trigger Dialog
+        </button>
+
+        <h2>Pattern</h2>
+
+        <ul class="list-disc pl-10 mb-3">
+          <li>
+            When a Dialog is displayed, no other interactions on the page is
+            allowed.
+          </li>
+          <li>
+            A Backdrop has to cover the content beneath the Dialog in order to
+            bring focus to its content, and prevent users trying to click on the
+            page.
+          </li>
+          <li>
+            If time is needed to process the primary action, the Button can
+            display a loader. No actions are displayed and it loads until the
+            action is complete.
+          </li>
+        </ul>
+
+        <div
+          class="rounded bg-gray-700 p-10 flex items-center justify-center mb-5"
+        >
+          <article class="msc-dialog">
+            <h4 class="msc-dialog-title">Are you sure?</h4>
+            <p>
+              You are setting your status as Out of Office. Your organization
+              will see this status until you turn it off.
+            </p>
+            <div class="msc-dialog-footer">
+              <button class="msc-btn msc-btn msc-btn-transparent">
+                Cancel
+              </button>
+
+              <button class="msc-btn msc-btn-blue-solid">
+                <div class="msc-btn-dots-container">
+                  <div class="msc-btn-dot1"></div>
+                  <div class="msc-btn-dot2"></div>
+                  <div class="msc-btn-dot3"></div>
+                </div>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <button
+          id="dialogBtn"
+          class="msc-btn msc-btn-blue-solid"
+          onclick="toggleDialog()"
+        >
+          Trigger Dialog
+        </button>
+
+        <div id="mscDialog" class="msc-dialog-overlay hidden">
+          <article class="msc-dialog">
+            <h4 class="msc-dialog-title">Title</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              rhoncus, ligula in euismod vehicula, dui libero volutpat nibh, vel
+              feugiat libero mauris at sapien.
+            </p>
+            <div class="msc-dialog-footer">
+              <button
+                class="msc-btn msc-btn msc-btn-transparent"
+                onclick="toggleDialog()"
+              >
+                Cancel
+              </button>
+
+              <button
+                class="msc-btn msc-btn-blue-solid"
+                onclick="toggleDialog()"
+              >
+                Approve
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <script>
+          toggleDialog = () => {
+            const mscDialog = document.getElementById("mscDialog");
+            mscDialog.classList.toggle("hidden");
+          };
+        </script>
       </div>
+    </section>
 
-      <button id="dialogBtn" class="msc-btn msc-btn-blue-solid" onclick="toggleDialog()">
-        Trigger Dialog
-      </button>
+    <script src="../utilities/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
-      <div id="mscDialog" class="msc-dialog-overlay hidden">
-        <article class="msc-dialog">
-          <h4>Title</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            rhoncus, ligula in euismod vehicula, dui libero volutpat nibh, vel
-            feugiat libero mauris at sapien.
-          </p>
-          <div class="footer">
-            <button class="msc-btn msc-btn-transparent" onclick="toggleDialog()">
-              Cancel
-            </button>
-
-            <button class="msc-btn msc-btn-blue-solid" onclick="toggleDialog()">
-              Approve
-            </button>
-          </div>
-        </article>
-      </div>
-
-      <script>
-        toggleDialog = () => {
-          const mscDialog = document.getElementById("mscDialog");
-          mscDialog.classList.toggle("hidden");
-        };
-      </script>
-    </div>
-  </section>
-
-  <script src="../utilities/index.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-  <script>
-    hljs.highlightAll();
-  </script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>

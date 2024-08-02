@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require("./utilities/colors");
+import tailwind, { tailwindHMR } from "stencil-tailwind-plugin";
 
 module.exports = {
   content: [
@@ -8,6 +9,7 @@ module.exports = {
     "./index.html",
     "./utilities/index.js",
     "./components/**/*.{html,js}",
+    "./msc-ds-wc/**/*.{html,js,tsx,jsx}",
   ],
   theme: {
     extend: {
@@ -36,6 +38,8 @@ module.exports = {
     },
   },
   plugins: [
+    tailwind(),
+    tailwindHMR(),
     require("./components/msc-buttons"),
     require("./components/msc-checkbox"),
     require("./components/msc-dropdown"),
@@ -56,5 +60,6 @@ module.exports = {
     require("./components/msc-cart-action-bar"),
     require("./components/msc-index"),
     require("./components/msc-breadcrumb"),
+    require("./components/msc-alert"),
   ],
 };

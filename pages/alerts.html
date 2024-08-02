@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css" />
+    <title>Alerts</title>
+</head>
+<body class="bg-[#f2f2f2]">
+    <button onclick="toggleSideNav()" aria-controls="default-sidebar" type="button"
+        class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+        <span class="sr-only">Open sidebar</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" fill-rule="evenodd"
+                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+            </path>
+        </svg>
+    </button>
+
+    <aside id="msc-sidebar"
+        class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+        aria-label="Sidebar">
+        <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
+            <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" />
+            <p class="font-bold text-lg mb-5">Fuel Design System</p>
+
+            <span id="sidenav-menu"> </span>
+        </div>
+    </aside>
+
+    <section class="p-4 sm:ml-64 grid grid-cols-12">
+        <div class="col-span-12 md:col-span-8 md:col-start-3 pt-10">
+            <div class="max-w-screen-2xl mx-auto">
+                <h1 class="font-bold text-3xl mb-3">
+                    <small class="text-sm text-primary-blue">Alerts</small> <br />
+                    Alerts
+                </h1>
+
+                <h2>Without Alert list</h2>
+                <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
+                    <!-- Without Alert list-->
+                    <div id="warning-example-id" class="msc-alert msc-alert-warning">
+                        <div class="msc-alert-main-container">
+                            <div class="msc-alert-content">
+                                <i class="msc-alert-icon msc-alert-warning-icon fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <p class="msc-alert-title">Example Title</p>
+                                    <p class="msc-alert-description">Example Description</p>
+                                </div>
+                            </div>
+                            <div class="msc-alert-cta-container">
+                                <!-- button component -->
+                                <button class="msc-btn msc-btn-blue-outline">
+                                    <span>Cancel</span>
+                                </button>
+                                <!-- button component -->
+                                <button class="msc-btn msc-btn-blue-solid">
+                                    <span>Agree</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>With Alert list</h2>
+
+                <div class="flex gap-2 items-center bg-white p-5 w-fit rounded">
+                    <!-- With Alert list-->
+                    <div id="warning-example-id" class="msc-alert msc-alert-warning">
+                        <div class="msc-alert-main-container">
+                            <div class="msc-alert-content">
+                                <i class="msc-alert-icon msc-alert-warning-icon fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <p class="msc-alert-title">Example Title</p>
+                                    <p class="msc-alert-description">Example Description</p>
+                                </div>
+                            </div>
+                            <div class="msc-alert-cta-container">
+                                <!-- button component -->
+                                <button class="msc-btn msc-btn-blue-outline">
+                                    <span>Cancel</span>
+                                </button>
+                                <!-- button component -->
+                                <button class="msc-btn msc-btn-blue-solid">
+                                    <span>Agree</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="msc-alert-list-container group">
+                            <button type="button" title="Alerts Information" onclick="accordionToggle(this)"
+                                class="msc-alert-list-toggle">
+                                <span class="msc-alert-list-toggle-show">Show</span>
+                                <span class="msc-alert-list-toggle-hide">Hide</span> Alerts
+                                <i class="msc-alert-list-toggle-icon fas fa-chevron-down fa-sm"></i>
+                            </button>
+                            <ul class="msc-alert-list">
+                                <li class="msc-alert-list-item"><a>Example list item</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script>
+        function accordionToggle(trigger) {
+            trigger.parentNode.classList.toggle("accordion-open");
+        }
+    </script>
+
+    <script src="../utilities/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
