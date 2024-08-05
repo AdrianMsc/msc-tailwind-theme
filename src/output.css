@@ -4794,6 +4794,10 @@ h6 {
   padding-top: 1px;
 }
 
+.pb-0 {
+  padding-bottom: 0px;
+}
+
 .text-left {
   text-align: left;
 }
