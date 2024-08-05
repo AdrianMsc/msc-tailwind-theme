@@ -62,6 +62,27 @@
               Alerts
             </h1>
 
+            <ul class="msc-tabs grid-cols-6 mb-3 sticky top-0 z-10 bg-white">
+              <li
+                class="col-span-6 md:col-span-2 active"
+                onclick="changeClasses('msc-alert-success', 'msc-alert-success-icon')"
+              >
+                <a href="#">Success</a>
+              </li>
+              <li
+                class="col-span-6 md:col-span-2"
+                onclick="changeClasses('msc-alert-warning', 'msc-alert-warning-icon')"
+              >
+                <a href="#">Warning</a>
+              </li>
+              <li
+                class="col-span-6 md:col-span-2"
+                onclick="changeClasses('msc-alert-error', 'msc-alert-error-icon')"
+              >
+                <a href="#">Error</a>
+              </li>
+            </ul>
+
             <h2 class="mb-4">CTA Alert</h2>
             <div class="flex gap-2 items-center bg-white p-5 w-full rounded">
               <div
@@ -344,6 +365,58 @@
     <script>
       function accordionToggle(trigger) {
         trigger.parentNode.classList.toggle("accordion-open");
+      }
+
+      document.querySelector(".msc-tabs").addEventListener("click", (event) => {
+        event.preventDefault();
+        let { target } = event;
+        if (target.tagName === "A") {
+          target = target.closest("li");
+        }
+        if (
+          target.tagName === "LI" &&
+          target.parentElement.classList.contains("msc-tabs")
+        ) {
+          Array.from(document.querySelectorAll(".msc-tabs > li")).forEach(
+            (tab) => {
+              tab === target
+                ? tab.classList.add("active")
+                : tab.classList.remove("active");
+            }
+          );
+        }
+      });
+
+      function changeClasses(newAlertClass, newIconClass) {
+        // Classes to validate and remove
+        const alertClasses = [
+          "msc-alert-success",
+          "msc-alert-warning",
+          "msc-alert-error",
+        ];
+        const iconClasses = [
+          "msc-alert-success-icon",
+          "msc-alert-warning-icon",
+          "msc-alert-error-icon",
+        ];
+
+        // Change all alert classes
+        const alertElements = document.querySelectorAll(
+          ".msc-alert-success, .msc-alert-warning, .msc-alert-error"
+        );
+        alertElements.forEach((element) => {
+          alertClasses.forEach((cls) => element.classList.remove(cls));
+          element.classList.add(newAlertClass);
+        });
+
+        // Change all icon classes
+        const iconElements = document.querySelectorAll(
+          ".msc-alert-success-icon, .msc-alert-warning-icon, .msc-alert-error-icon"
+        );
+        iconElements.forEach((element) => {
+          iconClasses.forEach((cls) => element.classList.remove(cls));
+          element.classList.add(newIconClass);
+        });
       }
     </script>
 
