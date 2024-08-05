@@ -62,9 +62,15 @@
               Alerts
             </h1>
 
-            <ul class="msc-tabs grid-cols-6 mb-3 sticky top-0 z-10 bg-white">
+            <ul class="msc-tabs grid-cols-8 mb-3 sticky top-0 z-10 bg-white">
               <li
                 class="col-span-6 md:col-span-2 active"
+                onclick="changeClasses('msc-alert-info', 'msc-alert-info-icon')"
+              >
+                <a href="#">info</a>
+              </li>
+              <li
+                class="col-span-6 md:col-span-2"
                 onclick="changeClasses('msc-alert-success', 'msc-alert-success-icon')"
               >
                 <a href="#">Success</a>
@@ -87,12 +93,12 @@
             <div class="flex gap-2 items-center bg-white p-5 w-full rounded">
               <div
                 id="warning-example-id"
-                class="msc-alert msc-alert-success w-full"
+                class="msc-alert msc-alert-info w-full"
               >
                 <div class="msc-alert-main-container">
                   <div class="msc-alert-content">
                     <i
-                      class="msc-alert-icon msc-alert-success-icon fas fa-circle-exclamation"
+                      class="msc-alert-icon msc-alert-info-icon fas fa-circle-exclamation"
                     ></i>
                     This is an alert message
                   </div>
@@ -113,10 +119,10 @@
             <div class="max-w-[1500px]">
               <pre class="h-fit">
                   <code class="language-html rounded">
-&lt;div id=&quot;warning-example-id&quot; class=&quot;msc-alert msc-alert-success w-full&quot;&gt;
+&lt;div id=&quot;warning-example-id&quot; class=&quot;msc-alert msc-alert-info w-full&quot;&gt;
     &lt;div class=&quot;msc-alert-main-container&quot;&gt;
         &lt;div class=&quot;msc-alert-content&quot;&gt;
-            &lt;i class=&quot;msc-alert-icon msc-alert-success-icon fas fa-circle-exclamation&quot;&gt;&lt;/i&gt;
+            &lt;i class=&quot;msc-alert-icon msc-alert-info-icon fas fa-circle-exclamation&quot;&gt;&lt;/i&gt;
             This is an alert message
             &lt;/div&gt;
             &lt;div class=&quot;msc-alert-cta-container pb-0&quot;&gt;
@@ -139,12 +145,12 @@
             <div class="flex gap-2 items-center bg-white p-5 w-full rounded">
               <div
                 id="warning-example-id"
-                class="msc-alert msc-alert-success w-full"
+                class="msc-alert msc-alert-info w-full"
               >
                 <div class="msc-alert-main-container">
                   <div class="msc-alert-content">
                     <i
-                      class="msc-alert-icon msc-alert-success-icon fas fa-circle-exclamation"
+                      class="msc-alert-icon msc-alert-info-icon fas fa-circle-exclamation"
                     ></i>
                     This is an error message
                   </div>
@@ -155,10 +161,10 @@
             <div class="max-w-[1500px]">
               <pre class="h-fit">
                     <code class="language-html rounded">
-  &lt;div id=&quot;warning-example-id&quot; class=&quot;msc-alert msc-alert-success w-full&quot;&gt;
+  &lt;div id=&quot;warning-example-id&quot; class=&quot;msc-alert msc-alert-info w-full&quot;&gt;
       &lt;div class=&quot;msc-alert-main-container&quot;&gt;
           &lt;div class=&quot;msc-alert-content&quot;&gt;
-              &lt;i class=&quot;msc-alert-icon msc-alert-success-icon fas fa-circle-exclamation&quot;&gt;&lt;/i&gt;
+              &lt;i class=&quot;msc-alert-icon msc-alert-info-icon fas fa-circle-exclamation&quot;&gt;&lt;/i&gt;
               This is an alert message
           &lt;/div&gt;
       &lt;/div&gt;
@@ -172,12 +178,12 @@
               <!-- Without Alert list-->
               <div
                 id="warning-example-id"
-                class="msc-alert msc-alert-success w-full"
+                class="msc-alert msc-alert-info w-full"
               >
                 <div class="msc-alert-main-container">
                   <div class="msc-alert-content">
                     <i
-                      class="msc-alert-icon msc-alert-success-icon fas fa-exclamation-triangle"
+                      class="msc-alert-icon msc-alert-info-icon fas fa-exclamation-triangle"
                     ></i>
                     <div>
                       <p class="msc-alert-title">Example Title</p>
@@ -191,10 +197,10 @@
             <div class="max-w-[1500px]">
               <pre class="h-fit">
                       <code class="language-html rounded">
-&lt;div id=&quot;warning-example-id&quot; class=&quot;msc-alert msc-alert-success w-full&quot;&gt;
+&lt;div id=&quot;warning-example-id&quot; class=&quot;msc-alert msc-alert-info w-full&quot;&gt;
     &lt;div class=&quot;msc-alert-main-container&quot;&gt;
         &lt;div class=&quot;msc-alert-content&quot;&gt;
-            &lt;i class=&quot;msc-alert-icon msc-alert-success-icon fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt;
+            &lt;i class=&quot;msc-alert-icon msc-alert-info-icon fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt;
             &lt;div&gt;
                 &lt;p class=&quot;msc-alert-title&quot;&gt;Example Title&lt;/p&gt;
                 &lt;p class=&quot;msc-alert-description&quot;&gt;Example Description&lt;/p&gt;
@@ -211,12 +217,12 @@
               <!-- Without Alert list-->
               <div
                 id="warning-example-id"
-                class="msc-alert msc-alert-success w-full"
+                class="msc-alert msc-alert-info w-full"
               >
                 <div class="msc-alert-main-container">
                   <div class="msc-alert-content">
                     <i
-                      class="msc-alert-icon msc-alert-success-icon fas fa-exclamation-triangle"
+                      class="msc-alert-icon msc-alert-info-icon fas fa-exclamation-triangle"
                     ></i>
                     <div>
                       <p class="msc-alert-title">Example Title</p>
@@ -240,10 +246,10 @@
             <div class="max-w-[1500px]">
               <pre class="h-fit">
                         <code class="language-html rounded">
-&lt;div id=&quot;warning-example-id&quot; class=&quot;msc-alert msc-alert-success w-full&quot;&gt;
+&lt;div id=&quot;warning-example-id&quot; class=&quot;msc-alert msc-alert-info w-full&quot;&gt;
     &lt;div class=&quot;msc-alert-main-container&quot;&gt;
         &lt;div class=&quot;msc-alert-content&quot;&gt;
-            &lt;i class=&quot;msc-alert-icon msc-alert-success-icon fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt;
+            &lt;i class=&quot;msc-alert-icon msc-alert-info-icon fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt;
                 &lt;div&gt;
                     &lt;p class=&quot;msc-alert-title&quot;&gt;Example Title&lt;/p&gt;
                     &lt;p class=&quot;msc-alert-description&quot;&gt;Example Description&lt;/p&gt;
@@ -272,12 +278,12 @@
               <!-- With Alert list-->
               <div
                 id="warning-example-id"
-                class="msc-alert msc-alert-success w-full"
+                class="msc-alert msc-alert-info w-full"
               >
                 <div class="msc-alert-main-container">
                   <div class="msc-alert-content">
                     <i
-                      class="msc-alert-icon msc-alert-success-icon fas fa-exclamation-triangle"
+                      class="msc-alert-icon msc-alert-info-icon fas fa-exclamation-triangle"
                     ></i>
                     <div>
                       <p class="msc-alert-title">Example Title</p>
@@ -320,10 +326,10 @@
             <div class="max-w-[1500px]">
               <pre class="h-fit">
                           <code class="language-html rounded">
-  &lt;div id=&quot;warning-example-id&quot; class=&quot;msc-alert msc-alert-success w-full&quot;&gt;
+  &lt;div id=&quot;warning-example-id&quot; class=&quot;msc-alert msc-alert-info w-full&quot;&gt;
       &lt;div class=&quot;msc-alert-main-container&quot;&gt;
           &lt;div class=&quot;msc-alert-content&quot;&gt;
-              &lt;i class=&quot;msc-alert-icon msc-alert-success-icon fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt;
+              &lt;i class=&quot;msc-alert-icon msc-alert-info-icon fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt;
                   &lt;div&gt;
                       &lt;p class=&quot;msc-alert-title&quot;&gt;Example Title&lt;/p&gt;
                       &lt;p class=&quot;msc-alert-description&quot;&gt;Example Description&lt;/p&gt;
@@ -390,11 +396,13 @@
       function changeClasses(newAlertClass, newIconClass) {
         // Classes to validate and remove
         const alertClasses = [
+          "msc-alert-info",
           "msc-alert-success",
           "msc-alert-warning",
           "msc-alert-error",
         ];
         const iconClasses = [
+          "msc-alert-info-icon",
           "msc-alert-success-icon",
           "msc-alert-warning-icon",
           "msc-alert-error-icon",
@@ -402,7 +410,7 @@
 
         // Change all alert classes
         const alertElements = document.querySelectorAll(
-          ".msc-alert-success, .msc-alert-warning, .msc-alert-error"
+          ".msc-alert-success, .msc-alert-warning, .msc-alert-error, .msc-alert-info "
         );
         alertElements.forEach((element) => {
           alertClasses.forEach((cls) => element.classList.remove(cls));
@@ -411,7 +419,7 @@
 
         // Change all icon classes
         const iconElements = document.querySelectorAll(
-          ".msc-alert-success-icon, .msc-alert-warning-icon, .msc-alert-error-icon"
+          ".msc-alert-success-icon, .msc-alert-warning-icon, .msc-alert-error-icon, .msc-alert-info-icon"
         );
         iconElements.forEach((element) => {
           iconClasses.forEach((cls) => element.classList.remove(cls));
