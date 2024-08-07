@@ -2892,6 +2892,7 @@ h6 {
 }
 
 .msc-alert-main-container {
+  align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
 }
@@ -3113,16 +3114,16 @@ h6 {
   grid-column: span 12 / span 12;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
 .col-span-5 {
   grid-column: span 5 / span 5;
 }
 
 .col-span-6 {
   grid-column: span 6 / span 6;
-}
-
-.col-span-2 {
-  grid-column: span 2 / span 2;
 }
 
 .col-start-3 {
@@ -4694,6 +4695,10 @@ h6 {
   padding-bottom: 13px;
 }
 
+.pb-0 {
+  padding-bottom: 0px;
+}
+
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -4804,10 +4809,6 @@ h6 {
 
 .pt-\[1px\] {
   padding-top: 1px;
-}
-
-.pb-0 {
-  padding-bottom: 0px;
 }
 
 .text-left {
