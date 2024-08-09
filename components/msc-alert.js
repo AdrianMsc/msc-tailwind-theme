@@ -1,7 +1,7 @@
 module.exports = function ({ addComponents, theme }) {
   const alert = {
     ".msc-alert": {
-      "@apply border rounded-md p-4": {},
+      "@apply border rounded-md p-3": {},
     },
     ".msc-alert-info": {
       "@apply border-primary-blue": {},
@@ -59,13 +59,14 @@ module.exports = function ({ addComponents, theme }) {
       "@apply font-bold": {},
     },
     ".msc-alert-main-container": {
-      "@apply md:flex justify-between gap-3 items-center": {},
+      "@apply flex justify-between gap-3 items-center flex-wrap": {},
     },
     ".msc-alert-content": {
-      "@apply flex justify-start gap-2 [&_a]:text-primary-blue_dark": {},
+      "@apply flex justify-start gap-2 [&_a]:text-primary-blue_dark lg:min-w-[300px]":
+        {},
     },
     ".msc-alert-cta-container": {
-      "@apply flex justify-between md:justify-end mt-4 md:mt-0 pb-4 md:gap-4 [&_button]:whitespace-nowrap":
+      "@apply flex justify-between md:justify-end mt-4 md:mt-0 pb-4 gap-4 [&_button]:whitespace-nowrap":
         {},
     },
   };

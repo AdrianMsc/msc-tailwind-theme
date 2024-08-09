@@ -1,7 +1,7 @@
 module.exports = function ({ addComponents, theme }) {
   const buttons = {
     ".msc-btn": {
-      "@apply py-2 px-5 h-10 rounded-full font-bold text-base cursor-pointer min-w-32":
+      "@apply py-2 px-2 md:px-5 h-10 rounded-full font-bold text-base cursor-pointer min-w-24 md:min-w-32":
         {},
     },
     ".msc-btn-sm": {
@@ -30,7 +30,7 @@ module.exports = function ({ addComponents, theme }) {
       },
     },
     ".msc-btn-blue-outline": {
-      "@apply bg-transparent border min-w-32": {},
+      "@apply bg-transparent border": {},
       color: theme("colors.primary.blue"),
       borderColor: theme("colors.primary.blue"),
       "&:hover": {
