@@ -58,5 +58,6 @@ module.exports = {
     require("./components/msc-index"),
     require("./components/msc-breadcrumb"),
     require("./components/msc-alert"),
+    require("./components/msc-pagination"),
   ],
 };
