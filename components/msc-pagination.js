@@ -5,7 +5,7 @@ module.exports = function ({ addComponents }) {
         {},
     },
     ".msc-pagination-btn-text": {
-      "@apply p-[10px] rounded border border-transparent justify-center items-center gap-1 flex text-[#212121] text-sm font-bold":
+      "@apply p-[10px] rounded border border-transparent justify-center items-center gap-1 flex text-[#212121] text-sm font-bold min-w-10 min-h-10":
         {},
       "&:hover": {
         "@apply bg-primary-blue_xlight border border-primary-blue_light text-primary-blue":
@@ -15,6 +15,9 @@ module.exports = function ({ addComponents }) {
         "@apply text-monochromes-grey_xlight cursor-not-allowed bg-white border-transparent":
           {},
       },
+    },
+    ".msc-pagination-btn-text p": {
+      "@apply hidden lg:flex": {},
     },
     ".msc-pagination-btn": {
       "@apply size-10 p-2 rounded justify-center items-center flex text-black text-sm font-bold":
