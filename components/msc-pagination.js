@@ -17,7 +17,7 @@ module.exports = function ({ addComponents }) {
       },
     },
     ".msc-pagination-btn-text p": {
-      "@apply hidden lg:flex": {},
+      "@apply hidden md:flex": {},
     },
     ".msc-pagination-btn": {
       "@apply size-10 p-2 rounded justify-center items-center flex text-black text-sm font-bold":
