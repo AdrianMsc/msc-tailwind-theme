@@ -37,7 +37,7 @@ module.exports = function ({ addComponents, theme }) {
       "@apply font-normal text-sm": {},
     },
     ".msc-alert-list-container": {
-      "@apply text-sm [&_a]:text-primary-blue_dark": {},
+      "@apply text-sm [&_a]:text-primary-blue_dark mt-3 border-t pt-3": {},
     },
     ".msc-alert-list-toggle": {
       "@apply font-bold text-primary-blue_dark outline-none": {},
@@ -52,7 +52,7 @@ module.exports = function ({ addComponents, theme }) {
       "@apply ml-1 group-[.accordion-open]:rotate-180": {},
     },
     ".msc-alert-list": {
-      "@apply list-disc list-inside border-t mt-1 pt-1 group-[.accordion-open]:block hidden":
+      "@apply list-disc list-inside  mt-1 pt-1 group-[.accordion-open]:block hidden":
         {},
     },
     ".msc-alert-list-item": {
@@ -62,11 +62,11 @@ module.exports = function ({ addComponents, theme }) {
       "@apply flex justify-between gap-3 items-center flex-wrap": {},
     },
     ".msc-alert-content": {
-      "@apply flex justify-start gap-2 [&_a]:text-primary-blue_dark lg:min-w-[300px]":
+      "@apply flex justify-start gap-2 [&_a]:text-primary-blue_dark lg:min-w-[300px] lg:max-w-[50%]":
         {},
     },
     ".msc-alert-cta-container": {
-      "@apply flex justify-between md:justify-end mt-4 md:mt-0 pb-4 gap-4 [&_button]:whitespace-nowrap":
+      "@apply flex justify-between md:justify-end mt-4 md:mt-0  gap-4 [&_button]:whitespace-nowrap":
         {},
     },
   };
