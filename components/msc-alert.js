@@ -66,7 +66,7 @@ module.exports = function ({ addComponents, theme }) {
         {},
     },
     ".msc-alert-cta-container": {
-      "@apply flex justify-between md:justify-end mt-4 md:mt-0  gap-4 [&_button]:whitespace-nowrap":
+      "@apply flex justify-between md:justify-end mt-0 md:mt-0  gap-4 [&_button]:whitespace-nowrap":
         {},
     },
   };

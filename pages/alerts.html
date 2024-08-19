@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -27,7 +27,7 @@
       onclick="toggleSideNav()"
       aria-controls="default-sidebar"
       type="button"
-      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
     >
       <span class="sr-only">Open sidebar</span>
       <svg
@@ -47,18 +47,17 @@
 
     <aside
       id="msc-sidebar"
-      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full lg:translate-x-0"
       aria-label="Sidebar"
     >
       <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
         <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" />
         <p class="font-bold text-lg mb-5">Fuel Design System</p>
-
         <span id="sidenav-menu"> </span>
       </div>
     </aside>
 
-    <div class="p-4 sm:ml-64">
+    <div class="p-4 lg:ml-64">
       <section class="container mx-auto">
         <div class="grid grid-cols-12">
           <div class="msc-layout-container">
