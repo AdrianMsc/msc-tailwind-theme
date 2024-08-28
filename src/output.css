@@ -2407,9 +2407,10 @@ h6 {
 .msc-top-filter-active {
   display: flex;
   height: 2rem;
-  width: 216px;
-  flex-direction: row;
+  width: 100%;
   align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -2431,9 +2432,18 @@ h6 {
   border-color: #000000;
 }
 
+.msc-top-filter-active p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  vertical-align: middle;
+}
+
 .msc-top-filter-badge {
   width: 1rem;
   height: 1rem;
+  min-width: 1rem;
   align-items: center;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
@@ -3642,10 +3652,6 @@ h6 {
   width: 200px;
 }
 
-.w-\[216px\] {
-  width: 216px;
-}
-
 .w-\[240px\] {
   width: 240px;
 }
@@ -3697,6 +3703,10 @@ h6 {
 
 .min-w-32 {
   min-width: 8rem;
+}
+
+.min-w-4 {
+  min-width: 1rem;
 }
 
 .max-w-\[1500px\] {
@@ -4042,10 +4052,6 @@ h6 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.text-clip {
-  text-overflow: clip;
 }
 
 .whitespace-nowrap {
