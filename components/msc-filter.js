@@ -1,15 +1,25 @@
-module.exports = function ({ addComponents, theme }) {
+module.exports = function ({ addComponents }) {
   const filter = {
     ".msc-top-filter": {
-      "@apply border border-monochromes-grey_light rounded bg-white h-8 w-full md:w-[216px] flex flex-row place-content-between py-1.5 px-3 items-center text-monochromes-grey":
+      "@apply border border-monochromes-grey_light rounded bg-white h-8 py-1.5 px-3 items-center text-monochromes-grey flex place-content-between w-full overflow-hidden":
         {},
       "&:hover": {
         borderColor: "#000000",
       },
     },
+    // ".msc-top-filter p": {
+    //   "@apply align-middle text-nowrap w-full text-clip": {},
+    // },
+    ".msc-top-filter p": {
+      "@apply text-nowrap truncate align-middle": {},
+    },
+    ".msc-top-filter i": {
+      "@apply bg-white": {},
+    },
     ".msc-top-filter-active": {
-      "@apply border border-monochromes-grey_light rounded bg-white h-8 w-full md:w-[216px] flex flex-row place-content-between py-1.5 px-3 items-center hover:border-black text-black":
+      "@apply border border-monochromes-grey_light rounded bg-white h-8 w-[216px] py-1.5 px-3 items-center text-monochromes-grey flex flex-row hover:border-black text-black":
         {},
+
       "&:hover": {
         borderColor: "#000000",
       },
@@ -18,14 +28,15 @@ module.exports = function ({ addComponents, theme }) {
       "@apply text-white rounded-full bg-black size-4 text-xs items-center": {},
     },
     ".msc-top-filters-section": {
-      "@apply flex flex-col gap-2 bg-[#F2F2F2] p-3 border border-primary-blue rounded":
+      "@apply flex flex-col gap-2 w-full bg-[#F2F2F2] p-3 border border-primary-blue rounded overflow-auto":
         {},
     },
     ".msc-top-filters-title": {
       "@apply font-bold text-lg": {},
     },
     ".msc-top-filters-container": {
-      "@apply flex flex-row gap-4 w-full flex-wrap": {},
+      "@apply flex flex-row gap-1 place-content-between overflow-clip shrink":
+        {},
     },
   };
   addComponents(filter);
