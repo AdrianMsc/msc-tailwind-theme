@@ -1,57 +1,79 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css"
+    />
+    <title>Toggle</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../src/output.css" rel="stylesheet" />
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css" />
-  <title>Toggle</title>
-</head>
+  <body class="bg-[#f2f2f2]">
+    <button
+      onclick="toggleSideNav()"
+      aria-controls="default-sidebar"
+      type="button"
+      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+    >
+      <span class="sr-only">Open sidebar</span>
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+        ></path>
+      </svg>
+    </button>
 
-<body class="bg-[#f2f2f2]">
-  <button onclick="toggleSideNav()" aria-controls="default-sidebar" type="button"
-    class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
-    <span class="sr-only">Open sidebar</span>
-    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-      <path clip-rule="evenodd" fill-rule="evenodd"
-        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-      </path>
-    </svg>
-  </button>
+    <aside
+      id="msc-sidebar"
+      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
+        <a href="../index.html">
+          <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3"
+        /></a>
+        <p class="font-bold text-lg mb-5">Fuel Design System</p>
 
-  <aside id="msc-sidebar"
-    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-    aria-label="Sidebar">
-    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
-      <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" />
-      <p class="font-bold text-lg mb-5">Fuel Design System</p>
+        <span id="sidenav-menu"> </span>
+      </div>
+    </aside>
 
-      <span id="sidenav-menu"> </span>
-    </div>
-  </aside>
+    <section class="p-4 sm:ml-64 grid grid-cols-12">
+      <div class="msc-layout-container">
+        <main class="max-w-screen-2xl mx-auto px-5">
+          <h1 class="font-bold text-3xl mb-3">
+            <small class="text-sm text-primary-blue">Form</small> <br />
+            Toggle
+          </h1>
 
-  <section class="p-4 sm:ml-64 grid grid-cols-12">
-    <div class="msc-layout-container">
-      <main class="max-w-screen-2xl mx-auto px-5">
-        <h1 class="font-bold text-3xl mb-3">
-          <small class="text-sm text-primary-blue">Form</small> <br />
-          Toggle
-        </h1>
+          <p class="mb-4">This is the toggle of MSC</p>
 
-        <p class="mb-4">This is the toggle of MSC</p>
+          <label for="toggleOne" class="msc-toggle">
+            <div class="relative">
+              <input
+                type="checkbox"
+                id="toggleOne"
+                checked
+                class="peer sr-only"
+              />
+              <div class="msc-toggle-container"></div>
+              <div class="msc-toggle-dot"></div>
+            </div>
+          </label>
 
-        <label for="toggleOne" class="msc-toggle">
-          <div class="relative">
-            <input type="checkbox" id="toggleOne" checked class="peer sr-only" />
-            <div class="msc-toggle-container"></div>
-            <div class="msc-toggle-dot"></div>
-          </div>
-        </label>
-
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
           <code class="language-html rounded">
   &lt;label for=&quot;toggleOne&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
@@ -66,19 +88,28 @@
   &lt;/label&gt;
           </code>
         </pre>
-        </div>
-
-        <h2 class="font-bold text-2xl mb-4">Toggle With Text</h2>
-        <label for="toggleTwo" class="msc-toggle">
-          <div class="relative">
-            <input type="checkbox" id="toggleTwo" checked class="peer sr-only" />
-            <div before="Yes" after="No" class="msc-toggle-container-text"></div>
-            <div class="msc-toggle-dot-text"></div>
           </div>
-        </label>
 
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
+          <h2 class="font-bold text-2xl mb-4">Toggle With Text</h2>
+          <label for="toggleTwo" class="msc-toggle">
+            <div class="relative">
+              <input
+                type="checkbox"
+                id="toggleTwo"
+                checked
+                class="peer sr-only"
+              />
+              <div
+                before="Yes"
+                after="No"
+                class="msc-toggle-container-text"
+              ></div>
+              <div class="msc-toggle-dot-text"></div>
+            </div>
+          </label>
+
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
           <code class="language-html rounded">
   &lt;label for=&quot;toggleTwo&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
@@ -96,28 +127,47 @@
   &lt;/label&gt;
           </code>
         </pre>
-        </div>
+          </div>
 
-        <h2 class="font-bold text-2xl mb-4">Toggle With Text Disabled</h2>
-        <div class="flex gap-2 w-fit">
-          <label for="toggleDisabled" class="msc-toggle">
-            <div class="relative">
-              <input type="checkbox" id="toggleDisabled" class="peer sr-only" disabled checked />
-              <div before="Yes" after="No" class="msc-toggle-container-disabled"></div>
-              <div class="msc-toggle-dot-disabled"></div>
-            </div>
-          </label>
-          <label for="toggleDisabled" class="msc-toggle">
-            <div class="relative">
-              <input type="checkbox" id="toggleDisabled" class="peer sr-only" disabled />
-              <div before="Yes" after="No" class="msc-toggle-container-disabled"></div>
-              <div class="msc-toggle-dot-disabled"></div>
-            </div>
-          </label>
-        </div>
+          <h2 class="font-bold text-2xl mb-4">Toggle With Text Disabled</h2>
+          <div class="flex gap-2 w-fit">
+            <label for="toggleDisabled" class="msc-toggle">
+              <div class="relative">
+                <input
+                  type="checkbox"
+                  id="toggleDisabled"
+                  class="peer sr-only"
+                  disabled
+                  checked
+                />
+                <div
+                  before="Yes"
+                  after="No"
+                  class="msc-toggle-container-disabled"
+                ></div>
+                <div class="msc-toggle-dot-disabled"></div>
+              </div>
+            </label>
+            <label for="toggleDisabled" class="msc-toggle">
+              <div class="relative">
+                <input
+                  type="checkbox"
+                  id="toggleDisabled"
+                  class="peer sr-only"
+                  disabled
+                />
+                <div
+                  before="Yes"
+                  after="No"
+                  class="msc-toggle-container-disabled"
+                ></div>
+                <div class="msc-toggle-dot-disabled"></div>
+              </div>
+            </label>
+          </div>
 
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
           <code class="language-html rounded">
   &lt;label for=&quot;toggleDisabled&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
@@ -136,19 +186,27 @@
   &lt;/label&gt;
           </code>
         </pre>
-        </div>
-
-        <h2 class="font-bold text-2xl mb-4">Address Type Toggle</h2>
-        <label for="toggleAddress" class="msc-toggle">
-          <div class="relative">
-            <input type="checkbox" id="toggleAddress" class="peer sr-only" />
-            <div before="Residential" after="Commercial" class="msc-toggle-container-text-lg"></div>
-            <div before="Residential" after="Commercial" class="msc-toggle-dot-text-lg"></div>
           </div>
-        </label>
 
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
+          <h2 class="font-bold text-2xl mb-4">Address Type Toggle</h2>
+          <label for="toggleAddress" class="msc-toggle">
+            <div class="relative">
+              <input type="checkbox" id="toggleAddress" class="peer sr-only" />
+              <div
+                before="Residential"
+                after="Commercial"
+                class="msc-toggle-container-text-lg"
+              ></div>
+              <div
+                before="Residential"
+                after="Commercial"
+                class="msc-toggle-dot-text-lg"
+              ></div>
+            </div>
+          </label>
+
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
           <code class="language-html rounded">
   &lt;label for=&quot;toggleAddress&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
@@ -168,19 +226,27 @@
   &lt;/label&gt;
           </code>
         </pre>
-        </div>
-
-        <h2 class="font-bold text-2xl mb-4">Units Toggle</h2>
-        <label for="toggleUnits" class="msc-toggle">
-          <div class="relative">
-            <input type="checkbox" id="toggleUnits" class="peer sr-only" />
-            <div before="Decimal Inch" after="MM" class="msc-toggle-container-text-lg after:right-10"></div>
-            <div before="Decimal Inch" after="MM" class="msc-toggle-dot-text-lg after:right-6"></div>
           </div>
-        </label>
 
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
+          <h2 class="font-bold text-2xl mb-4">Units Toggle</h2>
+          <label for="toggleUnits" class="msc-toggle">
+            <div class="relative">
+              <input type="checkbox" id="toggleUnits" class="peer sr-only" />
+              <div
+                before="Decimal Inch"
+                after="MM"
+                class="msc-toggle-container-text-lg after:right-10"
+              ></div>
+              <div
+                before="Decimal Inch"
+                after="MM"
+                class="msc-toggle-dot-text-lg after:right-6"
+              ></div>
+            </div>
+          </label>
+
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
           <code class="language-html rounded">
   &lt;label for=&quot;toggleAddress&quot; class=&quot;msc-toggle&quot;&gt;
     &lt;div class=&quot;relative&quot;&gt;
@@ -200,30 +266,51 @@
   &lt;/label&gt;
           </code>
         </pre>
-        </div>
-
-        <h2 class="font-bold text-2xl mb-4">Tolerance Toggle</h2>
-
-        <fieldset>
-          <div class="msc-label-toggle-container">
-            <p class="msc-label-triple-toggle">Tolerance</p>
-            <img src="../assets/info-question.svg" class="msc-toggle-icon" />
-            <div class="msc-triple-toggle-container">
-              <span id="toleranceDot" class="msc-triple-toggle-dot"></span>
-              <label for="allTolerance" class="msc-triple-toggle-input-label"><input type="radio" id="allTolerance"
-                  name="tolerance" value="allTolerance" class="peer sr-only" checked /><span
-                  class="msc-triple-toggle-text">All</span></label>
-              <label for="plus" class="msc-triple-toggle-input-label">
-                <input type="radio" id="plus" name="tolerance" value="plus" class="peer sr-only" />
-                <span class="msc-triple-toggle-text">Super</span></label>
-              <label for="minus" class="msc-triple-toggle-input-label"><input type="radio" id="minus" name="tolerance"
-                  value="minus" class="peer sr-only" /><span class="msc-triple-toggle-text">Minus</span></label>
-            </div>
           </div>
-        </fieldset>
 
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
+          <h2 class="font-bold text-2xl mb-4">Tolerance Toggle</h2>
+
+          <fieldset>
+            <div class="msc-label-toggle-container">
+              <p class="msc-label-triple-toggle">Tolerance</p>
+              <img src="../assets/info-question.svg" class="msc-toggle-icon" />
+              <div class="msc-triple-toggle-container">
+                <span id="toleranceDot" class="msc-triple-toggle-dot"></span>
+                <label for="allTolerance" class="msc-triple-toggle-input-label"
+                  ><input
+                    type="radio"
+                    id="allTolerance"
+                    name="tolerance"
+                    value="allTolerance"
+                    class="peer sr-only"
+                    checked
+                  /><span class="msc-triple-toggle-text">All</span></label
+                >
+                <label for="plus" class="msc-triple-toggle-input-label">
+                  <input
+                    type="radio"
+                    id="plus"
+                    name="tolerance"
+                    value="plus"
+                    class="peer sr-only"
+                  />
+                  <span class="msc-triple-toggle-text">Super</span></label
+                >
+                <label for="minus" class="msc-triple-toggle-input-label"
+                  ><input
+                    type="radio"
+                    id="minus"
+                    name="tolerance"
+                    value="minus"
+                    class="peer sr-only"
+                  /><span class="msc-triple-toggle-text">Minus</span></label
+                >
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
               <code class="language-html rounded">
   &lt;fieldset&gt;
     &lt;div class=&quot;msc-label-toggle-container&quot;&gt;
@@ -294,30 +381,51 @@
   &lt;/script&gt;
               </code>
             </pre>
-        </div>
-
-        <h2 class="font-bold text-2xl mb-4">Class Toggle</h2>
-
-        <fieldset>
-          <div class="msc-label-toggle-container">
-            <p class="msc-label-triple-toggle">Class</p>
-            <img src="../assets/info-question.svg" class="msc-toggle-icon" />
-            <div class="msc-triple-toggle-container">
-              <span id="classDot" class="msc-triple-toggle-dot"></span>
-              <label for="allClass" class="msc-triple-toggle-input-label"><input type="radio" id="allClass" name="class"
-                  value="allClass" class="peer sr-only" checked /><span
-                  class="msc-triple-toggle-text">All</span></label>
-              <label for="x" class="msc-triple-toggle-input-label">
-                <input type="radio" id="x" name="class" value="x" class="peer sr-only" />
-                <span class="msc-triple-toggle-text">X</span></label>
-              <label for="zz" class="msc-triple-toggle-input-label"><input type="radio" id="zz" name="class" value="zz"
-                  class="peer sr-only" /><span class="msc-triple-toggle-text">ZZ</span></label>
-            </div>
           </div>
-        </fieldset>
 
-        <div class="max-w-[1500px]">
-          <pre class="h-fit">
+          <h2 class="font-bold text-2xl mb-4">Class Toggle</h2>
+
+          <fieldset>
+            <div class="msc-label-toggle-container">
+              <p class="msc-label-triple-toggle">Class</p>
+              <img src="../assets/info-question.svg" class="msc-toggle-icon" />
+              <div class="msc-triple-toggle-container">
+                <span id="classDot" class="msc-triple-toggle-dot"></span>
+                <label for="allClass" class="msc-triple-toggle-input-label"
+                  ><input
+                    type="radio"
+                    id="allClass"
+                    name="class"
+                    value="allClass"
+                    class="peer sr-only"
+                    checked
+                  /><span class="msc-triple-toggle-text">All</span></label
+                >
+                <label for="x" class="msc-triple-toggle-input-label">
+                  <input
+                    type="radio"
+                    id="x"
+                    name="class"
+                    value="x"
+                    class="peer sr-only"
+                  />
+                  <span class="msc-triple-toggle-text">X</span></label
+                >
+                <label for="zz" class="msc-triple-toggle-input-label"
+                  ><input
+                    type="radio"
+                    id="zz"
+                    name="class"
+                    value="zz"
+                    class="peer sr-only"
+                  /><span class="msc-triple-toggle-text">ZZ</span></label
+                >
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="max-w-[1500px]">
+            <pre class="h-fit">
               <code class="language-html rounded">
   &lt;fieldset&gt;
     &lt;div class=&quot;msc-label-toggle-container&quot;&gt;
@@ -388,47 +496,46 @@
   &lt;/script&gt;
               </code>
             </pre>
-        </div>
-      </main>
-    </div>
-  </section>
+          </div>
+        </main>
+      </div>
+    </section>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      function updateSliderPosition(toggleContainer) {
-        let slider = toggleContainer.querySelector(".msc-triple-toggle-dot");
-        let checkedRadio = toggleContainer.querySelector(
-          'input[type="radio"]:checked'
-        );
-        let radioIndex = Array.from(
-          checkedRadio.parentNode.parentNode.children
-        ).indexOf(checkedRadio.parentNode);
-        let positions = ["left-[4px]", "left-1/3", "left-[130px]"];
-        slider.className =
-          "msc-triple-toggle-dot " + positions[radioIndex - 1];
-      }
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function updateSliderPosition(toggleContainer) {
+          let slider = toggleContainer.querySelector(".msc-triple-toggle-dot");
+          let checkedRadio = toggleContainer.querySelector(
+            'input[type="radio"]:checked'
+          );
+          let radioIndex = Array.from(
+            checkedRadio.parentNode.parentNode.children
+          ).indexOf(checkedRadio.parentNode);
+          let positions = ["left-[4px]", "left-1/3", "left-[130px]"];
+          slider.className =
+            "msc-triple-toggle-dot " + positions[radioIndex - 1];
+        }
 
-      document
-        .querySelectorAll(".msc-triple-toggle-container")
-        .forEach(function (toggleContainer) {
-          toggleContainer
-            .querySelectorAll(".msc-triple-toggle-input-label input")
-            .forEach(function (radio) {
-              radio.addEventListener("change", function () {
-                updateSliderPosition(toggleContainer);
+        document
+          .querySelectorAll(".msc-triple-toggle-container")
+          .forEach(function (toggleContainer) {
+            toggleContainer
+              .querySelectorAll(".msc-triple-toggle-input-label input")
+              .forEach(function (radio) {
+                radio.addEventListener("change", function () {
+                  updateSliderPosition(toggleContainer);
+                });
               });
-            });
-          updateSliderPosition(toggleContainer);
-        });
-    });
-  </script>
-  <script src="../utilities/index.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+            updateSliderPosition(toggleContainer);
+          });
+      });
+    </script>
+    <script src="../utilities/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-  <script>
-    hljs.highlightAll();
-  </script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>

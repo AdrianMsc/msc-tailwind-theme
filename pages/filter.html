@@ -1,136 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/font-awesome/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css"
+    />
+    <title>Filter</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../src/output.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/font-awesome/css/all.css" />
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css" />
-  <title>Filter</title>
-</head>
+  <body class="bg-[#f2f2f2]">
+    <button
+      onclick="toggleSideNav()"
+      aria-controls="default-sidebar"
+      type="button"
+      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+    >
+      <span class="sr-only">Open sidebar</span>
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+        ></path>
+      </svg>
+    </button>
 
-<body class="bg-[#f2f2f2]">
-  <button onclick="toggleSideNav()" aria-controls="default-sidebar" type="button"
-    class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
-    <span class="sr-only">Open sidebar</span>
-    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-      <path clip-rule="evenodd" fill-rule="evenodd"
-        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-      </path>
-    </svg>
-  </button>
+    <aside
+      id="msc-sidebar"
+      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
+        <a href="../index.html">
+          <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3"
+        /></a>
+        <p class="font-bold text-lg mb-5">Fuel Design System</p>
 
-  <aside id="msc-sidebar"
-    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-    aria-label="Sidebar">
-    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
-      <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" />
-      <p class="font-bold text-lg mb-5">Fuel Design System</p>
-
-      <span id="sidenav-menu"> </span>
-    </div>
-  </aside>
-
-  <main class="p-4 sm:ml-64 grid grid-cols-12">
-    <div class="msc-layout-container">
-      <h1 class="font-bold text-3xl mb-3">
-        <small class="text-sm text-primary-blue">Table View</small> <br />
-        Filter
-      </h1>
-
-      <h2 class="mb-3">Default</h2>
-      <div class="msc-top-filters-section">
-        <h4 class="msc-top-filters-title">Refine your search</h4>
-        <div class="msc-top-filters-container">
-          <button class="msc-top-filter group">
-            <p>Drill Point Angle (Degrees)</p>
-            <i class="fa-solid fa-plus group-hover:text-black"></i>
-          </button>
-          <button class="msc-top-filter group">
-            <p>Coating/Finish</p>
-            <i class="fa-solid fa-plus group-hover:text-black"></i>
-          </button>
-          <button class="msc-top-filter group">
-            <p>Primary Workplace Material</p>
-            <i class="fa-solid fa-plus group-hover:text-black"></i>
-          </button>
-          <button class="msc-top-filter group">
-            <p>Point Type</p>
-            <i class="fa-solid fa-plus group-hover:text-black"></i>
-          </button>
-          <button class="msc-top-filter group">
-            <p>Cutting Direction</p>
-            <i class="fa-solid fa-plus group-hover:text-black"></i>
-          </button>
-        </div>
+        <span id="sidenav-menu"> </span>
       </div>
+    </aside>
 
-      <div class="max-w-[1500px]">
-        <pre class="h-fit">
-              <code class="language-html rounded">
-  &lt;div class=&quot;msc-top-filters-section&quot;&gt;
-    &lt;h4 class=&quot;msc-top-filters-title&quot;&gt;Refine your search&lt;/h4&gt;
-    &lt;div class=&quot;msc-top-filters-container&quot;&gt;
-      &lt;button class=&quot;msc-top-filter group&quot;&gt;
-        &lt;p&gt;Drill Bit Material&lt;/p&gt;
-        &lt;i class=&quot;fa-solid fa-plus group-hover:text-black&quot;&gt;&lt;/i&gt;
-      &lt;/button&gt;
-      &lt;button class=&quot;msc-top-filter group&quot;&gt;
-        &lt;p&gt;Drill Point Angle&lt;/p&gt;
-        &lt;i class=&quot;fa-solid fa-plus group-hover:text-black&quot;&gt;&lt;/i&gt;
-      &lt;/button&gt;
-      &lt;button class=&quot;msc-top-filter group&quot;&gt;
-        &lt;p&gt;Coating/Finish&lt;/p&gt;
-        &lt;i class=&quot;fa-solid fa-plus group-hover:text-black&quot;&gt;&lt;/i&gt;
-      &lt;/button&gt;
-      &lt;button class=&quot;msc-top-filter group&quot;&gt;
-        &lt;p&gt;Point Type&lt;/p&gt;
-        &lt;i class=&quot;fa-solid fa-plus group-hover:text-black&quot;&gt;&lt;/i&gt;
-      &lt;/button&gt;
-      &lt;button class=&quot;msc-top-filter group&quot;&gt;
-        &lt;p&gt;Cutting Direction&lt;/p&gt;
-        &lt;i class=&quot;fa-solid fa-plus group-hover:text-black&quot;&gt;&lt;/i&gt;
-      &lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-              </code>
-            </pre>
-      </div>
+    <main class="p-4 sm:ml-64 grid grid-cols-12">
+      <div class="msc-layout-container">
+        <h1 class="font-bold text-3xl mb-3">
+          <small class="text-sm text-primary-blue">Table View</small> <br />
+          Filter
+        </h1>
 
-      <h2 class="mb-3">Active</h2>
-      <div
-        class="flex flex-row gap-10 items-center bg-white p-5 max-w-[1500px] rounded overflow-hidden h-fit flex-wrap">
+        <h2 class="mb-3">Default</h2>
         <div class="msc-top-filters-section">
           <h4 class="msc-top-filters-title">Refine your search</h4>
           <div class="msc-top-filters-container">
-            <button class="msc-top-filter-active">
-              <p>Drill Bit Material</p>
-              <span class="msc-top-filter-badge">1</span>
+            <button class="msc-top-filter group">
+              <p>Drill Point Angle (Degrees)</p>
+              <i class="fa-solid fa-plus group-hover:text-black"></i>
             </button>
-            <button class="msc-top-filter-active">
-              <p>Drill Point Angle</p>
-              <span class="msc-top-filter-badge">2</span>
-            </button>
-            <button class="msc-top-filter-active">
+            <button class="msc-top-filter group">
               <p>Coating/Finish</p>
-              <span class="msc-top-filter-badge">3</span>
+              <i class="fa-solid fa-plus group-hover:text-black"></i>
             </button>
-            <button class="msc-top-filter-active">
+            <button class="msc-top-filter group">
+              <p>Primary Workplace Material</p>
+              <i class="fa-solid fa-plus group-hover:text-black"></i>
+            </button>
+            <button class="msc-top-filter group">
               <p>Point Type</p>
-              <span class="msc-top-filter-badge">4</span>
+              <i class="fa-solid fa-plus group-hover:text-black"></i>
             </button>
-            <button class="msc-top-filter-active">
+            <button class="msc-top-filter group">
               <p>Cutting Direction</p>
-              <span class="msc-top-filter-badge">5</span>
+              <i class="fa-solid fa-plus group-hover:text-black"></i>
             </button>
           </div>
         </div>
-      </div>
 
-      <div class="max-w-[1500px]">
-        <pre class="h-fit">
+        <div class="max-w-[1500px]">
+          <pre class="h-fit">
+              <code class="language-html rounded">
+  &lt;div class=&quot;msc-top-filters-section&quot;&gt;
+    &lt;h4 class=&quot;msc-top-filters-title&quot;&gt;Refine your search&lt;/h4&gt;
+    &lt;div class=&quot;msc-top-filters-container&quot;&gt;
+      &lt;button class=&quot;msc-top-filter group&quot;&gt;
+        &lt;p&gt;Drill Bit Material&lt;/p&gt;
+        &lt;i class=&quot;fa-solid fa-plus group-hover:text-black&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;button class=&quot;msc-top-filter group&quot;&gt;
+        &lt;p&gt;Drill Point Angle&lt;/p&gt;
+        &lt;i class=&quot;fa-solid fa-plus group-hover:text-black&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;button class=&quot;msc-top-filter group&quot;&gt;
+        &lt;p&gt;Coating/Finish&lt;/p&gt;
+        &lt;i class=&quot;fa-solid fa-plus group-hover:text-black&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;button class=&quot;msc-top-filter group&quot;&gt;
+        &lt;p&gt;Point Type&lt;/p&gt;
+        &lt;i class=&quot;fa-solid fa-plus group-hover:text-black&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;button class=&quot;msc-top-filter group&quot;&gt;
+        &lt;p&gt;Cutting Direction&lt;/p&gt;
+        &lt;i class=&quot;fa-solid fa-plus group-hover:text-black&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+              </code>
+            </pre>
+        </div>
+
+        <h2 class="mb-3">Active</h2>
+        <div
+          class="flex flex-row gap-10 items-center bg-white p-5 max-w-[1500px] rounded overflow-hidden h-fit flex-wrap"
+        >
+          <div class="msc-top-filters-section">
+            <h4 class="msc-top-filters-title">Refine your search</h4>
+            <div class="msc-top-filters-container">
+              <button class="msc-top-filter-active">
+                <p>Drill Bit Material</p>
+                <span class="msc-top-filter-badge">1</span>
+              </button>
+              <button class="msc-top-filter-active">
+                <p>Drill Point Angle</p>
+                <span class="msc-top-filter-badge">2</span>
+              </button>
+              <button class="msc-top-filter-active">
+                <p>Coating/Finish</p>
+                <span class="msc-top-filter-badge">3</span>
+              </button>
+              <button class="msc-top-filter-active">
+                <p>Point Type</p>
+                <span class="msc-top-filter-badge">4</span>
+              </button>
+              <button class="msc-top-filter-active">
+                <p>Cutting Direction</p>
+                <span class="msc-top-filter-badge">5</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="max-w-[1500px]">
+          <pre class="h-fit">
               <code class="language-html rounded">
   &lt;div class=&quot;msc-top-filters-section&quot;&gt;
     &lt;h4 class=&quot;msc-top-filters-title&quot;&gt;Refine your search&lt;/h4&gt;
@@ -159,17 +177,16 @@
   &lt;/div&gt;
               </code>
             </pre>
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-  <script src="../utilities/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="../utilities/index.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-  <script>
-    hljs.highlightAll();
-  </script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>
