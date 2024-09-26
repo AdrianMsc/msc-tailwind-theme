@@ -59,5 +59,6 @@ module.exports = {
     require("./components/msc-breadcrumb"),
     require("./components/msc-alert"),
     require("./components/msc-pagination"),
+    require("./components/msc-page-down"),
   ],
 };
