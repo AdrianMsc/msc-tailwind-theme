@@ -46,46 +46,8 @@
       </div>
     </main>
 
-    <!-- <style>
-      .unplug-animation-left {
-        animation-name: unplugLeft;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-      }
-
-      @keyframes unplugLeft {
-        0% {
-          left: 1.75rem;
-        }
-        50% {
-          left: -2rem;
-        }
-        100% {
-          left: 1.75rem;
-        }
-      }
-
-      .unplug-animation-right {
-        animation-name: unplugRight;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-      }
-
-      @keyframes unplugRight {
-        0% {
-          right: 0;
-        }
-        50% {
-          right: -2rem;
-        }
-        100% {
-          right: 0;
-        }
-      }
-    </style> -->
-
     <script>
-      function formatDate() {
+      const formatDate = () => {
         const options = {
           month: "long",
           day: "numeric",
@@ -99,29 +61,29 @@
         const date = new Date();
         const formattedDate = date.toLocaleString("en-US", options);
 
-        // Adding the ordinal suffix to the day
         const day = date.getDate();
-        const dayWithSuffix =
-          day +
-          (day % 10 === 1 && day !== 11
-            ? "st"
-            : day % 10 === 2 && day !== 12
-            ? "nd"
-            : day % 10 === 3 && day !== 13
-            ? "rd"
-            : "th");
+        const getDaySuffix = (day) => {
+          if (day % 10 === 1 && day !== 11) return "st";
+          if (day % 10 === 2 && day !== 12) return "nd";
+          if (day % 10 === 3 && day !== 13) return "rd";
+          return "th";
+        };
+        const dayWithSuffix = `${day}${getDaySuffix(day)}`;
 
         return formattedDate.replace(day, dayWithSuffix);
-      }
-
-      function displayDate() {
-        document.getElementById("date").innerText = formatDate();
-      }
-
-      window.onload = function () {
-        displayDate();
-        setInterval(displayDate, 1000); // Update every second
       };
+
+      const displayDate = () => {
+        const dateElement = document.getElementById("date");
+        if (dateElement) {
+          dateElement.innerText = formatDate();
+        }
+      };
+
+      window.addEventListener("DOMContentLoaded", () => {
+        displayDate();
+        setInterval(displayDate, 1000);
+      });
     </script>
   </body>
 </html>
