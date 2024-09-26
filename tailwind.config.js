@@ -28,8 +28,20 @@ module.exports = {
           "50%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        unplugLeft: {
+          "0%": { left: "1.75rem" },
+          "50%": { left: "-2rem" },
+          "100%": { left: "1.75rem" },
+        },
+        unplugRight: {
+          "0%": { right: "0" },
+          "50%": { right: "-2rem" },
+          "100%": { right: "0" },
+        },
       },
       animation: {
+        unplugLeft: "unplugLeft 4s infinite",
+        unplugRight: "unplugRight 4s infinite",
         dotFlashing1: "dotFlashing1 2s infinite linear alternate",
         dotFlashing2: "dotFlashing2 2s infinite linear alternate 0.4s",
         dotFlashing3: "dotFlashing3 2s infinite linear alternate 0.6s",

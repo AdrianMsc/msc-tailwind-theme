@@ -16,11 +16,12 @@ module.exports = function ({ addComponents }) {
       "@apply flex z-10 w-full justify-center h-auto": {},
     },
     ".msc-pd-left-plug": {
-      "@apply relative flex left-[10px] sm:left-7 -z-10 w-full place-items-end items-center":
+      "@apply relative flex left-[10px] sm:left-7 -z-10 w-full place-items-end items-center animate-unplugLeft":
         {},
     },
     ".msc-pd-right-plug": {
-      "@apply flex w-full items-center place-items-start": {},
+      "@apply flex w-full items-center place-items-start right-[-1px] relative animate-unplugRight":
+        {},
     },
     ".msc-pd-timestamp": {
       "@apply text-monochromes-grey text-center pt-8 sm:pt-16": {},
