@@ -1,47 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <title>Page Down</title>
+    <link
+      rel="shortcut icon"
+      href="https://www.mscdirect.com/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../src/output.css" rel="stylesheet" />
-  <title>Document</title>
-</head>
+  <body>
+    <header class="msc-pd-header">
+      <img src="../assets/msc-logo.svg" class="h-[20px]" alt="" />
+      <p>Call Us 1-800-645-7270</p>
+    </header>
 
-<body>
-  <header class="msc-pd-header">
-    <img src="../assets/msc-logo.svg" class="h-[20px]" alt="" />
-    <p>
-      Call Us 1-800-645-7270
-    </p>
-  </header>
-
-  <main class="flex">
-
-    <div class="msc-pd-container">
-      <div class="msc-pd-text-container">
-        <h1 class=" text-primary-blue_dark">This site is under maintenance for a few hours</h1>
-        <h4 class=" text-primary-blue_dark">We apologize for any inconvenience. We'll be back up soon.</h4>
-      </div>
-
-      <div class="msc-pd-img-container">
-        <div class="msc-pd-left-plug">
-          <img src="../assets/pls.svg" alt="plug left side image">
+    <main class="flex">
+      <div class="msc-pd-container">
+        <div class="msc-pd-text-container">
+          <h1 class="text-primary-blue_dark">
+            This site is under maintenance for a few hours
+          </h1>
+          <h4 class="text-primary-blue_dark">
+            We apologize for any inconvenience. We'll be back up soon.
+          </h4>
         </div>
-        <div class="msc-pd-right-plug">
-          <img src="../assets/prs.svg" alt="plug right side image">
+
+        <div class="msc-pd-img-container">
+          <div class="msc-pd-left-plug unplug-animation-left">
+            <img src="../assets/pls.svg" alt="plug left side image" />
+          </div>
+          <div class="msc-pd-right-plug unplug-animation-right">
+            <img src="../assets/prs.svg" alt="plug right side image" />
+          </div>
         </div>
+
+        <h6 class="msc-pd-timestamp" id="date">Timestamp</h6>
       </div>
 
-      <h6 class="msc-pd-timestamp">Timestamp</h6>
-    </div>
-
-    <div class="msc-pd-bg-container">
-      <div class="msc-pd-bg">
+      <div class="msc-pd-bg-container">
+        <div class="msc-pd-bg"></div>
       </div>
-    </div>
+    </main>
 
-  </main>
-</body>
+    <style>
+      .unplug-animation-left {
+        animation-name: unplugLeft;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        /* animation-fill-mode: forwards; */
+      }
 
+      @keyframes unplugLeft {
+        0% {
+          left: 1.75rem;
+        }
+        50% {
+          left: -2rem;
+        }
+        100% {
+          left: 1.75rem;
+        }
+      }
+
+      .unplug-animation-right {
+        animation-name: unplugRight;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        /* animation-fill-mode: forwards; */
+      }
+
+      @keyframes unplugRight {
+        0% {
+          right: 0;
+        }
+        50% {
+          right: -2rem;
+        }
+        100% {
+          right: 0;
+        }
+      }
+    </style>
+
+    <script>
+      function formatDate() {
+        const options = {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          second: "numeric",
+          hour12: true,
+        };
+
+        const date = new Date();
+        const formattedDate = date.toLocaleString("en-US", options);
+
+        // Adding the ordinal suffix to the day
+        const day = date.getDate();
+        const dayWithSuffix =
+          day +
+          (day % 10 === 1 && day !== 11
+            ? "st"
+            : day % 10 === 2 && day !== 12
+            ? "nd"
+            : day % 10 === 3 && day !== 13
+            ? "rd"
+            : "th");
+
+        return formattedDate.replace(day, dayWithSuffix);
+      }
+
+      function displayDate() {
+        document.getElementById("date").innerText = formatDate();
+      }
+
+      window.onload = function () {
+        displayDate();
+        setInterval(displayDate, 1000); // Update every second
+      };
+    </script>
+  </body>
 </html>
