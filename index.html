@@ -29,7 +29,7 @@
     </header>
 
     <section class="flex justify-center items-center h-screen">
-      <div class="flex flex-col justify-center px-5 lg:w-[45%]">
+      <!-- <div class="flex flex-col justify-center px-5 lg:w-[45%]">
         <h1 class="font-normal text-[4rem] leading-none">
           Welcome to MSC <br />
           Design System
@@ -59,7 +59,98 @@
         </div>
       </div>
 
-      <div id="lottieContainer" class="lg:w-[45%]"></div>
+      <div id="lottieContainer" class="lg:w-[45%]"></div> -->
+
+      <p id="date"></p>
+
+      <section class="absolute w-full flex overflow-hidden">
+        <div
+          class="unplug-animation-left bg-red-600 h-[110px] w-1/2 relative"
+        ></div>
+        <div
+          class="unplug-animation-right bg-blue-600 h-[110px] w-1/2 relative"
+        ></div>
+      </section>
+
+      <style>
+        .unplug-animation-left {
+          animation-name: unplugLeft;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+          /* animation-fill-mode: forwards; */
+        }
+
+        @keyframes unplugLeft {
+          0% {
+            left: 0;
+          }
+          50% {
+            left: -2rem;
+          }
+          100% {
+            left: 0;
+          }
+        }
+
+        .unplug-animation-right {
+          animation-name: unplugRight;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+          /* animation-fill-mode: forwards; */
+        }
+
+        @keyframes unplugRight {
+          0% {
+            right: 0;
+          }
+          50% {
+            right: -2rem;
+          }
+          100% {
+            right: 0;
+          }
+        }
+      </style>
+
+      <script>
+        function formatDate() {
+          const options = {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric",
+            hour12: true,
+          };
+
+          const date = new Date();
+          const formattedDate = date.toLocaleString("en-US", options);
+
+          // Adding the ordinal suffix to the day
+          const day = date.getDate();
+          const dayWithSuffix =
+            day +
+            (day % 10 === 1 && day !== 11
+              ? "st"
+              : day % 10 === 2 && day !== 12
+              ? "nd"
+              : day % 10 === 3 && day !== 13
+              ? "rd"
+              : "th");
+
+          return formattedDate.replace(day, dayWithSuffix);
+        }
+
+        function displayDate() {
+          document.getElementById("date").innerText = formatDate();
+        }
+
+        window.onload = function () {
+          displayDate();
+          setInterval(displayDate, 1000); // Update every second
+        };
+      </script>
     </section>
 
     <script>
