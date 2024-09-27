@@ -29,14 +29,14 @@ module.exports = {
           "100%": { opacity: "1" },
         },
         unplugLeft: {
-          "0%": { left: "1.75rem" },
-          "50%": { left: "-2rem" },
-          "100%": { left: "1.75rem" },
+          "0%": { right: "-2.2rem" },
+          "50%": { right: "0" },
+          "100%": { right: "-2.2rem" },
         },
         unplugRight: {
-          "0%": { right: "0" },
-          "50%": { right: "-2rem" },
-          "100%": { right: "0" },
+          "0%": { left: "0" },
+          "50%": { left: "2rem" },
+          "100%": { left: "0" },
         },
       },
       animation: {

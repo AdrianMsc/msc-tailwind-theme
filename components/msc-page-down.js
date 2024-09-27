@@ -13,15 +13,27 @@ module.exports = function ({ addComponents }) {
         {},
     },
     ".msc-pd-img-container": {
-      "@apply flex z-10 w-full justify-center h-auto": {},
+      "@apply flex relative": {},
+    },
+    ".msc-plug-container-left": {
+      "@apply w-1/2 relative h-[80px] flex items-center": {},
+    },
+    ".msc-left-wire": {
+      "@apply h-[20px] w-[95%]": {},
+      background: "transparent url(../assets/fragment.svg) scroll repeat-x",
+    },
+    ".msc-plug-container-right": {
+      "@apply w-1/2 relative h-[80px] flex items-center": {},
+    },
+    ".msc-right-wire": {
+      "@apply h-[20px] w-full w-[95%] left-[5%] relative": {},
+      background: "transparent url(../assets/fragment.svg) scroll repeat-x",
     },
     ".msc-pd-left-plug": {
-      "@apply relative flex left-[10px] sm:left-7 -z-10 w-full place-items-end items-center animate-unplugLeft":
-        {},
+      "@apply absolute -right-10 top-0 animate-unplugLeft h-full": {},
     },
     ".msc-pd-right-plug": {
-      "@apply flex w-full items-center place-items-start right-[-1px] relative animate-unplugRight":
-        {},
+      "@apply absolute left-0 top-0 animate-unplugRight h-full": {},
     },
     ".msc-pd-timestamp": {
       "@apply text-monochromes-grey text-center pt-8 sm:pt-16": {},
