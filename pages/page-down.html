@@ -36,18 +36,33 @@
       }
 
       h1 {
-        font-size: 32px;
-        line-height: 2.5rem;
+        font-size: 24px;
+        line-height: 2rem;
+
+        @media (min-width: 640px) {
+          font-size: 32px;
+          line-height: 2.5rem;
+        }
       }
 
       h4 {
-        font-size: 20px;
-        line-height: 1.75rem;
+        font-size: 18px;
+        line-height: 1.25rem;
+
+        @media (min-width: 640px) {
+          font-size: 20px;
+          line-height: 1.75rem;
+        }
       }
 
       h6 {
-        font-size: 14px;
+        font-size: 10px;
         line-height: 1.25rem;
+
+        @media (min-width: 640px) {
+          font-size: 14px;
+          line-height: 1.25rem;
+        }
       }
 
       .msc-pd-header {
@@ -188,10 +203,10 @@
       .msc-pd-timestamp {
         color: #6b7280;
         text-align: center;
-        padding-top: 2rem;
+        padding-top: 0rem;
 
         @media (min-width: 640px) {
-          padding-top: 1rem;
+          padding-top: 2rem;
         }
       }
 
