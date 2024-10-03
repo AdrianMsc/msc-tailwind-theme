@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -118,8 +118,14 @@
 
       .msc-left-wire {
         height: 22px;
-        width: 95%;
+        width: 60%;
+        left: 40%;
         background: transparent url("../assets/fragment.svg") scroll repeat-x;
+
+        @media (min-width: 640px) {
+          width: 90%;
+          right: 10%;
+        }
       }
 
       .msc-plug-container-right {
