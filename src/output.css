@@ -3308,6 +3308,10 @@ h6 {
   left: 0.5rem;
 }
 
+.left-2\/4 {
+  left: 50%;
+}
+
 .left-3 {
   left: 0.75rem;
 }
@@ -3324,12 +3328,24 @@ h6 {
   left: 130px;
 }
 
+.left-\[212px\] {
+  left: 212px;
+}
+
 .left-\[4px\] {
   left: 4px;
 }
 
 .left-\[5\%\] {
   left: 5%;
+}
+
+.left-\[74px\] {
+  left: 74px;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .right-3 {
@@ -3614,6 +3630,10 @@ h6 {
   height: 400px;
 }
 
+.\!h-5 {
+  height: 1.25rem !important;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -3780,6 +3800,10 @@ h6 {
   min-height: min-content;
 }
 
+.\!w-\[70px\] {
+  width: 70px !important;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -3894,6 +3918,10 @@ h6 {
 
 .w-\[68px\] {
   width: 68px;
+}
+
+.w-\[70px\] {
+  width: 70px;
 }
 
 .w-\[88px\] {
@@ -4340,6 +4368,10 @@ h6 {
   white-space: nowrap;
 }
 
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -4406,6 +4438,14 @@ h6 {
   border-bottom-width: 1px;
 }
 
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.border-l {
+  border-left-width: 1px;
+}
+
 .border-r {
   border-right-width: 1px;
 }
@@ -4416,6 +4456,10 @@ h6 {
 
 .border-t-2 {
   border-top-width: 2px;
+}
+
+.border-dashed {
+  border-style: dashed;
 }
 
 .border-none {
@@ -4924,6 +4968,10 @@ h6 {
   padding-bottom: 0.25rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -4934,6 +4982,10 @@ h6 {
 
 .pl-2 {
   padding-left: 0.5rem;
+}
+
+.pl-3 {
+  padding-left: 0.75rem;
 }
 
 .pl-4 {
@@ -4954,6 +5006,10 @@ h6 {
 
 .pr-2 {
   padding-right: 0.5rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
 }
 
 .pr-4 {
@@ -5004,6 +5060,18 @@ h6 {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
 .align-middle {
   vertical-align: middle;
 }
@@ -5024,6 +5092,10 @@ h6 {
 
 .text-\[1\.5rem\] {
   font-size: 1.5rem;
+}
+
+.text-\[10px\] {
+  font-size: 10px;
 }
 
 .text-\[12px\] {
@@ -6155,6 +6227,11 @@ body {
     display: flex;
   }
 
+  .md\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
   .md\:min-w-32 {
     min-width: 8rem;
   }
@@ -6170,6 +6247,10 @@ body {
   .md\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .md\:pl-64 {
+    padding-left: 16rem;
   }
 }
 
