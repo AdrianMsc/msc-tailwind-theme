@@ -3783,6 +3783,14 @@ h6 {
   height: 100vh;
 }
 
+.h-\[215px\] {
+  height: 215px;
+}
+
+.h-\[216px\] {
+  height: 216px;
+}
+
 .max-h-10 {
   max-height: 2.5rem;
 }
@@ -3798,6 +3806,14 @@ h6 {
 .min-h-min {
   min-height: -moz-min-content;
   min-height: min-content;
+}
+
+.min-h-\[215PX\] {
+  min-height: 215PX;
+}
+
+.min-h-\[215px\] {
+  min-height: 215px;
 }
 
 .\!w-\[70px\] {
@@ -3963,6 +3979,10 @@ h6 {
 
 .min-w-4 {
   min-width: 1rem;
+}
+
+.min-w-\[256px\] {
+  min-width: 256px;
 }
 
 .max-w-\[1500px\] {
@@ -4370,6 +4390,10 @@ h6 {
 
 .text-ellipsis {
   text-overflow: ellipsis;
+}
+
+.whitespace-normal {
+  white-space: normal;
 }
 
 .whitespace-nowrap {
