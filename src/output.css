@@ -6153,9 +6153,17 @@ body {
     overflow-x: hidden;
   }
 
+  .md\:p-64 {
+    padding: 16rem;
+  }
+
   .md\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .md\:pl-64 {
+    padding-left: 16rem;
   }
 }
 
