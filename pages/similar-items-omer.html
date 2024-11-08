@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/font-awesome/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css"
+    />
+    <title>Templete</title>
+    <link
+      rel="shortcut icon"
+      href="https://www.mscdirect.com/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body class="bg-[#f2f2f2]">
+    <button
+      aria-controls="default-sidebar"
+      type="button"
+      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+    >
+      <span class="sr-only">Open sidebar</span>
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+        ></path>
+      </svg>
+    </button>
+
+    <aside
+      id="msc-sidebar"
+      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
+        <a href="../index.html">
+          <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3"
+        /></a>
+        <p class="font-bold text-lg mb-5">Fuel Design System</p>
+
+        <span id="sidenav-menu"></span>
+      </div>
+    </aside>
+
+    <section class="msc-grid-layout">
+      <div class="msc-layout-container">
+        <h1 class="mb-3">
+          <small class="text-sm text-primary-blue">Component Category</small>
+          <br />
+          Component Title
+        </h1>
+        <p class="mb-4">This is the MSC page component templete</p>
+
+        <h2 class="mb-2">Similar Items</h2>
+
+        <!-- COMPONENT SIMILAR  -->
+        <div
+          class="pdp-alt-prod glider-slide active visible left-2"
+          style="align-content: start; margin: 0"
+        >
+          <span
+            class="card-type text-sm text-monochromes font-bold inline-block mb-3"
+            style="text-transform: uppercase"
+          >
+            Alternate 1
+          </span>
+          <div
+            role="button"
+            aria-hidden="true"
+            class="f-slide recommendation-horizontal-card group mr-4 rounded-md bg-white pb-1 hover:shadow-2xl cursor-pointer glider-slide left-5"
+            style="
+              height: auto;
+              width: 248px;
+              flex-shrink: 0;
+              border-radius: 0.375rem;
+            "
+          >
+            <div class="px-6 py-4 text-center">
+              <a href="/product/details/89305445">
+                <img
+                  class="object-scale-down w-full"
+                  src="https://cdn.mscdirect.com/global/images/ProductImages/8930544-24.jpg"
+                  alt="Disposable"
+                />
+              </a>
+            </div>
+            <div class="px-4">
+              <div class="pt-2 flex justify-between items-end flex-row-reverse">
+                <div class="text-monochromes">
+                  <span
+                    class="recomm-slider-price font-allumin_std pr-1"
+                    style="font-size: 20px"
+                    >$24.33</span
+                  >
+                </div>
+                <span
+                  class="pb-1 text-sm leading-14 font-normal text-monochromes"
+                  >Web Price</span
+                >
+              </div>
+              <div class="pt-2 hover:underline">
+                <p class="text-sm leading-14 font-bold uppercase select-text">
+                  <a href="/product/details/89305445"> Ansell</a>
+                </p>
+              </div>
+              <div class="pt-1 h-12">
+                <p
+                  class="text-sm font-bold hover:underline leading-5 line-clamp cursor-pointer select-text"
+                >
+                  <a href="/product/details/89305445"
+                    >Disposable Gloves: Series TouchNTuff, Size X-Large, 4.9
+                    mil, Not Coated, Nitrile, General Purpose Grade,
+                    Powder-Free</a
+                  >
+                </p>
+              </div>
+              <div class="">
+                <span class="text-sm leading-4">MSC #</span>
+                <span
+                  class="text-sm leading-4 hover:underline cursor-pointer pl-2 select-text"
+                >
+                  <a href="/product/details/89305445"> 89305445</a>
+                </span>
+              </div>
+              <div class="grid grid-cols-16 pt-1">
+                <div class="col-span-6 align-middle">
+                  <a href="/product/details/89305445#reviews_title">
+                    <svg
+                      style="background-size: 80%"
+                      viewBox="0 0 77 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="rating rating_box mb-1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M77 0H0V5.8297V14H77V0ZM0 5.8297C-4.4356e-06 5.57082 0.198575 5.317 0.512567 5.32424L4.75559 5.42208L5.97371 1.35649C6.11612 0.881169 6.78922 0.881168 6.93163 1.35649L8.14975 5.42208L12.3928 5.32424C12.8888 5.31281 13.0968 5.95296 12.6888 6.23529L9.19861 8.65012L10.6028 12.6552C10.767 13.1235 10.2224 13.5191 9.82784 13.2183L6.45267 10.6452L3.0775 13.2183C2.6829 13.5191 2.13835 13.1235 2.30252 12.6552L3.70673 8.65012L0.216553 6.23529C0.0667809 6.13166 2.57223e-06 5.97983 0 5.8297ZM51.0775 13.2183L54.4527 10.6452L57.8278 13.2183C58.2224 13.5191 58.767 13.1235 58.6028 12.6552L57.1986 8.65012L60.6888 6.23529C61.0968 5.95296 60.8888 5.31281 60.3928 5.32424L56.1498 5.42208L54.9316 1.35649C54.7892 0.881168 54.1161 0.881169 53.9737 1.35649L52.7556 5.42208L48.5126 5.32424C48.0165 5.31281 47.8085 5.95296 48.2166 6.23529L51.7067 8.65012L50.3025 12.6552C50.1384 13.1235 50.6829 13.5191 51.0775 13.2183ZM22.4527 10.6452L19.0775 13.2183C18.6829 13.5191 18.1383 13.1235 18.3025 12.6552L19.7067 8.65012L16.2166 6.23529C15.8085 5.95296 16.0165 5.31281 16.5126 5.32424L20.7556 5.42208L21.9737 1.35649C22.1161 0.881169 22.7892 0.881168 22.9316 1.35649L24.1498 5.42208L28.3928 5.32424C28.8888 5.31281 29.0968 5.95296 28.6888 6.23529L25.1986 8.65012L26.6028 12.6552C26.767 13.1235 26.2224 13.5191 25.8278 13.2183L22.4527 10.6452ZM35.0775 13.2183L38.4527 10.6452L41.8278 13.2183C42.2224 13.5191 42.767 13.1235 42.6028 12.6552L41.1986 8.65012L44.6888 6.23529C45.0968 5.95296 44.8888 5.31281 44.3928 5.32424L40.1498 5.42208L38.9316 1.35649C38.7892 0.881168 38.1161 0.881169 37.9737 1.35649L36.7556 5.42208L32.5126 5.32424C32.0165 5.31281 31.8085 5.95296 32.2166 6.23529L35.7067 8.65012L34.3025 12.6552C34.1384 13.1235 34.6829 13.5191 35.0775 13.2183ZM70.4527 10.6452L67.0775 13.2183C66.6829 13.5191 66.1384 13.1235 66.3025 12.6552L67.7067 8.65012L64.2166 6.23529C63.8085 5.95296 64.0165 5.31281 64.5126 5.32424L68.7556 5.42208L69.9737 1.35649C70.1161 0.881169 70.7892 0.881168 70.9316 1.35649L72.1498 5.42208L76.3928 5.32424C76.8888 5.31281 77.0968 5.95296 76.6888 6.23529L73.1986 8.65012L74.6028 12.6552C74.767 13.1235 74.2224 13.5191 73.8278 13.2183L70.4527 10.6452Z"
+                        fill="white"
+                      ></path>
+                    </svg>
+                    <span class="ml-2 inline-block text-sm xl:text-base"
+                      >1</span
+                    >
+                  </a>
+                </div>
+              </div>
+              <div>
+                <div class="text-center py-2">
+                  <button
+                    class="px-2 md:px-5 rounded-full font-bold text-base h-10 py-2 cursor-pointer min-w-24 md:min-w-32 bg-[#186DF5] text-white"
+                  >
+                    <div class="inline-flex items-center">Add to Cart</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../utilities/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
