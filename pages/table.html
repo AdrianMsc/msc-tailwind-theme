@@ -59,7 +59,7 @@
               <img src="../assets/times.svg" class="msc-modal-close" />
             </button>
           </div>
-          <div class="msc-modal-body">
+          <div class="msc-modal-body max-h-[600px]">
             <div class="flex flex-col gap-4 pb-4">
               <fieldset>
                 <div class="msc-label-toggle-container">
@@ -86,9 +86,9 @@
                   </div>
                 </div>
               </fieldset>
-              <div class="border border-monochromes-grey_xlight rounded overflow-auto">
+              <div class="border border-monochromes-grey_xlight rounded max-h-[500px] overflow-auto">
                 <table class="w-full text-[10px]">
-                  <thead class="border-b-2 border-monochromes-main">
+                  <thead class="sticky top-0 bg-white z-10 border-b-2 border-monochromes-main">
                     <tr class="w-full">
                       <th class="text-start py-2 pl-3 text-sm">Size</th>
                       <th class="text-start py-2 pl-3 text-sm">Dec. Equiv.</th>
@@ -98,12 +98,12 @@
                       <th class="text-start py-2 pl-3 text-sm">Avalability</th>
                       <th class="text-end py-2 pr-3 text-sm">Price</th>
                       <th
-                        class="text-center bg-primary-blue_xlight border-l border-monochromes-grey_xlight sticky right-0 text-sm">
+                        class="text-center bg-primary-blue_xlight border-l border-monochromes-grey_xlight sticky right-0 text-sm z-10">
                         Quantity
                       </th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="-z-10">
                     <!-- Row 1 -->
                     <tr class="border-b border-dashed border-monochromes-grey_light">
                       <td class="py-2 px-3 text-sm">1/64</td>
@@ -178,7 +178,7 @@
                         <button>+</button>
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="border-b border-dashed border-monochromes-grey_light">
                       <td class="py-2 px-3 text-sm">13/64</td>
                       <td class="py-2 px-3 text-sm">0.2031</td>
                       <td class="py-2 px-3 text-sm">18</td>
@@ -242,6 +242,42 @@
                         81171092</td>
                       <td class="py-2 px-3 text-sm">In Stock</td>
                       <td class="py-2 px-3 text-right text-sm">$87.56<span>/ea</span></td>
+                      <td
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0">
+                        <button>-</button>
+                        <div class="msc-input-unit-wrapper">
+                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        </div>
+                        <button>+</button>
+                      </td>
+                    </tr>
+                    <tr class="border-b border-dashed border-monochromes-grey_light">
+                      <td class="py-2 px-3 text-sm">11/16</td>
+                      <td class="py-2 px-3 text-sm">0.6875</td>
+                      <td class="py-2 px-3 text-sm">18</td>
+                      <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
+                      <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
+                        81171118</td>
+                      <td class="py-2 px-3 text-sm">In Stock - Sold in multiples of 12</td>
+                      <td class="py-2 px-3 text-right text-sm">$153.54<span>/ea</span></td>
+                      <td
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0">
+                        <button>-</button>
+                        <div class="msc-input-unit-wrapper">
+                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        </div>
+                        <button>+</button>
+                      </td>
+                    </tr>
+                    <tr class="border-b border-dashed border-monochromes-grey_light">
+                      <td class="py-2 px-3 text-sm">11/16</td>
+                      <td class="py-2 px-3 text-sm">0.6875</td>
+                      <td class="py-2 px-3 text-sm">18</td>
+                      <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
+                      <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
+                        81171118</td>
+                      <td class="py-2 px-3 text-sm">In Stock - Sold in multiples of 12</td>
+                      <td class="py-2 px-3 text-right text-sm">$153.54<span>/ea</span></td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0">
                         <button>-</button>
