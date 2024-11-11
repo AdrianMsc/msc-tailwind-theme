@@ -36,7 +36,7 @@ module.exports = function ({ addComponents }) {
         {},
     },
     ".msc-label-toggle-container": {
-      "@apply flex flex-row items-center": {},
+      "@apply flex flex-col sm:flex-row sm:items-center items-start gap-2": {},
     },
     ".msc-label-triple-toggle": {
       "@apply mb-0.5 mr-1 font-bold": {},
