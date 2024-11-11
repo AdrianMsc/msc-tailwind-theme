@@ -6320,6 +6320,15 @@ body {
     min-width: 256px;
   }
 
+  .md\:min-w-fit {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+
+  .md\:max-w-\[90\%\] {
+    max-width: 90%;
+  }
+
   .md\:justify-end {
     justify-content: flex-end;
   }
