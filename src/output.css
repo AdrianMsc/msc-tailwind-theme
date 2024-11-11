@@ -6289,8 +6289,16 @@ body {
     width: fit-content;
   }
 
+  .md\:w-\[256px\] {
+    width: 256px;
+  }
+
   .md\:min-w-32 {
     min-width: 8rem;
+  }
+
+  .md\:min-w-\[256px\] {
+    min-width: 256px;
   }
 
   .md\:justify-end {
