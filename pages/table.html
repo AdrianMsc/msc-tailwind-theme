@@ -48,11 +48,13 @@
         Trigger Modal
       </button>
 
-      <div id="modalOne" class="msc-modal-bg hidden p-5 md:pl-64">
+      <div id="modalOne"
+        class="absolute flex h-screen w-screen bg-[#21212166] top-0 left-0 place-content-center place-items-center hidden p-5 md:pl-64">
         <div id="modal"
           class="h-fit w-full md:min-w-fit md:max-w-[90%] md:h-[90%] md:min-h-fit bg-white rounded-lg shadow-xl overflow-hidden flex flex-col justify-between">
           <div class="flex p-4 w-full place-content-between items-center">
-            <h4 class="h-fit font-bold align-middle text-sm sm:text-base"><span>Other Available Sizes for</span>
+            <h4 class="h-fit font-bold align-middle text-sm sm:text-base">
+              <span>Other Available Sizes for</span>
               <span>Carbide 118-Degree Bright</span>
               <span class="text-monochromes-grey">By Chicago-Latrobe</span>
             </h4>
@@ -63,27 +65,33 @@
           <div class="flex-row px-4 pt-4 border-t border-b text-sm h-full">
             <div class="flex flex-col gap-4 pb-4 h-full">
               <fieldset>
-                <div class="msc-label-toggle-container">
+                <div class="msc-label-toggle-container flex flex-col sm:flex-row sm:items-center items-start gap-2">
                   <div class="flex">
-                    <p class="msc-label-triple-toggle text-nowrap">Size Type</p>
+                    <p class="mb-0.5 mr-1 font-bold text-nowrap">Size Type</p>
                     <img src="../assets/info-question.svg" class="msc-toggle-icon" />
                   </div>
                   <div
                     class="relative flex flex-row h-8 w-fit p-1 rounded-full items-center bg-monochromes-grey_xlight text-xs text-[#212121A3] bg-[#21212129]">
                     <span id="tripleToggleDot"
                       class="absolute w-[70px] h-3/4 bg-white shadow-md rounded-full transition-all duration-150 ease-in-out"></span>
-                    <label for="fractional" class="msc-triple-toggle-input-label !w-[70px]">
+                    <label for="fractional"
+                      class="msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]">
                       <input type="radio" id="fractional" name="tableModal" value="fractional" class="peer sr-only"
-                        checked /><span class="msc-triple-toggle-text">Fractional</span></label>
-                    <label for="letter" class="msc-triple-toggle-input-label !w-[70px]">
+                        checked /><span
+                        class="w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10">Fractional</span></label>
+                    <label for="letter"
+                      class="msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]">
                       <input type="radio" id="letter" name="tableModal" value="letter" class="peer sr-only" />
-                      <span class="msc-triple-toggle-text">Letter</span></label>
-                    <label for="wire" class="msc-triple-toggle-input-label !w-[70px]">
+                      <span
+                        class="w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10">Letter</span></label>
+                    <label for="wire"
+                      class="msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]">
                       <input type="radio" id="wire" name="tableModal" value="wire" class="peer sr-only" /><span
-                        class="msc-triple-toggle-text">Wire</span></label>
-                    <label for="metric" class="msc-triple-toggle-input-label !w-[70px]">
+                        class="w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10">Wire</span></label>
+                    <label for="metric"
+                      class="msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]">
                       <input type="radio" id="metric" name="tableModal" value="metric" class="peer sr-only" /><span
-                        class="msc-triple-toggle-text">Metric</span></label>
+                        class="w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10">Metric</span></label>
                   </div>
                 </div>
               </fieldset>
@@ -93,12 +101,20 @@
                   <thead
                     class="sticky top-0 bg-white z-10 after:content-[''] after:absolute after:inset-0 after:border-b-2 after:border-black after:pointer-events-none after:z-10">
                     <tr class="w-full">
-                      <th class="text-start py-2 pl-3 text-sm ">Size</th>
-                      <th class="text-start py-2 pl-3 text-sm">Dec. Equiv.</th>
-                      <th class="text-start py-2 pl-3 text-sm">Drill Point Angle</th>
-                      <th class="text-start py-2 pl-3 text-sm">Coating/Finish</th>
+                      <th class="text-start py-2 pl-3 text-sm">Size</th>
+                      <th class="text-start py-2 pl-3 text-sm">
+                        Dec. Equiv.
+                      </th>
+                      <th class="text-start py-2 pl-3 text-sm">
+                        Drill Point Angle
+                      </th>
+                      <th class="text-start py-2 pl-3 text-sm">
+                        Coating/Finish
+                      </th>
                       <th class="text-start py-2 pl-3">MSC#</th>
-                      <th class="text-start py-2 pl-3 text-sm">Avalability</th>
+                      <th class="text-start py-2 pl-3 text-sm">
+                        Avalability
+                      </th>
                       <th class="text-end py-2 pr-3 text-sm">Price</th>
                       <th
                         class="text-center bg-primary-blue_xlight after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_light after:pointer-events-none after:z-10 sticky right-0 text-sm z-10">
@@ -113,16 +129,26 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171043</td>
-                      <td class="py-2 px-3 text-ellipsis text-nowrap text-sm">In Stock - Sold in multiples of 12</td>
-                      <td class="py-2 px-3 text-right text-sm">$145.32<span>/ea</span></td>
+                        81171043
+                      </td>
+                      <td class="py-2 px-3 text-ellipsis text-nowrap text-sm">
+                        In Stock - Sold in multiples of 12
+                      </td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $145.32<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -131,16 +157,26 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171043</td>
-                      <td class="py-2 px-3 text-sm">In Stock - Sold in multiples of 12</td>
-                      <td class="py-2 px-3 text-right text-sm">$145.32<span>/ea</span></td>
+                        81171043
+                      </td>
+                      <td class="py-2 px-3 text-sm">
+                        In Stock - Sold in multiples of 12
+                      </td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $145.32<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black h-5 disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 " />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -149,16 +185,26 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171043</td>
-                      <td class="py-2 px-3 text-sm">In Stock - Sold in multiples of 12</td>
-                      <td class="py-2 px-3 text-right text-sm">$145.32<span>/ea</span></td>
+                        81171043
+                      </td>
+                      <td class="py-2 px-3 text-sm">
+                        In Stock - Sold in multiples of 12
+                      </td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $145.32<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -167,16 +213,26 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171043</td>
-                      <td class="py-2 px-3 text-sm">In Stock - Sold in multiples of 12</td>
-                      <td class="py-2 px-3 text-right text-sm">$145.32<span>/ea</span></td>
+                        81171043
+                      </td>
+                      <td class="py-2 px-3 text-sm">
+                        In Stock - Sold in multiples of 12
+                      </td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $145.32<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -185,16 +241,26 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171043</td>
-                      <td class="py-2 px-3 text-sm">In Stock - Sold in multiples of 12</td>
-                      <td class="py-2 px-3 text-right text-sm">$145.32<span>/ea</span></td>
+                        81171043
+                      </td>
+                      <td class="py-2 px-3 text-sm">
+                        In Stock - Sold in multiples of 12
+                      </td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $145.32<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black  disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -203,16 +269,26 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171043</td>
-                      <td class="py-2 px-3 text-sm">In Stock - Sold in multiples of 12</td>
-                      <td class="py-2 px-3 text-right text-sm">$145.32<span>/ea</span></td>
+                        81171043
+                      </td>
+                      <td class="py-2 px-3 text-sm">
+                        In Stock - Sold in multiples of 12
+                      </td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $145.32<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -221,16 +297,26 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171043</td>
-                      <td class="py-2 px-3 text-sm">In Stock - Sold in multiples of 12</td>
-                      <td class="py-2 px-3 text-right text-sm">$145.32<span>/ea</span></td>
+                        81171043
+                      </td>
+                      <td class="py-2 px-3 text-sm">
+                        In Stock - Sold in multiples of 12
+                      </td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $145.32<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -239,16 +325,24 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171092</td>
+                        81171092
+                      </td>
                       <td class="py-2 px-3 text-sm">In Stock</td>
-                      <td class="py-2 px-3 text-right text-sm">$87.56<span>/ea</span></td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $87.56<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -257,16 +351,26 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171118</td>
-                      <td class="py-2 px-3 text-sm">In Stock - Sold in multiples of 12</td>
-                      <td class="py-2 px-3 text-right text-sm">$153.54<span>/ea</span></td>
+                        81171118
+                      </td>
+                      <td class="py-2 px-3 text-sm">
+                        In Stock - Sold in multiples of 12
+                      </td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $153.54<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -275,16 +379,24 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171134</td>
+                        81171134
+                      </td>
                       <td class="py-2 px-3 text-sm">Ships from supplier</td>
-                      <td class="py-2 px-3 text-right text-sm">$184.24<span>/ea</span></td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $184.24<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -293,16 +405,26 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171043</td>
-                      <td class="py-2 px-3 text-ellipsis text-nowrap text-sm">In Stock - Sold in multiples of 12</td>
-                      <td class="py-2 px-3 text-right text-sm">$145.32<span>/ea</span></td>
+                        81171043
+                      </td>
+                      <td class="py-2 px-3 text-ellipsis text-nowrap text-sm">
+                        In Stock - Sold in multiples of 12
+                      </td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $145.32<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black  disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <!-- Repeat similar rows for a total of 10 rows -->
@@ -312,16 +434,26 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171043</td>
-                      <td class="py-2 px-3 text-sm">In Stock - Sold in multiples of 12</td>
-                      <td class="py-2 px-3 text-right text-sm">$145.32<span>/ea</span></td>
+                        81171043
+                      </td>
+                      <td class="py-2 px-3 text-sm">
+                        In Stock - Sold in multiples of 12
+                      </td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $145.32<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black  disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -330,16 +462,24 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171092</td>
+                        81171092
+                      </td>
                       <td class="py-2 px-3 text-sm">In Stock</td>
-                      <td class="py-2 px-3 text-right text-sm">$87.56<span>/ea</span></td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $87.56<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black h-5 disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -348,16 +488,26 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171118</td>
-                      <td class="py-2 px-3 text-sm">In Stock - Sold in multiples of 12</td>
-                      <td class="py-2 px-3 text-right text-sm">$153.54<span>/ea</span></td>
+                        81171118
+                      </td>
+                      <td class="py-2 px-3 text-sm">
+                        In Stock - Sold in multiples of 12
+                      </td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $153.54<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black h-5 disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 " />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -366,16 +516,26 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171118</td>
-                      <td class="py-2 px-3 text-sm">In Stock - Sold in multiples of 12</td>
-                      <td class="py-2 px-3 text-right text-sm">$153.54<span>/ea</span></td>
+                        81171118
+                      </td>
+                      <td class="py-2 px-3 text-sm">
+                        In Stock - Sold in multiples of 12
+                      </td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $153.54<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black h-5 disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -384,16 +544,26 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171118</td>
-                      <td class="py-2 px-3 text-sm">In Stock - Sold in multiples of 12</td>
-                      <td class="py-2 px-3 text-right text-sm">$153.54<span>/ea</span></td>
+                        81171118
+                      </td>
+                      <td class="py-2 px-3 text-sm">
+                        In Stock - Sold in multiples of 12
+                      </td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $153.54<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black  disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                     <tr>
@@ -402,39 +572,264 @@
                       <td class="py-2 px-3 text-sm">18</td>
                       <td class="py-2 px-3 text-sm">Bright/Uncoated</td>
                       <td class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline">
-                        81171134</td>
+                        81171134
+                      </td>
                       <td class="py-2 px-3 text-sm">Ships from supplier</td>
-                      <td class="py-2 px-3 text-right text-sm">$184.24<span>/ea</span></td>
+                      <td class="py-2 px-3 text-right text-sm">
+                        $184.24<span>/ea</span>
+                      </td>
                       <td
                         class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button><i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i></button>
-                        <div class="msc-input-unit-wrapper">
-                          <input id="field" type="number" placeholder="0" class="msc-input-unit peer order-2 !h-5" />
+                        <button>
+                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                        </button>
+                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                          <input id="field" type="number" placeholder="0"
+                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black  disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
                         </div>
-                        <button><i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i></button>
+                        <button>
+                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                        </button>
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
-
           </div>
           <div class="flex justify-end py-3 px-4 gap-4 items-center h-auto">
-            <p class="font-bold text-sm sm:text-base">Total: <span class="font-bold text-sm sm:text-base">$0.00</span>
+            <p class="font-bold text-sm sm:text-base">
+              Total: <span class="font-bold text-sm sm:text-base">$0.00</span>
             </p>
-            <button class="msc-btn msc-btn-blue-solid">Add to Cart</button>
+            <button
+              class="py-2 px-2 md:px-5 h-10 rounded-full font-bold text-base cursor-pointer min-w-24 md:min-w-32 text-white bg-primary-blue hover:bg-[#186DF5] active:bg-blue-700 disabled:text-white disabled:cursor-not-allowed disabled:bg-gray-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-[#424242]">
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- <h2 class="mt-4">Code</h2>
+      <h2 class="mt-4">Code</h2>
       <div class="max-w-[1500px]">
         <pre class="h-fit">
           <code class="language-html rounded">
+  &lt;div id=&quot;modalOne&quot;
+    class=&quot;absolute flex h-screen w-screen bg-[#21212166] top-0 left-0 place-content-center place-items-center hidden
+    p-5 md:pl-64&quot;&gt;
+      &lt;div id=&quot;modal&quot;
+          class=&quot;h-fit w-full md:min-w-fit md:max-w-[90%] md:h-[90%] md:min-h-fit bg-white rounded-lg shadow-xl
+          overflow-hidden flex flex-col justify-between&quot;&gt;
+            &lt;div class=&quot;flex p-4 w-full place-content-between items-center&quot;&gt;
+              &lt;h4 class=&quot;h-fit font-bold align-middle text-sm sm:text-base&quot;&gt;&lt;span&gt;Other Available Sizes
+                for&lt;/span&gt;&lt;span&gt;Carbide 118-Degree Bright&lt;/span&gt;
+                &lt;span class=&quot;text-monochromes-grey&quot;&gt;By Chicago-Latrobe&lt;/span&gt;
+              &lt;/h4&gt;
+              &lt;button id=&quot;modalClsBtn&quot; class=&quot;p-2&quot;&gt;
+                &lt;img src=&quot;../assets/times.svg&quot; class=&quot;msc-modal-close&quot; /&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex-row px-4 pt-4 border-t border-b text-sm h-full&quot;&gt;
+              &lt;div class=&quot;flex flex-col gap-4 pb-4 h-full&quot;&gt;
+                &lt;fieldset&gt;
+                  &lt;div class=&quot;msc-label-toggle-container flex flex-col sm:flex-row sm:items-center items-start gap-2&quot;&gt;
+                  &lt;div class=&quot;flex&quot;&gt;
+                    &lt;p class=&quot;mb-0.5 mr-1 font-bold text-nowrap&quot;&gt;Size Type&lt;/p&gt;
+                    &lt;img src=&quot;../assets/info-question.svg&quot; class=&quot;msc-toggle-icon&quot; /&gt;
+                  &lt;/div&gt;
+                &lt;div
+                  class=&quot;relative flex flex-row h-8 w-fit p-1 rounded-full items-center bg-monochromes-grey_xlight text-xs
+                  text-[#212121A3] bg-[#21212129]&quot;&gt;
+                    &lt;span id=&quot;tripleToggleDot&quot;
+                    class=&quot;absolute w-[70px] h-3/4 bg-white shadow-md rounded-full transition-all duration-150
+                    ease-in-out&quot;&gt;&lt;/span&gt;
+                  &lt;label for=&quot;fractional&quot;
+                    class=&quot;msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer
+                    w-[70px]&quot;&gt;
+                    &lt;input type=&quot;radio&quot; id=&quot;fractional&quot; name=&quot;tableModal&quot; value=&quot;fractional&quot;
+                    class=&quot;peer sr-only&quot;
+                    checked /&gt;&lt;span
+                    class=&quot;w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition
+                    ease-in delay-150 z-10&quot;&gt;Fractional&lt;/span&gt;
+                  &lt;/label&gt;
+                  &lt;label for=&quot;letter&quot;
+                    class=&quot;msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer
+                    w-[70px]&quot;&gt;
+                    &lt;input type=&quot;radio&quot; id=&quot;letter&quot; name=&quot;tableModal&quot; value=&quot;letter&quot;
+                    class=&quot;peer sr-only&quot; /&gt;
+                    &lt;span
+                    class=&quot;w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition
+                    ease-in delay-150 z-10&quot;&gt;Letter&lt;/span&gt;
+                  &lt;/label&gt;
+                  &lt;label for=&quot;wire&quot;
+                    class=&quot;msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer
+                    w-[70px]&quot;&gt;
+                    &lt;input type=&quot;radio&quot; id=&quot;wire&quot; name=&quot;tableModal&quot; value=&quot;wire&quot; class=&quot;peer
+                    sr-only&quot; /&gt;&lt;span
+                    class=&quot;w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition
+                    ease-in delay-150 z-10&quot;&gt;Wire&lt;/span&gt;
+                  &lt;/label&gt;
+                  &lt;label for=&quot;metric&quot;
+                    class=&quot;msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer
+                    w-[70px]&quot;&gt;
+                    &lt;input type=&quot;radio&quot; id=&quot;metric&quot; name=&quot;tableModal&quot; value=&quot;metric&quot;
+                    class=&quot;peer sr-only&quot; /&gt;&lt;span
+                    class=&quot;w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition
+                    ease-in delay-150 z-10&quot;&gt;Metric&lt;/span&gt;
+                  &lt;/label&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/fieldset&gt;
+          &lt;div id=&quot;tableDiv&quot;
+            class=&quot;border border-monochromes-grey_xlight rounded overflow-auto max-h-[500px] sm:h-auto&quot;&gt;
+            &lt;table class=&quot;w-full h-full&quot;&gt;
+              &lt;thead
+                class=&quot;sticky top-0 bg-white z-10 after:content-[&#39;&#39;] after:absolute after:inset-0 after:border-b-2
+                after:border-black after:pointer-events-none after:z-10&quot;&gt;
+                  &lt;tr class=&quot;w-full&quot;&gt;
+                    &lt;th class=&quot;text-start py-2 pl-3 text-sm &quot;&gt;Size&lt;/th&gt;
+                    &lt;th class=&quot;text-start py-2 pl-3 text-sm&quot;&gt;Dec. Equiv.&lt;/th&gt;
+                    &lt;th class=&quot;text-start py-2 pl-3 text-sm&quot;&gt;Drill Point Angle&lt;/th&gt;
+                    &lt;th class=&quot;text-start py-2 pl-3 text-sm&quot;&gt;Coating/Finish&lt;/th&gt;
+                    &lt;th class=&quot;text-start py-2 pl-3&quot;&gt;MSC#&lt;/th&gt;
+                    &lt;th class=&quot;text-start py-2 pl-3 text-sm&quot;&gt;Avalability&lt;/th&gt;
+                    &lt;th class=&quot;text-end py-2 pr-3 text-sm&quot;&gt;Price&lt;/th&gt;
+                    &lt;th
+                      class=&quot;text-center bg-primary-blue_xlight after:content-[&#39;&#39;] after:absolute after:inset-0 after:border-l
+                      after:border-monochromes-grey_light after:pointer-events-none after:z-10 sticky right-0 text-sm z-10&quot;&gt;
+                        Quantity
+                    &lt;/th&gt;
+                  &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody class=&quot;-z-10 text-sm&quot;&gt;
+                  &lt;tr class=&quot;border-b border-dashed border-monochromes-grey_light&quot;&gt;
+                    &lt;td class=&quot;py-2 px-3 text-sm&quot;&gt;1/64&lt;/td&gt;
+                    &lt;td class=&quot;py-2 px-3 text-sm&quot;&gt;0.0325&lt;/td&gt;
+                    &lt;td class=&quot;py-2 px-3 text-sm&quot;&gt;18&lt;/td&gt;
+                    &lt;td class=&quot;py-2 px-3 text-sm&quot;&gt;Bright/Uncoated&lt;/td&gt;
+                    &lt;td class=&quot;py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline&quot;&gt;
+                    81171043&lt;/td&gt;
+                    &lt;td class=&quot;py-2 px-3 text-ellipsis text-nowrap text-sm&quot;&gt;In Stock - Sold in multiples of 12&lt;/td&gt;
+                    &lt;td class=&quot;py-2 px-3 text-right text-sm&quot;&gt;$145.32&lt;span&gt;/ea&lt;/span&gt;&lt;/td&gt;
+                    &lt;td
+                      class=&quot;py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0
+                      justify-center&quot;&gt;
+                      &lt;button&gt;&lt;i class=&quot;fa-solid fa-minus size-4 text-monochromes-grey p-1&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                        &lt;div class=&quot;relative flex flex-col max-w-[68px] w-[68px]&quot;&gt;
+                          &lt;input id=&quot;field&quot; type=&quot;number&quot; placeholder=&quot;0&quot; class=&quot;text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5&quot; /&gt;
+                        &lt;/div&gt;
+                      &lt;button&gt;&lt;i class=&quot;fa-solid fa-plus size-4 text-monochromes-grey p-1&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/tbody&gt;
+              &lt;/table&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;flex justify-end py-3 px-4 gap-4 items-center h-auto&quot;&gt;
+        &lt;p class=&quot;font-bold text-sm sm:text-base&quot;&gt;Total: &lt;span class=&quot;font-bold text-sm
+        sm:text-base&quot;&gt;$0.00&lt;/span&gt;
+        &lt;/p&gt;
+        &lt;button
+          class=&quot;py-2 px-2 md:px-5 h-10 rounded-full font-bold text-base cursor-pointer min-w-24 md:min-w-32 text-white
+          bg-primary-blue hover:bg-[#186DF5] active:bg-blue-700 disabled:text-white disabled:cursor-not-allowed
+          disabled:bg-gray-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-4
+          focus-visible:outline-[#424242]&quot;&gt;Add
+          to Cart
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;script&gt;
+  const modalBtn = document.getElementById(&quot;modalBtn&quot;);
+  const modalOne = document.getElementById(&quot;modalOne&quot;);
+  const modalClsBtn = document.getElementById(&quot;modalClsBtn&quot;);
+  const cancelBtn = document.getElementById(&quot;cancelBtn&quot;);
+
+  modalBtn.onclick = function () {
+    modalOne.classList.remove(&quot;hidden&quot;);
+  };
+  modalClsBtn.onclick = function () {
+    modalOne.classList.add(&quot;hidden&quot;);
+  };
+  cancelBtn.onclick = function () {
+    modalOne.classList.add(&quot;hidden&quot;);
+  };
+&lt;/script&gt;
+
+&lt;script&gt;
+  document.addEventListener(&quot;DOMContentLoaded&quot;, function () {
+    function updateSliderPosition(toggleContainer) {
+      let slider = toggleContainer.querySelector(&quot;#tripleToggleDot&quot;);
+      let checkedRadio = toggleContainer.querySelector(
+        &#39;input[type=&quot;radio&quot;]:checked&#39;
+      );
+      let radios = Array.from(
+      toggleContainer.querySelectorAll(&#39;input[type=&quot;radio&quot;]&#39;)
+      );
+      let radioIndex = radios.indexOf(checkedRadio);
+      let positions = [
+      &quot;left-[4px]&quot;,
+      &quot;left-[74px]&quot;,
+      &quot;left-2/4&quot;,
+      &quot;left-[212px]&quot;,
+      ];
+
+      if (radioIndex &gt;= 0 &amp;&amp; radioIndex &lt; positions.length) {
+        slider.className =
+        &quot;absolute w-1/4 h-3/4 bg-white shadow-md rounded-full transition-all duration-150 ease-in-out &quot; +
+        positions[radioIndex];
+      } else {
+        console.error(&quot;Invalid radio index:&quot;, radioIndex);
+      }
+    }
+
+  document
+    .querySelectorAll(&quot;.msc-label-toggle-container&quot;)
+    .forEach(function (toggleContainer) {
+      toggleContainer
+    .querySelectorAll(&quot;.msc-triple-toggle-input-label input&quot;)
+    .forEach(function (radio) {
+      radio.addEventListener(&quot;change&quot;, function () {
+        updateSliderPosition(toggleContainer);
+      });
+    });
+      updateSliderPosition(toggleContainer);
+    });
+  });
+&lt;/script&gt;
+
+&lt;script&gt;
+  function setMaxHeight() {
+    const tableDiv = document.getElementById(&quot;tableDiv&quot;);
+    const modal = document.getElementById(&quot;modal&quot;);
+    const modalOne = document.getElementById(&quot;modalOne&quot;);
+
+    if (tableDiv &amp;&amp; modal) {
+    tableDiv.style.maxHeight = modal.offsetHeight - 200 + &quot;px&quot;;
+    }
+  }
+
+  window.onload = function () {
+    setMaxHeight();
+    const modalOne = document.getElementById(&quot;modalOne&quot;);
+    if (modalOne &amp;&amp; !modalOne.classList.contains(&quot;hidden&quot;)) {
+      setMaxHeight();
+    }
+  };
+
+  window.onresize = setMaxHeight;
+
+  document.addEventListener(&quot;DOMContentLoaded&quot;, function () {
+    const modalElement = document.getElementById(&quot;modal&quot;);
+    if (modalElement) {
+      modalElement.addEventListener(&quot;shown.bs.modal&quot;, setMaxHeight);
+    }
+  });
+&lt;/script&gt;
           </code>
         </pre>
-      </div> -->
+      </div>
     </div>
   </section>
 
@@ -462,9 +857,16 @@
         let checkedRadio = toggleContainer.querySelector(
           'input[type="radio"]:checked'
         );
-        let radios = Array.from(toggleContainer.querySelectorAll('input[type="radio"]'));
+        let radios = Array.from(
+          toggleContainer.querySelectorAll('input[type="radio"]')
+        );
         let radioIndex = radios.indexOf(checkedRadio);
-        let positions = ["left-[4px]", "left-[74px]", "left-2/4", "left-[212px]"];
+        let positions = [
+          "left-[4px]",
+          "left-[74px]",
+          "left-2/4",
+          "left-[212px]",
+        ];
 
         if (radioIndex >= 0 && radioIndex < positions.length) {
           slider.className =
@@ -492,29 +894,29 @@
 
   <script>
     function setMaxHeight() {
-      const tableDiv = document.getElementById('tableDiv');
-      const modal = document.getElementById('modal');
-      const modalOne = document.getElementById('modalOne');
+      const tableDiv = document.getElementById("tableDiv");
+      const modal = document.getElementById("modal");
+      const modalOne = document.getElementById("modalOne");
 
       if (tableDiv && modal) {
-        tableDiv.style.maxHeight = (modal.offsetHeight - 200) + 'px';
+        tableDiv.style.maxHeight = modal.offsetHeight - 200 + "px";
       }
     }
 
     window.onload = function () {
       setMaxHeight();
-      const modalOne = document.getElementById('modalOne');
-      if (modalOne && !modalOne.classList.contains('hidden')) {
+      const modalOne = document.getElementById("modalOne");
+      if (modalOne && !modalOne.classList.contains("hidden")) {
         setMaxHeight();
       }
     };
 
     window.onresize = setMaxHeight;
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const modalElement = document.getElementById('modal');
+    document.addEventListener("DOMContentLoaded", function () {
+      const modalElement = document.getElementById("modal");
       if (modalElement) {
-        modalElement.addEventListener('shown.bs.modal', setMaxHeight);
+        modalElement.addEventListener("shown.bs.modal", setMaxHeight);
       }
     });
   </script>
@@ -525,7 +927,6 @@
   <script>
     hljs.highlightAll();
   </script>
-
 </body>
 
 </html>
