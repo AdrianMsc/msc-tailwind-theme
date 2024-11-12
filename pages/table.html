@@ -87,7 +87,8 @@
                   </div>
                 </div>
               </fieldset>
-              <div id="tableDiv" class="border border-monochromes-grey_xlight rounded overflow-auto">
+              <div id="tableDiv"
+                class="border border-monochromes-grey_xlight rounded overflow-auto max-h-[500px] sm:h-auto">
                 <table class="w-full h-full">
                   <thead
                     class="sticky top-0 bg-white z-10 after:content-[''] after:absolute after:inset-0 after:border-b-2 after:border-black after:pointer-events-none after:z-10">
@@ -438,6 +439,23 @@
   </section>
 
   <script>
+    const modalBtn = document.getElementById("modalBtn");
+    const modalOne = document.getElementById("modalOne");
+    const modalClsBtn = document.getElementById("modalClsBtn");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    modalBtn.onclick = function () {
+      modalOne.classList.remove("hidden");
+    };
+    modalClsBtn.onclick = function () {
+      modalOne.classList.add("hidden");
+    };
+    cancelBtn.onclick = function () {
+      modalOne.classList.add("hidden");
+    };
+  </script>
+
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
       function updateSliderPosition(toggleContainer) {
         let slider = toggleContainer.querySelector("#tripleToggleDot");
@@ -448,7 +466,6 @@
         let radioIndex = radios.indexOf(checkedRadio);
         let positions = ["left-[4px]", "left-[74px]", "left-2/4", "left-[212px]"];
 
-        // Ensure radioIndex is within bounds
         if (radioIndex >= 0 && radioIndex < positions.length) {
           slider.className =
             "absolute w-1/4 h-3/4 bg-white shadow-md rounded-full transition-all duration-150 ease-in-out " +
@@ -477,14 +494,29 @@
     function setMaxHeight() {
       const tableDiv = document.getElementById('tableDiv');
       const modal = document.getElementById('modal');
+      const modalOne = document.getElementById('modalOne');
 
       if (tableDiv && modal) {
         tableDiv.style.maxHeight = (modal.offsetHeight - 200) + 'px';
       }
     }
 
-    window.onload = setMaxHeight;
+    window.onload = function () {
+      setMaxHeight();
+      const modalOne = document.getElementById('modalOne');
+      if (modalOne && !modalOne.classList.contains('hidden')) {
+        setMaxHeight();
+      }
+    };
+
     window.onresize = setMaxHeight;
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const modalElement = document.getElementById('modal');
+      if (modalElement) {
+        modalElement.addEventListener('shown.bs.modal', setMaxHeight);
+      }
+    });
   </script>
 
   <script src="../utilities/index.js"></script>
@@ -492,22 +524,6 @@
   <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
   <script>
     hljs.highlightAll();
-  </script>
-  <script>
-    const modalBtn = document.getElementById("modalBtn");
-    const modalOne = document.getElementById("modalOne");
-    const modalClsBtn = document.getElementById("modalClsBtn");
-    const cancelBtn = document.getElementById("cancelBtn");
-
-    modalBtn.onclick = function () {
-      modalOne.classList.remove("hidden");
-    };
-    modalClsBtn.onclick = function () {
-      modalOne.classList.add("hidden");
-    };
-    cancelBtn.onclick = function () {
-      modalOne.classList.add("hidden");
-    };
   </script>
 
 </body>
