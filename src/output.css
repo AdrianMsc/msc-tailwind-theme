@@ -3795,12 +3795,12 @@ h6 {
   max-height: 2.5rem;
 }
 
-.max-h-\[500px\] {
-  max-height: 500px;
-}
-
 .max-h-\[560px\] {
   max-height: 560px;
+}
+
+.max-h-\[500px\] {
+  max-height: 500px;
 }
 
 .min-h-10 {
@@ -4834,11 +4834,6 @@ h6 {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
 .fill-\[\#1C58EE\] {
   fill: #1C58EE;
 }
@@ -5800,6 +5795,12 @@ body {
   content: var(--tw-content);
   --tw-border-opacity: 1;
   border-color: rgb(166 166 166 / var(--tw-border-opacity));
+}
+
+.after\:border-monochromes-grey_xlight::after {
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(219 219 219 / var(--tw-border-opacity));
 }
 
 .after\:\!bg-primary-blue::after {
