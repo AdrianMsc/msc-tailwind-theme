@@ -3839,12 +3839,12 @@ h6 {
   max-height: 2.5rem;
 }
 
-.max-h-\[500px\] {
-  max-height: 500px;
-}
-
 .max-h-\[560px\] {
   max-height: 560px;
+}
+
+.max-h-\[500px\] {
+  max-height: 500px;
 }
 
 .min-h-10 {
