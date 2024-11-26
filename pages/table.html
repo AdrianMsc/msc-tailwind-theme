@@ -63,7 +63,7 @@
               <img src="../assets/times.svg" class="h-3 w-3" />
             </button>
           </div>
-          <div class="flex-row px-4 pt-4 text-sm max-h-[90%] overflow-hidden">
+          <div class="flex-row px-4 pt-4 text-sm h-[90%] overflow-auto">
             <div class="flex flex-col gap-4 pb-4 h-full flex-1">
               <fieldset>
                 <div class="msc-label-toggle-container flex flex-col sm:flex-row sm:items-center items-start gap-2">
@@ -96,7 +96,7 @@
                   </div>
                 </div>
               </fieldset>
-              <div id="tableDiv" class="border border-monochromes-grey_xlight rounded overflow-auto">
+              <div id="tableDiv" class="border border-monochromes-grey_xlight rounded overflow-auto max-h-[99%] w-full">
                 <table class="w-full h-full">
                   <thead
                     class="sticky top-0 bg-white z-10 after:content-[''] after:absolute after:inset-0 after:border-b-2 after:border-black after:pointer-events-none after:z-10">
@@ -123,7 +123,7 @@
                       </th>
                     </tr>
                   </thead>
-                  <tbody class="-z-10 text-sm">
+                  <tbody class="text-sm">
                     <tr class="border-b border-dashed border-monochromes-grey_light">
                       <td class="text-nowrap py-2 px-3 text-sm">1/64</td>
                       <td class="text-nowrap py-2 px-3 text-sm">0.0325</td>
@@ -143,17 +143,19 @@
                         $145.32<span>/pack of 12</span>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="sticky right-0 z-[5] py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight justify-center h-full w-full">
+                        <div class="flex flex-row gap-2">
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -175,17 +177,20 @@
                         $5.32<span>/ea</span>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black h-5 disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 " />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black h-5 disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 " />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -207,17 +212,20 @@
                         $87.56<span>/ea</span>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -239,17 +247,20 @@
                         $153.54<span>/pack of 12</span>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -271,17 +282,20 @@
                         $184.54<span>/pack of 12</span>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black  disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black  disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -303,17 +317,20 @@
                         $168.24<span>/ea</span>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -335,17 +352,20 @@
                         $237.89<span>/pack of 12</span>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -367,17 +387,20 @@
                         $254.56<span>/ea</span>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -399,17 +422,20 @@
                         $254.56<span>/pack of 12</span>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -431,17 +457,20 @@
                       <td class="py-2 px-3 text-right text-sm text-nowrap">$279.44<span>/ea</span></td>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -463,17 +492,20 @@
                         $254.56<span>/ea</span>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -495,17 +527,20 @@
                         $254.56<span>/pack of 12</span>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -527,17 +562,20 @@
                       <td class="py-2 px-3 text-right text-sm text-nowrap">$279.44<span>/ea</span></td>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -559,17 +597,20 @@
                         $254.56<span>/pack of 12</span>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -591,17 +632,20 @@
                       <td class="py-2 px-3 text-right text-sm text-nowrap">$279.44<span>/ea</span></td>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -623,17 +667,20 @@
                         $254.56<span>/ea</span>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -655,17 +702,20 @@
                         $254.56<span>/pack of 12</span>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                     <tr class="border-b border-dashed border-monochromes-grey_light">
@@ -687,17 +737,20 @@
                       <td class="py-2 px-3 text-right text-sm text-nowrap">$279.44<span>/ea</span></td>
                       </td>
                       <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0 justify-center">
-                        <button>
-                          <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                        </button>
-                        <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                          <input id="field" type="number" placeholder="0"
-                            class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center">
+                        <div class="flex flex-row gap-2">
+
+                          <button>
+                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
+                          </button>
+                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
+                            <input id="field" type="number" placeholder="0"
+                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
+                          </div>
+                          <button>
+                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
+                          </button>
                         </div>
-                        <button>
-                          <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                        </button>
                       </td>
                     </tr>
                   </tbody>
