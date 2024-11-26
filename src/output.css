@@ -6650,8 +6650,18 @@ body {
     display: none;
   }
 
+  .lg\:h-fit {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
   .lg\:max-h-\[80\%\] {
     max-height: 80%;
+  }
+
+  .lg\:max-h-fit {
+    max-height: -moz-fit-content;
+    max-height: fit-content;
   }
 
   .lg\:w-\[45\%\] {
@@ -6664,6 +6674,11 @@ body {
 
   .lg\:max-w-\[50\%\] {
     max-width: 50%;
+  }
+
+  .lg\:max-w-fit {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
   }
 
   .lg\:translate-x-0 {
