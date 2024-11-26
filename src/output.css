@@ -6784,6 +6784,16 @@ body {
   .\32xl\:col-start-3 {
     grid-column-start: 3;
   }
+
+  .\32xl\:h-fit {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .\32xl\:max-w-fit {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
 }
 
 .rtl\:text-right:where([dir="rtl"], [dir="rtl"] *) {
