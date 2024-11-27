@@ -771,132 +771,131 @@
       <div class="max-w-[1500px]">
         <pre class="h-fit">
           <code class="language-html rounded">
+  &lt;button id=&quot;modalBtn&quot; class=&quot;msc-btn msc-btn-blue-solid&quot;&gt;
+    Trigger Modal
+  &lt;/button&gt;
+  
   &lt;div id=&quot;modalOne&quot;
     class=&quot;absolute flex h-screen w-screen bg-[#21212166] top-0 left-0 place-content-center place-items-center hidden
     p-5 md:pl-64&quot;&gt;
-      &lt;div id=&quot;modal&quot;
-          class=&quot;h-fit w-full md:min-w-fit md:max-w-[90%] md:h-[90%] md:min-h-fit bg-white rounded-lg shadow-xl
-          overflow-hidden flex flex-col justify-between&quot;&gt;
-            &lt;div class=&quot;flex p-4 w-full place-content-between items-center&quot;&gt;
-              &lt;h4 class=&quot;h-fit font-bold align-middle text-sm sm:text-base&quot;&gt;&lt;span&gt;Other Available Sizes
-                for&lt;/span&gt;&lt;span&gt;Carbide 118-Degree Bright&lt;/span&gt;
-                &lt;span class=&quot;text-monochromes-grey&quot;&gt;By Chicago-Latrobe&lt;/span&gt;
-              &lt;/h4&gt;
-              &lt;button id=&quot;modalClsBtn&quot; class=&quot;p-2&quot;&gt;
-                &lt;img src=&quot;../assets/times.svg&quot; class=&quot;h-3 w-3&quot;1/&gt;
-              &lt;/button&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;flex-row px-4 pt-4 border-t border-b text-sm h-full&quot;&gt;
-              &lt;div class=&quot;flex flex-col gap-4 pb-4 h-full&quot;&gt;
-                &lt;fieldset&gt;
-                  &lt;div class=&quot;msc-label-toggle-container flex flex-col sm:flex-row sm:items-center items-start gap-2&quot;&gt;
-                  &lt;div class=&quot;flex&quot;&gt;
-                    &lt;p class=&quot;mb-0.5 mr-1 font-bold text-nowrap&quot;&gt;Size Type&lt;/p&gt;
-                    &lt;img src=&quot;../assets/info-question.svg&quot; class=&quot;msc-toggle-icon&quot; /&gt;
-                  &lt;/div&gt;
-                &lt;div
-                  class=&quot;relative flex flex-row h-8 w-fit p-1 rounded-full items-center bg-monochromes-grey_xlight text-xs
-                  text-[#212121A3] bg-[#21212129]&quot;&gt;
-                    &lt;span id=&quot;tripleToggleDot&quot;
-                    class=&quot;absolute w-[70px] h-3/4 bg-white shadow-md rounded-full transition-all duration-150
-                    ease-in-out&quot;&gt;&lt;/span&gt;
-                  &lt;label for=&quot;fractional&quot;
-                    class=&quot;msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer
-                    w-[70px]&quot;&gt;
-                    &lt;input type=&quot;radio&quot; id=&quot;fractional&quot; name=&quot;tableModal&quot; value=&quot;fractional&quot;
-                    class=&quot;peer sr-only&quot;
-                    checked /&gt;&lt;span
-                    class=&quot;w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition
-                    ease-in delay-150 z-10&quot;&gt;Fractional&lt;/span&gt;
-                  &lt;/label&gt;
-                  &lt;label for=&quot;letter&quot;
-                    class=&quot;msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer
-                    w-[70px]&quot;&gt;
-                    &lt;input type=&quot;radio&quot; id=&quot;letter&quot; name=&quot;tableModal&quot; value=&quot;letter&quot;
-                    class=&quot;peer sr-only&quot; /&gt;
-                    &lt;span
-                    class=&quot;w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition
-                    ease-in delay-150 z-10&quot;&gt;Letter&lt;/span&gt;
-                  &lt;/label&gt;
-                  &lt;label for=&quot;wire&quot;
-                    class=&quot;msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer
-                    w-[70px]&quot;&gt;
-                    &lt;input type=&quot;radio&quot; id=&quot;wire&quot; name=&quot;tableModal&quot; value=&quot;wire&quot; class=&quot;peer
-                    sr-only&quot; /&gt;&lt;span
-                    class=&quot;w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition
-                    ease-in delay-150 z-10&quot;&gt;Wire&lt;/span&gt;
-                  &lt;/label&gt;
-                  &lt;label for=&quot;metric&quot;
-                    class=&quot;msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer
-                    w-[70px]&quot;&gt;
-                    &lt;input type=&quot;radio&quot; id=&quot;metric&quot; name=&quot;tableModal&quot; value=&quot;metric&quot;
-                    class=&quot;peer sr-only&quot; /&gt;&lt;span
-                    class=&quot;w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition
-                    ease-in delay-150 z-10&quot;&gt;Metric&lt;/span&gt;
-                  &lt;/label&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/fieldset&gt;
-          &lt;div id=&quot;tableDiv&quot;
-            class=&quot;border border-monochromes-grey_xlight rounded overflow-auto max-h-[500px] sm:h-auto&quot;&gt;
-            &lt;table class=&quot;w-full h-full&quot;&gt;
-              &lt;thead
-                class=&quot;sticky top-0 bg-white z-10 after:content-[&#39;&#39;] after:absolute after:inset-0 after:border-b-2
-                after:border-black after:pointer-events-none after:z-10&quot;&gt;
-                  &lt;tr class=&quot;w-full&quot;&gt;
-                    &lt;th class=&quot;text-start py-2 pl-3 text-sm &quot;&gt;Size&lt;/th&gt;
-                    &lt;th class=&quot;text-start py-2 pl-3 text-sm&quot;&gt;Dec. Equiv.&lt;/th&gt;
-                    &lt;th class=&quot;text-start py-2 pl-3 text-sm&quot;&gt;Drill Point Angle&lt;/th&gt;
-                    &lt;th class=&quot;text-start py-2 pl-3 text-sm&quot;&gt;Coating/Finish&lt;/th&gt;
-                    &lt;th class=&quot;text-start py-2 pl-3&quot;&gt;MSC#&lt;/th&gt;
-                    &lt;th class=&quot;text-start py-2 pl-3 text-sm&quot;&gt;Avalability&lt;/th&gt;
-                    &lt;th class=&quot;text-end py-2 pr-3 text-sm&quot;&gt;Price&lt;/th&gt;
-                    &lt;th
-                      class=&quot;text-center bg-primary-blue_xlight after:content-[&#39;&#39;] after:absolute after:inset-0 after:border-l
-                      after:border-monochromes-grey_light after:pointer-events-none after:z-10 sticky right-0 text-sm z-10&quot;&gt;
-                        Quantity
-                    &lt;/th&gt;
-                  &lt;/tr&gt;
-                &lt;/thead&gt;
-                &lt;tbody class=&quot;-z-10 text-sm&quot;&gt;
-                  &lt;tr class=&quot;border-b border-dashed border-monochromes-grey_light&quot;&gt;
-                    &lt;td class=&quot;py-2 px-3 text-sm&quot;&gt;1/64&lt;/td&gt;
-                    &lt;td class=&quot;py-2 px-3 text-sm&quot;&gt;0.0325&lt;/td&gt;
-                    &lt;td class=&quot;py-2 px-3 text-sm&quot;&gt;18&lt;/td&gt;
-                    &lt;td class=&quot;py-2 px-3 text-sm&quot;&gt;Bright/Uncoated&lt;/td&gt;
-                    &lt;td class=&quot;py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline&quot;&gt;
-                    81171043&lt;/td&gt;
-                    &lt;td class=&quot;py-2 px-3 text-ellipsis text-nowrap text-sm&quot;&gt;In Stock&lt;/td&gt;
-                    &lt;td class=&quot;py-2 px-3 text-right text-sm&quot;&gt;$145.32&lt;span&gt;/ea&lt;/span&gt;&lt;/td&gt;
-                    &lt;td
-                      class=&quot;py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight flex gap-2 sticky right-0
-                      justify-center&quot;&gt;
-                      &lt;button&gt;&lt;i class=&quot;fa-solid fa-minus size-4 text-monochromes-grey p-1&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                        &lt;div class=&quot;relative flex flex-col max-w-[68px] w-[68px]&quot;&gt;
-                          &lt;input id=&quot;field&quot; type=&quot;number&quot; placeholder=&quot;0&quot; class=&quot;text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5&quot; /&gt;
-                        &lt;/div&gt;
-                      &lt;button&gt;&lt;i class=&quot;fa-solid fa-plus size-4 text-monochromes-grey p-1&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                    &lt;/td&gt;
-                  &lt;/tr&gt;
-                &lt;/tbody&gt;
-              &lt;/table&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;flex justify-end py-3 px-4 gap-4 items-center h-auto&quot;&gt;
-        &lt;p class=&quot;font-bold text-sm sm:text-base&quot;&gt;Total: &lt;span class=&quot;font-bold text-sm
-        sm:text-base&quot;&gt;$0.00&lt;/span&gt;
-        &lt;/p&gt;
-        &lt;button
-          class=&quot;py-2 px-2 md:px-5 h-10 rounded-full font-bold text-base cursor-pointer min-w-24 md:min-w-32 text-white
-          bg-primary-blue hover:bg-[#186DF5] active:bg-blue-700 disabled:text-white disabled:cursor-not-allowed
-          disabled:bg-gray-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-4
-          focus-visible:outline-[#424242]&quot;&gt;Add
-          to Cart
+    &lt;div id=&quot;modal&quot;
+    class=&quot;h-full w-full md:min-w-fit md:max-w-[90%] md:max-h-[90%] bg-white rounded-lg shadow-xl overflow-hidden flex
+    flex-col place-content-stretch 2xl:h-fit 2xl:max-w-fit&quot;&gt;
+      &lt;div class=&quot;flex p-4 w-full place-content-between items-center border-b&quot;&gt;
+        &lt;h4 class=&quot;h-fit font-bold align-middle text-sm sm:text-base max-h-fit&quot;&gt;
+          &lt;span&gt;Other Available Sizes for&lt;/span&gt;
+          &lt;span&gt;Carbide 118-Degree Bright&lt;/span&gt;
+          &lt;span class=&quot;text-monochromes-grey&quot;&gt;By Chicago-Latrobe&lt;/span&gt;
+        &lt;/h4&gt;
+        &lt;button id=&quot;modalClsBtn&quot; class=&quot;p-2&quot;&gt;
+          &lt;img src=&quot;../assets/times.svg&quot; class=&quot;h-3 w-3&quot; /&gt;
         &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;div class=&quot;flex-row px-4 pt-4 text-sm h-[90%] lg:h-fit overflow-auto&quot;&gt;
+      &lt;div class=&quot;flex flex-col gap-4 pb-4 h-full flex-1&quot;&gt;
+        &lt;fieldset&gt;
+          &lt;div class=&quot;msc-label-toggle-container flex flex-col sm:flex-row sm:items-center items-start gap-2&quot;&gt;
+            &lt;div class=&quot;flex&quot;&gt;
+              &lt;p class=&quot;mb-0.5 mr-1 font-bold text-nowrap&quot;&gt;Size Type&lt;/p&gt;
+              &lt;img src=&quot;../assets/info-question.svg&quot; class=&quot;msc-toggle-icon&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;relative flex flex-row h-8 w-fit p-1 rounded-full items-center bg-monochromes-grey_xlight text-xs text-[#212121A3] bg-[#21212129]&quot;&gt;
+              &lt;span id=&quot;tripleToggleDot&quot; class=&quot;absolute w-[70px] h-3/4 bg-white shadow-md rounded-full transition-all duration-150 ease-in-out&quot;&gt;&lt;/span&gt;
+              &lt;label for=&quot;fractional&quot; class=&quot;msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]&quot;&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;fractional&quot; name=&quot tableModal&quot; value=&quot;fractional&quot; class=&quot;peer sr-only&quot; checked /&gt;
+                &lt;span class=&quot;w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10&quot;&gt;
+                  Fractional
+                &lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label for=&quot;letter&quot; class=&quot;msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]&quot;&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;letter&quot; name=&quot;tableModal&quot; value=&quot;letter&quot; class=&quot;peer sr-only&quot; /&gt;
+                &lt;span class=&quot;w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10&quot;&gt;
+                  Letter
+                &lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label for=&quot;wire&quot; class=&quot;msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer
+              w-[70px]&quot;&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;wire&quot; name=&quot;tableModal&quot; value=&quot;wire&quot; class=&quot;peer sr-only&quot; /&gt;
+                &lt;span class=&quot;w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transitionv ease-in delay-150 z-10&quot;&gt;
+                  Wire
+                &lt;/span&gt;
+              &lt;/label&gt;
+              &lt;label for=&quot;metric&quot; class=&quot;msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]&quot;&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;metric&quot; name=&quot;tableModal&quot; value=&quot;metric&quot; class=&quot;peer sr-only&quot; /&gt;
+                &lt;span class=&quot;w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10&quot;&gt;
+                  Metric
+                &lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/fieldset&gt;
+        &lt;div id=&quot;tableDiv&quot; class=&quot;border border-monochromes-grey_xlight rounded overflow-auto max-h-[99%] w-full&quot;&gt;
+          &lt;table class=&quot;w-full h-full&quot;&gt;
+            &lt;thead class=&quot;sticky top-0 bg-white z-10 after:content-[&#39;&#39;] after:absolute after:inset-0 after:border-b-2 after:border-black 
+            after:pointer-events-none after:z-10&quot;&gt;
+              &lt;tr class=&quot;w-full&quot;&gt;
+                &lt;th class=&quot;text-start py-2 pl-3 text-sm&quot;&gt;Size&lt;/th&gt;
+                &lt;th class=&quot;text-start py-2 pl-3 text-sm&quot;&gt;Dec. Equiv.&lt;/th&gt;
+                &lt;th class=&quot;text-start py-2 pl-3 text-sm&quot;&gt;Drill Point Angle&lt;/th&gt;
+                &lt;th class=&quot;text-start py-2 pl-3 text-sm&quot;&gt;Coating/Finish&lt;/th&gt;
+                &lt;th class=&quot;text-start py-2 pl-3&quot;&gt;MSC#&lt;/th&gt;
+                &lt;th class=&quot;text-start py-2 pl-3 text-sm&quot;&gt;Avalability&lt;/th&gt;
+                &lt;th class=&quot;text-end py-2 pr-3 text-sm&quot;&gt;Unit Price&lt;/th&gt;
+                &lt;th class=&quot;text-end py-2 pr-3 text-sm&quot;&gt;Price&lt;/th&gt;
+                &lt;th class=&quot;text-center bg-primary-blue_xlight after:content-[&#39;&#39;] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight 
+                after:pointer-events-none after:z-10 sticky right-0 text-sm z-10&quot;&gt;Quantity&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody class=&quot;text-sm&quot;&gt;
+              &lt;tr class=&quot;border-b border-dashed border-monochromes-grey_light&quot;&gt;
+                &lt;td class=&quot;text-nowrap py-2 px-3 text-sm&quot;&gt;1/64&lt;/td&gt;
+                &lt;td class=&quot;text-nowrap py-2 px-3 text-sm&quot;&gt;0.0325&lt;/td&gt;
+                &lt;td class=&quot;text-nowrap py-2 px-3 text-sm&quot;&gt;18&lt;/td&gt;
+                &lt;td class=&quot;text-nowrap py-2 px-3 text-sm&quot;&gt;Bright/Uncoated&lt;/td&gt;
+                &lt;td class=&quot;py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap&quot;&gt;81171043&lt;/td&gt;
+                &lt;td class=&quot;text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit&quot;&gt;
+                  &lt;i class=&quot;fa-solid fa-check size-4&quot;&gt;&lt;/i&gt;
+                  In Stock
+                &lt;/td&gt;
+                &lt;td class=&quot;py-2 px-3 text-right text-sm text-nowrap&quot;&gt;$12.11&lt;span&gt;/ea&lt;/span&gt;&lt;/td&gt;
+                &lt;td class=&quot;py-2 px-3 text-right text-sm text-nowrap&quot;&gt;$145.32&lt;span&gt;/pack of 12&lt;/span&gt;&lt;/td&gt;
+                &lt;td class=&quot;sticky right-0 z-[5] py-2 px-3 bg-primary-blue_xlight justify-center h-full w-full border-l border-monochromes-grey_xlight 
+                after:content-[&#39;&#39;] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight&quot;&gt;
+                  &lt;div class=&quot;flex flex-row gap-2 justify-center&quot;&gt;
+                    &lt;button&gt;
+                      &lt;i class=&quot;fa-solid fa-minus size-4 text-monochromes-grey p-1&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;div class=&quot;relative flex flex-col max-w-[68px] w-[68px]&quot;&gt;
+                      &lt;input id=&quot;field&quot; type=&quot;number&quot; placeholder=&quot;0&quot; class=&quot;text-center max-w-[68px] border border-monochromes-grey_light 
+                      hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed 
+                      focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed
+                      hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red
+                      focus:invalid:!border-error-red peer order-2 h-5&quot; /&gt;
+                    &lt;/div&gt;
+                  &lt;button&gt;
+                    &lt;i class=&quot;fa-solid fa-plus size-4 text-monochromes-grey p-1&quot;&gt;&lt;/i&gt;
+                  &lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+  &lt;div class=&quot;flex justify-end py-3 px-4 gap-4 items-center h-auto border-t max-h-fit&quot;&gt;
+    &lt;p class=&quot;font-bold text-sm sm:text-base&quot;&gt;
+      Total: &lt;span class=&quot;font-bold text-sm sm:text-base&quot;&gt;$0.00&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;button class=&quot;py-2 px-2 md:px-5 h-10 rounded-full font-bold text-base cursor-pointer min-w-24 md:min-w-32 text-white
+    bg-primary-blue hover:bg-[#186DF5] active:bg-blue-700 disabled:text-white disabled:cursor-not-allowed
+    disabled:bg-gray-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-4
+    focus-visible:outline-[#424242]&quot;&gt;
+      Add to Cart
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;script&gt;
   const modalBtn = document.getElementById(&quot;modalBtn&quot;);
