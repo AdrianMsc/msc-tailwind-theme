@@ -3599,13 +3599,6 @@ h6 {
   -webkit-line-clamp: 3;
 }
 
-.line-clamp-4 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-}
-
 .\!block {
   display: block !important;
 }
@@ -4634,6 +4627,16 @@ h6 {
   border-color: rgb(255 152 10 / var(--tw-border-opacity));
 }
 
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-monochromes-grey {
+  --tw-border-opacity: 1;
+  border-color: rgb(113 113 113 / var(--tw-border-opacity));
+}
+
 .border-opacity-\[16\%\] {
   --tw-border-opacity: 16%;
 }
@@ -5006,6 +5009,11 @@ h6 {
   padding-bottom: 14px;
 }
 
+.py-\[10px\] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -5199,6 +5207,14 @@ h6 {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[40px\] {
+  font-size: 40px;
+}
+
+.text-\[30px\] {
+  font-size: 30px;
 }
 
 .font-black {
@@ -6001,6 +6017,11 @@ body {
   background-color: rgb(242 242 242 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-primary-blue_xlight:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 254 / var(--tw-bg-opacity));
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }
@@ -6097,6 +6118,10 @@ body {
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
+.active\:bg-\[\#0d3aa933\]:active {
+  background-color: #0d3aa933;
+}
+
 .hover\:enabled\:\!border-monochromes-main:enabled:hover {
   --tw-border-opacity: 1 !important;
   border-color: rgb(33 33 33 / var(--tw-border-opacity)) !important;
@@ -6124,6 +6149,10 @@ body {
 .disabled\:bg-white:disabled {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.disabled\:bg-transparent:disabled {
+  background-color: transparent;
 }
 
 .disabled\:text-monochromes-grey_light:disabled {
@@ -6408,6 +6437,10 @@ body {
     width: 256px;
   }
 
+  .md\:w-\[320px\] {
+    width: 320px;
+  }
+
   .md\:min-w-32 {
     min-width: 8rem;
   }
@@ -6423,6 +6456,10 @@ body {
 
   .md\:max-w-\[90\%\] {
     max-width: 90%;
+  }
+
+  .md\:max-w-\[720px\] {
+    max-width: 720px;
   }
 
   .md\:justify-end {
@@ -6485,12 +6522,20 @@ body {
     width: 45%;
   }
 
+  .lg\:w-\[720px\] {
+    width: 720px;
+  }
+
   .lg\:min-w-\[300px\] {
     min-width: 300px;
   }
 
   .lg\:max-w-\[50\%\] {
     max-width: 50%;
+  }
+
+  .lg\:max-w-\[720px\] {
+    max-width: 720px;
   }
 
   .lg\:translate-x-0 {

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../src/output.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="../assets/font-awesome/css/all.css" />
+  <link rel="shortcut icon" href="https://www.mscdirect.com/favicon.ico" type="image/x-icon" />
+  <title>Mail list Test C</title>
+</head>
+
+<body class="bg-[#f2f2f2]">
+  <button onclick="toggleSideNav()" aria-controls="default-sidebar" type="button"
+    class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+    <span class="sr-only">Open sidebar</span>
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path clip-rule="evenodd" fill-rule="evenodd"
+        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+      </path>
+    </svg>
+  </button>
+
+  <aside id="msc-sidebar"
+    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+    aria-label="Sidebar">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
+      <a href="../index.html">
+        <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" /></a>
+      <p class="font-bold text-lg mb-5">Fuel Design System</p>
+
+      <span id="sidenav-menu"></span>
+    </div>
+  </aside>
+
+  <section class="msc-grid-layout">
+    <div class="msc-layout-container">
+      <h1 class="mb-3">
+        <small class="text-sm text-primary-blue"></small>
+        <br />
+        Mail List Modal (C Variant)
+      </h1>
+
+      <button id="modalBtn"
+        class="py-2 px-2 md:px-5 h-10 rounded-full font-bold text-base cursor-pointer min-w-24 md:min-w-32 text-white bg-primary-blue hover:bg-[#186DF5] active:bg-blue-700 disabled:text-white disabled:cursor-not-allowed disabled:bg-gray-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-[#424242]">
+        Trigger Modal
+      </button>
+
+      <div id="modalOne"
+        class="absolute flex h-screen w-screen bg-[#21212166] top-0 left-0 place-content-center place-items-center hidden p-5 z-50">
+        <div id="modal"
+          class="h-fill w-full bg-white rounded-lg shadow-xl overflow-hidden flex flex-col place-content-stretch md:max-w-[720px]">
+          <div class=" flex py-5 px-4 font-bold text-white bg-primary-blue">
+            <h2 class="text-center w-full text-[30px]">
+              Join our email list!
+            </h2>
+            <button class="size-4" id="modalClsBtn"><i class="fa-solid fa-xmark top-0 right-0"></i></button>
+          </div>
+          <div class="flex flex-col items-center p-5 gap-4">
+            <div class="flex flex-col gap-2 items-center">
+              <p class="font-bold text-xl text-center">Save up to 20% off on order over $149</p>
+              <p class="font-bold text-xs">Exclusions Apply</p>
+            </div>
+
+            <input name="mail-list" placeholder="Email Address"
+              class="w-full border border-monochromes-grey_light py-[10px] px-4 rounded md:w-[320px] disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed disabled:text-monochromes-grey_light hover:disabled:!border-[#e5e7eb] hover:enabled:!border-monochromes-main focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red" />
+
+            <div class="flex flex-col gap-2 items-center">
+              <button
+                class="py-1 px-4 h-7 rounded-full font-bold text-sm w-[200px] cursor-pointer min-w-24 md:min-w-32 text-white bg-primary-blue hover:bg-[#186DF5] active:bg-blue-700 disabled:text-white disabled:cursor-not-allowed disabled:bg-gray-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-[#424242]">
+                Suscribe
+              </button>
+
+              <button
+                class="bg-transparent w-[200px] text-primary-blue rounded-full hover:bg-primary-blue_xlight active:bg-[#0d3aa933] disabled:bg-transparent disabled:cursor-not-allowed disabled:text-monochromes-grey_light focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-[#424242] font-bold text-sm">
+                No Thanks
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-4">Code</h2>
+      <div class="max-w-[1500px]">
+        <pre class="h-fit">
+          <code class="language-html rounded">
+          </code>
+        </pre>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const modalBtn = document.getElementById("modalBtn");
+    const modalOne = document.getElementById("modalOne");
+    const modalClsBtn = document.getElementById("modalClsBtn");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    modalBtn.onclick = function () {
+      modalOne.classList.remove("hidden");
+    };
+    modalClsBtn.onclick = function () {
+      modalOne.classList.add("hidden");
+    };
+    cancelBtn.onclick = function () {
+      modalOne.classList.add("hidden");
+    };
+  </script>
+
+  <script src="../utilities/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>
