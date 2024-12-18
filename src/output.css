@@ -5024,6 +5024,11 @@ h6 {
   padding-bottom: 14px;
 }
 
+.py-\[10px\] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -5222,6 +5227,10 @@ h6 {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[30px\] {
+  font-size: 30px;
 }
 
 .font-black {
@@ -6462,6 +6471,10 @@ body {
     width: 720px;
   }
 
+  .md\:w-\[320px\] {
+    width: 320px;
+  }
+
   .md\:min-w-32 {
     min-width: 8rem;
   }
@@ -6477,6 +6490,10 @@ body {
 
   .md\:max-w-\[90\%\] {
     max-width: 90%;
+  }
+
+  .md\:max-w-\[720px\] {
+    max-width: 720px;
   }
 
   .md\:flex-row {
