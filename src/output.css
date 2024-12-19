@@ -3653,6 +3653,11 @@ h6 {
   height: 1rem;
 }
 
+.size-5 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 .size-\[128px\] {
   width: 128px;
   height: 128px;
@@ -3661,11 +3666,6 @@ h6 {
 .size-\[400px\] {
   width: 400px;
   height: 400px;
-}
-
-.size-5 {
-  width: 1.25rem;
-  height: 1.25rem;
 }
 
 .h-10 {
@@ -3957,6 +3957,10 @@ h6 {
 
 .w-\[256px\] {
   width: 256px;
+}
+
+.w-\[50px\] {
+  width: 50px;
 }
 
 .w-\[60px\] {
@@ -5036,11 +5040,6 @@ h6 {
   padding-bottom: 1.25rem;
 }
 
-.py-\[10px\] {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 .py-\[13px\] {
   padding-top: 13px;
   padding-bottom: 13px;
@@ -5194,10 +5193,6 @@ h6 {
   font-size: 1.5rem;
 }
 
-.text-\[10rem\] {
-  font-size: 10rem;
-}
-
 .text-\[12px\] {
   font-size: 12px;
 }
@@ -5212,6 +5207,10 @@ h6 {
 
 .text-\[20px\] {
   font-size: 20px;
+}
+
+.text-\[20rem\] {
+  font-size: 20rem;
 }
 
 .text-\[24px\] {
@@ -5257,10 +5256,6 @@ h6 {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[20rem\] {
-  font-size: 20rem;
 }
 
 .font-black {
@@ -6514,10 +6509,6 @@ body {
 
   .md\:w-\[256px\] {
     width: 256px;
-  }
-
-  .md\:w-\[320px\] {
-    width: 320px;
   }
 
   .md\:w-\[720px\] {
