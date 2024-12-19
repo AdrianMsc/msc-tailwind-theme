@@ -322,6 +322,7 @@
 
               <div class="flex flex-col gap-2 items-center">
                 <button
+                  onclick="toggleThanksModal()"
                   class="py-1 px-4 h-10 rounded-full font-bold text-sm w-[200px] cursor-pointer min-w-24 md:min-w-32 text-white bg-primary-blue hover:bg-[#186DF5] active:bg-blue-700 disabled:text-white disabled:cursor-not-allowed disabled:bg-gray-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-[#424242]"
                 >
                   Subscribe
@@ -439,21 +440,20 @@
       const modalDiscount = document.getElementById("modalDiscount");
       const modalThanks = document.getElementById("modalThanks");
 
+      const modalBtn = document.getElementById("modalBtn");
+      const modalOne = document.getElementById("modalOne");
+      const modalClsBtn = document.getElementById("modalClsBtn");
+      const cancelBtn = document.getElementById("cancelBtn");
+
       toggleDiscountModal = () => {
         modalDiscount.classList.toggle("hidden");
       };
 
       toggleThanksModal = () => {
         modalDiscount.classList.add("hidden");
+        modalOne.classList.add("hidden");
         modalThanks.classList.toggle("hidden");
       };
-    </script>
-
-    <script>
-      const modalBtn = document.getElementById("modalBtn");
-      const modalOne = document.getElementById("modalOne");
-      const modalClsBtn = document.getElementById("modalClsBtn");
-      const cancelBtn = document.getElementById("cancelBtn");
 
       modalBtn.onclick = function () {
         modalOne.classList.remove("hidden");
