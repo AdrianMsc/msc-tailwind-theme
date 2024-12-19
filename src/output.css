@@ -5263,6 +5263,16 @@ h6 {
   line-height: 1rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .font-black {
   font-weight: 900;
 }
@@ -6447,6 +6457,14 @@ body {
     position: relative;
   }
 
+  .md\:order-1 {
+    order: 1;
+  }
+
+  .md\:order-2 {
+    order: 2;
+  }
+
   .md\:col-span-10 {
     grid-column: span 10 / span 10;
   }
@@ -6524,6 +6542,11 @@ body {
     width: 720px;
   }
 
+  .md\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
   .md\:min-w-32 {
     min-width: 8rem;
   }
@@ -6551,6 +6574,10 @@ body {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:place-content-between {
+    place-content: space-between;
   }
 
   .md\:justify-end {
@@ -6586,6 +6613,14 @@ body {
     padding-top: 0.75rem;
   }
 
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-center {
+    text-align: center;
+  }
+
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -6594,6 +6629,10 @@ body {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-\[4rem\] {
+    font-size: 4rem;
   }
 }
 
