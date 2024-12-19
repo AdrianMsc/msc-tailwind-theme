@@ -379,10 +379,18 @@ const sideNav = `
         </li>
         <li>
           <a
+            href="modal-discount.html"
+            class="flex items-center px-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
+          >
+            <span class="flex-1 ms-3 whitespace-nowrap">Mail List Modal B</span>
+          </a>
+        </li>
+        <li>
+          <a
             href="mail-list.html"
             class="flex items-center px-2 text-gray-900 rounded-lg pl-5 hover:bg-gray-100 group"
           >
-            <span class="flex-1 ms-3 whitespace-nowrap">Mail List Modal</span>
+            <span class="flex-1 ms-3 whitespace-nowrap">Mail List Modal C</span>
           </a>
         </li>
       </ul>
