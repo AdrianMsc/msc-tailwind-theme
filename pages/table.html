@@ -1,776 +1,1203 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css"
+    />
+    <link rel="stylesheet" href="../assets/font-awesome/css/all.css" />
+    <link
+      rel="shortcut icon"
+      href="https://www.mscdirect.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Table</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../src/output.css" rel="stylesheet" />
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css" />
-  <link rel="stylesheet" href="../assets/font-awesome/css/all.css" />
-  <link rel="shortcut icon" href="https://www.mscdirect.com/favicon.ico" type="image/x-icon" />
-  <title>Table</title>
-</head>
+  <body class="bg-[#f2f2f2]">
+    <button
+      onclick="toggleSideNav()"
+      aria-controls="default-sidebar"
+      type="button"
+      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+    >
+      <span class="sr-only">Open sidebar</span>
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+        ></path>
+      </svg>
+    </button>
 
-<body class="bg-[#f2f2f2]">
-  <button onclick="toggleSideNav()" aria-controls="default-sidebar" type="button"
-    class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
-    <span class="sr-only">Open sidebar</span>
-    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-      <path clip-rule="evenodd" fill-rule="evenodd"
-        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
-      </path>
-    </svg>
-  </button>
+    <aside
+      id="msc-sidebar"
+      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
+        <a href="../index.html">
+          <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3"
+        /></a>
+        <p class="font-bold text-lg mb-5">Fuel Design System</p>
 
-  <aside id="msc-sidebar"
-    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-    aria-label="Sidebar">
-    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
-      <a href="../index.html">
-        <img src="../assets/msc-logo.svg" alt=" MSC LOGO" class="mb-3" /></a>
-      <p class="font-bold text-lg mb-5">Fuel Design System</p>
+        <span id="sidenav-menu"></span>
+      </div>
+    </aside>
 
-      <span id="sidenav-menu"></span>
-    </div>
-  </aside>
+    <section class="msc-grid-layout">
+      <div class="msc-layout-container">
+        <h1 class="mb-3">
+          <small class="text-sm text-primary-blue"></small>
+          <br />
+          Table Modal
+        </h1>
 
-  <section class="msc-grid-layout">
-    <div class="msc-layout-container">
-      <h1 class="mb-3">
-        <small class="text-sm text-primary-blue"></small>
-        <br />
-        Table Modal
-      </h1>
+        <button
+          id="modalBtn"
+          class="py-2 px-2 md:px-5 h-10 rounded-full font-bold text-base cursor-pointer min-w-24 md:min-w-32 text-white bg-primary-blue hover:bg-[#186DF5] active:bg-blue-700 disabled:text-white disabled:cursor-not-allowed disabled:bg-gray-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-[#424242]"
+        >
+          Trigger Modal
+        </button>
 
-      <button id="modalBtn" class="py-2 px-2 md:px-5 h-10 rounded-full font-bold text-base cursor-pointer min-w-24 md:min-w-32 text-white
-    bg-primary-blue hover:bg-[#186DF5] active:bg-blue-700 disabled:text-white disabled:cursor-not-allowed
-    disabled:bg-gray-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-4
-    focus-visible:outline-[#424242]">
-        Trigger Modal
-      </button>
-
-      <div id="modalOne"
-        class="fixed flex h-full w-screen bg-[#21212166] top-0 left-0 place-content-center place-items-center hidden p-5 z-50">
-        <div id="modal"
-          class="h-full w-full md:min-w-fit md:max-w-[90%] md:max-h-[90%] bg-white rounded-lg shadow-xl overflow-hidden flex flex-col place-content-stretch 2xl:h-fit 2xl:max-w-fit">
-          <div class="flex p-4 w-full place-content-between items-center border-b">
-            <h4 class="h-fit font-bold align-middle text-sm sm:text-base max-h-fit">
-              <span>Other Available Sizes for</span>
-              <span>Carbide 118-Degree Bright</span>
-              <span class="text-monochromes-grey">By Chicago-Latrobe</span>
-            </h4>
-            <button id="modalClsBtn" class="p-2">
-              <img src="../assets/times.svg" class="h-3 w-3" />
-            </button>
-          </div>
-          <div class="flex-row px-4 pt-4 text-sm h-[90%] lg:h-fit overflow-auto">
-            <div class="flex flex-col gap-4 pb-4 h-full flex-1">
-              <fieldset>
-                <div class="msc-label-toggle-container flex flex-col sm:flex-row sm:items-center items-start gap-2">
-                  <div class="flex">
-                    <p class="mb-0.5 mr-1 font-bold text-nowrap">Size Type</p>
-                    <img src="../assets/info-question.svg" class="msc-toggle-icon" />
-                  </div>
+        <div
+          id="modalOne"
+          class="fixed flex h-full w-screen bg-[#21212166] top-0 left-0 place-content-center place-items-center hidden p-5 z-50"
+        >
+          <div
+            id="modal"
+            class="h-full w-full md:min-w-fit md:max-w-[90%] md:max-h-[90%] bg-white rounded-lg shadow-xl overflow-hidden flex flex-col place-content-stretch 2xl:h-fit 2xl:max-w-fit"
+          >
+            <div
+              class="flex p-4 w-full place-content-between items-center border-b"
+            >
+              <h4
+                class="h-fit font-bold align-middle text-sm sm:text-base max-h-fit"
+              >
+                <span>Other Available Sizes for</span>
+                <span>Carbide 118-Degree Bright</span>
+                <span class="text-monochromes-grey">By Chicago-Latrobe</span>
+              </h4>
+              <button id="modalClsBtn" class="p-2">
+                <img src="../assets/times.svg" class="h-3 w-3" />
+              </button>
+            </div>
+            <div
+              class="flex-row px-4 pt-4 text-sm h-[90%] lg:h-fit overflow-auto"
+            >
+              <div class="flex flex-col gap-4 pb-4 h-full flex-1">
+                <fieldset>
                   <div
-                    class="relative flex flex-row h-8 w-fit p-1 rounded-full items-center bg-monochromes-grey_xlight text-xs text-[#212121A3] bg-[#21212129]">
-                    <span id="tripleToggleDot"
-                      class="absolute w-[70px] h-3/4 bg-white shadow-md rounded-full transition-all duration-150 ease-in-out"></span>
-                    <label for="fractional"
-                      class="msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]">
-                      <input type="radio" id="fractional" name="tableModal" value="fractional" class="peer sr-only"
-                        checked /><span
-                        class="w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10">Fractional</span></label>
-                    <label for="letter"
-                      class="msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]">
-                      <input type="radio" id="letter" name="tableModal" value="letter" class="peer sr-only" />
+                    class="msc-label-toggle-container flex flex-col sm:flex-row sm:items-center items-start gap-2"
+                  >
+                    <div class="flex">
+                      <p class="mb-0.5 mr-1 font-bold text-nowrap">Size Type</p>
+                      <img
+                        src="../assets/info-question.svg"
+                        class="msc-toggle-icon"
+                      />
+                    </div>
+                    <div
+                      class="relative flex flex-row h-8 w-fit p-1 rounded-full items-center bg-monochromes-grey_xlight text-xs text-[#212121A3] bg-[#21212129]"
+                    >
                       <span
-                        class="w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10">Letter</span></label>
-                    <label for="wire"
-                      class="msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]">
-                      <input type="radio" id="wire" name="tableModal" value="wire" class="peer sr-only" /><span
-                        class="w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10">Wire</span></label>
-                    <label for="metric"
-                      class="msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]">
-                      <input type="radio" id="metric" name="tableModal" value="metric" class="peer sr-only" /><span
-                        class="w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10">Metric</span></label>
+                        id="tripleToggleDot"
+                        class="absolute w-[70px] h-3/4 bg-white shadow-md rounded-full transition-all duration-150 ease-in-out"
+                      ></span>
+                      <label
+                        for="fractional"
+                        class="msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]"
+                      >
+                        <input
+                          type="radio"
+                          id="fractional"
+                          name="tableModal"
+                          value="fractional"
+                          class="peer sr-only"
+                          checked
+                        /><span
+                          class="w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10"
+                          >Fractional</span
+                        ></label
+                      >
+                      <label
+                        for="letter"
+                        class="msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]"
+                      >
+                        <input
+                          type="radio"
+                          id="letter"
+                          name="tableModal"
+                          value="letter"
+                          class="peer sr-only"
+                        />
+                        <span
+                          class="w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10"
+                          >Letter</span
+                        ></label
+                      >
+                      <label
+                        for="wire"
+                        class="msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]"
+                      >
+                        <input
+                          type="radio"
+                          id="wire"
+                          name="tableModal"
+                          value="wire"
+                          class="peer sr-only"
+                        /><span
+                          class="w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10"
+                          >Wire</span
+                        ></label
+                      >
+                      <label
+                        for="metric"
+                        class="msc-triple-toggle-input-label flex h-6 items-center justify-center rounded-full cursor-pointer w-[70px]"
+                      >
+                        <input
+                          type="radio"
+                          id="metric"
+                          name="tableModal"
+                          value="metric"
+                          class="peer sr-only"
+                        /><span
+                          class="w-full h-full rounded-full text-center content-center font-bold text-xs peer-checked:text-black transition ease-in delay-150 z-10"
+                          >Metric</span
+                        ></label
+                      >
+                    </div>
                   </div>
+                </fieldset>
+                <div
+                  id="tableDiv"
+                  class="border border-monochromes-grey_xlight rounded overflow-auto max-h-[99%] w-full"
+                >
+                  <table class="w-full h-full">
+                    <thead
+                      class="sticky top-0 bg-white z-10 after:content-[''] after:absolute after:inset-0 after:border-b-2 after:border-black after:pointer-events-none after:z-10"
+                    >
+                      <tr class="w-full">
+                        <th class="text-start py-2 pl-3 text-sm">Size</th>
+                        <th class="text-start py-2 pl-3 text-sm">
+                          Dec. Equiv.
+                        </th>
+                        <th class="text-start py-2 pl-3 text-sm">
+                          Drill Point Angle
+                        </th>
+                        <th class="text-start py-2 pl-3 text-sm">
+                          Coating/Finish
+                        </th>
+                        <th class="text-start py-2 pl-3">MSC#</th>
+                        <th class="text-start py-2 pl-3 text-sm">
+                          Avalability
+                        </th>
+                        <th class="text-end py-2 pr-3 text-sm">Unit Price</th>
+                        <th class="text-end py-2 pr-3 text-sm">Price</th>
+                        <th
+                          class="text-center bg-primary-blue_xlight after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight after:pointer-events-none after:z-10 sticky right-0 text-sm z-10"
+                        >
+                          Quantity
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">1/64</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.0325</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171043
+                        </td>
+                        <td
+                          class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-check size-4"></i>
+                          In Stock
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $12.11<span>/ea</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $145.32<span>/pack of 12</span>
+                        </td>
+                        <td
+                          class="sticky right-0 z-[5] py-2 px-3 bg-primary-blue_xlight justify-center h-full max-w-fit border-l border-monochromes-grey_xlight after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">1/16</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.0625</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171043
+                        </td>
+                        <td
+                          class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-check size-4"></i>
+                          In Stock
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $5.32<span>/ea</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $5.32<span>/ea</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black h-5 disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">1/16</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.0625</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171043
+                        </td>
+                        <td
+                          class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-check size-4"></i>
+                          In Stock
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $87.56<span>/ea</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $87.56<span>/ea</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">1/16</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.0625</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171043
+                        </td>
+                        <td
+                          class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-check size-4"></i>
+                          In Stock
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $153.54<span>/ea</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $153.54<span>/pack of 12</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">1/16</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.0625</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171043
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm text-monochromes-grey font-bold flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-shield text-nowrap"></i>
+                          Ships fr. Supplier
+                          <span class="font-normal">(5 biz. days)</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $184.54<span>/ea</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $184.54<span>/pack of 12</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">1/16</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.0625</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171043
+                        </td>
+                        <td
+                          class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-check size-4"></i>
+                          In Stock
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $168.24<span>/ea</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $168.24<span>/ea</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">1/16</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.0625</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171043
+                        </td>
+                        <td
+                          class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-check size-4"></i>
+                          In Stock
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $237.89<span>/ea</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $237.89<span>/pack of 12</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">9/64</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.1406</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171092
+                        </td>
+                        <td
+                          class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-check size-4"></i>
+                          In Stock
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $254.56<span>/ea</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $254.56<span>/ea</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">11/16</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.6875</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171118
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm text-monochromes-grey font-bold text-ellipsis text-nowrap flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-shield"></i>
+                          Ships fr. Supplier
+                          <span class="font-normal">(5 biz. days)</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $254.56<span>/ea</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $254.56<span>/pack of 12</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">13/64</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.2031</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171134
+                        </td>
+                        <td
+                          class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-check size-4"></i>
+                          In Stock
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $279.44<span>/ea</span>
+                        </td>
+
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $279.44<span>/ea</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">9/64</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.1406</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171092
+                        </td>
+                        <td
+                          class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-check size-4"></i>
+                          In Stock
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $254.56<span>/ea</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $254.56<span>/ea</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">11/16</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.6875</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171118
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm text-monochromes-grey font-bold text-ellipsis text-nowrap flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-shield"></i>
+                          Ships fr. Supplier
+                          <span class="font-normal">(5 biz. days)</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $254.56<span>/ea</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $254.56<span>/pack of 12</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">13/64</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.2031</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171134
+                        </td>
+                        <td
+                          class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-check size-4"></i>
+                          In Stock
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $279.44<span>/ea</span>
+                        </td>
+
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $279.44<span>/ea</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">11/16</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.6875</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171118
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm text-monochromes-grey font-bold text-ellipsis text-nowrap flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-shield"></i>
+                          Ships fr. Supplier
+                          <span class="font-normal">(5 biz. days)</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $254.56<span>/ea</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $254.56<span>/pack of 12</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">13/64</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.2031</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171134
+                        </td>
+                        <td
+                          class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-check size-4"></i>
+                          In Stock
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $279.44<span>/ea</span>
+                        </td>
+
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $279.44<span>/ea</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">9/64</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.1406</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171092
+                        </td>
+                        <td
+                          class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-check size-4"></i>
+                          In Stock
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $254.56<span>/ea</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $254.56<span>/ea</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">11/16</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.6875</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171118
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm text-monochromes-grey font-bold text-ellipsis text-nowrap flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-shield"></i>
+                          Ships fr. Supplier
+                          <span class="font-normal">(5 biz. days)</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $254.56<span>/ea</span>
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $254.56<span>/pack of 12</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-dashed border-monochromes-grey_light"
+                      >
+                        <td class="text-nowrap py-2 px-3 text-sm">13/64</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">0.2031</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">18</td>
+                        <td class="text-nowrap py-2 px-3 text-sm">
+                          Bright/Uncoated
+                        </td>
+                        <td
+                          class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap"
+                        >
+                          81171134
+                        </td>
+                        <td
+                          class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit"
+                        >
+                          <i class="fa-solid fa-check size-4"></i>
+                          In Stock
+                        </td>
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $279.44<span>/ea</span>
+                        </td>
+
+                        <td class="py-2 px-3 text-right text-sm text-nowrap">
+                          $279.44<span>/ea</span>
+                        </td>
+                        <td
+                          class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight"
+                        >
+                          <div class="flex flex-row gap-2 justify-center">
+                            <button>
+                              <i
+                                class="fa-solid fa-minus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                            <div
+                              class="relative flex flex-col max-w-[68px] w-[68px]"
+                            >
+                              <input
+                                id="field"
+                                type="number"
+                                placeholder="0"
+                                class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5"
+                              />
+                            </div>
+                            <button>
+                              <i
+                                class="fa-solid fa-plus size-4 text-monochromes-grey p-1"
+                              ></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-              </fieldset>
-              <div id="tableDiv" class="border border-monochromes-grey_xlight rounded overflow-auto max-h-[99%] w-full">
-                <table class="w-full h-full">
-                  <thead
-                    class="sticky top-0 bg-white z-10 after:content-[''] after:absolute after:inset-0 after:border-b-2 after:border-black after:pointer-events-none after:z-10">
-                    <tr class="w-full">
-                      <th class="text-start py-2 pl-3 text-sm">Size</th>
-                      <th class="text-start py-2 pl-3 text-sm">
-                        Dec. Equiv.
-                      </th>
-                      <th class="text-start py-2 pl-3 text-sm">
-                        Drill Point Angle
-                      </th>
-                      <th class="text-start py-2 pl-3 text-sm">
-                        Coating/Finish
-                      </th>
-                      <th class="text-start py-2 pl-3">MSC#</th>
-                      <th class="text-start py-2 pl-3 text-sm">
-                        Avalability
-                      </th>
-                      <th class="text-end py-2 pr-3 text-sm">Unit Price</th>
-                      <th class="text-end py-2 pr-3 text-sm">Price</th>
-                      <th
-                        class="text-center bg-primary-blue_xlight after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight after:pointer-events-none after:z-10 sticky right-0 text-sm z-10">
-                        Quantity
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody class="text-sm">
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">1/64</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.0325</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171043
-                      </td>
-                      <td
-                        class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-check size-4"></i>
-                        In Stock
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$12.11<span>/ea</span></td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $145.32<span>/pack of 12</span>
-                      </td>
-                      <td
-                        class="sticky right-0 z-[5] py-2 px-3 bg-primary-blue_xlight justify-center h-full max-w-fit border-l border-monochromes-grey_xlight after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">1/16</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.0625</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171043
-                      </td>
-                      <td
-                        class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-check size-4"></i>
-                        In Stock
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$5.32<span>/ea</span></td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $5.32<span>/ea</span>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black h-5 disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 " />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">1/16</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.0625</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171043
-                      </td>
-                      <td
-                        class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-check size-4"></i>
-                        In Stock
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$87.56<span>/ea</span></td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $87.56<span>/ea</span>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">1/16</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.0625</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171043
-                      </td>
-                      <td
-                        class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-check size-4"></i>
-                        In Stock
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$153.54<span>/ea</span></td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $153.54<span>/pack of 12</span>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">1/16</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.0625</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171043
-                      </td>
-                      <td
-                        class="py-2 px-3 text-sm text-monochromes-grey font-bold flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-shield text-nowrap"></i>
-                        Ships fr. Supplier <span class="font-normal">(5 biz. days)</span>
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$184.54<span>/ea</span></td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $184.54<span>/pack of 12</span>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black  disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">1/16</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.0625</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171043
-                      </td>
-                      <td
-                        class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-check size-4"></i>
-                        In Stock
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$168.24<span>/ea</span></td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $168.24<span>/ea</span>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">1/16</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.0625</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171043
-                      </td>
-                      <td
-                        class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-check size-4"></i>
-                        In Stock
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$237.89<span>/ea</span></td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $237.89<span>/pack of 12</span>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">9/64</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.1406</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171092
-                      </td>
-                      <td
-                        class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-check size-4"></i>
-                        In Stock
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$254.56<span>/ea</span></td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $254.56<span>/ea</span>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">11/16</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.6875</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171118
-                      </td>
-                      <td
-                        class="py-2 px-3 text-sm text-monochromes-grey font-bold text-ellipsis text-nowrap flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-shield"></i>
-                        Ships fr. Supplier <span class="font-normal">(5 biz. days)</span>
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$254.56<span>/ea</span></td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $254.56<span>/pack of 12</span>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">13/64</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.2031</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171134
-                      </td>
-                      <td
-                        class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-check size-4"></i>
-                        In Stock
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $279.44<span>/ea</span>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$279.44<span>/ea</span></td>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">9/64</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.1406</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171092
-                      </td>
-                      <td
-                        class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-check size-4"></i>
-                        In Stock
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$254.56<span>/ea</span></td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $254.56<span>/ea</span>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">11/16</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.6875</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171118
-                      </td>
-                      <td
-                        class="py-2 px-3 text-sm text-monochromes-grey font-bold text-ellipsis text-nowrap flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-shield"></i>
-                        Ships fr. Supplier <span class="font-normal">(5 biz. days)</span>
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$254.56<span>/ea</span></td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $254.56<span>/pack of 12</span>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">13/64</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.2031</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171134
-                      </td>
-                      <td
-                        class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-check size-4"></i>
-                        In Stock
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $279.44<span>/ea</span>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$279.44<span>/ea</span></td>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">11/16</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.6875</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171118
-                      </td>
-                      <td
-                        class="py-2 px-3 text-sm text-monochromes-grey font-bold text-ellipsis text-nowrap flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-shield"></i>
-                        Ships fr. Supplier <span class="font-normal">(5 biz. days)</span>
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$254.56<span>/ea</span></td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $254.56<span>/pack of 12</span>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">13/64</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.2031</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171134
-                      </td>
-                      <td
-                        class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-check size-4"></i>
-                        In Stock
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $279.44<span>/ea</span>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$279.44<span>/ea</span></td>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">9/64</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.1406</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171092
-                      </td>
-                      <td
-                        class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-check size-4"></i>
-                        In Stock
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$254.56<span>/ea</span></td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $254.56<span>/ea</span>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">11/16</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.6875</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171118
-                      </td>
-                      <td
-                        class="py-2 px-3 text-sm text-monochromes-grey font-bold text-ellipsis text-nowrap flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-shield"></i>
-                        Ships fr. Supplier <span class="font-normal">(5 biz. days)</span>
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$254.56<span>/ea</span></td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $254.56<span>/pack of 12</span>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="border-b border-dashed border-monochromes-grey_light">
-                      <td class="text-nowrap py-2 px-3 text-sm">13/64</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">0.2031</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">18</td>
-                      <td class="text-nowrap py-2 px-3 text-sm">Bright/Uncoated</td>
-                      <td
-                        class="py-2 px-3 text-sm cursor-pointer text-primary-blue_dark font-bold hover:underline text-nowrap">
-                        81171134
-                      </td>
-                      <td
-                        class="text-success-green_dark py-2 px-3 text-ellipsis text-nowrap text-sm flex gap-1 items-center h-full w-fit">
-                        <i class="fa-solid fa-check size-4"></i>
-                        In Stock
-                      </td>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">
-                        $279.44<span>/ea</span>
-                      <td class="py-2 px-3 text-right text-sm text-nowrap">$279.44<span>/ea</span></td>
-                      </td>
-                      <td
-                        class="py-2 px-3 bg-primary-blue_xlight border-l border-monochromes-grey_xlight gap-2 sticky right-0 justify-center after:content-[''] after:absolute after:inset-0 after:border-l after:border-monochromes-grey_xlight">
-                        <div class="flex flex-row gap-2 justify-center">
-
-                          <button>
-                            <i class="fa-solid fa-minus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                          <div class="relative flex flex-col max-w-[68px] w-[68px]">
-                            <input id="field" type="number" placeholder="0"
-                              class="text-center max-w-[68px] border border-monochromes-grey_light hover:border-monochromes-main pl-4 pr-4 py-3.5 rounded text-sm focus:border-monochromes-grey_light focus:outline-dashed focus:outline-1 focus:outline-offset-4 focus:outline-black disabled:bg-off_white disabled:!border-[#e5e7eb] disabled:cursor-not-allowed hover:disabled:!border-[#e5e7eb] invalid:!border-error-red invalid:!text-error-red hover:invalid:!border-error-red focus:invalid:!border-error-red peer order-2 h-5" />
-                          </div>
-                          <button>
-                            <i class="fa-solid fa-plus size-4 text-monochromes-grey p-1"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
               </div>
             </div>
-          </div>
-          <div class="flex justify-end py-3 px-4 gap-4 items-center h-auto border-t max-h-fit">
-            <p class="font-bold text-sm sm:text-base">
-              Total: <span class="font-bold text-sm sm:text-base">$0.00</span>
-            </p>
-            <button
-              class="py-2 px-2 md:px-5 h-10 rounded-full font-bold text-base cursor-pointer min-w-24 md:min-w-32 text-white bg-primary-blue hover:bg-[#186DF5] active:bg-blue-700 disabled:text-white disabled:cursor-not-allowed disabled:bg-gray-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-[#424242]">
-              Add to Cart
-            </button>
+            <div
+              class="flex justify-end py-3 px-4 gap-4 items-center h-auto border-t max-h-fit"
+            >
+              <p class="font-bold text-sm sm:text-base">
+                Total: <span class="font-bold text-sm sm:text-base">$0.00</span>
+              </p>
+              <button
+                class="py-2 px-2 md:px-5 h-10 rounded-full font-bold text-base cursor-pointer min-w-24 md:min-w-32 text-white bg-primary-blue hover:bg-[#186DF5] active:bg-blue-700 disabled:text-white disabled:cursor-not-allowed disabled:bg-gray-300 focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-[#424242]"
+              >
+                Add to Cart
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <h2 class="mt-4">Code</h2>
-      <div class="max-w-[1500px]">
-        <pre class="h-fit">
+        <h2 class="mt-4">Code</h2>
+        <div class="max-w-[1500px]">
+          <pre class="h-fit">
           <code class="language-html rounded">
   &lt;button id=&quot;modalBtn&quot; class=&quot;msc-btn msc-btn-blue-solid&quot;&gt;
     Trigger Modal
@@ -987,114 +1414,112 @@
 &lt;/script&gt;
           </code>
         </pre>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <script>
-    const modalBtn = document.getElementById("modalBtn");
-    const modalOne = document.getElementById("modalOne");
-    const modalClsBtn = document.getElementById("modalClsBtn");
-    const cancelBtn = document.getElementById("cancelBtn");
+    <script>
+      const modalBtn = document.getElementById("modalBtn");
+      const modalOne = document.getElementById("modalOne");
+      const modalClsBtn = document.getElementById("modalClsBtn");
+      const cancelBtn = document.getElementById("cancelBtn");
 
-    modalBtn.onclick = function () {
-      modalOne.classList.remove("hidden");
-    };
-    modalClsBtn.onclick = function () {
-      modalOne.classList.add("hidden");
-    };
-    cancelBtn.onclick = function () {
-      modalOne.classList.add("hidden");
-    };
-  </script>
+      modalBtn.onclick = function () {
+        modalOne.classList.remove("hidden");
+      };
+      modalClsBtn.onclick = function () {
+        modalOne.classList.add("hidden");
+      };
+      cancelBtn.onclick = function () {
+        modalOne.classList.add("hidden");
+      };
+    </script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      function updateSliderPosition(toggleContainer) {
-        let slider = toggleContainer.querySelector("#tripleToggleDot");
-        let checkedRadio = toggleContainer.querySelector(
-          'input[type="radio"]:checked'
-        );
-        let radios = Array.from(
-          toggleContainer.querySelectorAll('input[type="radio"]')
-        );
-        let radioIndex = radios.indexOf(checkedRadio);
-        let positions = [
-          "left-[4px]",
-          "left-[74px]",
-          "left-2/4",
-          "left-[212px]",
-        ];
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function updateSliderPosition(toggleContainer) {
+          let slider = toggleContainer.querySelector("#tripleToggleDot");
+          let checkedRadio = toggleContainer.querySelector(
+            'input[type="radio"]:checked'
+          );
+          let radios = Array.from(
+            toggleContainer.querySelectorAll('input[type="radio"]')
+          );
+          let radioIndex = radios.indexOf(checkedRadio);
+          let positions = [
+            "left-[4px]",
+            "left-[74px]",
+            "left-2/4",
+            "left-[212px]",
+          ];
 
-        if (radioIndex >= 0 && radioIndex < positions.length) {
-          slider.className =
-            "absolute w-1/4 h-3/4 bg-white shadow-md rounded-full transition-all duration-150 ease-in-out " +
-            positions[radioIndex];
-        } else {
-          console.error("Invalid radio index:", radioIndex);
+          if (radioIndex >= 0 && radioIndex < positions.length) {
+            slider.className =
+              "absolute w-1/4 h-3/4 bg-white shadow-md rounded-full transition-all duration-150 ease-in-out " +
+              positions[radioIndex];
+          } else {
+            console.error("Invalid radio index:", radioIndex);
+          }
         }
-      }
 
-      document
-        .querySelectorAll(".msc-label-toggle-container")
-        .forEach(function (toggleContainer) {
-          toggleContainer
-            .querySelectorAll(".msc-triple-toggle-input-label input")
-            .forEach(function (radio) {
-              radio.addEventListener("change", function () {
-                updateSliderPosition(toggleContainer);
+        document
+          .querySelectorAll(".msc-label-toggle-container")
+          .forEach(function (toggleContainer) {
+            toggleContainer
+              .querySelectorAll(".msc-triple-toggle-input-label input")
+              .forEach(function (radio) {
+                radio.addEventListener("change", function () {
+                  updateSliderPosition(toggleContainer);
+                });
               });
-            });
-          updateSliderPosition(toggleContainer);
-        });
-    });
-  </script>
+            updateSliderPosition(toggleContainer);
+          });
+      });
+    </script>
 
-  <script>
-    function setMaxHeight() {
-      const tableDiv = document.getElementById("tableDiv");
-      const modal = document.getElementById("modal");
-      const modalOne = document.getElementById("modalOne");
+    <script>
+      function setMaxHeight() {
+        const tableDiv = document.getElementById("tableDiv");
+        const modal = document.getElementById("modal");
+        const modalOne = document.getElementById("modalOne");
 
-      if (tableDiv && modal) {
-        tableDiv.style.maxHeight = modal.offsetHeight - 200 + "px";
-        if (window.innerHeight >= 1200) {
-          modal.classList.remove('md:h-[90%]')
-          modal.classList.add("md:max-h-fit");
-        } else if (window.innerHeight < 1200) {
-          modal.classList.remove("md:max-h-fit");
-          modal.classList.add('md:h-[90%]')
+        if (tableDiv && modal) {
+          tableDiv.style.maxHeight = modal.offsetHeight - 200 + "px";
+          if (window.innerHeight >= 1200) {
+            modal.classList.remove("md:h-[90%]");
+            modal.classList.add("md:max-h-fit");
+          } else if (window.innerHeight < 1200) {
+            modal.classList.remove("md:max-h-fit");
+            modal.classList.add("md:h-[90%]");
+          }
         }
       }
-    }
 
-    window.onload = function () {
-      setMaxHeight();
-      const modalOne = document.getElementById("modalOne");
-      if (modalOne) {
+      window.onload = function () {
         setMaxHeight();
-      }
-    };
+        const modalOne = document.getElementById("modalOne");
+        if (modalOne) {
+          setMaxHeight();
+        }
+      };
 
-    window.onresize = function () {
-      setMaxHeight();
-    };
+      window.onresize = function () {
+        setMaxHeight();
+      };
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const modalElement = document.getElementById("modal");
-      if (modalElement && !modalOne.classList.contains("hidden")) {
-        modalElement.addEventListener("shown.bs.modal", setMaxHeight);
-      }
-    });
-  </script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const modalElement = document.getElementById("modal");
+        if (modalElement && !modalOne.classList.contains("hidden")) {
+          modalElement.addEventListener("shown.bs.modal", setMaxHeight);
+        }
+      });
+    </script>
 
-
-  <script src="../utilities/index.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-  <script>
-    hljs.highlightAll();
-  </script>
-</body>
-
+    <script src="../utilities/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>
