@@ -3995,6 +3995,10 @@ h6 {
   width: 88px;
 }
 
+.w-\[90\%\] {
+  width: 90%;
+}
+
 .w-\[95\%\] {
   width: 95%;
 }
@@ -4042,10 +4046,6 @@ h6 {
 
 .min-w-\[280px\] {
   min-width: 280px;
-}
-
-.min-w-\[720px\] {
-  min-width: 720px;
 }
 
 .min-w-\[88px\] {
@@ -4920,10 +4920,6 @@ h6 {
   fill: #1C58EE;
 }
 
-.fill-\[\#717171\] {
-  fill: #717171;
-}
-
 .fill-monochromes-grey {
   fill: #717171;
 }
@@ -5046,6 +5042,11 @@ h6 {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .py-\[13px\] {
@@ -6507,6 +6508,10 @@ body {
     max-height: fit-content;
   }
 
+  .md\:min-h-\[311px\] {
+    min-height: 311px;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -6525,6 +6530,10 @@ body {
 
   .md\:min-w-\[256px\] {
     min-width: 256px;
+  }
+
+  .md\:min-w-\[720px\] {
+    min-width: 720px;
   }
 
   .md\:min-w-fit {
@@ -6560,10 +6569,6 @@ body {
     fill: #717171;
   }
 
-  .md\:fill-white {
-    fill: #FFFFFF;
-  }
-
   .md\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -6579,6 +6584,16 @@ body {
 
   .md\:pt-3 {
     padding-top: 0.75rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
