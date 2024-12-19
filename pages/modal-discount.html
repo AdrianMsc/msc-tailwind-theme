@@ -67,7 +67,14 @@
           class="msc-btn msc-btn-blue-solid"
           onclick="toggleDiscountModal()"
         >
-          Open Modal
+          Open Mail List Modal B
+        </button>
+
+        <button
+          class="msc-btn msc-btn-blue-solid"
+          onclick="toggleThanksModal()"
+        >
+          Open Thanks Modal
         </button>
 
         <div
@@ -246,6 +253,7 @@
               </div>
 
               <button
+                onclick="toggleThanksModal()"
                 class="flex items-center justify-center py-2 px-2 md:px-5 h-10 rounded-full font-bold text-base cursor-pointer min-w-24 md:min-w-32 text-sm text-white bg-primary-blue hover:bg-[#186DF5] active:bg-primary-blue_dark disabled:bg-monochromes-grey_light disabled:text-white disabled:cursor-not-allowed focus-visible:outline-dashed focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-[#424242] w-[200px]"
               >
                 Subscribe
@@ -263,14 +271,15 @@
         </div>
 
         <!-- THANKS MODAL -->
-        <!-- <div
+        <div
+          id="modalThanks"
           class="absolute flex h-screen w-screen bg-[#21212166] top-0 left-0 place-content-center place-items-center z-50 hidden"
         >
           <article
             class="bg-[#1C58EE] relative min-h-[311px] min-w-[720px] flex justify-center items-center flex-col text-white text-center"
           >
             <svg
-              onclick="toggleDiscountModal()"
+              onclick="toggleThanksModal()"
               width="36"
               height="36"
               viewBox="0 0 36 36"
@@ -285,9 +294,11 @@
               />
             </svg>
 
-            <div class="bg-white rounded-full flex items-center p-3">
+            <div
+              class="bg-white rounded-full flex items-center justify-center p-3 mb-4 w-24 h-24"
+            >
               <svg
-                class="w-[50px]"
+                class="w-[40px]"
                 viewBox="0 0 36 36"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -344,20 +355,27 @@
             </p>
 
             <button
-              class="bg-white min-w-7 rounded-full text-[#1C58EE] py-1 px-4 hover:bg-[#F1F5FE] text-sm font-bold"
+              onclick="toggleThanksModal()"
+              class="bg-white min-w-[88px] rounded-full text-[#1C58EE] py-1 px-4 hover:bg-[#F1F5FE] text-sm font-bold"
             >
               Close
             </button>
           </article>
-        </div> -->
+        </div>
       </div>
     </section>
 
     <script>
       const modalDiscount = document.getElementById("modalDiscount");
+      const modalThanks = document.getElementById("modalThanks");
 
       toggleDiscountModal = () => {
         modalDiscount.classList.toggle("hidden");
+      };
+
+      toggleThanksModal = () => {
+        modalDiscount.classList.add("hidden");
+        modalThanks.classList.toggle("hidden");
       };
     </script>
 

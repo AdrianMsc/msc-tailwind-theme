@@ -3821,6 +3821,10 @@ h6 {
   height: 100vh;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .max-h-10 {
   max-height: 2.5rem;
 }
@@ -4012,6 +4016,14 @@ h6 {
   width: 100vw;
 }
 
+.w-\[40px\] {
+  width: 40px;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
 .min-w-10 {
   min-width: 2.5rem;
 }
@@ -4042,6 +4054,10 @@ h6 {
 
 .min-w-\[720px\] {
   min-width: 720px;
+}
+
+.min-w-\[88px\] {
+  min-width: 88px;
 }
 
 .max-w-\[1500px\] {
