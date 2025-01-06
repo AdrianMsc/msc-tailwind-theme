@@ -5193,6 +5193,11 @@ h6 {
   line-height: 2.25rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -5234,10 +5239,6 @@ h6 {
   font-size: 32px;
 }
 
-.text-\[4rem\] {
-  font-size: 4rem;
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -5261,16 +5262,6 @@ h6 {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .font-black {
@@ -6617,22 +6608,18 @@ body {
     text-align: left;
   }
 
-  .md\:text-center {
-    text-align: center;
-  }
-
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
 
+  .md\:text-\[4rem\] {
+    font-size: 4rem;
+  }
+
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-\[4rem\] {
-    font-size: 4rem;
   }
 }
 
