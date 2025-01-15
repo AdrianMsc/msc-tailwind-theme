@@ -1,0 +1,2 @@
+import{p as a,b as e}from"./p-7440027f.js";export{s as setNonce}from"./p-7440027f.js";import{g as t}from"./p-e1255160.js";var o=()=>{const s=import.meta.url;const e={};if(s!==""){e.resourcesUrl=new URL(".",s).href}return a(e)};o().then((async s=>{await t();return e([["p-8ccdb115",[[1,"msc-drawer",{navTitle:[1,"nav-title"],items:[8],logo:[1],isSideNavOpen:[32]}]]],["p-5b86a912",[[1,"msc-hello"]]],["p-bb2af852",[[1,"msc-table",{comps:[16]}]]]],s)}));
+//# sourceMappingURL=msc-ds-wc.esm.js.map

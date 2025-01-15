@@ -51,7 +51,67 @@
     </aside>
 
     <!-- CONTENT  -->
-    <div class="p-4 sm:ml-64">
+
+    <section class="p-4 sm:ml-64 grid grid-cols-12">
+      <div class="msc-layout-container">
+        <div class="max-w-screen-2xl mx-auto">
+          <h1 class="font-bold text-3xl">
+            <small class="text-sm text-primary-blue">Getting Started</small>
+            <br />
+            Component Status
+          </h1>
+
+          <small>Last update: June 5th, 2024</small>
+
+          <ul class="flex mt-5">
+            <li class="mr-3">🧱 Todo</li>
+            <li class="mr-3">🛠 WIP</li>
+            <li class="mr-3">🔭 Alpha</li>
+            <li class="mr-3">🧪 Beta</li>
+            <li class="mr-3">✅ Live</li>
+            <li class="mr-3"><b class="font-bold">N/A</b> Not Applicable</li>
+          </ul>
+          <msc-table id="mscTable"></msc-table>
+
+          <div id="comp-stat-spinner" class="msc-spinner-overlay hidden">
+            <div class="msc-spinner-wrapper">
+              <svg
+                class="msc-spinner"
+                viewBox="0 0 62 62"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="31"
+                  cy="31"
+                  r="28"
+                  stroke="white"
+                  stroke-width="6"
+                />
+                <circle
+                  opacity="0.38"
+                  cx="31"
+                  cy="31"
+                  r="28"
+                  stroke="#212121"
+                  stroke-width="6"
+                />
+                <path
+                  opacity="0.8"
+                  d="M3 31C3 15.536 15.536 3 31 3"
+                  stroke="#212121"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <label class="msc-spinner-label">Loading Results</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="p-4 sm:ml-64 hidden">
       <section class="container mx-auto">
         <div class="grid grid-cols-12">
           <div class="msc-layout-container">
@@ -522,7 +582,35 @@
       </section>
     </div>
 
+    <script type="module" src="../fds-web-components/msc-ds-wc.esm.js"></script>
+    <script nomodule src="../fds-web-components/msc-ds-wc.js"></script>
     <script src="../utilities/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <script>
+      getTableData = () => {
+        const spinner = document.getElementById("comp-stat-spinner");
+        spinner.classList.remove("hidden");
+
+        fetch("https://msc-component-status-ws.onrender.com/components/")
+          .then((response) => response.json())
+          .then((data) => {
+            const mscTable = document.getElementById("mscTable");
+            mscTable.comps = null;
+            mscTable.comps = data;
+            console.log("Fetched", data);
+
+            spinner.classList.add("hidden");
+          })
+          .catch((error) => {
+            spinner.classList.remove("hidden");
+            console.error("Error fetching components:", error);
+          });
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        getTableData();
+      });
+    </script>
   </body>
 </html>
