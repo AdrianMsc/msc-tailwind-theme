@@ -6628,6 +6628,10 @@ body {
     justify-content: flex-end;
   }
 
+  .md\:gap-10 {
+    gap: 2.5rem;
+  }
+
   .md\:overflow-x-auto {
     overflow-x: auto;
   }
