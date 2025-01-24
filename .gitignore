@@ -4,3 +4,4 @@ node_modules/
 package-lock.json
 pages/tableview-standard.html
 fuel-web-components
+.DS_Store
