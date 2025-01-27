@@ -593,26 +593,19 @@
         const mscTable = document.getElementById("mscTable");
 
         try {
-          const statusData = localStorage.getItem("statusData");
-
-          if (!statusData) {
-            showSpinner(spinner);
-            const response = await fetch(
-              "https://msc-component-status-ws.onrender.com/components/"
-            );
-            if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            const data = await response.json();
-            localStorage.setItem("statusData", JSON.stringify(data));
-            updateTable(mscTable, data);
-            hideSpinner(spinner);
-          } else {
-            updateTable(mscTable, JSON.parse(statusData));
+          showSpinner(spinner);
+          const response = await fetch(
+            "https://msc-component-status-ws.onrender.com/components/"
+          );
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
           }
 
-          console.log("Fetched", statusData);
+          const data = await response.json();
+          updateTable(mscTable, data);
+          hideSpinner(spinner);
+
+          console.log("Fetched", data);
         } catch (error) {
           console.error("Error fetching components:", error);
           hideSpinner(spinner);
